@@ -1,0 +1,10 @@
+_name: Gender
+_type: LOVType
+_package: CustomerMDM.list_of_values
+label: Gender
+length: 8
+lovValues:
+  - label: MALE
+    code: MALE
+  - label: FEMALE
+    code: FEMALE

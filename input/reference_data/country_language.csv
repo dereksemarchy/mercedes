@@ -1,0 +1,11 @@
+﻿country_code,language_code,is_default
+DE,de-DE,true
+GB,en-GB,true
+IT,it-IT,true
+IT,en-GB,false
+CH,de-DE,true
+CH,fr-FR,false
+CH,it-IT,false
+US,en-US,true
+KR,ko-KR,true
+KR,en-GB,false

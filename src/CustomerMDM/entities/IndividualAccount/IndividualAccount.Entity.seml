@@ -1,0 +1,34 @@
+_package: CustomerMDM.entities.IndividualAccount
+_type: Entity
+_name: IndividualAccount
+label: Individual Account
+pluralLabel: Individual Account
+physicalTableName: INDIVIDUAL_ACCOUNT
+iconUrl: images://mdi/card-account-details-outline.svg
+description: ""
+documentation: ""
+historizeGolden: true
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: IndividualAccountID
+    label: Individual Account ID
+    physicalName: INDIVIDUAL_ACCOUNT_ID
+    dataType: String
+    length: 128
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: CiamID
+    label: CIAM ID
+    physicalName: CIAM_ID
+    dataType: String
+    length: 128
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+sourceIdGeneration:
+  mode: MANUAL
+primaryKey: CustomerMDM.entities.IndividualAccount.IndividualAccount.IndividualAccountID
+entityType: BASIC

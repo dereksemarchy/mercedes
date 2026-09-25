@@ -1,0 +1,80 @@
+_package: CustomerMDM.entities.Company
+_type: Entity
+_name: Company
+label: Company
+pluralLabel: Companies
+physicalTableName: COMPANY
+iconUrl: images://mdi/domain.svg
+description: ""
+documentation: ""
+historizeGolden: true
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: CompanyID
+    label: Company ID
+    physicalName: COMPANY_ID
+    dataType: UUID
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: CompanyMEID
+    label: Company ME ID
+    physicalName: COMPANY_ME_ID
+    dataType: String
+    mandatory: true
+    searchable: true
+    length: 128
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: FullName
+    label: Full Name
+    physicalName: FULL_NAME
+    dataType: String
+    mandatory: true
+    searchable: true
+    length: 256
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: ShortName
+    label: Short Name
+    physicalName: SHORT_NAME
+    dataType: String
+    mandatory: true
+    searchable: true
+    length: 128
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: FullNameLocal
+    label: Full Name (Local)
+    physicalName: FULL_NAME_LOCAL
+    dataType: String
+    mandatory: false
+    searchable: true
+    length: 256
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: ShortNameLocal
+    label: Short Name (Local)
+    physicalName: SHORT_NAME_LOCAL
+    dataType: String
+    mandatory: false
+    searchable: true
+    length: 128
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: LegalForm
+    label: Legal Form
+    physicalName: LEGAL_FORM
+    dataType: CustomerMDM.list_of_values.LegalForm
+    mandatory: false
+    searchable: true
+    length: 16
+    mandatoryValidationScope: PRE_CONSO
+    lovValidationScope: PRE_CONSO
+sourceIdGeneration:
+  mode: UUID
+  startWith: 1
+primaryKey: CustomerMDM.entities.Company.Company.CompanyID
+entityType: BASIC

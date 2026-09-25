@@ -1,0 +1,16 @@
+_package: CustomerMDM.entities.Company.display_cards
+_type: DisplayCard
+_name: CompanyDisplayCard
+entity: CustomerMDM.entities.Company.Company
+default: true
+primaryTextExpression: FullName
+primaryImageValueInterpreter: LITERAL
+avatarImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageFallbackValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+avatarImageValueInterpreter: LITERAL
+primaryImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT

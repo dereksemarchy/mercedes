@@ -1,0 +1,74 @@
+_name: Customer
+_type: ModelDiagram
+_package: CustomerMDM.model_diagrams
+label: Customer
+attributeNameFormat: NAME
+entityNameFormat: NAME
+referenceRoleNameFormat: NAME
+referenceNameFormat: NAME
+showAttributeDataType: true
+showForeignAttribute: true
+showInheritLinkName: true
+showInheritedAttributes: true
+showReferenceCardinality: true
+showReferenceName: true
+showReferenceRoles: true
+entityShapes:
+  - _type: EntityShape
+    _name: Individual
+    entity: CustomerMDM.entities.Individual.Individual
+    borderColor: "#0000FF"
+    fontTitleColor: "#FFFFFF"
+    position:
+      x: 0
+      y: 0
+    height: 220
+    width: 320
+  - _type: EntityShape
+    _name: Country
+    entity: CustomerMDM.entities.Country.Country
+    borderColor: "#008000"
+    fontTitleColor: "#FFFFFF"
+    position:
+      x: 520
+      y: 0
+    height: 160
+    width: 280
+  - _type: EntityShape
+    _name: CountryLanguage
+    entity: CustomerMDM.entities.CountryLanguage.CountryLanguage
+    borderColor: "#008000"
+    fontTitleColor: "#FFFFFF"
+    position:
+      x: 820
+      y: 0
+    height: 160
+    width: 280
+  - _type: EntityShape
+    _name: IndividualAccount
+    entity: CustomerMDM.entities.IndividualAccount.IndividualAccount
+    borderColor: "#0000FF"
+    fontTitleColor: "#FFFFFF"
+    position:
+      x: 260
+      y: 0
+    height: 160
+    width: 280
+  - _type: EntityShape
+    _name: Company
+    entity: CustomerMDM.entities.Company.Company
+    borderColor: "#0000FF"
+    fontTitleColor: "#FFFFFF"
+    position:
+      x: 260
+      y: 180
+    height: 160
+    width: 280
+referenceLinks:
+  - bendPoints: []
+    reference: CustomerMDM.references.CountryLanguageHasCountry
+  - bendPoints: []
+    reference: CustomerMDM.references.IndividualAccountHasIndividual
+  - bendPoints: []
+    reference: CustomerMDM.references.IndividualAccountHasCountry
+inheritLinks: []

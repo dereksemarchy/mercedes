@@ -1,0 +1,7 @@
+﻿country_code,code,is_default,active
+DE,DE_STANDARD,true,true
+GB,GB_STANDARD,true,true
+IT,IT_STANDARD,true,true
+CH,CH_STANDARD,true,true
+US,US_STANDARD,true,true
+KR,KR_STANDARD,true,true

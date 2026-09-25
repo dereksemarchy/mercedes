@@ -1,0 +1,10 @@
+_name: Region
+_type: LOVType
+_package: CustomerMDM.list_of_values
+label: Region
+length: 4
+lovValues:
+  - label: AMAP
+    code: AMAP
+  - label: EMEA
+    code: EMEA

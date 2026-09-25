@@ -1,0 +1,14 @@
+_package: CustomerMDM.entities.Individual.dups_managers
+_type: DupsManager
+_name: ManageDuplicatesOnIndividual
+entity: CustomerMDM.entities.Individual.Individual
+enableMasterValuePicking: true
+displayCard: CustomerMDM.entities.Individual.display_cards.IndividualDisplayCard
+formTab: CustomerMDM.entities.Individual.forms.IndividualForm.Individual
+collectionView: CustomerMDM.entities.Individual.collection_views.IndividualCollectionView
+checkoutCustomSortEnabled: false
+checkoutUserDefinedSortEnabled: true
+checkoutDefaultDisplayType: TABLE
+checkoutDisplayGridAllowed: false
+checkoutDisplayListAllowed: true
+checkoutDisplayTableAllowed: true

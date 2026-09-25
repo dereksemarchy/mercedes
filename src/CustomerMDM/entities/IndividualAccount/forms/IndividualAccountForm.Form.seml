@@ -1,0 +1,36 @@
+_package: CustomerMDM.entities.IndividualAccount.forms
+_type: Form
+_name: IndividualAccountForm
+entity: CustomerMDM.entities.IndividualAccount.IndividualAccount
+default: true
+formTabs:
+  - _type: FormTab
+    _name: IndividualAccount
+    label: Individual Account
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    content:
+      - _type: IdField
+        _name: IndividualAccountID
+        value: IndividualAccountID
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: CiamID
+        value: CiamID
+        useCustomLabel: false
+        dataType: STRING
+      - _type: ReferenceField
+        _name: FDN_Country
+        value: FDN_Country
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.Country.Country
+      - _type: ReferenceField
+        _name: FDN_Individual
+        value: FDN_Individual
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.Individual.Individual

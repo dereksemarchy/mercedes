@@ -1,0 +1,70 @@
+_package: CustomerMDM.entities.CountryLanguage.action_sets
+_type: ActionSet
+_name: CountryLanguageActionSet
+entity: CustomerMDM.entities.CountryLanguage.CountryLanguage
+label: Country Language Action Set
+defaultActionSet: true
+actions:
+  - _type: CreateAction
+    _name: CreateAuthorCountryLanguages
+    label: Create
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.CountryLanguage.steppers.AuthorCountryLanguages
+    createMultiple: false
+    createdRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: true
+  - _type: EditAction
+    _name: EditAuthorCountryLanguages
+    label: Edit
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.CountryLanguage.steppers.AuthorCountryLanguages
+    multipleSelectionAllowed: true
+    availableForGoldenData: true
+    availableForMasterData: false
+    availableForErrorData: false
+    waitDialogEnabled: false
+  - _type: MassUpdateAction
+    _name: MassUpdateAuthorCountryLanguages
+    label: Mass Update
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.CountryLanguage.steppers.AuthorCountryLanguages
+    availableForGoldenData: true
+    availableForErrorData: false
+    availableForMasterData: false
+    waitDialogEnabled: false
+  - _type: DeleteAction
+    _name: Delete
+    label: Delete
+    useCustomLabel: true
+    multipleSelectionAllowed: true
+    deleteType: HARD_DELETE
+    waitDialogEnabled: false
+    availableForGoldenData: true
+    availableForMasterData: false
+  - _type: ExportAction
+    _name: Export
+    label: Export
+    useCustomLabel: true
+    waitDialogEnabled: false
+  - _type: ImportAction
+    _name: ImportAuthorCountryLanguages
+    label: Import
+    useCustomLabel: true
+    importMode: CREATE_AND_UPDATE
+    stepper: CustomerMDM.entities.CountryLanguage.steppers.AuthorCountryLanguages
+    importedRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: true
+  - _type: BrowseGraphAction
+    _name: BrowseGraph
+    label: Browse Graph
+    useCustomLabel: true
+    waitDialogEnabled: false
+  - _type: CopyAction
+    _name: CopyAuthorCountryLanguages
+    label: Copy
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.CountryLanguage.steppers.AuthorCountryLanguages
+    multipleSelectionAllowed: true
+    waitDialogEnabled: false

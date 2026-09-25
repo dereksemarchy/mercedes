@@ -1,0 +1,15 @@
+﻿country_code,code,is_default,active
+DE,MR,true,true
+DE,MRS,false,true
+GB,MR,true,true
+GB,MISS,false,true
+GB,MS,false,true
+IT,MR,true,true
+CH,MR,true,true
+CH,MRS,false,true
+US,MR,true,true
+US,MISS,false,true
+US,MS,false,true
+US,-,false,true
+KR,MR,true,true
+KR,MS,false,true

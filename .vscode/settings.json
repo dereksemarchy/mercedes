@@ -1,0 +1,6 @@
+{
+    "semarchy.sdp.instanceUrl": "https://poc-mercedes.eu.semarchy.net/",
+    "semarchy.sdp.overwriteDeploymentUrl": "https://poc-mercedes.eu.semarchy.net/dpc",
+    "semarchy.sdp.datasource": "datasource0",
+    "semarchy.sdp.dataLocation": "CustomerMDM"
+}

@@ -1,0 +1,22 @@
+_name: IndividualAccountHasCountry
+_type: Reference
+_package: CustomerMDM.references
+label: Individual Account Has Country
+deletePropagation: RESTRICT
+fromEntity: CustomerMDM.entities.IndividualAccount.IndividualAccount
+fromRoleLabel: Individual Account
+fromRoleName: IndividualAccount
+fromRolePluralLabel: Individual Accounts
+physicalName: CIAM_ID
+toEntity: CustomerMDM.entities.Country.Country
+toRoleLabel: Country
+toRoleName: Country
+toRolePhysicalName: COUNTRY_CODE
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  entity: CustomerMDM.entities.CountryLanguage.CountryLanguage
+  _name: Country
+  label: Country
+  physicalName: COUNTRY_CODE
+  searchable: true

@@ -1,0 +1,18 @@
+_name: Language
+_type: LOVType
+_package: CustomerMDM.list_of_values
+label: Language
+length: 8
+lovValues:
+  - label: de-DE
+    code: de-DE
+  - label: en-GB
+    code: en-GB
+  - label: en-US
+    code: en-US
+  - label: fr-FR
+    code: fr-FR
+  - label: it-IT
+    code: it-IT
+  - label: ko-KR
+    code: ko-KR

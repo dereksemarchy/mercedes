@@ -1,0 +1,146 @@
+_package: CustomerMDM.applications
+_type: Application
+_name: Customer
+label: Customer MDM
+visibility: VISIBLE
+applicationTitle: Customer MDM
+avatarImageUrl: https://car-brand-names.com/wp-content/uploads/2015/05/Mercedes-Benz-Logo-1933-720x405.png
+logoUrl: https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-4-logo-png-transparent.png
+coverImageUrl: https://mercedes-benz-media.co.uk/assets/images/thumbnail/48568-mercedes-cla-250e-0012.jpg
+favIcon: https://car-brand-names.com/wp-content/uploads/2015/05/Mercedes-Benz-Logo-1933-720x405.png
+sortStrategy: POSITION
+historyBrowsingEnabled: false
+historyBrowsingRequiredRole: ""
+defaultAction: CustomerMDM.applications.Customer.Root.TopActions.GlobalSearch
+documentationConfig:
+  documentation: ""
+  documentationConfigDiagrams:
+  - _type: DocumentationConfigDiagram
+    _name: Customer
+    modelDiagram: CustomerMDM.model_diagrams.Customer
+    label: Customer
+globalSearchConfig:
+  displaySearchForDropdown: true
+  sortBusinessViewsAlphabetically: true
+  globalSearchBusinessViews:
+  - _type: GlobalSearchBoView
+    _name: Individual
+    label: Individual
+    businessView: CustomerMDM.entities.Individual.business_views.IndividualBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.TextConfig
+  - _type: GlobalSearchBoView
+    _name: IndividualAccount
+    label: Individual Account
+    businessView: CustomerMDM.entities.IndividualAccount.business_views.IndividualAccountBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.IndividualAccount.business_views.IndividualAccountBusinessView.IndividualAccount.TextConfig
+navDrawer:
+  - _type: FolderNavGroup
+    _name: RootFolder
+    dividerVisible: false
+    labelVisible: false
+    linkedFolder: CustomerMDM.applications.Customer.Root.TopActions
+  - _type: FolderNavGroup
+    _name: MasterData
+    dividerVisible: true
+    labelVisible: true
+    linkedFolder: CustomerMDM.applications.Customer.Root.MasterData
+  - _type: FolderNavGroup
+    _name: ReferenceData
+    dividerVisible: true
+    labelVisible: true
+    linkedFolder: CustomerMDM.applications.Customer.Root.ReferenceData
+rootFolder:
+  _type: FolderAction
+  _name: Root
+  label: Root Folder
+  image: images://mdi/folder.svg
+  imageAlign: MIDDLE_CENTER
+  imageMode: FIT
+  appActions:
+    - _type : FolderAction
+      _name: TopActions
+      label: Top Actions
+      image: images://mdi/folder.svg
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      appActions:
+      - _type: GlobalSearchAction
+        _name: GlobalSearch
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+      - _type: MyTasksAction
+        _name: MyTasks
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        badgeVisible: true
+      - _type: BrowseEntitiesFolderAction
+        _name: Entities
+        lineageEnabled: true
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+      # - _name: Dashboard
+      #   image: images://idh/dq-dashboard.png
+      #   label: Dashboard
+      #   imageAlign: MIDDLE_CENTER
+      #   imageMode: FIT
+      #   _type: OpenDashboardAction
+      #   dashboard: Dashboard
+      #   dashboardApplication: SariaDashboard
+      #   parameters: []
+    - _type : FolderAction
+      _name: MasterData
+      label: Master Data
+      image: images://mdi/database.svg
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      appActions:
+      - _type: BrowseBusinessViewAction
+        _name: Individual
+        businessView: CustomerMDM.entities.Individual.business_views.IndividualBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Individual
+      - _type: ImportDataAppAction
+        _name: ImportIndividual
+        label: Import Individual
+        importAction: CustomerMDM.entities.Individual.action_sets.IndividualActionSet.ImportAuthorIndividuals
+      - _type: BrowseBusinessViewAction
+        _name: IndividualAccount
+        businessView: CustomerMDM.entities.IndividualAccount.business_views.IndividualAccountBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Individual Account
+      - _type: BrowseBusinessViewAction
+        _name: Company
+        businessView: CustomerMDM.entities.Company.business_views.CompanyBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Company
+    - _type : FolderAction
+      _name: ReferenceData
+      label: Reference Data
+      image: images://mdi/database.svg
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      appActions:
+      - _type: BrowseBusinessViewAction
+        _name: Country
+        businessView: CustomerMDM.entities.Country.business_views.CountryBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Country
+      - _type: BrowseBusinessViewAction
+        _name: CountryLanguage
+        businessView: CustomerMDM.entities.CountryLanguage.business_views.CountryLanguageBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Country Language

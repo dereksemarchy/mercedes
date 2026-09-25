@@ -1,0 +1,50 @@
+_package: CustomerMDM.entities.Company.forms
+_type: Form
+_name: CompanyForm
+entity: CustomerMDM.entities.Company.Company
+default: true
+formTabs:
+  - _type: FormTab
+    _name: Company
+    label: Company
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    labelWidth: "150"
+    content:
+      - _type: IdField
+        _name: CompanyID
+        value: CompanyID
+        useCustomLabel: false
+        dataType: UUID
+      - _type: TextField
+        _name: CompanyMEID
+        value: CompanyMEID
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: FullName
+        value: FullName
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: ShortName
+        value: ShortName
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: FullNameLocal
+        value: FullNameLocal
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: ShortNameLocal
+        value: ShortNameLocal
+        useCustomLabel: false
+        dataType: STRING
+      - _type: MenuField
+        _name: LegalForm
+        value: LegalForm
+        useCustomLabel: false
+        dataType: STRING

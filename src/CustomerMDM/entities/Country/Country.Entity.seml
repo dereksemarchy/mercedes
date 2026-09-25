@@ -1,0 +1,53 @@
+_package: CustomerMDM.entities.Country
+_type: Entity
+_name: Country
+label: Country
+pluralLabel: Country
+physicalTableName: COUNTRY
+iconUrl: images://mdi/flag-variant-outline.svg
+description: ""
+documentation: ""
+historizeGolden: true
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: CountryCode
+    label: Country Code
+    physicalName: COUNTRY_CODE
+    dataType: String
+    length: 2
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: CountryName
+    label: Country Name
+    physicalName: COUNTRY_NAME
+    dataType: String
+    length: 128
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: Region
+    label: Region
+    physicalName: REGION
+    dataType: CustomerMDM.list_of_values.Region
+    length: 4
+    mandatory: true
+    searchable: true
+    lovValidationScope: PRE_CONSO
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: Active
+    label: Active
+    physicalName: ACTIVE
+    dataType: Boolean
+    length: 1
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+sourceIdGeneration:
+  mode: MANUAL
+primaryKey: CustomerMDM.entities.Country.Country.CountryCode
+entityType: BASIC

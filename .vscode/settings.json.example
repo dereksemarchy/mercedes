@@ -1,0 +1,37 @@
+// Semarchy SDP extension — WORKSPACE settings. One target per developer.
+//
+// HOW TO USE: copy this file to `.vscode/settings.json` and replace every <placeholder>
+// with YOUR own target. VS Code accepts these `//` comments in settings.json, so you can
+// keep them.
+//
+// WHY THIS FILE EXISTS: `.vscode/settings.json` is gitignored on purpose — it points the
+// IDE at a personal data location, so committing it hijacks every teammate's deploy
+// target. Only this .example is versioned. (It was tracked by mistake until 2026-08-21:
+// a .gitignore rule does not untrack an already-tracked file — `git rm --cached` does.)
+//
+// The IDE deploy and the CLI take the SAME pair of URLs:
+//   sem-design data-product deploy --data-product-folder "src/<Model>" \
+//     --instance-url <instanceUrl> --overwrite-deployment-url <overwriteDeploymentUrl> \
+//     --data-source <datasource> --data-location <dataLocation>
+//
+// AUTHENTICATION is NOT configured here: run `sem-design auth login --url <tenant>` once
+// (browser device flow) and the shared session in ~/.sem/config.yaml covers the IDE, the
+// CLI deploys and the REST loads/query APIs — no secret to store. If you ever use a
+// key-based setting instead, keep it out of the repo (see tutorial § 2.5).
+{
+  // Tenant root — NO trailing slash and NO `/dm` suffix (SEML 2.0 / data products).
+  "semarchy.sdp.instanceUrl": "https://<tenant>.eu.semarchy.net",
+
+  // ALWAYS set this on 2.0 (runtime-validated): without it the deploy falls back to the
+  // legacy `/dm` route, which still works but disturbs the target `dpc` component.
+  "semarchy.sdp.overwriteDeploymentUrl": "https://<tenant>.eu.semarchy.net/dpc",
+
+  // Target datasource. A data location occupies exactly ONE datasource; find a free one
+  // by crossing `sem dm data-locations` with `sem dm admin datasources`.
+  "semarchy.sdp.datasource": "<datasourceNN>",
+
+  // Target data location. Control what it already holds BEFORE deploying (pre-deploy
+  // guardrail): `sem dm data-locations get <DL>` — new DL / upgrade of the same data
+  // product / conflict with another one are three very different situations.
+  "semarchy.sdp.dataLocation": "<MY_DATA_LOCATION>"
+}

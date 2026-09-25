@@ -1,0 +1,16 @@
+_name: LegalForm
+_type: LOVType
+_package: CustomerMDM.list_of_values
+label: Legal Form
+length: 16
+lovValues:
+  - label: GMBH
+    code: GMBH
+  - label: AG
+    code: AG
+  - label: LTD
+    code: LTD
+  - label: SRL
+    code: SRL
+  - label: CORPORATION
+    code: CORPORATION

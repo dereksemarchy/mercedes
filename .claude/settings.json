@@ -1,0 +1,74 @@
+{
+  "model": "opus",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"systemMessage\":\"Workspace LLM policy: Opus 5 by default (cost control). Fable 5 is reserved for live client demos and genuinely complex implementations - switch with /model only when the situation justifies it.\"}'"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash(grep -o 'lovValues[^;]\\\\{0,400\\\\}' 'C:\\\\Users\\\\JulienPELTIER/.vscode/extensions/semarchy.semarchy-extension-1.11.0/dist/languageserver.js')",
+      "Bash(gh api *)",
+      "Bash(python -c \"import json,sys; [print\\(x['name'], x['type']\\) for x in json.load\\(sys.stdin\\)]\")",
+      "Bash(python -c ' *)",
+      "Read(//c/Users/JulienPELTIER/AppData/Roaming/fnm/node-versions/v22.16.0/installation/node_modules/@semarchy/sem-design/**)",
+      "Bash(PKG=\"/c/Users/JulienPELTIER/AppData/Roaming/fnm/node-versions/v22.16.0/installation/node_modules/@semarchy/sem-design\"; echo \"=== out dir ===\" && find \"$PKG/out\" -maxdepth 2 | head -40; echo \"=== grep for LovType/idGenerationType tokens in bundle ===\" && grep -rl \"idGenerationType\" \"$PKG/out\" 2>/dev/null | head; echo \"=== search bundle for 'SEQUENCE' and LOV type names ===\" && grep -roh \"sourceIdGeneration\\\\|idGenerationType\\\\|LovType\\\\|lovType\" \"$PKG/out\" 2>/dev/null | sort | uniq -c | head)",
+      "Read(//c/Users/JulienPELTIER/AppData/Roaming/fnm/node-versions/v22.16.0/installation/node_modules/@semarchy/sem-design/out/**)",
+      "Bash(python)",
+      "Bash(python -c \"import yaml; print\\('pyyaml', yaml.__version__\\)\")",
+      "Bash(python -m pip install pyyaml --quiet)",
+      "Bash(python -c \"import yaml; print\\('ok', yaml.__version__\\)\")",
+      "Bash(python \"C:/Users/JULIEN~1/AppData/Local/Temp/claude/c--TOOLS-Workspaces-Test-Generation/c3a03175-9a07-4186-97c5-ec0a7a5b0d33/scratchpad/gen.py\")",
+      "Bash(node -e \"console.log\\('node', process.version\\)\")",
+      "Bash(npm ls *)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(sed -i \"s#require\\(PKG+'/node_modules/ajv'\\)#require\\('ajv'\\)#\" validate.js)",
+      "Bash(node validate.js)",
+      "Bash(sed -i \"s#for\\(const k of Object.keys\\(node\\)\\){const v=node\\\\[k\\\\];#for\\(const k of Object.keys\\(node\\)\\){const v=node[k]; if\\(k==='_package'||k==='_name'\\){continue;}#\" xref.js)",
+      "Bash(node xref.js)",
+      "Bash(cp \"C:/Users/JULIEN~1/AppData/Local/Temp/claude/c--TOOLS-Workspaces-Test-Generation/c3a03175-9a07-4186-97c5-ec0a7a5b0d33/scratchpad/gen.py\" \"ai-model-development/generate-DemoPOV-model.py\")",
+      "Bash(cp \"C:/Users/JULIEN~1/AppData/Local/Temp/claude/c--TOOLS-Workspaces-Test-Generation/c3a03175-9a07-4186-97c5-ec0a7a5b0d33/scratchpad/validate.js\" \"ai-model-development/validate-seml-schemas.js\")",
+      "Bash(cp \"C:/Users/JULIEN~1/AppData/Local/Temp/claude/c--TOOLS-Workspaces-Test-Generation/c3a03175-9a07-4186-97c5-ec0a7a5b0d33/scratchpad/xref.js\" \"ai-model-development/check-xrefs.js\")",
+      "Bash(node \"c:/TOOLS/Workspaces/Test Generation/ai-model-development/validate-seml-schemas.js\" \"c:/TOOLS/Workspaces/Test Generation/src/DemoPOV\")",
+      "Bash(node \"c:/TOOLS/Workspaces/Test Generation/ai-model-development/check-xrefs.js\" \"c:/TOOLS/Workspaces/Test Generation/src/DemoPOV\")",
+      "Bash(mkdir -p ai-model-development/prompt ai-model-development/methodology ai-model-development/scripts ai-model-development/cli)",
+      "Bash(mv \"ai-model-development/dxp-model-development-prompt.md\" \"ai-model-development/prompt/\")",
+      "Bash(mv \"ai-model-development/README.md\" \"ai-model-development/prompt/\")",
+      "Bash(mv .agent/* \"ai-model-development/methodology/\")",
+      "Bash(mv ai-model-development/generate-DemoPOV-model.py ai-model-development/validate-seml-schemas.js ai-model-development/check-xrefs.js \"ai-model-development/scripts/\")",
+      "Read(//c/TOOLS/Workspaces/**)",
+      "Read(//c/TOOLS/**)",
+      "Bash(sem-design --version)",
+      "Bash(mv ai-model-development/scripts/generate-DemoPOV-model.py ai-model-development/scripts/generate-model.example.py)",
+      "Bash(cp -r \"c:/TOOLS/Workspaces/CLI\" ai-model-development/cli)",
+      "Bash(python \"ai-model-development/scripts/generate-model.example.py\")",
+      "Bash(node \"c:/TOOLS/Workspaces/Test Generation/ai-model-development/scripts/check-xrefs.js\" \"c:/TOOLS/Workspaces/Test Generation/src/DemoPOV\")",
+      "WebFetch(domain:docs.semarchy.com)",
+      "Bash(node dump-schemas.js --list)",
+      "Bash(node dump-schemas.js \"^SemQLEnricher$|^JavaPluginEnricher$|^RestClientEnricher$|^EnricherCache$|EnricherScope$|SemQLEnricherExpression$|PluginEnricherOutput$|PluginEnricherInput$|EnricherCacheParam$\")",
+      "Bash(node dump-schemas.js \"^SemQLValidation$|^PluginValidation$|^UniqueKey$|ValidationScopeType$|^ValidationType$|ValidationBehavior$|KeyAttribute$|PluginValidationInput$|PluginValidationParam$\")",
+      "Bash(node dump-schemas.js \"^EnricherScope$|^ValidationScopeType$|^ValidationType$|^ValidationBehavior$|^PluginOnErrorBehavior$|^ConsolidationStrategy$|^OverrideStrategy$|^EntityType$|^IdGenerationType$|^GoldenIdGeneration$|^SourceIdGeneration$|^DeletePropagationType$\")",
+      "Bash(node dump-schemas.js \"^SemQLMatcher$|^SemQLMatchRule$|SemQLMatchRuleBinningExpression$|^StandardSurvivorshipRule$|^IDSurvivorshipRule$|SurvivorshipRuleAttribute$|ConsoPublisherRanking$\")",
+      "Bash(node -e ' *)",
+      "Bash(sem-design *)",
+      "Bash(sem *)",
+      "Bash(./ai-model-development/cli/PlatformCLI/sem.exe *)",
+      "Bash(ai-model-development/cli/PlatformCLI/sem.exe *)",
+      "Bash(python *)",
+      "Bash(node *)",
+      "Bash(bash output/timeit.sh *)"
+    ],
+    "deny": [
+      "Bash(sem dm data-locations delete *)",
+      "Bash(./ai-model-development/cli/PlatformCLI/sem.exe dm data-locations delete *)"
+    ]
+  }
+}

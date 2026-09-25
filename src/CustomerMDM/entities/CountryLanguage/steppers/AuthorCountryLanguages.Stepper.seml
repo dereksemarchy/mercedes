@@ -1,0 +1,33 @@
+_package: CustomerMDM.entities.CountryLanguage.steppers
+_type: Stepper
+_name: AuthorCountryLanguages
+entity: CustomerMDM.entities.CountryLanguage.CountryLanguage
+label: Country Languages
+rootStep:
+  _type: CollectionStep
+  _name: CountryLanguages
+  label: Country Languages
+  canFinishSubLevel: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  childDeleteType: HARD_DELETE
+  collectionView: CustomerMDM.entities.CountryLanguage.collection_views.CountryLanguageCollectionView
+  defaultDisplayType: TABLE
+  customSortEnabled: false
+  userDefinedSortEnabled: true
+  displayGridAllowed: false
+  displayListAllowed: true
+  displayTableAllowed: true
+  useCustomCollectionLabel: false
+  childSteps:
+    - _type: FormStep
+      _name: CountryLanguage
+      label: Country Language
+      canFinishSubLevel: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      enableMasterValuePicking: false
+      formTab: CustomerMDM.entities.CountryLanguage.forms.CountryLanguageForm.CountryLanguage

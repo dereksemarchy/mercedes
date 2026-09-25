@@ -1,0 +1,38 @@
+_package: CustomerMDM.entities.CountryLanguage.forms
+_type: Form
+_name: CountryLanguageForm
+entity: CustomerMDM.entities.CountryLanguage.CountryLanguage
+default: true
+formTabs:
+  - _type: FormTab
+    _name: CountryLanguage
+    label: Country Language
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    labelWidth: "150"
+    content:
+      - _type: IdField
+        _name: CountryLanguageID
+        value: CountryLanguageID
+        useCustomLabel: false
+        dataType: LONG_INTEGER
+      - _type: MenuField
+        _name: Language
+        value: Language
+        useCustomLabel: false
+        dataType: STRING
+      - _type: CheckboxField
+        _name: IsDefault
+        value: IsDefault
+        useCustomLabel: false
+        dataType: BOOLEAN
+      - _type: ReferenceField
+        _name: FDN_Country
+        value: FDN_Country
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.Country.Country
+
+

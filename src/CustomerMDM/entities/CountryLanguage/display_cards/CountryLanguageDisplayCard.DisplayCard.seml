@@ -1,0 +1,16 @@
+_package: CustomerMDM.entities.CountryLanguage.display_cards
+_type: DisplayCard
+_name: CountryLanguageDisplayCard
+entity: CustomerMDM.entities.CountryLanguage.CountryLanguage
+default: true
+primaryTextExpression: FDN_Country||' - '||Language
+primaryImageValueInterpreter: LITERAL
+avatarImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageFallbackValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+avatarImageValueInterpreter: LITERAL
+primaryImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT

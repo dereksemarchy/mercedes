@@ -1,0 +1,14 @@
+﻿country_code,code,is_default,active
+DE,DR,true,true
+DE,PROF,false,true
+GB,DR,true,true
+GB,PROF,false,true
+GB,REV,false,true
+US,DR,true,true
+US,PROF,false,true
+US,REV,false,true
+US,GOV,false,true
+US,FR,false,true
+US,HON,false,true
+US,PSTR,false,true
+US,RABBI,false,true

@@ -1,0 +1,33 @@
+_package: CustomerMDM.entities.Individual.steppers
+_type: Stepper
+_name: AuthorIndividuals
+entity: CustomerMDM.entities.Individual.Individual
+label: Individuals
+rootStep:
+  _type: CollectionStep
+  _name: Individuals
+  label: Individuals
+  canFinishSubLevel: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  childDeleteType: HARD_DELETE
+  collectionView: CustomerMDM.entities.Individual.collection_views.IndividualCollectionView
+  defaultDisplayType: TABLE
+  customSortEnabled: false
+  userDefinedSortEnabled: true
+  displayGridAllowed: false
+  displayListAllowed: true
+  displayTableAllowed: true
+  useCustomCollectionLabel: false
+  childSteps:
+    - _type: FormStep
+      _name: Individual
+      label: Individual
+      canFinishSubLevel: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      enableMasterValuePicking: false
+      formTab: CustomerMDM.entities.Individual.forms.IndividualForm.Individual

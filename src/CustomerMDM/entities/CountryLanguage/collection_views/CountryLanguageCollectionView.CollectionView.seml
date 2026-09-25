@@ -1,0 +1,49 @@
+_package: CustomerMDM.entities.CountryLanguage.collection_views
+_type: CollectionView
+_name: CountryLanguageCollectionView
+entity: CustomerMDM.entities.CountryLanguage.CountryLanguage
+default: true
+displayCard: CustomerMDM.entities.CountryLanguage.display_cards.CountryLanguageDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 1
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Country Language
+tableRowLines: 1
+tableShowDisplayCard: true
+tableColumns:
+  - _type: IdColumn
+    _name: CountryLanguageID
+    value: CountryLanguageID
+    useCustomLabel: false
+    dataType: LONG_INTEGER
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: ReferenceColumn
+    _name: FDN_Country
+    value: FDN_Country
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+    referencedEntity: CustomerMDM.entities.Country.Country
+  - _type: MenuColumn
+    _name: Language
+    value: Language
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: CheckboxColumn
+    _name: IsDefault
+    value: IsDefault
+    useCustomLabel: false
+    dataType: BOOLEAN
+    columnAlign: LEFT
+    visibleByDefault: true

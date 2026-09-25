@@ -1,0 +1,6 @@
+_type: DataProductProfile
+_package: CustomerMDM
+_name: CustomerMDM
+label: Customer MDM
+modelConfiguration:
+  type: POSTGRESQL

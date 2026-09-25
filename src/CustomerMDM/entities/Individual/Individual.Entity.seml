@@ -1,0 +1,107 @@
+_package: CustomerMDM.entities.Individual
+_type: Entity
+_name: Individual
+label: Individual
+pluralLabel: Individual
+physicalTableName: INDIVIDUAL
+iconUrl: images://mdi/account-outline.svg
+description: ""
+documentation: ""
+historizeGolden: true
+historizeMaster: true
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: IndividualID
+    label: Individual ID
+    physicalName: INDIVIDUAL_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: Gender
+    label: Gender
+    physicalName: GENDER
+    dataType: CustomerMDM.list_of_values.Gender
+    mandatory: false
+    searchable: true
+    lovValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: Salutation
+    label: Salutation
+    physicalName: SALUTATION
+    dataType: CustomerMDM.list_of_values.Salutation
+    mandatory: false
+    searchable: true
+    lovValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: FirstName
+    label: First Name
+    physicalName: FIRST_NAME
+    dataType: String
+    mandatory: true
+    searchable: true
+    length: 128
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: LastName
+    label: Last Name
+    physicalName: LAST_NAME
+    dataType: String
+    mandatory: true
+    searchable: true
+    length: 128
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: NickName
+    label: Nick Name
+    physicalName: NICK_NAME
+    dataType: String
+    mandatory: false
+    searchable: true
+    length: 128
+  - _type: EntityAttribute
+    _name: Birthday
+    label: Birthday
+    physicalName: BIRTHDAY
+    dataType: Date
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: NameComponents
+    label: Name Components
+    physicalName: NAME_COMPONENTS
+    dataType: String
+    mandatory: false
+    searchable: true
+    length: 256
+sourceIdGeneration:
+  mode: MANUAL
+primaryKey: CustomerMDM.entities.Individual.Individual.IndividualID
+entityType: FUZZY_MATCHED
+goldenIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+matcher:
+  _type: SemQLMatcher
+  _name: Matcher
+  description: IndividualSemQLMatcher
+  matchRules:
+    - _type: SemQLMatchRule
+      _name: ExactNameAndBirthday
+      label: Exact Name And Birthday
+      condition: Record1.FirstName = Record2.FirstName AND Record1.LastName = Record2.LastName AND Record1.Birthday = Record2.Birthday
+      matchScore: 100
+      usingMatchOn: false
+  useTransitiveMatchScore: true
+  useMultiIterationGrouping: true
+  mergeThresholdNewGroup: 75
+  mergeThresholdMergingUnconfirmed: 75
+  mergeThresholdMergingConfirmed: 75
+  mergeThresholdMergingConfirmedWithUnconfirmed: 75
+  mergeThresholdMergingUnconfirmedWithNewMasters: 75
+  mergeThresholdMergingConfirmedWithNewMasters: 75
+  mergeThresholdRemergingPreviouslySplit: 100
+  autoConfirmGoldenThreshold: 99
+  autoConfirmSingletons: false

@@ -1,0 +1,56 @@
+_package: CustomerMDM.entities.Country.collection_views
+_type: CollectionView
+_name: CountryCollectionView
+entity: CustomerMDM.entities.Country.Country
+default: true
+displayCard: CustomerMDM.entities.Country.display_cards.CountryDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 1
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Country
+tableRowLines: 1
+tableShowDisplayCard: true
+tableColumns:
+  - _type: IdColumn
+    _name: CountryCode
+    value: CountryCode
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: CountryName
+    value: CountryName
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: MenuColumn
+    _name: Region
+    value: Region
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: CheckboxColumn
+    _name: Active
+    value: Active
+    useCustomLabel: false
+    dataType: BOOLEAN
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: DefaultLanguage
+    value: LOOKUP first Language from CountryLanguage where IsDefault = '1' end
+    useCustomLabel: true
+    label: Default Language
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true

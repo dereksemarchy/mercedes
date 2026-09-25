@@ -1,0 +1,18 @@
+_name: Salutation
+_type: LOVType
+_package: CustomerMDM.list_of_values
+label: Salutation
+length: 8
+lovValues:
+  - label: MR
+    code: MR
+  - label: MRS
+    code: MRS
+  - label: MME
+    code: MME
+  - label: MISS
+    code: MISS
+  - label: MS
+    code: MS
+  - label: "-"
+    code: "-"

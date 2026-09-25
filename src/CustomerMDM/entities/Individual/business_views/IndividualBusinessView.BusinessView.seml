@@ -1,0 +1,157 @@
+_package: CustomerMDM.entities.Individual.business_views
+_type: BusinessView
+_name: IndividualBusinessView
+entity: CustomerMDM.entities.Individual.Individual
+rootLabel: Individuals
+rootPluralLabel: Individuals
+displayRootNodeAs: ICON_LABEL
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: Individual
+  entity: CustomerMDM.entities.Individual.Individual
+  actionSet: CustomerMDM.entities.Individual.action_sets.IndividualActionSet
+  collection: CustomerMDM.entities.Individual.collection_views.IndividualCollectionView
+  form: CustomerMDM.entities.Individual.forms.IndividualForm
+  outlineVisible: false
+  displayRecordCount: ALWAYS
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+  overrideDefaultSort: false
+  enableUserDefinedSort: true
+  listAllowed: true
+  tableAllowed: true
+  gridAllowed: true
+  transitions:
+    - _type: BusinessViewTransition
+      _name: IndividualAccounts
+      transitionPath: IndividualAccount
+      transitionType: FULLY_QUALIFIED
+      useCustomLabel: true
+      pluralLabel: Individual Accounts
+      label: Individual Account
+      enableHierarchy: "1"
+      transitionVisible: any IndividualAccount has (1=1)
+      displayFormTabAs: LABEL
+      transitionVisibleInterpreter: SEMQL
+      visibleInFormTabCondition: any IndividualAccount has (1=1)
+      businessViewEntity:
+        _type: BusinessViewEntity
+        _name: IndividualAccounts
+        entity: CustomerMDM.entities.IndividualAccount.IndividualAccount
+        actionSet: CustomerMDM.entities.IndividualAccount.action_sets.IndividualAccountActionSet
+        collection: CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountImportCollectionView
+        form: CustomerMDM.entities.IndividualAccount.forms.IndividualAccountForm
+        outlineVisible: false
+        displayRecordCount: ALWAYS
+        businessEntitySearchConfigs:
+          - _name: TextConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: TEXT
+          - _name: FormConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: BY_FORM
+          - _name: AdvancedConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: ADVANCED
+          - _name: SemqlConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: SEMQL
+        overrideDefaultSort: false
+        enableUserDefinedSort: true
+        listAllowed: true
+        tableAllowed: true
+        gridAllowed: true
+
+    - _type: BusinessViewTransition
+      _name: MasterRecords
+      transitionPath: MasterRecords
+      transitionType: FULLY_QUALIFIED
+      useCustomLabel: true
+      pluralLabel: Master Records
+      label: Master Record
+      enableHierarchy: "0"
+      transitionVisible: "1"
+      displayFormTabAs: LABEL
+      businessViewEntity:
+        _type: BusinessViewEntity
+        _name: MasterRecords
+        entity: CustomerMDM.entities.Individual.Individual
+        actionSet: CustomerMDM.entities.Individual.action_sets.IndividualActionSet
+        collection: CustomerMDM.entities.Individual.collection_views.IndividualCollectionViewMR
+        form: CustomerMDM.entities.Individual.forms.IndividualForm
+        outlineVisible: false
+        displayRecordCount: ALWAYS
+        businessEntitySearchConfigs:
+          - _name: TextConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: TEXT
+          - _name: FormConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: BY_FORM
+          - _name: AdvancedConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: ADVANCED
+          - _name: SemqlConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: SEMQL
+        overrideDefaultSort: false
+        enableUserDefinedSort: true
+        listAllowed: true
+        tableAllowed: true
+        gridAllowed: true
+    - _name: GoldenHistoryRecords
+      _type: BusinessViewTransition
+      transitionPath: GoldenHistoryRecords
+      transitionType: FULLY_QUALIFIED
+      useCustomLabel: false
+      displayFormTabAs: LABEL
+      displayTransitionNodeAs: ICON_LABEL
+      enableHierarchy: "0"
+      enableHierarchyInterpreter: LITERAL
+      expandHierarchyByDefault: false
+      transitionVisible: "1"
+      transitionVisibleInterpreter: LITERAL
+      businessViewEntity:
+        _name: IndividualGH
+        _type: BusinessViewEntity
+        collection: CustomerMDM.entities.Individual.collection_views.IndividualCollectionViewGH
+        displayRecordCount: ALWAYS
+        enableUserDefinedSort: true
+        entity: CustomerMDM.entities.Individual.Individual
+        form: CustomerMDM.entities.Individual.forms.IndividualForm
+        gridAllowed: true
+        listAllowed: true
+        outlineVisible: false
+        overrideDefaultSort: false
+        tableAllowed: true
+        businessEntityBuiltInFilters: []
+        businessEntitySearchConfigs:
+          - _name: TextConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: TEXT
+            enabled: true
+          - _name: FormConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: BY_FORM
+            enabled: true
+          - _name: AdvancedConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: ADVANCED
+            enabled: true
+          - _name: SemqlConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: SEMQL
+            enabled: true
+enableHierarchyView: true
+useHierarchyOnOpen: false

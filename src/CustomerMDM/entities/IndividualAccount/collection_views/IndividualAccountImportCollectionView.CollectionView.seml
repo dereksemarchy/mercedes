@@ -1,0 +1,64 @@
+_package: CustomerMDM.entities.IndividualAccount.collection_views
+_type: CollectionView
+_name: IndividualAccountImportCollectionView
+entity: CustomerMDM.entities.IndividualAccount.IndividualAccount
+default: true
+displayCard: CustomerMDM.entities.IndividualAccount.display_cards.IndividualAccountDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 1
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Individual Account
+tableRowLines: 1
+tableShowDisplayCard: true
+tableColumns:
+  - _type: IdColumn
+    _name: IndividualAccountID
+    value: IndividualAccountID
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: CiamID
+    value: CiamID
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: ReferenceColumn
+    _name: FDN_Country
+    value: FDN_Country
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+    referencedEntity: CustomerMDM.entities.Country.Country
+  - _type: ReferenceColumn
+    _name: FDN_Individual
+    value: FDN_Individual
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+    referencedEntity: CustomerMDM.entities.Individual.Individual
+  - _type: TextColumn
+    _name: PublisherID_Individual
+    value: PublisherID_Individual
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: SourceID_Individual
+    value: SourceID_Individual
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true

@@ -1,0 +1,7 @@
+﻿country_code,country_name,default_language,region,active
+DE,Germany,de-DE,EMEA,true
+GB,United Kingdom,en-GB,EMEA,true
+IT,Italy,it-IT,EMEA,true
+CH,Switzerland,de-DE,EMEA,true
+US,United States,en-US,AMAP,true
+KR,"Korea, Republic of",ko-KR,AMAP,true

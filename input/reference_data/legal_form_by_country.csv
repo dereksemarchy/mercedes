@@ -1,0 +1,8 @@
+﻿country_code,code,is_default,active
+DE,GMBH,true,true
+DE,AG,false,true
+GB,LTD,true,true
+IT,SRL,true,true
+CH,AG,true,true
+US,CORPORATION,true,true
+KR,CORPORATION,true,true

@@ -1,0 +1,55 @@
+_package: CustomerMDM.entities.Individual.forms
+_type: Form
+_name: IndividualForm
+entity: CustomerMDM.entities.Individual.Individual
+default: true
+formTabs:
+  - _type: FormTab
+    _name: Individual
+    label: Individual
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    labelWidth: "150"
+    content:
+      - _type: IdField
+        _name: IndividualID
+        value: IndividualID
+        useCustomLabel: false
+        dataType: LONG_INTEGER
+      - _type: MenuField
+        _name: Gender
+        value: Gender
+        useCustomLabel: false
+        dataType: STRING
+      - _type: MenuField
+        _name: Salutation
+        value: Salutation
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: FirstName
+        value: FirstName
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: LastName
+        value: LastName
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: NickName
+        value: NickName
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: Birthday
+        value: Birthday
+        useCustomLabel: false
+        dataType: DATE
+      - _type: TextField
+        _name: NameComponents
+        value: NameComponents
+        useCustomLabel: false
+        dataType: STRING

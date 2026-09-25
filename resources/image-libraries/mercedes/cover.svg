@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="200" viewBox="0 0 440 200">
+  <!-- Cover slot is about 2.2:1 and CENTER-CROPS: keep everything inside the middle ~55% of the width.
+       Flat fills only: gradients render black in the application image slots. -->
+  <rect x="0" y="0" width="440" height="200" fill="#00263e"/>
+  <rect x="0" y="140" width="440" height="60" fill="#ffffff" opacity="0.06"/>
+  <circle cx="220" cy="72" r="30" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <path d="M220 44 L220 72" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M220 72 L196 87" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M220 72 L244 87" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <text x="220" y="134" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="22"
+        font-weight="bold" text-anchor="middle">Customer MDM</text>
+  <text x="220" y="160" fill="#c8d2d8" font-family="Arial, Helvetica, sans-serif" font-size="13"
+        text-anchor="middle">Proof of concept</text>
+</svg>
