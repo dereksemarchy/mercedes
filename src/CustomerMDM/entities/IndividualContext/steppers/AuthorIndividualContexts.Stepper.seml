@@ -13,7 +13,7 @@ rootStep:
   formFieldsMode: AUTO
   linear: false
   childDeleteType: HARD_DELETE
-  collectionView: CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionView
+  collectionView: CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView
   defaultDisplayType: TABLE
   customSortEnabled: false
   userDefinedSortEnabled: true

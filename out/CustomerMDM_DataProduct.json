@@ -1123,6 +1123,145 @@
                                 "componentProperties": []
                             }
                         ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView",
+                        "default": true,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Individual Context",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "CustomerMDM.entities.IndividualContext.display_cards.IndividualContextDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView.IndividualContextID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "IndividualContextID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView.ContextType",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "ContextType",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView.BusinessRole",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "BusinessRole",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView.StartDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "StartDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView.EndDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "EndDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView.FDN_Individual",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "FDN_Individual",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Individual.Individual",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView.FDN_Company",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "FDN_Company",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Company.Company",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView.PublisherID_Individual",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "PublisherID_Individual",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView.SourceID_Individual",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "SourceID_Individual",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
                     }
                 ],
                 "displayCards": [
@@ -1281,7 +1420,7 @@
                                 "canFinishSubLevel": true,
                                 "childDeleteType": "HARD_DELETE",
                                 "childImportModeOnParentEdit": "CREATE_AND_UPDATE",
-                                "collectionView": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionView",
+                                "collectionView": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView",
                                 "createChildUsingManyToManyPicker": false,
                                 "customSortEnabled": false,
                                 "defaultDisplayType": "TABLE",
@@ -2260,6 +2399,23 @@
                                         "visibleInFormTabCondition": "any IndividualAccount has (1=1)"
                                     },
                                     {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts",
+                                        "transitionPath": "IndividualContext",
+                                        "useCustomLabel": true,
+                                        "displayFormTabAs": "LABEL",
+                                        "enableHierarchy": "1",
+                                        "label": "Individual Context",
+                                        "pluralLabel": "Individual Contexts",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "any IndividualContext has (1=1)",
+                                        "transitionVisibleInterpreter": "SEMQL",
+                                        "visibleInFormTabCondition": "any IndividualContext has (1=1)"
+                                    },
+                                    {
                                         "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.MasterRecords",
                                         "enableHierarchyInterpreter": "LITERAL",
                                         "expandHierarchyByDefault": false,
@@ -2326,6 +2482,47 @@
                                     },
                                     {
                                         "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualAccounts.IndividualAccounts.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts",
+                                "collection": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                                "form": "CustomerMDM.entities.IndividualContext.forms.IndividualContextForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerMDM.entities.IndividualContext.action_sets.IndividualContextActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.SemqlConfig",
                                         "searchTypeConfig": {
                                             "searchType": "SEMQL"
                                         }

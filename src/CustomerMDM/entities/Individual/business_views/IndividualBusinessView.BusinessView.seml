@@ -72,7 +72,45 @@ rootBusinessViewEntity:
         listAllowed: true
         tableAllowed: true
         gridAllowed: true
-
+    - _type: BusinessViewTransition
+      _name: IndividualContexts
+      transitionPath: IndividualContext
+      transitionType: FULLY_QUALIFIED
+      useCustomLabel: true
+      pluralLabel: Individual Contexts
+      label: Individual Context
+      enableHierarchy: "1"
+      transitionVisible: any IndividualContext has (1=1)
+      displayFormTabAs: LABEL
+      transitionVisibleInterpreter: SEMQL
+      visibleInFormTabCondition: any IndividualContext has (1=1)
+      businessViewEntity:
+        _type: BusinessViewEntity
+        _name: IndividualContexts
+        entity: CustomerMDM.entities.IndividualContext.IndividualContext
+        actionSet: CustomerMDM.entities.IndividualContext.action_sets.IndividualContextActionSet
+        collection: CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView
+        form: CustomerMDM.entities.IndividualContext.forms.IndividualContextForm
+        outlineVisible: false
+        displayRecordCount: ALWAYS
+        businessEntitySearchConfigs:
+          - _name: TextConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: TEXT
+          - _name: FormConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: BY_FORM
+          - _name: AdvancedConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: ADVANCED
+          - _name: SemqlConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: SEMQL
+        overrideDefaultSort: false
+        enableUserDefinedSort: true
+        listAllowed: true
+        tableAllowed: true
+        gridAllowed: true
     - _type: BusinessViewTransition
       _name: MasterRecords
       transitionPath: MasterRecords
