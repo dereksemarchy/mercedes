@@ -117,6 +117,13 @@ rootFolder:
         imageMode: FIT
         label: Individual Account
       - _type: BrowseBusinessViewAction
+        _name: IndividualContext
+        businessView: CustomerMDM.entities.IndividualContext.business_views.IndividualContextBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Individual Context
+      - _type: BrowseBusinessViewAction
         _name: Company
         businessView: CustomerMDM.entities.Company.business_views.CompanyBusinessView
         nbRecordsBadgeVisible: false

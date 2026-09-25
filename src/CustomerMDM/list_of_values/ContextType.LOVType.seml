@@ -1,0 +1,10 @@
+_name: ContextType
+_type: LOVType
+_package: CustomerMDM.list_of_values
+label: Context Type
+length: 8
+lovValues:
+  - label: PRIVATE
+    code: PRIVATE
+  - label: BUSINESS
+    code: BUSINESS

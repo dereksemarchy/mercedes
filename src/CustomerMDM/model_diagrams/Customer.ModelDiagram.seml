@@ -64,6 +64,16 @@ entityShapes:
       y: 180
     height: 160
     width: 280
+  - _type: EntityShape
+    _name: IndividualContext
+    entity: CustomerMDM.entities.IndividualContext.IndividualContext
+    borderColor: "#0000FF"
+    fontTitleColor: "#FFFFFF"
+    position:
+      x: 0
+      y: 400
+    height: 200
+    width: 280
 referenceLinks:
   - bendPoints: []
     reference: CustomerMDM.references.CountryLanguageHasCountry
@@ -71,4 +81,8 @@ referenceLinks:
     reference: CustomerMDM.references.IndividualAccountHasIndividual
   - bendPoints: []
     reference: CustomerMDM.references.IndividualAccountHasCountry
+  - bendPoints: []
+    reference: CustomerMDM.references.IndividualContextHasIndividual
+  - bendPoints: []
+    reference: CustomerMDM.references.IndividualContextHasCompany
 inheritLinks: []

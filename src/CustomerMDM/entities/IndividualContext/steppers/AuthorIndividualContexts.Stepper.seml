@@ -1,0 +1,33 @@
+_package: CustomerMDM.entities.IndividualContext.steppers
+_type: Stepper
+_name: AuthorIndividualContexts
+entity: CustomerMDM.entities.IndividualContext.IndividualContext
+label: Individual Contexts
+rootStep:
+  _type: CollectionStep
+  _name: IndividualContexts
+  label: Individual Contexts
+  canFinishSubLevel: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  childDeleteType: HARD_DELETE
+  collectionView: CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionView
+  defaultDisplayType: TABLE
+  customSortEnabled: false
+  userDefinedSortEnabled: true
+  displayGridAllowed: false
+  displayListAllowed: true
+  displayTableAllowed: true
+  useCustomCollectionLabel: false
+  childSteps:
+    - _type: FormStep
+      _name: IndividualContext
+      label: Individual Context
+      canFinishSubLevel: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      enableMasterValuePicking: false
+      formTab: CustomerMDM.entities.IndividualContext.forms.IndividualContextForm.IndividualContext

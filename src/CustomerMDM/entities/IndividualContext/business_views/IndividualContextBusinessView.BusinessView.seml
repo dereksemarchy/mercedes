@@ -1,0 +1,36 @@
+_package: CustomerMDM.entities.IndividualContext.business_views
+_type: BusinessView
+_name: IndividualContextBusinessView
+entity: CustomerMDM.entities.IndividualContext.IndividualContext
+rootLabel: Individual Contexts
+rootPluralLabel: Individual Contexts
+displayRootNodeAs: ICON_LABEL
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: IndividualContext
+  entity: CustomerMDM.entities.IndividualContext.IndividualContext
+  actionSet: CustomerMDM.entities.IndividualContext.action_sets.IndividualContextActionSet
+  collection: CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionView
+  form: CustomerMDM.entities.IndividualContext.forms.IndividualContextForm
+  outlineVisible: false
+  displayRecordCount: ALWAYS
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+  overrideDefaultSort: false
+  enableUserDefinedSort: true
+  listAllowed: true
+  tableAllowed: true
+  gridAllowed: true
+enableHierarchyView: false
+useHierarchyOnOpen: false

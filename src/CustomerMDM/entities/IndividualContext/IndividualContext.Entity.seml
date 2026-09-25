@@ -1,0 +1,60 @@
+_package: CustomerMDM.entities.IndividualContext
+_type: Entity
+_name: IndividualContext
+label: Individual Context
+pluralLabel: Individual Context
+physicalTableName: INDIVIDUAL_CONTEXT
+iconUrl: images://mdi/account-eye.svg
+description: ""
+documentation: ""
+historizeGolden: true
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: IndividualContextID
+    label: Individual Context ID
+    physicalName: INDIVIDUAL_CONTEXT_ID
+    dataType: String
+    length: 32
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: ContextType
+    label: Context Type
+    physicalName: CONTEXT_TYPE
+    dataType: CustomerMDM.list_of_values.ContextType
+    length: 8
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+    lovValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: BusinessRole
+    label: Business Role
+    physicalName: BUSINESS_ROLE
+    dataType: CustomerMDM.list_of_values.BusinessRole
+    length: 16
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+    lovValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: StartDate
+    label: Start Date
+    physicalName: START_DATE
+    dataType: Date
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: EndDate
+    label: End Date
+    physicalName: END_DATE
+    dataType: Date
+    mandatory: false
+    searchable: true
+sourceIdGeneration:
+  mode: MANUAL
+primaryKey: CustomerMDM.entities.IndividualContext.IndividualContext.IndividualContextID
+entityType: BASIC

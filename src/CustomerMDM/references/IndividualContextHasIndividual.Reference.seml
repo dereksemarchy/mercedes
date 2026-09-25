@@ -1,0 +1,22 @@
+_name: IndividualContextHasIndividual
+_type: Reference
+_package: CustomerMDM.references
+label: Individual Context Has Individual
+deletePropagation: RESTRICT
+fromEntity: CustomerMDM.entities.IndividualContext.IndividualContext
+fromRoleLabel: Individual Context
+fromRoleName: IndividualContext
+fromRolePluralLabel: Individual Contexts
+physicalName: IND_CONTEXT_ID
+toEntity: CustomerMDM.entities.Individual.Individual
+toRoleLabel: Individual
+toRoleName: Individual
+toRolePhysicalName: INDIVIDUAL_ID
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  entity: CustomerMDM.entities.Individual.Individual
+  _name: Individual
+  label: Individual
+  physicalName: INDIVIDUAL_ID
+  searchable: true

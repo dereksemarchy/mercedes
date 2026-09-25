@@ -1,0 +1,18 @@
+_name: BusinessRole
+_type: LOVType
+_package: CustomerMDM.list_of_values
+label: Business Role
+length: 16
+lovValues:
+  - label: COMPANY_ADMIN
+    code: COMPANY_ADMIN
+  - label: FLEET_MANAGER
+    code: FLEET_MANAGER
+  - label: BUYER
+    code: BUYER
+  - label: DRIVER
+    code: DRIVER
+  - label: USER_CHOOSER
+    code: USER_CHOOSER
+  - label: OTHER
+    code: OTHER
