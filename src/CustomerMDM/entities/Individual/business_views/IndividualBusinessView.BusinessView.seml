@@ -111,6 +111,46 @@ rootBusinessViewEntity:
         listAllowed: true
         tableAllowed: true
         gridAllowed: true
+        transitions:
+        - _type: BusinessViewTransition
+          _name: Phones
+          transitionPath: Phone
+          transitionType: FULLY_QUALIFIED
+          useCustomLabel: true
+          pluralLabel: Phones
+          label: Phone
+          enableHierarchy: "1"
+          transitionVisible: any Phone has (1=1)
+          displayFormTabAs: LABEL
+          transitionVisibleInterpreter: SEMQL
+          visibleInFormTabCondition: any Phone has (1=1)
+          businessViewEntity:
+            _type: BusinessViewEntity
+            _name: Phones
+            entity: CustomerMDM.entities.Phone.Phone
+            actionSet: CustomerMDM.entities.Phone.action_sets.PhoneActionSet
+            collection: CustomerMDM.entities.Phone.collection_views.PhoneImportCollectionView
+            form: CustomerMDM.entities.Phone.forms.PhoneForm
+            outlineVisible: false
+            displayRecordCount: ALWAYS
+            businessEntitySearchConfigs:
+              - _name: TextConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: TEXT
+              - _name: FormConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: BY_FORM
+              - _name: AdvancedConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: ADVANCED
+              - _name: SemqlConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: SEMQL
+            overrideDefaultSort: false
+            enableUserDefinedSort: true
+            listAllowed: true
+            tableAllowed: true
+            gridAllowed: true
     - _type: BusinessViewTransition
       _name: MasterRecords
       transitionPath: MasterRecords

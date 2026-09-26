@@ -3,7 +3,7 @@ _type: DisplayCard
 _name: PhoneDisplayCard
 entity: CustomerMDM.entities.Phone.Phone
 default: true
-primaryTextExpression: SEM_NUMBER_TO_CHAR(PhoneID)
+primaryTextExpression: PhoneNumber
 primaryImageValueInterpreter: LITERAL
 avatarImageSourceType: URL
 primaryImageAlign: MIDDLE_CENTER
