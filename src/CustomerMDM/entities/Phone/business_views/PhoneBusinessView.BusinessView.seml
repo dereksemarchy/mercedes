@@ -1,0 +1,36 @@
+_package: CustomerMDM.entities.Phone.business_views
+_type: BusinessView
+_name: PhoneBusinessView
+entity: CustomerMDM.entities.Phone.Phone
+rootLabel: Phones
+rootPluralLabel: Phones
+displayRootNodeAs: ICON_LABEL
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: Phone
+  entity: CustomerMDM.entities.Phone.Phone
+  actionSet: CustomerMDM.entities.Phone.action_sets.PhoneActionSet
+  collection: CustomerMDM.entities.Phone.collection_views.PhoneCollectionView
+  form: CustomerMDM.entities.Phone.forms.PhoneForm
+  outlineVisible: false
+  displayRecordCount: ALWAYS
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+  overrideDefaultSort: false
+  enableUserDefinedSort: true
+  listAllowed: true
+  tableAllowed: true
+  gridAllowed: true
+enableHierarchyView: false
+useHierarchyOnOpen: false

@@ -1,0 +1,16 @@
+_package: CustomerMDM.entities.Phone.display_cards
+_type: DisplayCard
+_name: PhoneDisplayCard
+entity: CustomerMDM.entities.Phone.Phone
+default: true
+primaryTextExpression: SEM_NUMBER_TO_CHAR(PhoneID)
+primaryImageValueInterpreter: LITERAL
+avatarImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageFallbackValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+avatarImageValueInterpreter: LITERAL
+primaryImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT

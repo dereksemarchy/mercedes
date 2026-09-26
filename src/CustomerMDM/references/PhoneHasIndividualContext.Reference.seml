@@ -1,0 +1,22 @@
+_name: PhoneHasIndividualContext
+_type: Reference
+_package: CustomerMDM.references
+label: Phone Has Individual Context
+deletePropagation: RESTRICT
+fromEntity: CustomerMDM.entities.Phone.Phone
+fromRoleLabel: Phone
+fromRoleName: Phone
+fromRolePluralLabel: Phones
+physicalName: PHONE_ID
+toEntity: CustomerMDM.entities.IndividualContext.IndividualContext
+toRoleLabel: Individual Context
+toRoleName: IndividualContext
+toRolePhysicalName: INDIVIDUAL_CONTEXT_ID
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  entity: CustomerMDM.entities.IndividualContext.IndividualContext
+  _name: IndividualContext
+  label: Individual Context
+  physicalName: INDIVIDUAL_CONTEXT_ID
+  searchable: true

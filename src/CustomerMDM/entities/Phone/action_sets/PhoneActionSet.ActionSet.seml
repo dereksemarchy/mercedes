@@ -1,0 +1,70 @@
+_package: CustomerMDM.entities.Phone.action_sets
+_type: ActionSet
+_name: PhoneActionSet
+entity: CustomerMDM.entities.Phone.Phone
+label: Phone Action Set
+defaultActionSet: true
+actions:
+  - _type: CreateAction
+    _name: CreateAuthorPhones
+    label: Create
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.Phone.steppers.AuthorPhones
+    createMultiple: false
+    createdRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: true
+  - _type: EditAction
+    _name: EditAuthorPhones
+    label: Edit
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.Phone.steppers.AuthorPhones
+    multipleSelectionAllowed: true
+    availableForGoldenData: true
+    availableForMasterData: false
+    availableForErrorData: false
+    waitDialogEnabled: false
+  - _type: MassUpdateAction
+    _name: MassUpdateAuthorPhones
+    label: Mass Update
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.Phone.steppers.AuthorPhones
+    availableForGoldenData: true
+    availableForErrorData: false
+    availableForMasterData: false
+    waitDialogEnabled: false
+  - _type: DeleteAction
+    _name: Delete
+    label: Delete
+    useCustomLabel: true
+    multipleSelectionAllowed: true
+    deleteType: HARD_DELETE
+    waitDialogEnabled: false
+    availableForGoldenData: true
+    availableForMasterData: false
+  - _type: ExportAction
+    _name: Export
+    label: Export
+    useCustomLabel: true
+    waitDialogEnabled: false
+  - _type: ImportAction
+    _name: ImportAuthorPhones
+    label: Import
+    useCustomLabel: true
+    importMode: CREATE_AND_UPDATE
+    stepper: CustomerMDM.entities.Phone.steppers.AuthorPhones
+    importedRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: true
+  - _type: BrowseGraphAction
+    _name: BrowseGraph
+    label: Browse Graph
+    useCustomLabel: true
+    waitDialogEnabled: false
+  - _type: CopyAction
+    _name: CopyAuthorPhones
+    label: Copy
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.Phone.steppers.AuthorPhones
+    multipleSelectionAllowed: true
+    waitDialogEnabled: false

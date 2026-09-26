@@ -148,6 +148,13 @@ rootFolder:
         _name: ImportCompany
         label: Import Company
         importAction: CustomerMDM.entities.Company.action_sets.CompanyActionSet.ImportAuthorCompanies
+      - _type: BrowseBusinessViewAction
+        _name: Phone
+        businessView: CustomerMDM.entities.Phone.business_views.PhoneBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Phone
     - _type : FolderAction
       _name: ReferenceData
       label: Reference Data

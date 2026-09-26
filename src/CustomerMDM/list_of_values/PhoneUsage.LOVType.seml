@@ -1,0 +1,10 @@
+_name: PhoneUsage
+_type: LOVType
+_package: CustomerMDM.list_of_values
+label: Phone Usage
+length: 16
+lovValues:
+  - label: MOBILE
+    code: MOBILE
+  - label: BUSINESS
+    code: BUSINESS

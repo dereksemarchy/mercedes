@@ -1,0 +1,62 @@
+_package: CustomerMDM.entities.Phone
+_type: Entity
+_name: Phone
+label: Phone
+pluralLabel: Phone
+physicalTableName: PHONE
+iconUrl: images://mdi/cellphone-basic.svg
+description: ""
+documentation: ""
+historizeGolden: true
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: PhoneID
+    label: Phone ID
+    physicalName: PHONE_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: PhoneNumber
+    label: Phone Number
+    physicalName: PHONE_NUMBER
+    dataType: String
+    length: 64
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: Primary
+    label: Primary
+    physicalName: IS_PRIMARY
+    dataType: Boolean
+    length: 1
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: InCriticalUse
+    label: In Critical Use
+    physicalName: IN_CRITICAL_USE
+    dataType: Boolean
+    length: 1
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: PhoneUsage
+    label: Phone Usage
+    physicalName: PHONE_USAGE
+    dataType: CustomerMDM.list_of_values.PhoneUsage
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+    lovValidationScope: PRE_CONSO
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: CustomerMDM.entities.Phone.Phone.PhoneID
+entityType: BASIC
