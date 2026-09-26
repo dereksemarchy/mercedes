@@ -74,6 +74,16 @@ entityShapes:
       y: 400
     height: 200
     width: 280
+  - _type: EntityShape
+    _name: Phone
+    entity: CustomerMDM.entities.Phone.Phone
+    borderColor: "#0000FF"
+    fontTitleColor: "#FFFFFF"
+    position:
+      x: 400
+      y: 400
+    height: 200
+    width: 280
 referenceLinks:
   - bendPoints: []
     reference: CustomerMDM.references.CountryLanguageHasCountry
@@ -85,4 +95,6 @@ referenceLinks:
     reference: CustomerMDM.references.IndividualContextHasIndividual
   - bendPoints: []
     reference: CustomerMDM.references.IndividualContextHasCompany
+  - bendPoints: []
+    reference: CustomerMDM.references.PhoneHasIndividualContext
 inheritLinks: []

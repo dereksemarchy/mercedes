@@ -637,6 +637,18 @@
                         "height": 200,
                         "borderColor": "0,0,255",
                         "fontTitleColor": "255,255,255"
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.model_diagrams.Customer.Phone",
+                        "entity": "CustomerMDM.entities.Phone.Phone",
+                        "position": {
+                            "x": 400,
+                            "y": 400
+                        },
+                        "width": 280,
+                        "height": 200,
+                        "borderColor": "0,0,255",
+                        "fontTitleColor": "255,255,255"
                     }
                 ],
                 "inheritLinks": [],
@@ -670,6 +682,12 @@
                         "reference": "CustomerMDM.references.IndividualContextHasCompany",
                         "toEntityShape": "CustomerMDM.model_diagrams.Customer.Company",
                         "fromEntityShape": "CustomerMDM.model_diagrams.Customer.IndividualContext"
+                    },
+                    {
+                        "bendPoints": [],
+                        "reference": "CustomerMDM.references.PhoneHasIndividualContext",
+                        "toEntityShape": "CustomerMDM.model_diagrams.Customer.IndividualContext",
+                        "fromEntityShape": "CustomerMDM.model_diagrams.Customer.Phone"
                     }
                 ],
                 "label": "Customer",
