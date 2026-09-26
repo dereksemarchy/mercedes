@@ -17,7 +17,7 @@ formTabs:
         _name: CompanyID
         value: CompanyID
         useCustomLabel: false
-        dataType: UUID
+        dataType: LONG_INTEGER
       - _type: TextField
         _name: CompanyMEID
         value: CompanyMEID

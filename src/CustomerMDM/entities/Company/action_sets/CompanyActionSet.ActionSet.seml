@@ -53,7 +53,7 @@ actions:
     useCustomLabel: true
     importMode: CREATE_AND_UPDATE
     stepper: CustomerMDM.entities.Company.steppers.AuthorCompanies
-    importedRecordType: GOLDEN
+    importedRecordType: MASTER
     waitDialogEnabled: false
     allowOtherPublishers: true
   - _type: BrowseGraphAction
@@ -67,4 +67,40 @@ actions:
     useCustomLabel: true
     stepper: CustomerMDM.entities.Company.steppers.AuthorCompanies
     multipleSelectionAllowed: true
+    waitDialogEnabled: false
+  - _type: DirectConfirmDupsAction
+    _name: DirectConfirmDuplicates
+    label: Direct Confirm Duplicates
+    useCustomLabel: false
+    waitDialogEnabled: false
+  - _type: ReviewAndConfirm
+    _name: ReviewAndConfirmDuplicatesManageDuplicatesOnCompany
+    label: Review and Confirm Duplicates
+    useCustomLabel: true
+    dupsManager: CustomerMDM.entities.Company.dups_managers.ManageDuplicatesOnCompany
+    enableEdit: true
+    mandateConfirmAll: false
+    waitDialogEnabled: false
+  - _type: MergeOrSplit
+    _name: MergeOrSplitDuplicatesManageDuplicatesOnCompany
+    label: Merge Or Split Duplicates
+    useCustomLabel: true
+    dupsManager: CustomerMDM.entities.Company.dups_managers.ManageDuplicatesOnCompany
+    enableEdit: true
+    waitDialogEnabled: false
+  - _type: ReviewSuggestions
+    _name: ReviewSuggestionsDuplicatesManageDuplicatesOnCompany
+    label: Review Duplicates Suggestions
+    useCustomLabel: true
+    dupsManager: CustomerMDM.entities.Company.dups_managers.ManageDuplicatesOnCompany
+    enableEdit: true
+    waitDialogEnabled: false
+    onAcceptPromptGoldenId: false
+    mandateResolveAllSuggestions: false
+  - _type: ExplainRecordAction
+    _name: ExplainRecord
+    label: Explain Record
+    useCustomLabel: true
+    displayCard: CustomerMDM.entities.Company.display_cards.CompanyDisplayCard
+    formTab: CustomerMDM.entities.Company.forms.CompanyForm.Company
     waitDialogEnabled: false

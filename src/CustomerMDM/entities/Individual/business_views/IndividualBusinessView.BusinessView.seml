@@ -192,4 +192,4 @@ rootBusinessViewEntity:
             searchType: SEMQL
             enabled: true
 enableHierarchyView: true
-useHierarchyOnOpen: false
+useHierarchyOnOpen: true

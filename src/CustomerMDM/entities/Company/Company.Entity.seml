@@ -2,12 +2,12 @@ _package: CustomerMDM.entities.Company
 _type: Entity
 _name: Company
 label: Company
-pluralLabel: Companies
+pluralLabel: Company
 physicalTableName: COMPANY
 iconUrl: images://mdi/domain.svg
 description: ""
 documentation: ""
-historizeGolden: true
+historizeGolden: false
 historizeMaster: false
 enableDelete: true
 attributes:
@@ -15,7 +15,8 @@ attributes:
     _name: CompanyID
     label: Company ID
     physicalName: COMPANY_ID
-    dataType: UUID
+    dataType: LongInteger
+    precision: 38
     mandatory: true
     searchable: true
   - _type: EntityAttribute
@@ -75,6 +76,31 @@ attributes:
     lovValidationScope: PRE_CONSO
 sourceIdGeneration:
   mode: UUID
-  startWith: 1
+  # startWith: 1
 primaryKey: CustomerMDM.entities.Company.Company.CompanyID
-entityType: BASIC
+entityType: FUZZY_MATCHED
+goldenIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+matcher:
+  _type: SemQLMatcher
+  _name: Matcher
+  description: CompanySemQLMatcher
+  matchRules:
+    - _type: SemQLMatchRule
+      _name: ExactFullName
+      label: Exact Full Name
+      condition: Record1.FullName = Record2.FullName
+      matchScore: 100
+      usingMatchOn: false
+  useTransitiveMatchScore: true
+  useMultiIterationGrouping: true
+  mergeThresholdNewGroup: 75
+  mergeThresholdMergingUnconfirmed: 75
+  mergeThresholdMergingConfirmed: 75
+  mergeThresholdMergingConfirmedWithUnconfirmed: 75
+  mergeThresholdMergingUnconfirmedWithNewMasters: 75
+  mergeThresholdMergingConfirmedWithNewMasters: 75
+  mergeThresholdRemergingPreviouslySplit: 100
+  autoConfirmGoldenThreshold: 99
+  autoConfirmSingletons: false

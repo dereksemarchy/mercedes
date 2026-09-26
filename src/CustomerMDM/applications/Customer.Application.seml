@@ -37,6 +37,20 @@ globalSearchConfig:
     maxResults: 100
     viewType: "GD"
     searchTypeConfig: CustomerMDM.entities.IndividualAccount.business_views.IndividualAccountBusinessView.IndividualAccount.TextConfig
+  - _type: GlobalSearchBoView
+    _name: IndividualContext
+    label: Individual Context
+    businessView: CustomerMDM.entities.IndividualContext.business_views.IndividualContextBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.IndividualContext.business_views.IndividualContextBusinessView.IndividualContext.TextConfig
+  - _type: GlobalSearchBoView
+    _name: Company
+    label: Company
+    businessView: CustomerMDM.entities.Company.business_views.CompanyBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.TextConfig
 navDrawer:
   - _type: FolderNavGroup
     _name: RootFolder
@@ -130,6 +144,10 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: Company
+      - _type: ImportDataAppAction
+        _name: ImportCompany
+        label: Import Company
+        importAction: CustomerMDM.entities.Company.action_sets.CompanyActionSet.ImportAuthorCompanies
     - _type : FolderAction
       _name: ReferenceData
       label: Reference Data

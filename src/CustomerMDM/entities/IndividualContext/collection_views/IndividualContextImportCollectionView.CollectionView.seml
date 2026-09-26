@@ -83,3 +83,17 @@ tableColumns:
     dataType: STRING
     columnAlign: LEFT
     visibleByDefault: true
+  - _type: TextColumn
+    _name: PublisherID_Company
+    value: PublisherID_Company
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: SourceID_Company
+    value: SourceID_Company
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true

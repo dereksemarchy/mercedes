@@ -16,13 +16,13 @@ listShowDivider: true
 tableAllowed: true
 tableDisplayCardColumnLabel: Company
 tableRowLines: 1
-tableShowDisplayCard: false
+tableShowDisplayCard: true
 tableColumns:
   - _type: IdColumn
     _name: CompanyID
     value: CompanyID
     useCustomLabel: false
-    dataType: UUID
+    dataType: LONG_INTEGER
     columnAlign: LEFT
     visibleByDefault: true
   - _type: TextColumn
@@ -63,6 +63,13 @@ tableColumns:
   - _type: MenuColumn
     _name: LegalForm
     value: LegalForm
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: MastersCount
+    value: MastersCount
     useCustomLabel: false
     dataType: STRING
     columnAlign: LEFT
