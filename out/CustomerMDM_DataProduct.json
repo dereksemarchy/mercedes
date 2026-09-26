@@ -120,6 +120,14 @@
                             "labelVisible": true,
                             "position": 2,
                             "underlyingFolder": "CustomerMDM.applications.Customer.Root.ReferenceData"
+                        },
+                        {
+                            "qualifiedName": "CustomerMDM.applications.Customer.ImportData",
+                            "_type": "FolderNavigationGroup",
+                            "dividerVisible": true,
+                            "labelVisible": true,
+                            "position": 3,
+                            "underlyingFolder": "CustomerMDM.applications.Customer.Root.ImportData"
                         }
                     ]
                 },
@@ -167,6 +175,17 @@
                         "label": "Reference Data"
                     },
                     {
+                        "qualifiedName": "CustomerMDM.applications.Customer.Root.ImportData",
+                        "posInFolder": 3,
+                        "parentFolder": "CustomerMDM.applications.Customer.Root",
+                        "_type": "FolderAction",
+                        "useCustomLabel": true,
+                        "image": "images://mdi/database.svg",
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Import Data"
+                    },
+                    {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.TopActions.GlobalSearch",
                         "posInFolder": 0,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.TopActions",
@@ -208,17 +227,8 @@
                         "label": "Individual"
                     },
                     {
-                        "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.ImportIndividual",
-                        "posInFolder": 1,
-                        "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
-                        "_type": "ImportDataAppAction",
-                        "useCustomLabel": true,
-                        "label": "Import Individual",
-                        "importAction": "CustomerMDM.entities.Individual.action_sets.IndividualActionSet.ImportAuthorIndividuals"
-                    },
-                    {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.IndividualAccount",
-                        "posInFolder": 2,
+                        "posInFolder": 1,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "CustomerMDM.entities.IndividualAccount.business_views.IndividualAccountBusinessView",
@@ -230,7 +240,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.IndividualContext",
-                        "posInFolder": 3,
+                        "posInFolder": 2,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "CustomerMDM.entities.IndividualContext.business_views.IndividualContextBusinessView",
@@ -242,7 +252,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.Company",
-                        "posInFolder": 4,
+                        "posInFolder": 3,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "CustomerMDM.entities.Company.business_views.CompanyBusinessView",
@@ -253,17 +263,8 @@
                         "label": "Company"
                     },
                     {
-                        "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.ImportCompany",
-                        "posInFolder": 5,
-                        "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
-                        "_type": "ImportDataAppAction",
-                        "useCustomLabel": true,
-                        "label": "Import Company",
-                        "importAction": "CustomerMDM.entities.Company.action_sets.CompanyActionSet.ImportAuthorCompanies"
-                    },
-                    {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.Phone",
-                        "posInFolder": 6,
+                        "posInFolder": 4,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "CustomerMDM.entities.Phone.business_views.PhoneBusinessView",
@@ -296,6 +297,24 @@
                         "imageAlign": "MIDDLE_CENTER",
                         "imageMode": "FIT",
                         "label": "Country Language"
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.applications.Customer.Root.ImportData.ImportIndividual",
+                        "posInFolder": 0,
+                        "parentFolder": "CustomerMDM.applications.Customer.Root.ImportData",
+                        "_type": "ImportDataAppAction",
+                        "useCustomLabel": true,
+                        "label": "Import Individual",
+                        "importAction": "CustomerMDM.entities.Individual.action_sets.IndividualActionSet.ImportAuthorIndividuals"
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.applications.Customer.Root.ImportData.ImportCompany",
+                        "posInFolder": 1,
+                        "parentFolder": "CustomerMDM.applications.Customer.Root.ImportData",
+                        "_type": "ImportDataAppAction",
+                        "useCustomLabel": true,
+                        "label": "Import Company",
+                        "importAction": "CustomerMDM.entities.Company.action_sets.CompanyActionSet.ImportAuthorCompanies"
                     }
                 ]
             }

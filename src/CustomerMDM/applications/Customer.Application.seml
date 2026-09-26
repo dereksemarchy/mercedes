@@ -67,6 +67,11 @@ navDrawer:
     dividerVisible: true
     labelVisible: true
     linkedFolder: CustomerMDM.applications.Customer.Root.ReferenceData
+  - _type: FolderNavGroup
+    _name: ImportData
+    dividerVisible: true
+    labelVisible: true
+    linkedFolder: CustomerMDM.applications.Customer.Root.ImportData
 rootFolder:
   _type: FolderAction
   _name: Root
@@ -119,10 +124,10 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: Individual
-      - _type: ImportDataAppAction
-        _name: ImportIndividual
-        label: Import Individual
-        importAction: CustomerMDM.entities.Individual.action_sets.IndividualActionSet.ImportAuthorIndividuals
+      # - _type: ImportDataAppAction
+      #   _name: ImportIndividual
+      #   label: Import Individual
+      #   importAction: CustomerMDM.entities.Individual.action_sets.IndividualActionSet.ImportAuthorIndividuals
       - _type: BrowseBusinessViewAction
         _name: IndividualAccount
         businessView: CustomerMDM.entities.IndividualAccount.business_views.IndividualAccountBusinessView
@@ -144,10 +149,10 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: Company
-      - _type: ImportDataAppAction
-        _name: ImportCompany
-        label: Import Company
-        importAction: CustomerMDM.entities.Company.action_sets.CompanyActionSet.ImportAuthorCompanies
+      # - _type: ImportDataAppAction
+      #   _name: ImportCompany
+      #   label: Import Company
+      #   importAction: CustomerMDM.entities.Company.action_sets.CompanyActionSet.ImportAuthorCompanies
       - _type: BrowseBusinessViewAction
         _name: Phone
         businessView: CustomerMDM.entities.Phone.business_views.PhoneBusinessView
@@ -176,3 +181,18 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: Country Language
+    - _type : FolderAction
+      _name: ImportData
+      label: Import Data
+      image: images://mdi/database.svg
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      appActions:
+      - _type: ImportDataAppAction
+        _name: ImportIndividual
+        label: Import Individual
+        importAction: CustomerMDM.entities.Individual.action_sets.IndividualActionSet.ImportAuthorIndividuals
+      - _type: ImportDataAppAction
+        _name: ImportCompany
+        label: Import Company
+        importAction: CustomerMDM.entities.Company.action_sets.CompanyActionSet.ImportAuthorCompanies
