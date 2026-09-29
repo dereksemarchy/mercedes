@@ -1,0 +1,43 @@
+_package: CustomerMDM.entities.EmailIndividualContext.collection_views
+_type: CollectionView
+_name: EmailIndividualContextCollectionView
+entity: CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext
+default: true
+displayCard: CustomerMDM.entities.EmailIndividualContext.display_cards.EmailIndividualContextDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 1
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Email Individual Context
+tableRowLines: 1
+tableShowDisplayCard: true
+tableColumns:
+  - _type: IdColumn
+    _name: EmailIndividualContextID
+    value: EmailIndividualContextID
+    useCustomLabel: false
+    dataType: LONG_INTEGER
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: ReferenceColumn
+    _name: FDN_Email
+    value: FDN_Email
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+    referencedEntity: CustomerMDM.entities.Email.Email
+  - _type: ReferenceColumn
+    _name: FDN_IndividualContext
+    value: FDN_IndividualContext
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+    referencedEntity: CustomerMDM.entities.IndividualContext.IndividualContext

@@ -104,6 +104,26 @@ entityShapes:
       y: 400
     height: 220
     width: 320
+  - _type: EntityShape
+    _name: Email
+    entity: CustomerMDM.entities.Email.Email
+    borderColor: "#0000FF"
+    fontTitleColor: "#FFFFFF"
+    position:
+      x: 0
+      y: 640
+    height: 180
+    width: 280
+  - _type: EntityShape
+    _name: EmailIndividualContext
+    entity: CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext
+    borderColor: "#0000FF"
+    fontTitleColor: "#FFFFFF"
+    position:
+      x: 400
+      y: 640
+    height: 160
+    width: 320
 referenceLinks:
   - bendPoints: []
     reference: CustomerMDM.references.CountryLanguageHasCountry
@@ -125,4 +145,8 @@ referenceLinks:
     reference: CustomerMDM.references.AddressHasCountry
   - bendPoints: []
     reference: CustomerMDM.references.AddressHasIndividualContext
+  - bendPoints: []
+    reference: CustomerMDM.references.EmailIndividualContextHasEmail
+  - bendPoints: []
+    reference: CustomerMDM.references.EmailIndividualContextHasIndividualContext
 inheritLinks: []

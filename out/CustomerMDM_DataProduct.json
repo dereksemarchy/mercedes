@@ -299,6 +299,18 @@
                         "label": "Email"
                     },
                     {
+                        "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.EmailIndividualContext",
+                        "posInFolder": 7,
+                        "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView",
+                        "nbRecordsBadgeVisible": false,
+                        "useCustomLabel": true,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Email Individual Context"
+                    },
+                    {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.ReferenceData.Country",
                         "posInFolder": 0,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.ReferenceData",
@@ -789,6 +801,30 @@
                         "height": 220,
                         "borderColor": "0,0,255",
                         "fontTitleColor": "255,255,255"
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.model_diagrams.Customer.Email",
+                        "entity": "CustomerMDM.entities.Email.Email",
+                        "position": {
+                            "x": 0,
+                            "y": 640
+                        },
+                        "width": 280,
+                        "height": 180,
+                        "borderColor": "0,0,255",
+                        "fontTitleColor": "255,255,255"
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.model_diagrams.Customer.EmailIndividualContext",
+                        "entity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
+                        "position": {
+                            "x": 400,
+                            "y": 640
+                        },
+                        "width": 320,
+                        "height": 160,
+                        "borderColor": "0,0,255",
+                        "fontTitleColor": "255,255,255"
                     }
                 ],
                 "inheritLinks": [],
@@ -852,6 +888,18 @@
                         "reference": "CustomerMDM.references.AddressHasIndividualContext",
                         "toEntityShape": "CustomerMDM.model_diagrams.Customer.IndividualContext",
                         "fromEntityShape": "CustomerMDM.model_diagrams.Customer.Address"
+                    },
+                    {
+                        "bendPoints": [],
+                        "reference": "CustomerMDM.references.EmailIndividualContextHasEmail",
+                        "toEntityShape": "CustomerMDM.model_diagrams.Customer.Email",
+                        "fromEntityShape": "CustomerMDM.model_diagrams.Customer.EmailIndividualContext"
+                    },
+                    {
+                        "bendPoints": [],
+                        "reference": "CustomerMDM.references.EmailIndividualContextHasIndividualContext",
+                        "toEntityShape": "CustomerMDM.model_diagrams.Customer.IndividualContext",
+                        "fromEntityShape": "CustomerMDM.model_diagrams.Customer.EmailIndividualContext"
                     }
                 ],
                 "label": "Customer",
@@ -1019,6 +1067,60 @@
                     "physicalName": "COUNTRY_CODE",
                     "entity": "CustomerMDM.entities.CountryLanguage.CountryLanguage",
                     "label": "Country",
+                    "searchable": true
+                }
+            },
+            {
+                "qualifiedName": "CustomerMDM.references.EmailIndividualContextHasEmail",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
+                "fromRoleName": "EmailIndividualContext",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "EMAIL_IC_EMAIL",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "CustomerMDM.entities.Email.Email",
+                "toRoleName": "Email",
+                "toRolePhysicalName": "EMAIL_ID",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Email Individual Context",
+                "fromRolePluralLabel": "Email Individual Contexts",
+                "label": "Email Individual Context Has Email",
+                "toRoleLabel": "Email",
+                "foreignAttribute": {
+                    "qualifiedName": "CustomerMDM.references.EmailIndividualContextHasEmail.Email",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "EMAIL_ID",
+                    "entity": "CustomerMDM.entities.Email.Email",
+                    "label": "Email",
+                    "searchable": true
+                }
+            },
+            {
+                "qualifiedName": "CustomerMDM.references.EmailIndividualContextHasIndividualContext",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
+                "fromRoleName": "EmailIndividualContext",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "EMAIL_IC_CONTEXT",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                "toRoleName": "IndividualContext",
+                "toRolePhysicalName": "INDIVIDUAL_CONTEXT_ID",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Email Individual Context",
+                "fromRolePluralLabel": "Email Individual Contexts",
+                "label": "Email Individual Context Has Individual Context",
+                "toRoleLabel": "Individual Context",
+                "foreignAttribute": {
+                    "qualifiedName": "CustomerMDM.references.EmailIndividualContextHasIndividualContext.IndividualContext",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "INDIVIDUAL_CONTEXT_ID",
+                    "entity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                    "label": "Individual Context",
                     "searchable": true
                 }
             },
@@ -4592,6 +4694,410 @@
                         "documentation": ""
                     }
                 ],
+                "uniqueKeys": [],
+                "fuzzyLookupRules": []
+            },
+            {
+                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
+                "dataEntryAllowed": true,
+                "historizeGolden": false,
+                "historizeMaster": false,
+                "description": "",
+                "documentation": "",
+                "enableDelete": true,
+                "entityType": "BASIC",
+                "iconUrl": "images://mdi/email-send-outline.svg",
+                "label": "Email Individual Context",
+                "physicalTableName": "EMAIL_INDIVIDUAL_CONTEXT",
+                "pluralLabel": "Email Individual Context",
+                "pkAttributes": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext.EmailIndividualContextID",
+                        "_type": "PKAttribute",
+                        "abstractAtomicType": "LongInteger",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "mandatory": true,
+                        "multiValued": false,
+                        "physicalColName": "EMAIL_IC_ID",
+                        "valueSeparator": "",
+                        "idGenerationType": "SEQUENCE",
+                        "idSequenceStartsWith": 1,
+                        "label": "Email Individual Context ID",
+                        "precision": 38,
+                        "searchable": true
+                    }
+                ],
+                "atomicAttributes": [],
+                "complexAttributes": [],
+                "abstractRowCheckConstraints": [],
+                "actionSets": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.action_sets.EmailIndividualContextActionSet",
+                        "defaultActionSet": true,
+                        "description": "",
+                        "label": "Email Individual Context Action Set",
+                        "actions": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.action_sets.EmailIndividualContextActionSet.CreateAuthorEmailIndividualContexts",
+                                "_type": "CreateAction",
+                                "description": "",
+                                "label": "Create",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "createdRecordType": "GOLDEN",
+                                "createMultiple": false,
+                                "stepper": "CustomerMDM.entities.EmailIndividualContext.steppers.AuthorEmailIndividualContexts"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.action_sets.EmailIndividualContextActionSet.EditAuthorEmailIndividualContexts",
+                                "_type": "EditAction",
+                                "description": "",
+                                "label": "Edit",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "multipleSelectionAllowed": true,
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false,
+                                "stepper": "CustomerMDM.entities.EmailIndividualContext.steppers.AuthorEmailIndividualContexts"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.action_sets.EmailIndividualContextActionSet.MassUpdateAuthorEmailIndividualContexts",
+                                "_type": "MassUpdateAction",
+                                "description": "",
+                                "label": "Mass Update",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "stepper": "CustomerMDM.entities.EmailIndividualContext.steppers.AuthorEmailIndividualContexts",
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.action_sets.EmailIndividualContextActionSet.Delete",
+                                "_type": "DeleteAction",
+                                "description": "",
+                                "label": "Delete",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "deleteType": "HARD_DELETE",
+                                "multipleSelectionAllowed": true,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.action_sets.EmailIndividualContextActionSet.Export",
+                                "_type": "ExportAction",
+                                "description": "",
+                                "label": "Export",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.action_sets.EmailIndividualContextActionSet.ImportAuthorEmailIndividualContexts",
+                                "_type": "ImportAction",
+                                "description": "",
+                                "label": "Import",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "importedRecordType": "GOLDEN",
+                                "importMode": "CREATE_AND_UPDATE",
+                                "stepper": "CustomerMDM.entities.EmailIndividualContext.steppers.AuthorEmailIndividualContexts"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.action_sets.EmailIndividualContextActionSet.BrowseGraph",
+                                "_type": "BrowseGraphAction",
+                                "description": "",
+                                "label": "Browse Graph",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.action_sets.EmailIndividualContextActionSet.CopyAuthorEmailIndividualContexts",
+                                "_type": "CopyAction",
+                                "description": "",
+                                "label": "Copy",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "multipleSelectionAllowed": true,
+                                "stepper": "CustomerMDM.entities.EmailIndividualContext.steppers.AuthorEmailIndividualContexts"
+                            }
+                        ]
+                    }
+                ],
+                "businessObjectViews": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView",
+                        "displayRootNodeAs": "ICON_LABEL",
+                        "enableHierarchyView": false,
+                        "filter": "1 = 1",
+                        "rootBoViewEntity": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView.EmailIndividualContext",
+                        "rootDescription": "",
+                        "rootLabel": "Email Individual Contexts",
+                        "rootPluralLabel": "Email Individual Contexts",
+                        "useHierarchyOnOpen": false,
+                        "visible": true,
+                        "boViewEntities": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView.EmailIndividualContext",
+                                "collection": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
+                                "form": "CustomerMDM.entities.EmailIndividualContext.forms.EmailIndividualContextForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerMDM.entities.EmailIndividualContext.action_sets.EmailIndividualContextActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView.EmailIndividualContext.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView.EmailIndividualContext.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView.EmailIndividualContext.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView.EmailIndividualContext.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "collections": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionView",
+                        "default": true,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Email Individual Context",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "CustomerMDM.entities.EmailIndividualContext.display_cards.EmailIndividualContextDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionView.EmailIndividualContextID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "EmailIndividualContextID",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionView.FDN_Email",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "FDN_Email",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Email.Email",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionView.FDN_IndividualContext",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "FDN_IndividualContext",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "displayCards": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.display_cards.EmailIndividualContextDisplayCard",
+                        "avatarImageValueInterpreter": "LITERAL",
+                        "default": true,
+                        "primaryImageFallbackValueInterpreter": "LITERAL",
+                        "primaryImageValueInterpreter": "LITERAL",
+                        "avatarImageAlign": "MIDDLE_CENTER",
+                        "avatarImageMode": "FIT",
+                        "avatarImageSourceType": "URL",
+                        "primaryImageAlign": "MIDDLE_CENTER",
+                        "primaryImageFallbackSourceType": "URL",
+                        "primaryImageMode": "FIT",
+                        "primaryImageSourceType": "URL",
+                        "primaryTextExpression": "Email.EmailAddress||' / '||IndividualContext.IndividualContextID"
+                    }
+                ],
+                "dupsManagers": [],
+                "enrichers": [],
+                "forms": [
+                    {
+                        "default": true,
+                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.forms.EmailIndividualContextForm",
+                        "formCharts": [],
+                        "formCollections": [],
+                        "formContainers": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.forms.EmailIndividualContextForm.EmailIndividualContext",
+                                "_type": "FormTab",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "visibleValueInterpreter": "LITERAL",
+                                "displayFormTabAs": "LABEL",
+                                "label": "Email Individual Context",
+                                "visibleValue": "1"
+                            }
+                        ],
+                        "formDashboards": [],
+                        "formFields": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.forms.EmailIndividualContextForm.EmailIndividualContext.EmailIndividualContextID",
+                                "_type": "FormField",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "EmailIndividualContextID",
+                                "parentFormContainer": "CustomerMDM.entities.EmailIndividualContext.forms.EmailIndividualContextForm.EmailIndividualContext",
+                                "valueDataType": "LONG_INTEGER",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.forms.EmailIndividualContextForm.EmailIndividualContext.FDN_Email",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "FDN_Email",
+                                "parentFormContainer": "CustomerMDM.entities.EmailIndividualContext.forms.EmailIndividualContextForm.EmailIndividualContext",
+                                "referencedEntity": "CustomerMDM.entities.Email.Email",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.forms.EmailIndividualContextForm.EmailIndividualContext.FDN_IndividualContext",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "FDN_IndividualContext",
+                                "parentFormContainer": "CustomerMDM.entities.EmailIndividualContext.forms.EmailIndividualContextForm.EmailIndividualContext",
+                                "referencedEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "searchForms": [],
+                "steppers": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.steppers.AuthorEmailIndividualContexts",
+                        "label": "Email Individual Contexts",
+                        "rootCollectionStep": "CustomerMDM.entities.EmailIndividualContext.steppers.AuthorEmailIndividualContexts.EmailIndividualContexts",
+                        "steps": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.steppers.AuthorEmailIndividualContexts.EmailIndividualContexts",
+                                "_type": "CollectionStep",
+                                "canFinishSubLevel": true,
+                                "childDeleteType": "HARD_DELETE",
+                                "childImportModeOnParentEdit": "CREATE_AND_UPDATE",
+                                "collectionView": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionView",
+                                "createChildUsingManyToManyPicker": false,
+                                "customSortEnabled": false,
+                                "defaultDisplayType": "TABLE",
+                                "displayGridAllowed": false,
+                                "displayListAllowed": true,
+                                "displayTableAllowed": true,
+                                "enableChildCopyOnParentCreate": false,
+                                "enableChildCopyOnParentEdit": true,
+                                "enableChildCreationOnParentCreate": false,
+                                "enableChildCreationOnParentEdit": false,
+                                "enableChildDeleteOnParentEdit": false,
+                                "enableChildEditOnParentCreate": false,
+                                "enableChildEditOnParentEdit": false,
+                                "enableChildExport": false,
+                                "enableChildImportOnParentCreate": true,
+                                "enableChildImportOnParentEdit": false,
+                                "enableChildRemoveOnParentCreate": false,
+                                "enableChildRemoveOnParentEdit": false,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "formFieldsMode": "AUTO",
+                                "linear": false,
+                                "manyToManyCustomSortEnabled": false,
+                                "manyToManyDefaultDisplayType": "GRID",
+                                "manyToManyDisplayGridAllowed": false,
+                                "manyToManyDisplayListAllowed": false,
+                                "manyToManyDisplayTableAllowed": false,
+                                "manyToManyUserDefinedSortEnabled": false,
+                                "skipToChildCreationOnParentCreate": false,
+                                "skipToChildEditingOnParentEdit": false,
+                                "useCustomCollectionLabel": false,
+                                "userDefinedSortEnabled": true,
+                                "label": "Email Individual Contexts"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.steppers.AuthorEmailIndividualContexts.EmailIndividualContexts.EmailIndividualContext",
+                                "_type": "FormStep",
+                                "canFinishSubLevel": true,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "enableMasterValuePicking": false,
+                                "formFieldsMode": "AUTO",
+                                "formTab": "CustomerMDM.entities.EmailIndividualContext.forms.EmailIndividualContextForm.EmailIndividualContext",
+                                "label": "Email Individual Context",
+                                "parentCollectionStep": "CustomerMDM.entities.EmailIndividualContext.steppers.AuthorEmailIndividualContexts.EmailIndividualContexts"
+                            }
+                        ]
+                    }
+                ],
+                "survivorshipRules": [],
                 "uniqueKeys": [],
                 "fuzzyLookupRules": []
             },

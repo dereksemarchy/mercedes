@@ -1,0 +1,70 @@
+_package: CustomerMDM.entities.EmailIndividualContext.action_sets
+_type: ActionSet
+_name: EmailIndividualContextActionSet
+entity: CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext
+label: Email Individual Context Action Set
+defaultActionSet: true
+actions:
+  - _type: CreateAction
+    _name: CreateAuthorEmailIndividualContexts
+    label: Create
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.EmailIndividualContext.steppers.AuthorEmailIndividualContexts
+    createMultiple: false
+    createdRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: true
+  - _type: EditAction
+    _name: EditAuthorEmailIndividualContexts
+    label: Edit
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.EmailIndividualContext.steppers.AuthorEmailIndividualContexts
+    multipleSelectionAllowed: true
+    availableForGoldenData: true
+    availableForMasterData: false
+    availableForErrorData: false
+    waitDialogEnabled: false
+  - _type: MassUpdateAction
+    _name: MassUpdateAuthorEmailIndividualContexts
+    label: Mass Update
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.EmailIndividualContext.steppers.AuthorEmailIndividualContexts
+    availableForGoldenData: true
+    availableForErrorData: false
+    availableForMasterData: false
+    waitDialogEnabled: false
+  - _type: DeleteAction
+    _name: Delete
+    label: Delete
+    useCustomLabel: true
+    multipleSelectionAllowed: true
+    deleteType: HARD_DELETE
+    waitDialogEnabled: false
+    availableForGoldenData: true
+    availableForMasterData: false
+  - _type: ExportAction
+    _name: Export
+    label: Export
+    useCustomLabel: true
+    waitDialogEnabled: false
+  - _type: ImportAction
+    _name: ImportAuthorEmailIndividualContexts
+    label: Import
+    useCustomLabel: true
+    importMode: CREATE_AND_UPDATE
+    stepper: CustomerMDM.entities.EmailIndividualContext.steppers.AuthorEmailIndividualContexts
+    importedRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: true
+  - _type: BrowseGraphAction
+    _name: BrowseGraph
+    label: Browse Graph
+    useCustomLabel: true
+    waitDialogEnabled: false
+  - _type: CopyAction
+    _name: CopyAuthorEmailIndividualContexts
+    label: Copy
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.EmailIndividualContext.steppers.AuthorEmailIndividualContexts
+    multipleSelectionAllowed: true
+    waitDialogEnabled: false

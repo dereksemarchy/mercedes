@@ -1,0 +1,33 @@
+_package: CustomerMDM.entities.EmailIndividualContext.steppers
+_type: Stepper
+_name: AuthorEmailIndividualContexts
+entity: CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext
+label: Email Individual Contexts
+rootStep:
+  _type: CollectionStep
+  _name: EmailIndividualContexts
+  label: Email Individual Contexts
+  canFinishSubLevel: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  childDeleteType: HARD_DELETE
+  collectionView: CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionView
+  defaultDisplayType: TABLE
+  customSortEnabled: false
+  userDefinedSortEnabled: true
+  displayGridAllowed: false
+  displayListAllowed: true
+  displayTableAllowed: true
+  useCustomCollectionLabel: false
+  childSteps:
+    - _type: FormStep
+      _name: EmailIndividualContext
+      label: Email Individual Context
+      canFinishSubLevel: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      enableMasterValuePicking: false
+      formTab: CustomerMDM.entities.EmailIndividualContext.forms.EmailIndividualContextForm.EmailIndividualContext

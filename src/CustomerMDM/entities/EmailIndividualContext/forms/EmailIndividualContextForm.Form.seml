@@ -1,0 +1,31 @@
+_package: CustomerMDM.entities.EmailIndividualContext.forms
+_type: Form
+_name: EmailIndividualContextForm
+entity: CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext
+default: true
+formTabs:
+  - _type: FormTab
+    _name: EmailIndividualContext
+    label: Email Individual Context
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    content:
+      - _type: IdField
+        _name: EmailIndividualContextID
+        value: EmailIndividualContextID
+        useCustomLabel: false
+        dataType: LONG_INTEGER
+      - _type: ReferenceField
+        _name: FDN_Email
+        value: FDN_Email
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.Email.Email
+      - _type: ReferenceField
+        _name: FDN_IndividualContext
+        value: FDN_IndividualContext
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.IndividualContext.IndividualContext

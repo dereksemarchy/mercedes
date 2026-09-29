@@ -1,0 +1,26 @@
+_package: CustomerMDM.entities.EmailIndividualContext
+_type: Entity
+_name: EmailIndividualContext
+label: Email Individual Context
+pluralLabel: Email Individual Context
+physicalTableName: EMAIL_INDIVIDUAL_CONTEXT
+iconUrl: images://mdi/email-send-outline.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: EmailIndividualContextID
+    label: Email Individual Context ID
+    physicalName: EMAIL_IC_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext.EmailIndividualContextID
+entityType: BASIC
