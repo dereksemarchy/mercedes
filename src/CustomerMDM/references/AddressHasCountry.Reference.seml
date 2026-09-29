@@ -1,0 +1,22 @@
+_name: AddressHasCountry
+_type: Reference
+_package: CustomerMDM.references
+label: Address Has Country
+deletePropagation: RESTRICT
+fromEntity: CustomerMDM.entities.Address.Address
+fromRoleLabel: Address
+fromRoleName: Address
+fromRolePluralLabel: Addresses
+physicalName: ADDRESS_CTY_ID
+toEntity: CustomerMDM.entities.Country.Country
+toRoleLabel: Country
+toRoleName: Country
+toRolePhysicalName: COUNTRY_ID
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  entity: CustomerMDM.entities.Country.Country
+  _name: Country
+  label: Country
+  physicalName: COUNTRY_ID
+  searchable: true

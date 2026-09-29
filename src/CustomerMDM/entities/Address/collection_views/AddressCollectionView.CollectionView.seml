@@ -1,0 +1,101 @@
+_package: CustomerMDM.entities.Address.collection_views
+_type: CollectionView
+_name: AddressCollectionView
+entity: CustomerMDM.entities.Address.Address
+default: true
+displayCard: CustomerMDM.entities.Address.display_cards.AddressDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 1
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Address
+tableRowLines: 1
+tableShowDisplayCard: false
+tableColumns:
+  - _type: IdColumn
+    _name: AddressID
+    value: AddressID
+    useCustomLabel: false
+    dataType: LONG_INTEGER
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: ReferenceColumn
+    _name: FDN_AddressDefinition
+    value: FDN_AddressDefinition
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+    referencedEntity: CustomerMDM.entities.AddressDefinition.AddressDefinition
+  - _type: ReferenceColumn
+    _name: FDN_Country
+    value: FDN_Country
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+    referencedEntity: CustomerMDM.entities.Country.Country
+  - _type: ReferenceColumn
+    _name: FDN_IndividualContext
+    value: FDN_IndividualContext
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+    referencedEntity: CustomerMDM.entities.IndividualContext.IndividualContext
+  - _type: TextColumn
+    _name: Street
+    value: Street
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: HouseNumber
+    value: HouseNumber
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: PostalCode
+    value: PostalCode
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: City
+    value: City
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: CheckboxColumn
+    _name: Primary
+    value: Primary
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: CheckboxColumn
+    _name: InCriticalUse
+    value: InCriticalUse
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: AddressUsage
+    value: AddressUsage
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+

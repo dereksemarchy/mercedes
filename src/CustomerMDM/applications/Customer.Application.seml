@@ -154,6 +154,13 @@ rootFolder:
       #   label: Import Company
       #   importAction: CustomerMDM.entities.Company.action_sets.CompanyActionSet.ImportAuthorCompanies
       - _type: BrowseBusinessViewAction
+        _name: Address
+        businessView: CustomerMDM.entities.Address.business_views.AddressBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Address
+      - _type: BrowseBusinessViewAction
         _name: Phone
         businessView: CustomerMDM.entities.Phone.business_views.PhoneBusinessView
         nbRecordsBadgeVisible: false

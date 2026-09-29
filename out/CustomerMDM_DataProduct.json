@@ -263,8 +263,20 @@
                         "label": "Company"
                     },
                     {
-                        "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.Phone",
+                        "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.Address",
                         "posInFolder": 4,
+                        "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "CustomerMDM.entities.Address.business_views.AddressBusinessView",
+                        "nbRecordsBadgeVisible": false,
+                        "useCustomLabel": true,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Address"
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.Phone",
+                        "posInFolder": 5,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "CustomerMDM.entities.Phone.business_views.PhoneBusinessView",
@@ -373,6 +385,26 @@
                         "description": "",
                         "label": "KR_STANDARD",
                         "code": "KR_STANDARD"
+                    }
+                ]
+            },
+            {
+                "qualifiedName": "CustomerMDM.list_of_values.AddressUsage",
+                "_type": "LOVType",
+                "description": "",
+                "label": "Address Usage",
+                "validationLabel": "",
+                "length": 16,
+                "lovValues": [
+                    {
+                        "description": "",
+                        "label": "BUSINESS",
+                        "code": "BUSINESS"
+                    },
+                    {
+                        "description": "",
+                        "label": "RESIDENTIAL",
+                        "code": "RESIDENTIAL"
                     }
                 ]
             },
@@ -821,6 +853,87 @@
                 }
             },
             {
+                "qualifiedName": "CustomerMDM.references.AddressHasAddressDefinition",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "CustomerMDM.entities.Address.Address",
+                "fromRoleName": "Address",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "ADDRESS_AD_ID",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "CustomerMDM.entities.AddressDefinition.AddressDefinition",
+                "toRoleName": "AddressDefinition",
+                "toRolePhysicalName": "ADDRESS_DEFINITION_ID",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Address",
+                "fromRolePluralLabel": "Addresses",
+                "label": "Address Has Address Definition",
+                "toRoleLabel": "Address Definition",
+                "foreignAttribute": {
+                    "qualifiedName": "CustomerMDM.references.AddressHasAddressDefinition.AddressDefinition",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "ADDRESS_DEFINITION_ID",
+                    "entity": "CustomerMDM.entities.AddressDefinition.AddressDefinition",
+                    "label": "Address Definition",
+                    "searchable": true
+                }
+            },
+            {
+                "qualifiedName": "CustomerMDM.references.AddressHasCountry",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "CustomerMDM.entities.Address.Address",
+                "fromRoleName": "Address",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "ADDRESS_CTY_ID",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "CustomerMDM.entities.Country.Country",
+                "toRoleName": "Country",
+                "toRolePhysicalName": "COUNTRY_ID",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Address",
+                "fromRolePluralLabel": "Addresses",
+                "label": "Address Has Country",
+                "toRoleLabel": "Country",
+                "foreignAttribute": {
+                    "qualifiedName": "CustomerMDM.references.AddressHasCountry.Country",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "COUNTRY_ID",
+                    "entity": "CustomerMDM.entities.Country.Country",
+                    "label": "Country",
+                    "searchable": true
+                }
+            },
+            {
+                "qualifiedName": "CustomerMDM.references.AddressHasIndividualContext",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "CustomerMDM.entities.Address.Address",
+                "fromRoleName": "Address",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "ADDRESS_ID",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                "toRoleName": "IndividualContext",
+                "toRolePhysicalName": "INDIVIDUAL_CONTEXT_ID",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Address",
+                "fromRolePluralLabel": "Addresses",
+                "label": "Address Has Individual Context",
+                "toRoleLabel": "Individual Context",
+                "foreignAttribute": {
+                    "qualifiedName": "CustomerMDM.references.AddressHasIndividualContext.IndividualContext",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "INDIVIDUAL_CONTEXT_ID",
+                    "entity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                    "label": "Individual Context",
+                    "searchable": true
+                }
+            },
+            {
                 "qualifiedName": "CustomerMDM.references.CountryLanguageHasCountry",
                 "brokenValidationLabel": "",
                 "deletePropagation": "RESTRICT",
@@ -869,7 +982,7 @@
                     "qualifiedName": "CustomerMDM.references.IndividualAccountHasCountry.Country",
                     "_type": "ForeignAttribute",
                     "physicalName": "COUNTRY_CODE",
-                    "entity": "CustomerMDM.entities.CountryLanguage.CountryLanguage",
+                    "entity": "CustomerMDM.entities.Country.Country",
                     "label": "Country",
                     "searchable": true
                 }
@@ -3427,6 +3540,23 @@
                                 ],
                                 "transitions": [
                                     {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Addresses",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Addresses.Addresses",
+                                        "transitionPath": "Address",
+                                        "useCustomLabel": true,
+                                        "displayFormTabAs": "LABEL",
+                                        "enableHierarchy": "1",
+                                        "label": "Address",
+                                        "pluralLabel": "Addresses",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "any Address has (1=1)",
+                                        "transitionVisibleInterpreter": "SEMQL",
+                                        "visibleInFormTabCondition": "any Address has (1=1)"
+                                    },
+                                    {
                                         "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Phones",
                                         "enableHierarchyInterpreter": "LITERAL",
                                         "expandHierarchyByDefault": false,
@@ -3442,6 +3572,47 @@
                                         "transitionVisible": "any Phone has (1=1)",
                                         "transitionVisibleInterpreter": "SEMQL",
                                         "visibleInFormTabCondition": "any Phone has (1=1)"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Addresses.Addresses",
+                                "collection": "CustomerMDM.entities.Address.collection_views.AddressCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.Address.Address",
+                                "form": "CustomerMDM.entities.Address.forms.AddressForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerMDM.entities.Address.action_sets.AddressActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Addresses.Addresses.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Addresses.Addresses.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Addresses.Addresses.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Addresses.Addresses.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
                                     }
                                 ]
                             },
@@ -6297,7 +6468,7 @@
                                 "qualifiedName": "CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionView.AddressDefinitionCode",
                                 "_type": "TableColumn",
                                 "columnAlign": "LEFT",
-                                "componentName": "semMenuField",
+                                "componentName": "semIdField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 0,
                                 "useCustomLabel": false,
@@ -6383,7 +6554,6 @@
                                 "visibleValueInterpreter": "LITERAL",
                                 "displayFormTabAs": "LABEL",
                                 "label": "Address Definition",
-                                "labelWidth": "150",
                                 "visibleValue": "1"
                             }
                         ],
@@ -6392,7 +6562,7 @@
                             {
                                 "qualifiedName": "CustomerMDM.entities.AddressDefinition.forms.AddressDefinitionForm.AddressDefinition.AddressDefinitionCode",
                                 "_type": "FormField",
-                                "componentName": "semMenuField",
+                                "componentName": "semIdField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 0,
                                 "useCustomLabel": false,
@@ -6508,6 +6678,650 @@
                                 "formTab": "CustomerMDM.entities.AddressDefinition.forms.AddressDefinitionForm.AddressDefinition",
                                 "label": "Address Definition",
                                 "parentCollectionStep": "CustomerMDM.entities.AddressDefinition.steppers.AuthorAddressDefinitions.AddressDefinitions"
+                            }
+                        ]
+                    }
+                ],
+                "survivorshipRules": [],
+                "uniqueKeys": [],
+                "fuzzyLookupRules": []
+            },
+            {
+                "qualifiedName": "CustomerMDM.entities.Address.Address",
+                "dataEntryAllowed": true,
+                "historizeGolden": true,
+                "historizeMaster": false,
+                "description": "",
+                "documentation": "",
+                "enableDelete": true,
+                "entityType": "BASIC",
+                "iconUrl": "images://mdi/map-outline.svg",
+                "label": "Address",
+                "physicalTableName": "ADDRESS",
+                "pluralLabel": "Address",
+                "pkAttributes": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Address.Address.AddressID",
+                        "_type": "PKAttribute",
+                        "abstractAtomicType": "LongInteger",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "mandatory": true,
+                        "multiValued": false,
+                        "physicalColName": "ADDRESS_ID",
+                        "valueSeparator": "",
+                        "idGenerationType": "SEQUENCE",
+                        "idSequenceStartsWith": 1,
+                        "label": "Address ID",
+                        "precision": 38,
+                        "searchable": true
+                    }
+                ],
+                "atomicAttributes": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Address.Address.Street",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "STREET",
+                        "valueSeparator": "",
+                        "label": "Street",
+                        "length": 255,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Address.Address.City",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "CITY",
+                        "valueSeparator": "",
+                        "label": "City",
+                        "length": 255,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Address.Address.PostalCode",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "POSTAL_CODE",
+                        "valueSeparator": "",
+                        "label": "Postal Code",
+                        "length": 20,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Address.Address.HouseNumber",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "HOUSE_NUMBER",
+                        "valueSeparator": "",
+                        "label": "House Number",
+                        "length": 255,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Address.Address.Primary",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "Boolean",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "IS_PRIMARY",
+                        "valueSeparator": "",
+                        "label": "Primary",
+                        "length": 1,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Address.Address.InCriticalUse",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "Boolean",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "IN_CRITICAL_USE",
+                        "valueSeparator": "",
+                        "label": "In Critical Use",
+                        "length": 1,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Address.Address.AddressUsage",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "CustomerMDM.list_of_values.AddressUsage",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "PRE_CONSO",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "ADDRESS_USAGE",
+                        "valueSeparator": "",
+                        "label": "Address Usage",
+                        "length": 16,
+                        "searchable": true
+                    }
+                ],
+                "complexAttributes": [],
+                "abstractRowCheckConstraints": [],
+                "actionSets": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Address.action_sets.AddressActionSet",
+                        "defaultActionSet": true,
+                        "description": "",
+                        "label": "Address Action Set",
+                        "actions": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.action_sets.AddressActionSet.CreateAuthorAddresses",
+                                "_type": "CreateAction",
+                                "description": "",
+                                "label": "Create",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "createdRecordType": "GOLDEN",
+                                "createMultiple": false,
+                                "stepper": "CustomerMDM.entities.Address.steppers.AuthorAddresses"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.action_sets.AddressActionSet.EditAuthorAddresses",
+                                "_type": "EditAction",
+                                "description": "",
+                                "label": "Edit",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "multipleSelectionAllowed": true,
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false,
+                                "stepper": "CustomerMDM.entities.Address.steppers.AuthorAddresses"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.action_sets.AddressActionSet.MassUpdateAuthorAddresses",
+                                "_type": "MassUpdateAction",
+                                "description": "",
+                                "label": "Mass Update",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "stepper": "CustomerMDM.entities.Address.steppers.AuthorAddresses",
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.action_sets.AddressActionSet.Delete",
+                                "_type": "DeleteAction",
+                                "description": "",
+                                "label": "Delete",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "deleteType": "HARD_DELETE",
+                                "multipleSelectionAllowed": true,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.action_sets.AddressActionSet.Export",
+                                "_type": "ExportAction",
+                                "description": "",
+                                "label": "Export",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.action_sets.AddressActionSet.ImportAuthorAddresses",
+                                "_type": "ImportAction",
+                                "description": "",
+                                "label": "Import",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "importedRecordType": "GOLDEN",
+                                "importMode": "CREATE_AND_UPDATE",
+                                "stepper": "CustomerMDM.entities.Address.steppers.AuthorAddresses"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.action_sets.AddressActionSet.BrowseGraph",
+                                "_type": "BrowseGraphAction",
+                                "description": "",
+                                "label": "Browse Graph",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.action_sets.AddressActionSet.CopyAuthorAddresses",
+                                "_type": "CopyAction",
+                                "description": "",
+                                "label": "Copy",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "multipleSelectionAllowed": true,
+                                "stepper": "CustomerMDM.entities.Address.steppers.AuthorAddresses"
+                            }
+                        ]
+                    }
+                ],
+                "businessObjectViews": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Address.business_views.AddressBusinessView",
+                        "displayRootNodeAs": "ICON_LABEL",
+                        "enableHierarchyView": false,
+                        "filter": "1 = 1",
+                        "rootBoViewEntity": "CustomerMDM.entities.Address.business_views.AddressBusinessView.Address",
+                        "rootDescription": "",
+                        "rootLabel": "Addresses",
+                        "rootPluralLabel": "Addresses",
+                        "useHierarchyOnOpen": false,
+                        "visible": true,
+                        "boViewEntities": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.business_views.AddressBusinessView.Address",
+                                "collection": "CustomerMDM.entities.Address.collection_views.AddressCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.Address.Address",
+                                "form": "CustomerMDM.entities.Address.forms.AddressForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerMDM.entities.Address.action_sets.AddressActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Address.business_views.AddressBusinessView.Address.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Address.business_views.AddressBusinessView.Address.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Address.business_views.AddressBusinessView.Address.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Address.business_views.AddressBusinessView.Address.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "collections": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionView",
+                        "default": true,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Address",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": false,
+                        "displayCard": "CustomerMDM.entities.Address.display_cards.AddressDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionView.AddressID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "AddressID",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionView.FDN_AddressDefinition",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "FDN_AddressDefinition",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.AddressDefinition.AddressDefinition",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionView.FDN_Country",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "FDN_Country",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Country.Country",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionView.FDN_IndividualContext",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "FDN_IndividualContext",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionView.Street",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Street",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionView.HouseNumber",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "HouseNumber",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionView.PostalCode",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "PostalCode",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionView.City",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "City",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionView.Primary",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "Primary",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionView.InCriticalUse",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "InCriticalUse",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionView.AddressUsage",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "AddressUsage",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "displayCards": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Address.display_cards.AddressDisplayCard",
+                        "avatarImageValueInterpreter": "LITERAL",
+                        "default": true,
+                        "primaryImageFallbackValueInterpreter": "LITERAL",
+                        "primaryImageValueInterpreter": "LITERAL",
+                        "avatarImageAlign": "MIDDLE_CENTER",
+                        "avatarImageMode": "FIT",
+                        "avatarImageSourceType": "URL",
+                        "primaryImageAlign": "MIDDLE_CENTER",
+                        "primaryImageFallbackSourceType": "URL",
+                        "primaryImageMode": "FIT",
+                        "primaryImageSourceType": "URL",
+                        "primaryTextExpression": "HouseNumber||' '||Street||','||City||','||PostalCode"
+                    }
+                ],
+                "dupsManagers": [],
+                "enrichers": [],
+                "forms": [
+                    {
+                        "default": true,
+                        "qualifiedName": "CustomerMDM.entities.Address.forms.AddressForm",
+                        "formCharts": [],
+                        "formCollections": [],
+                        "formContainers": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.forms.AddressForm.Address",
+                                "_type": "FormTab",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "visibleValueInterpreter": "LITERAL",
+                                "displayFormTabAs": "LABEL",
+                                "label": "Address",
+                                "visibleValue": "1"
+                            }
+                        ],
+                        "formDashboards": [],
+                        "formFields": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.forms.AddressForm.Address.AddressID",
+                                "_type": "FormField",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "AddressID",
+                                "parentFormContainer": "CustomerMDM.entities.Address.forms.AddressForm.Address",
+                                "valueDataType": "LONG_INTEGER",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.forms.AddressForm.Address.FDN_AddressDefinition",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "FDN_AddressDefinition",
+                                "parentFormContainer": "CustomerMDM.entities.Address.forms.AddressForm.Address",
+                                "referencedEntity": "CustomerMDM.entities.AddressDefinition.AddressDefinition",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.forms.AddressForm.Address.FDN_Country",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "FDN_Country",
+                                "parentFormContainer": "CustomerMDM.entities.Address.forms.AddressForm.Address",
+                                "referencedEntity": "CustomerMDM.entities.Country.Country",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.forms.AddressForm.Address.FDN_IndividualContext",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "FDN_IndividualContext",
+                                "parentFormContainer": "CustomerMDM.entities.Address.forms.AddressForm.Address",
+                                "referencedEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "searchForms": [],
+                "steppers": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Address.steppers.AuthorAddresses",
+                        "label": "Addresses",
+                        "rootCollectionStep": "CustomerMDM.entities.Address.steppers.AuthorAddresses.Addresses",
+                        "steps": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.steppers.AuthorAddresses.Addresses",
+                                "_type": "CollectionStep",
+                                "canFinishSubLevel": true,
+                                "childDeleteType": "HARD_DELETE",
+                                "childImportModeOnParentEdit": "CREATE_AND_UPDATE",
+                                "collectionView": "CustomerMDM.entities.Address.collection_views.AddressCollectionView",
+                                "createChildUsingManyToManyPicker": false,
+                                "customSortEnabled": false,
+                                "defaultDisplayType": "TABLE",
+                                "displayGridAllowed": false,
+                                "displayListAllowed": true,
+                                "displayTableAllowed": true,
+                                "enableChildCopyOnParentCreate": false,
+                                "enableChildCopyOnParentEdit": true,
+                                "enableChildCreationOnParentCreate": false,
+                                "enableChildCreationOnParentEdit": false,
+                                "enableChildDeleteOnParentEdit": false,
+                                "enableChildEditOnParentCreate": false,
+                                "enableChildEditOnParentEdit": false,
+                                "enableChildExport": false,
+                                "enableChildImportOnParentCreate": true,
+                                "enableChildImportOnParentEdit": false,
+                                "enableChildRemoveOnParentCreate": false,
+                                "enableChildRemoveOnParentEdit": false,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "formFieldsMode": "AUTO",
+                                "linear": false,
+                                "manyToManyCustomSortEnabled": false,
+                                "manyToManyDefaultDisplayType": "GRID",
+                                "manyToManyDisplayGridAllowed": false,
+                                "manyToManyDisplayListAllowed": false,
+                                "manyToManyDisplayTableAllowed": false,
+                                "manyToManyUserDefinedSortEnabled": false,
+                                "skipToChildCreationOnParentCreate": false,
+                                "skipToChildEditingOnParentEdit": false,
+                                "useCustomCollectionLabel": false,
+                                "userDefinedSortEnabled": true,
+                                "label": "Addresses"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.steppers.AuthorAddresses.Addresses.Address",
+                                "_type": "FormStep",
+                                "canFinishSubLevel": true,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "enableMasterValuePicking": false,
+                                "formFieldsMode": "AUTO",
+                                "formTab": "CustomerMDM.entities.Address.forms.AddressForm.Address",
+                                "label": "Address",
+                                "parentCollectionStep": "CustomerMDM.entities.Address.steppers.AuthorAddresses.Addresses"
                             }
                         ]
                     }

@@ -1,0 +1,38 @@
+_package: CustomerMDM.entities.Address.forms
+_type: Form
+_name: AddressForm
+entity: CustomerMDM.entities.Address.Address
+default: true
+formTabs:
+  - _type: FormTab
+    _name: Address
+    label: Address
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    labelWidth: "150"
+    content:
+      - _type: IdField
+        _name: AddressID
+        value: AddressID
+        useCustomLabel: false
+        dataType: LONG_INTEGER
+      - _type: ReferenceField
+        _name: FDN_AddressDefinition
+        value: FDN_AddressDefinition
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.AddressDefinition.AddressDefinition
+      - _type: ReferenceField
+        _name: FDN_Country
+        value: FDN_Country
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.Country.Country
+      - _type: ReferenceField
+        _name: FDN_IndividualContext
+        value: FDN_IndividualContext
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.IndividualContext.IndividualContext

@@ -18,7 +18,7 @@ tableDisplayCardColumnLabel: Address Definition
 tableRowLines: 1
 tableShowDisplayCard: false
 tableColumns:
-  - _type: MenuColumn
+  - _type: IdColumn
     _name: AddressDefinitionCode
     value: AddressDefinitionCode
     useCustomLabel: false

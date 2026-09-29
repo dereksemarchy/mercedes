@@ -15,7 +15,7 @@ toRolePhysicalName: COUNTRY_CODE
 validationScope: PRE_CONSO
 foreignAttribute:
   _type: ForeignAttribute
-  entity: CustomerMDM.entities.CountryLanguage.CountryLanguage
+  entity: CustomerMDM.entities.Country.Country
   _name: Country
   label: Country
   physicalName: COUNTRY_CODE

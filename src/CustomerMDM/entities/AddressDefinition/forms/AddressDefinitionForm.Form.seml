@@ -11,9 +11,8 @@ formTabs:
     visibleValue: "1"
     visibleValueInterpreter: LITERAL
     displayFormTabAs: LABEL
-    labelWidth: "150"
     content:
-      - _type: MenuField
+      - _type: IdField
         _name: AddressDefinitionCode
         value: AddressDefinitionCode
         useCustomLabel: false

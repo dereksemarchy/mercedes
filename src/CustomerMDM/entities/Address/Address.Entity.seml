@@ -1,0 +1,83 @@
+_package: CustomerMDM.entities.Address
+_type: Entity
+_name: Address
+label: Address
+pluralLabel: Address
+physicalTableName: ADDRESS
+iconUrl: images://mdi/map-outline.svg
+description: ""
+documentation: ""
+historizeGolden: true
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: AddressID
+    label: Address ID
+    physicalName: ADDRESS_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: Street
+    label: Street
+    physicalName: STREET
+    dataType: String
+    length: 255
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: City
+    label: City
+    physicalName: CITY
+    dataType: String
+    length: 255
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: PostalCode
+    label: Postal Code
+    physicalName: POSTAL_CODE
+    dataType: String
+    length: 20
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: HouseNumber
+    label: House Number
+    physicalName: HOUSE_NUMBER
+    dataType: String
+    length: 255
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: Primary
+    label: Primary
+    physicalName: IS_PRIMARY
+    dataType: Boolean
+    length: 1
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: InCriticalUse
+    label: In Critical Use
+    physicalName: IN_CRITICAL_USE
+    dataType: Boolean
+    length: 1
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: AddressUsage
+    label: Address Usage
+    physicalName: ADDRESS_USAGE
+    dataType: CustomerMDM.list_of_values.AddressUsage
+    length: 16
+    mandatory: false
+    searchable: true
+    lovValidationScope: PRE_CONSO
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: CustomerMDM.entities.Address.Address.AddressID
+entityType: BASIC

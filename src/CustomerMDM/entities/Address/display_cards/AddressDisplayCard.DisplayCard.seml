@@ -1,0 +1,16 @@
+_package: CustomerMDM.entities.Address.display_cards
+_type: DisplayCard
+_name: AddressDisplayCard
+entity: CustomerMDM.entities.Address.Address
+default: true
+primaryTextExpression: HouseNumber||' '||Street||', '||City||', '||PostalCode
+primaryImageValueInterpreter: LITERAL
+avatarImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageFallbackValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+avatarImageValueInterpreter: LITERAL
+primaryImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT
