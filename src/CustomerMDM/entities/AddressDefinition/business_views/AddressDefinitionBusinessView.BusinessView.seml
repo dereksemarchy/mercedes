@@ -1,0 +1,36 @@
+_package: CustomerMDM.entities.AddressDefinition.business_views
+_type: BusinessView
+_name: AddressDefinitionBusinessView
+entity: CustomerMDM.entities.AddressDefinition.AddressDefinition
+rootLabel: Address Definitions
+rootPluralLabel: Address Definitions
+displayRootNodeAs: ICON_LABEL
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: AddressDefinition
+  entity: CustomerMDM.entities.AddressDefinition.AddressDefinition
+  actionSet: CustomerMDM.entities.AddressDefinition.action_sets.AddressDefinitionActionSet
+  collection: CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionView
+  form: CustomerMDM.entities.AddressDefinition.forms.AddressDefinitionForm
+  outlineVisible: false
+  displayRecordCount: ALWAYS
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+  overrideDefaultSort: false
+  enableUserDefinedSort: true
+  listAllowed: true
+  tableAllowed: true
+  gridAllowed: true
+enableHierarchyView: false
+useHierarchyOnOpen: false

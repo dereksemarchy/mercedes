@@ -1,0 +1,22 @@
+_name: AddressDefinitionHasCountry
+_type: Reference
+_package: CustomerMDM.references
+label: Address Definition Has Country
+deletePropagation: RESTRICT
+fromEntity: CustomerMDM.entities.AddressDefinition.AddressDefinition
+fromRoleLabel: Address Definition
+fromRoleName: AddressDefinition
+fromRolePluralLabel: Address Definitions
+physicalName: ADDRESS_DEFINITION_ID
+toEntity: CustomerMDM.entities.Country.Country
+toRoleLabel: Country
+toRoleName: Country
+toRolePhysicalName: COUNTRY_CODE
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  entity: CustomerMDM.entities.CountryLanguage.CountryLanguage
+  _name: Country
+  label: Country
+  physicalName: COUNTRY_CODE
+  searchable: true

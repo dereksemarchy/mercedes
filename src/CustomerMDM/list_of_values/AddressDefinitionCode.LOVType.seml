@@ -1,0 +1,18 @@
+_name: AddressDefinitionCode
+_type: LOVType
+_package: CustomerMDM.list_of_values
+label: Business Role
+length: 16
+lovValues:
+  - label: DE_STANDARD
+    code: DE_STANDARD
+  - label: GB_STANDARD
+    code: GB_STANDARD
+  - label: IT_STANDARD
+    code: IT_STANDARD
+  - label: CH_STANDARD
+    code: CH_STANDARD
+  - label: US_STANDARD
+    code: US_STANDARD
+  - label: KR_STANDARD
+    code: KR_STANDARD

@@ -181,6 +181,13 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: Country Language
+      - _type: BrowseBusinessViewAction
+        _name: AddressDefinition
+        businessView: CustomerMDM.entities.AddressDefinition.business_views.AddressDefinitionBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Address Definition
     - _type : FolderAction
       _name: ImportData
       label: Import Data

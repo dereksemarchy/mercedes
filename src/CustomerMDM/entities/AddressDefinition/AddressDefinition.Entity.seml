@@ -1,0 +1,54 @@
+_package: CustomerMDM.entities.AddressDefinition
+_type: Entity
+_name: AddressDefinition
+label: Address Definition
+pluralLabel: Address Definition
+physicalTableName: ADDRESS_DEFINITION
+iconUrl: images://mdi/map-legend.svg
+description: ""
+documentation: ""
+historizeGolden: true
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: AddressDefinitionID
+    label: Address Definition ID
+    physicalName: ADDRESS_DEFINITION_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: AddressDefinitionCode
+    label: Address Definition Code
+    physicalName: ADDRESS_DEFINITION_CODE
+    dataType: CustomerMDM.list_of_values.AddressDefinitionCode
+    length: 16
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+    lovValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: IsDefault
+    label: Is Default
+    physicalName: IS_DEFAULT
+    dataType: Boolean
+    length: 1
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: Active
+    label: Active
+    physicalName: ACTIVE
+    dataType: Boolean
+    length: 1
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: CustomerMDM.entities.AddressDefinition.AddressDefinition.AddressDefinitionID
+entityType: BASIC

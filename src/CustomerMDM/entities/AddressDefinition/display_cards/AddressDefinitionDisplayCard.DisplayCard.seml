@@ -1,0 +1,16 @@
+_package: CustomerMDM.entities.AddressDefinition.display_cards
+_type: DisplayCard
+_name: AddressDefinitionDisplayCard
+entity: CustomerMDM.entities.AddressDefinition.AddressDefinition
+default: true
+primaryTextExpression: SEM_NUMBER_TO_CHAR(AddressDefinitionID)
+primaryImageValueInterpreter: LITERAL
+avatarImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageFallbackValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+avatarImageValueInterpreter: LITERAL
+primaryImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT
