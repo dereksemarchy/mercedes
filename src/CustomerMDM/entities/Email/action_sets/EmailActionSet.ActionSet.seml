@@ -1,0 +1,70 @@
+_package: CustomerMDM.entities.Email.action_sets
+_type: ActionSet
+_name: EmailActionSet
+entity: CustomerMDM.entities.Email.Email
+label: Email Action Set
+defaultActionSet: true
+actions:
+  - _type: CreateAction
+    _name: CreateAuthorEmails
+    label: Create
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.Email.steppers.AuthorEmails
+    createMultiple: false
+    createdRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: true
+  - _type: EditAction
+    _name: EditAuthorEmails
+    label: Edit
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.Email.steppers.AuthorEmails
+    multipleSelectionAllowed: true
+    availableForGoldenData: true
+    availableForMasterData: false
+    availableForErrorData: false
+    waitDialogEnabled: false
+  - _type: MassUpdateAction
+    _name: MassUpdateAuthorEmails
+    label: Mass Update
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.Email.steppers.AuthorEmails
+    availableForGoldenData: true
+    availableForErrorData: false
+    availableForMasterData: false
+    waitDialogEnabled: false
+  - _type: DeleteAction
+    _name: Delete
+    label: Delete
+    useCustomLabel: true
+    multipleSelectionAllowed: true
+    deleteType: HARD_DELETE
+    waitDialogEnabled: false
+    availableForGoldenData: true
+    availableForMasterData: false
+  - _type: ExportAction
+    _name: Export
+    label: Export
+    useCustomLabel: true
+    waitDialogEnabled: false
+  - _type: ImportAction
+    _name: ImportAuthorEmails
+    label: Import
+    useCustomLabel: true
+    importMode: CREATE_AND_UPDATE
+    stepper: CustomerMDM.entities.Email.steppers.AuthorEmails
+    importedRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: true
+  - _type: BrowseGraphAction
+    _name: BrowseGraph
+    label: Browse Graph
+    useCustomLabel: true
+    waitDialogEnabled: false
+  - _type: CopyAction
+    _name: CopyAuthorEmails
+    label: Copy
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.Email.steppers.AuthorEmails
+    multipleSelectionAllowed: true
+    waitDialogEnabled: false

@@ -167,6 +167,13 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: Phone
+      - _type: BrowseBusinessViewAction
+        _name: Email
+        businessView: CustomerMDM.entities.Email.business_views.EmailBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Email
     - _type : FolderAction
       _name: ReferenceData
       label: Reference Data

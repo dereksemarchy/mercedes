@@ -1,0 +1,36 @@
+_package: CustomerMDM.entities.Email.business_views
+_type: BusinessView
+_name: EmailBusinessView
+entity: CustomerMDM.entities.Email.Email
+rootLabel: Emails
+rootPluralLabel: Emails
+displayRootNodeAs: ICON_LABEL
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: Email
+  entity: CustomerMDM.entities.Email.Email
+  actionSet: CustomerMDM.entities.Email.action_sets.EmailActionSet
+  collection: CustomerMDM.entities.Email.collection_views.EmailCollectionView
+  form: CustomerMDM.entities.Email.forms.EmailForm
+  outlineVisible: false
+  displayRecordCount: ALWAYS
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+  overrideDefaultSort: false
+  enableUserDefinedSort: true
+  listAllowed: true
+  tableAllowed: true
+  gridAllowed: true
+enableHierarchyView: false
+useHierarchyOnOpen: false

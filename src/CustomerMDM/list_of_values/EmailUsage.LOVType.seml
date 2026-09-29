@@ -1,0 +1,10 @@
+_name: EmailUsage
+_type: LOVType
+_package: CustomerMDM.list_of_values
+label: Email Usage
+length: 16
+lovValues:
+  - label: BUSINESS
+    code: BUSINESS
+  - label: PRIVATE
+    code: PRIVATE

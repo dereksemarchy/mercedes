@@ -1,0 +1,62 @@
+_package: CustomerMDM.entities.Email
+_type: Entity
+_name: Email
+label: Email
+pluralLabel: Email
+physicalTableName: EMAIL
+iconUrl: images://mdi/email-outline.svg
+description: ""
+documentation: ""
+historizeGolden: true
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: EmailID
+    label: Email ID
+    physicalName: EMAIL_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: EmailAddress
+    label: Email Address
+    physicalName: EMAIL_ADDRESS
+    dataType: String
+    length: 255
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: Primary
+    label: Primary
+    physicalName: IS_PRIMARY
+    dataType: Boolean
+    length: 1
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: InCriticalUse
+    label: In Critical Use
+    physicalName: IN_CRITICAL_USE
+    dataType: Boolean
+    length: 1
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: EmailUsage
+    label: Email Usage
+    physicalName: EMAIL_USAGE
+    dataType: CustomerMDM.list_of_values.EmailUsage
+    length: 16
+    mandatory: false
+    searchable: true
+    lovValidationScope: PRE_CONSO
+    multiValued: true
+    valueSeparator: ';'
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: CustomerMDM.entities.Email.Email.EmailID
+entityType: BASIC

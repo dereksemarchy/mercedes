@@ -287,6 +287,18 @@
                         "label": "Phone"
                     },
                     {
+                        "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.Email",
+                        "posInFolder": 6,
+                        "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "CustomerMDM.entities.Email.business_views.EmailBusinessView",
+                        "nbRecordsBadgeVisible": false,
+                        "useCustomLabel": true,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Email"
+                    },
+                    {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.ReferenceData.Country",
                         "posInFolder": 0,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.ReferenceData",
@@ -465,6 +477,26 @@
                         "description": "",
                         "label": "BUSINESS",
                         "code": "BUSINESS"
+                    }
+                ]
+            },
+            {
+                "qualifiedName": "CustomerMDM.list_of_values.EmailUsage",
+                "_type": "LOVType",
+                "description": "",
+                "label": "Email Usage",
+                "validationLabel": "",
+                "length": 16,
+                "lovValues": [
+                    {
+                        "description": "",
+                        "label": "BUSINESS",
+                        "code": "BUSINESS"
+                    },
+                    {
+                        "description": "",
+                        "label": "PRIVATE",
+                        "code": "PRIVATE"
                     }
                 ]
             },
@@ -4560,6 +4592,529 @@
                         "documentation": ""
                     }
                 ],
+                "uniqueKeys": [],
+                "fuzzyLookupRules": []
+            },
+            {
+                "qualifiedName": "CustomerMDM.entities.Email.Email",
+                "dataEntryAllowed": true,
+                "historizeGolden": true,
+                "historizeMaster": false,
+                "description": "",
+                "documentation": "",
+                "enableDelete": true,
+                "entityType": "BASIC",
+                "iconUrl": "images://mdi/email-outline.svg",
+                "label": "Email",
+                "physicalTableName": "EMAIL",
+                "pluralLabel": "Email",
+                "pkAttributes": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Email.Email.EmailID",
+                        "_type": "PKAttribute",
+                        "abstractAtomicType": "LongInteger",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "mandatory": true,
+                        "multiValued": false,
+                        "physicalColName": "EMAIL_ID",
+                        "valueSeparator": "",
+                        "idGenerationType": "SEQUENCE",
+                        "idSequenceStartsWith": 1,
+                        "label": "Email ID",
+                        "precision": 38,
+                        "searchable": true
+                    }
+                ],
+                "atomicAttributes": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Email.Email.EmailAddress",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": true,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "PRE_CONSO",
+                        "multiValued": false,
+                        "physicalColName": "EMAIL_ADDRESS",
+                        "valueSeparator": "",
+                        "label": "Email Address",
+                        "length": 255,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Email.Email.Primary",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "Boolean",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "IS_PRIMARY",
+                        "valueSeparator": "",
+                        "label": "Primary",
+                        "length": 1,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Email.Email.InCriticalUse",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "Boolean",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "IN_CRITICAL_USE",
+                        "valueSeparator": "",
+                        "label": "In Critical Use",
+                        "length": 1,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Email.Email.EmailUsage",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "CustomerMDM.list_of_values.EmailUsage",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "PRE_CONSO",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": true,
+                        "physicalColName": "EMAIL_USAGE",
+                        "valueSeparator": ";",
+                        "label": "Email Usage",
+                        "length": 16,
+                        "searchable": true
+                    }
+                ],
+                "complexAttributes": [],
+                "abstractRowCheckConstraints": [],
+                "actionSets": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Email.action_sets.EmailActionSet",
+                        "defaultActionSet": true,
+                        "description": "",
+                        "label": "Email Action Set",
+                        "actions": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.action_sets.EmailActionSet.CreateAuthorEmails",
+                                "_type": "CreateAction",
+                                "description": "",
+                                "label": "Create",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "createdRecordType": "GOLDEN",
+                                "createMultiple": false,
+                                "stepper": "CustomerMDM.entities.Email.steppers.AuthorEmails"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.action_sets.EmailActionSet.EditAuthorEmails",
+                                "_type": "EditAction",
+                                "description": "",
+                                "label": "Edit",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "multipleSelectionAllowed": true,
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false,
+                                "stepper": "CustomerMDM.entities.Email.steppers.AuthorEmails"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.action_sets.EmailActionSet.MassUpdateAuthorEmails",
+                                "_type": "MassUpdateAction",
+                                "description": "",
+                                "label": "Mass Update",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "stepper": "CustomerMDM.entities.Email.steppers.AuthorEmails",
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.action_sets.EmailActionSet.Delete",
+                                "_type": "DeleteAction",
+                                "description": "",
+                                "label": "Delete",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "deleteType": "HARD_DELETE",
+                                "multipleSelectionAllowed": true,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.action_sets.EmailActionSet.Export",
+                                "_type": "ExportAction",
+                                "description": "",
+                                "label": "Export",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.action_sets.EmailActionSet.ImportAuthorEmails",
+                                "_type": "ImportAction",
+                                "description": "",
+                                "label": "Import",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "importedRecordType": "GOLDEN",
+                                "importMode": "CREATE_AND_UPDATE",
+                                "stepper": "CustomerMDM.entities.Email.steppers.AuthorEmails"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.action_sets.EmailActionSet.BrowseGraph",
+                                "_type": "BrowseGraphAction",
+                                "description": "",
+                                "label": "Browse Graph",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.action_sets.EmailActionSet.CopyAuthorEmails",
+                                "_type": "CopyAction",
+                                "description": "",
+                                "label": "Copy",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "multipleSelectionAllowed": true,
+                                "stepper": "CustomerMDM.entities.Email.steppers.AuthorEmails"
+                            }
+                        ]
+                    }
+                ],
+                "businessObjectViews": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Email.business_views.EmailBusinessView",
+                        "displayRootNodeAs": "ICON_LABEL",
+                        "enableHierarchyView": false,
+                        "filter": "1 = 1",
+                        "rootBoViewEntity": "CustomerMDM.entities.Email.business_views.EmailBusinessView.Email",
+                        "rootDescription": "",
+                        "rootLabel": "Emails",
+                        "rootPluralLabel": "Emails",
+                        "useHierarchyOnOpen": false,
+                        "visible": true,
+                        "boViewEntities": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.business_views.EmailBusinessView.Email",
+                                "collection": "CustomerMDM.entities.Email.collection_views.EmailCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.Email.Email",
+                                "form": "CustomerMDM.entities.Email.forms.EmailForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerMDM.entities.Email.action_sets.EmailActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Email.business_views.EmailBusinessView.Email.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Email.business_views.EmailBusinessView.Email.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Email.business_views.EmailBusinessView.Email.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Email.business_views.EmailBusinessView.Email.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "collections": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionView",
+                        "default": true,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Email",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": false,
+                        "displayCard": "CustomerMDM.entities.Email.display_cards.EmailDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionView.EmailID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "EmailID",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionView.EmailAddress",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "EmailAddress",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionView.Primary",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "Primary",
+                                "visibleByDefault": true,
+                                "valueDataType": "BOOLEAN",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionView.InCriticalUse",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "InCriticalUse",
+                                "visibleByDefault": true,
+                                "valueDataType": "BOOLEAN",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionView.EmailUsage",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semChipsField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "EmailUsage",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "displayCards": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Email.display_cards.EmailDisplayCard",
+                        "avatarImageValueInterpreter": "LITERAL",
+                        "default": true,
+                        "primaryImageFallbackValueInterpreter": "LITERAL",
+                        "primaryImageValueInterpreter": "LITERAL",
+                        "avatarImageAlign": "MIDDLE_CENTER",
+                        "avatarImageMode": "FIT",
+                        "avatarImageSourceType": "URL",
+                        "primaryImageAlign": "MIDDLE_CENTER",
+                        "primaryImageFallbackSourceType": "URL",
+                        "primaryImageMode": "FIT",
+                        "primaryImageSourceType": "URL",
+                        "primaryTextExpression": "EmailAddress"
+                    }
+                ],
+                "dupsManagers": [],
+                "enrichers": [],
+                "forms": [
+                    {
+                        "default": true,
+                        "qualifiedName": "CustomerMDM.entities.Email.forms.EmailForm",
+                        "formCharts": [],
+                        "formCollections": [],
+                        "formContainers": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.forms.EmailForm.Email",
+                                "_type": "FormTab",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "visibleValueInterpreter": "LITERAL",
+                                "displayFormTabAs": "LABEL",
+                                "label": "Email",
+                                "visibleValue": "1"
+                            }
+                        ],
+                        "formDashboards": [],
+                        "formFields": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.forms.EmailForm.Email.EmailID",
+                                "_type": "FormField",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "EmailID",
+                                "parentFormContainer": "CustomerMDM.entities.Email.forms.EmailForm.Email",
+                                "valueDataType": "LONG_INTEGER",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.forms.EmailForm.Email.EmailAddress",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "EmailAddress",
+                                "parentFormContainer": "CustomerMDM.entities.Email.forms.EmailForm.Email",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.forms.EmailForm.Email.Primary",
+                                "_type": "FormField",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "Primary",
+                                "parentFormContainer": "CustomerMDM.entities.Email.forms.EmailForm.Email",
+                                "valueDataType": "BOOLEAN",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.forms.EmailForm.Email.InCriticalUse",
+                                "_type": "FormField",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "InCriticalUse",
+                                "parentFormContainer": "CustomerMDM.entities.Email.forms.EmailForm.Email",
+                                "valueDataType": "BOOLEAN",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.forms.EmailForm.Email.EmailUsage",
+                                "_type": "FormField",
+                                "componentName": "semChipsField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "EmailUsage",
+                                "parentFormContainer": "CustomerMDM.entities.Email.forms.EmailForm.Email",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "searchForms": [],
+                "steppers": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Email.steppers.AuthorEmails",
+                        "label": "Emails",
+                        "rootCollectionStep": "CustomerMDM.entities.Email.steppers.AuthorEmails.Emails",
+                        "steps": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.steppers.AuthorEmails.Emails",
+                                "_type": "CollectionStep",
+                                "canFinishSubLevel": true,
+                                "childDeleteType": "HARD_DELETE",
+                                "childImportModeOnParentEdit": "CREATE_AND_UPDATE",
+                                "collectionView": "CustomerMDM.entities.Email.collection_views.EmailCollectionView",
+                                "createChildUsingManyToManyPicker": false,
+                                "customSortEnabled": false,
+                                "defaultDisplayType": "TABLE",
+                                "displayGridAllowed": false,
+                                "displayListAllowed": true,
+                                "displayTableAllowed": true,
+                                "enableChildCopyOnParentCreate": false,
+                                "enableChildCopyOnParentEdit": true,
+                                "enableChildCreationOnParentCreate": false,
+                                "enableChildCreationOnParentEdit": false,
+                                "enableChildDeleteOnParentEdit": false,
+                                "enableChildEditOnParentCreate": false,
+                                "enableChildEditOnParentEdit": false,
+                                "enableChildExport": false,
+                                "enableChildImportOnParentCreate": true,
+                                "enableChildImportOnParentEdit": false,
+                                "enableChildRemoveOnParentCreate": false,
+                                "enableChildRemoveOnParentEdit": false,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "formFieldsMode": "AUTO",
+                                "linear": false,
+                                "manyToManyCustomSortEnabled": false,
+                                "manyToManyDefaultDisplayType": "GRID",
+                                "manyToManyDisplayGridAllowed": false,
+                                "manyToManyDisplayListAllowed": false,
+                                "manyToManyDisplayTableAllowed": false,
+                                "manyToManyUserDefinedSortEnabled": false,
+                                "skipToChildCreationOnParentCreate": false,
+                                "skipToChildEditingOnParentEdit": false,
+                                "useCustomCollectionLabel": false,
+                                "userDefinedSortEnabled": true,
+                                "label": "Emails"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.steppers.AuthorEmails.Emails.Email",
+                                "_type": "FormStep",
+                                "canFinishSubLevel": true,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "enableMasterValuePicking": false,
+                                "formFieldsMode": "AUTO",
+                                "formTab": "CustomerMDM.entities.Email.forms.EmailForm.Email",
+                                "label": "Email",
+                                "parentCollectionStep": "CustomerMDM.entities.Email.steppers.AuthorEmails.Emails"
+                            }
+                        ]
+                    }
+                ],
+                "survivorshipRules": [],
                 "uniqueKeys": [],
                 "fuzzyLookupRules": []
             },
