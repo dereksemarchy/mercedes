@@ -745,6 +745,18 @@
                         "height": 160,
                         "borderColor": "0,128,0",
                         "fontTitleColor": "255,255,255"
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.model_diagrams.Customer.Address",
+                        "entity": "CustomerMDM.entities.Address.Address",
+                        "position": {
+                            "x": 820,
+                            "y": 400
+                        },
+                        "width": 320,
+                        "height": 220,
+                        "borderColor": "0,0,255",
+                        "fontTitleColor": "255,255,255"
                     }
                 ],
                 "inheritLinks": [],
@@ -790,6 +802,24 @@
                         "reference": "CustomerMDM.references.AddressDefinitionHasCountry",
                         "toEntityShape": "CustomerMDM.model_diagrams.Customer.Country",
                         "fromEntityShape": "CustomerMDM.model_diagrams.Customer.AddressDefinition"
+                    },
+                    {
+                        "bendPoints": [],
+                        "reference": "CustomerMDM.references.AddressHasAddressDefinition",
+                        "toEntityShape": "CustomerMDM.model_diagrams.Customer.AddressDefinition",
+                        "fromEntityShape": "CustomerMDM.model_diagrams.Customer.Address"
+                    },
+                    {
+                        "bendPoints": [],
+                        "reference": "CustomerMDM.references.AddressHasCountry",
+                        "toEntityShape": "CustomerMDM.model_diagrams.Customer.Country",
+                        "fromEntityShape": "CustomerMDM.model_diagrams.Customer.Address"
+                    },
+                    {
+                        "bendPoints": [],
+                        "reference": "CustomerMDM.references.AddressHasIndividualContext",
+                        "toEntityShape": "CustomerMDM.model_diagrams.Customer.IndividualContext",
+                        "fromEntityShape": "CustomerMDM.model_diagrams.Customer.Address"
                     }
                 ],
                 "label": "Customer",
@@ -914,7 +944,7 @@
                 "fromRoleName": "Address",
                 "mandatoryValidationLabel": "",
                 "oneToMany": false,
-                "physicalName": "ADDRESS_ID",
+                "physicalName": "ADDRESS_IC_ID",
                 "splitDuplicatePropagation": "NONE",
                 "toEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
                 "toRoleName": "IndividualContext",
@@ -7176,7 +7206,7 @@
                         "primaryImageFallbackSourceType": "URL",
                         "primaryImageMode": "FIT",
                         "primaryImageSourceType": "URL",
-                        "primaryTextExpression": "HouseNumber||' '||Street||','||City||','||PostalCode"
+                        "primaryTextExpression": "HouseNumber||' '||Street||', '||City||', '||PostalCode"
                     }
                 ],
                 "dupsManagers": [],
@@ -7196,6 +7226,7 @@
                                 "visibleValueInterpreter": "LITERAL",
                                 "displayFormTabAs": "LABEL",
                                 "label": "Address",
+                                "labelWidth": "150",
                                 "visibleValue": "1"
                             }
                         ],

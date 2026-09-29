@@ -94,6 +94,16 @@ entityShapes:
       y: 200
     height: 160
     width: 280
+  - _type: EntityShape
+    _name: Address
+    entity: CustomerMDM.entities.Address.Address
+    borderColor: "#0000FF"
+    fontTitleColor: "#FFFFFF"
+    position:
+      x: 820
+      y: 400
+    height: 220
+    width: 320
 referenceLinks:
   - bendPoints: []
     reference: CustomerMDM.references.CountryLanguageHasCountry
@@ -109,4 +119,10 @@ referenceLinks:
     reference: CustomerMDM.references.PhoneHasIndividualContext
   - bendPoints: []
     reference: CustomerMDM.references.AddressDefinitionHasCountry
+  - bendPoints: []
+    reference: CustomerMDM.references.AddressHasAddressDefinition
+  - bendPoints: []
+    reference: CustomerMDM.references.AddressHasCountry
+  - bendPoints: []
+    reference: CustomerMDM.references.AddressHasIndividualContext
 inheritLinks: []
