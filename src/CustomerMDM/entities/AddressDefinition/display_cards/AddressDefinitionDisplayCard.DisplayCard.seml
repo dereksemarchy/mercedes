@@ -3,7 +3,7 @@ _type: DisplayCard
 _name: AddressDefinitionDisplayCard
 entity: CustomerMDM.entities.AddressDefinition.AddressDefinition
 default: true
-primaryTextExpression: SEM_NUMBER_TO_CHAR(AddressDefinitionID)
+primaryTextExpression: AddressDefinitionCode
 primaryImageValueInterpreter: LITERAL
 avatarImageSourceType: URL
 primaryImageAlign: MIDDLE_CENTER

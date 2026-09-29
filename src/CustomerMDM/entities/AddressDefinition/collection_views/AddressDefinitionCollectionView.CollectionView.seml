@@ -18,13 +18,6 @@ tableDisplayCardColumnLabel: Address Definition
 tableRowLines: 1
 tableShowDisplayCard: false
 tableColumns:
-  - _type: IdColumn
-    _name: AddressDefinitionID
-    value: AddressDefinitionID
-    useCustomLabel: false
-    dataType: LONG_INTEGER
-    columnAlign: LEFT
-    visibleByDefault: true
   - _type: MenuColumn
     _name: AddressDefinitionCode
     value: AddressDefinitionCode

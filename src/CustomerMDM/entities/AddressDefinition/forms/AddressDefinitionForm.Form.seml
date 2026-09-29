@@ -13,11 +13,6 @@ formTabs:
     displayFormTabAs: LABEL
     labelWidth: "150"
     content:
-      - _type: IdField
-        _name: AddressDefinitionID
-        value: AddressDefinitionID
-        useCustomLabel: false
-        dataType: LONG_INTEGER
       - _type: MenuField
         _name: AddressDefinitionCode
         value: AddressDefinitionCode

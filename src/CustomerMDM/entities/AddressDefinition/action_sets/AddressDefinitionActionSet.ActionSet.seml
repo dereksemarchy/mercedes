@@ -61,10 +61,10 @@ actions:
     label: Browse Graph
     useCustomLabel: true
     waitDialogEnabled: false
-  - _type: CopyAction
-    _name: CopyAuthorAddressDefinitions
-    label: Copy
-    useCustomLabel: true
-    stepper: CustomerMDM.entities.AddressDefinition.steppers.AuthorAddressDefinitions
-    multipleSelectionAllowed: true
-    waitDialogEnabled: false
+  # - _type: CopyAction
+  #   _name: CopyAuthorAddressDefinitions
+  #   label: Copy
+  #   useCustomLabel: true
+  #   stepper: CustomerMDM.entities.AddressDefinition.steppers.AuthorAddressDefinitions
+  #   multipleSelectionAllowed: true
+  #   waitDialogEnabled: false

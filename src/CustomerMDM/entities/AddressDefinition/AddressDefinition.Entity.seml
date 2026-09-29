@@ -12,23 +12,13 @@ historizeMaster: false
 enableDelete: true
 attributes:
   - _type: EntityAttribute
-    _name: AddressDefinitionID
-    label: Address Definition ID
-    physicalName: ADDRESS_DEFINITION_ID
-    dataType: LongInteger
-    precision: 38
-    mandatory: true
-    searchable: true
-  - _type: EntityAttribute
     _name: AddressDefinitionCode
     label: Address Definition Code
     physicalName: ADDRESS_DEFINITION_CODE
-    dataType: CustomerMDM.list_of_values.AddressDefinitionCode
+    dataType: String
     length: 16
     mandatory: true
     searchable: true
-    mandatoryValidationScope: PRE_CONSO
-    lovValidationScope: PRE_CONSO
   - _type: EntityAttribute
     _name: IsDefault
     label: Is Default
@@ -48,7 +38,6 @@ attributes:
     searchable: true
     mandatoryValidationScope: PRE_CONSO
 sourceIdGeneration:
-  mode: SEQUENCE
-  startWith: 1
-primaryKey: CustomerMDM.entities.AddressDefinition.AddressDefinition.AddressDefinitionID
+  mode: MANUAL
+primaryKey: CustomerMDM.entities.AddressDefinition.AddressDefinition.AddressDefinitionCode
 entityType: BASIC
