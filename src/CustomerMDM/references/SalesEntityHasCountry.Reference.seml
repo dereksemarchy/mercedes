@@ -1,0 +1,22 @@
+_name: SalesEntityHasCountry
+_type: Reference
+_package: CustomerMDM.references
+label: Sales Entity Has Country
+deletePropagation: RESTRICT
+fromEntity: CustomerMDM.entities.SalesEntity.SalesEntity
+fromRoleLabel: Sales Entity
+fromRoleName: SalesEntity
+fromRolePluralLabel: Sales Entities
+physicalName: SALES_ENTITY_ID
+toEntity: CustomerMDM.entities.Country.Country
+toRoleLabel: Country
+toRoleName: Country
+toRolePhysicalName: COUNTRY_CODE
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  entity: CustomerMDM.entities.CountryLanguage.CountryLanguage
+  _name: Country
+  label: Country
+  physicalName: COUNTRY_CODE
+  searchable: true

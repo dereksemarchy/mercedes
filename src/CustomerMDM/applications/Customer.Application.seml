@@ -195,6 +195,13 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: External ID
+      - _type: BrowseBusinessViewAction
+        _name: SalesEntity
+        businessView: CustomerMDM.entities.SalesEntity.business_views.SalesEntityBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Sales Entity
     - _type : FolderAction
       _name: ReferenceData
       label: Reference Data

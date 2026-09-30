@@ -1,0 +1,43 @@
+_package: CustomerMDM.entities.SalesEntity
+_type: Entity
+_name: SalesEntity
+label: Sales Entity
+pluralLabel: Sales Entity
+physicalTableName: SALES_ENTITY
+iconUrl: images://mdi/account-cash-outline.svg
+description: ""
+documentation: ""
+historizeGolden: true
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: GCID
+    label: GC ID
+    physicalName: GC_ID
+    dataType: String
+    length: 32
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: SalesEntityName
+    label: Sales Entity Name
+    physicalName: SALES_ENTITY_NAME
+    dataType: String
+    length: 128
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: LegalEntity
+    label: Legal Entity
+    physicalName: LEGAL_ENTITY
+    dataType: Boolean
+    length: 1
+    mandatory: false
+    searchable: true
+sourceIdGeneration:
+  mode: MANUAL
+  startWith: 1
+primaryKey: CustomerMDM.entities.SalesEntity.SalesEntity.GCID
+entityType: BASIC

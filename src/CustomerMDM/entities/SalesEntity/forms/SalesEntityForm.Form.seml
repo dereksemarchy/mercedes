@@ -1,0 +1,36 @@
+_package: CustomerMDM.entities.SalesEntity.forms
+_type: Form
+_name: SalesEntityForm
+entity: CustomerMDM.entities.SalesEntity.SalesEntity
+default: true
+formTabs:
+  - _type: FormTab
+    _name: SalesEntity
+    label: Sales Entity
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    labelWidth: "150"
+    content:
+      - _type: IdField
+        _name: GCID
+        value: GCID
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: SalesEntityName
+        value: SalesEntityName
+        useCustomLabel: false
+        dataType: STRING
+      - _type: CheckboxField
+        _name: LegalEntity
+        value: LegalEntity
+        useCustomLabel: false
+        dataType: BOOLEAN
+      - _type: ReferenceField
+        _name: FDN_Country
+        value: FDN_Country
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.Country.Country

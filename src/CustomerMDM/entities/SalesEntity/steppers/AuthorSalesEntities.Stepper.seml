@@ -1,0 +1,33 @@
+_package: CustomerMDM.entities.SalesEntity.steppers
+_type: Stepper
+_name: AuthorSalesEntities
+entity: CustomerMDM.entities.SalesEntity.SalesEntity
+label: Sales Entities
+rootStep:
+  _type: CollectionStep
+  _name: SalesEntities
+  label: Sales Entities
+  canFinishSubLevel: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  childDeleteType: HARD_DELETE
+  collectionView: CustomerMDM.entities.SalesEntity.collection_views.SalesEntityCollectionView
+  defaultDisplayType: TABLE
+  customSortEnabled: false
+  userDefinedSortEnabled: true
+  displayGridAllowed: false
+  displayListAllowed: true
+  displayTableAllowed: true
+  useCustomCollectionLabel: false
+  childSteps:
+    - _type: FormStep
+      _name: SalesEntity
+      label: Sales Entity
+      canFinishSubLevel: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      enableMasterValuePicking: false
+      formTab: CustomerMDM.entities.SalesEntity.forms.SalesEntityForm.SalesEntity

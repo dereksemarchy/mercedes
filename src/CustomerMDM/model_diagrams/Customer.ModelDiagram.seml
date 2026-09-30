@@ -144,6 +144,16 @@ entityShapes:
       y: 640
     height: 200
     width: 320
+  - _type: EntityShape
+    _name: SalesEntity
+    entity: CustomerMDM.entities.SalesEntity.SalesEntity
+    borderColor: "#0000FF"
+    fontTitleColor: "#FFFFFF"
+    position:
+      x: 1200
+      y: 0
+    height: 160
+    width: 280
 referenceLinks:
   - bendPoints: []
     reference: CustomerMDM.references.CountryLanguageHasCountry
@@ -177,4 +187,6 @@ referenceLinks:
     reference: CustomerMDM.references.ExternalIDHasCompany
   - bendPoints: []
     reference: CustomerMDM.references.ExternalIDHasIndividual
+  - bendPoints: []
+    reference: CustomerMDM.references.SalesEntityHasCountry
 inheritLinks: []
