@@ -1,0 +1,22 @@
+_name: InternalIDHasCompany
+_type: Reference
+_package: CustomerMDM.references
+label: Internal ID Has Company
+deletePropagation: RESTRICT
+fromEntity: CustomerMDM.entities.InternalID.InternalID
+fromRoleLabel: Internal ID
+fromRoleName: InternalID
+fromRolePluralLabel: Internal IDs
+physicalName: INTERNAL_ID2
+toEntity: CustomerMDM.entities.Company.Company
+toRoleLabel: Company
+toRoleName: Company
+toRolePhysicalName: COMPANY_ID
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  entity: CustomerMDM.entities.Company.Company
+  _name: Company
+  label: Company
+  physicalName: COMPANY_ID
+  searchable: true

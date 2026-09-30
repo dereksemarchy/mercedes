@@ -1,0 +1,63 @@
+_package: CustomerMDM.entities.ExternalID.action_sets
+_type: ActionSet
+_name: ExternalIDActionSet
+entity: CustomerMDM.entities.ExternalID.ExternalID
+label: External ID Action Set
+defaultActionSet: true
+actions:
+  - _type: CreateAction
+    _name: CreateAuthorExternalIDS
+    label: Create
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.ExternalID.steppers.AuthorExternalIDS
+    createMultiple: false
+    createdRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: true
+  - _type: EditAction
+    _name: EditAuthorExternalIDS
+    label: Edit
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.ExternalID.steppers.AuthorExternalIDS
+    multipleSelectionAllowed: true
+    availableForGoldenData: true
+    availableForMasterData: false
+    availableForErrorData: false
+    waitDialogEnabled: false
+  - _type: MassUpdateAction
+    _name: MassUpdateAuthorExternalIDS
+    label: Mass Update
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.ExternalID.steppers.AuthorExternalIDS
+    availableForGoldenData: true
+    availableForErrorData: false
+    availableForMasterData: false
+    waitDialogEnabled: false
+  - _type: DeleteAction
+    _name: Delete
+    label: Delete
+    useCustomLabel: true
+    multipleSelectionAllowed: true
+    deleteType: HARD_DELETE
+    waitDialogEnabled: false
+    availableForGoldenData: true
+    availableForMasterData: false
+  - _type: ExportAction
+    _name: Export
+    label: Export
+    useCustomLabel: true
+    waitDialogEnabled: false
+  - _type: ImportAction
+    _name: ImportAuthorExternalIDS
+    label: Import
+    useCustomLabel: true
+    importMode: CREATE_AND_UPDATE
+    stepper: CustomerMDM.entities.ExternalID.steppers.AuthorExternalIDS
+    importedRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: true
+  - _type: BrowseGraphAction
+    _name: BrowseGraph
+    label: Browse Graph
+    useCustomLabel: true
+    waitDialogEnabled: false

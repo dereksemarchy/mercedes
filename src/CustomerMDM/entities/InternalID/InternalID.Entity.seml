@@ -1,0 +1,69 @@
+_package: CustomerMDM.entities.InternalID
+_type: Entity
+_name: InternalID
+label: Internal ID
+pluralLabel: Internal ID
+physicalTableName: INTERNAL_ID
+iconUrl: images://mdi/database-arrow-left-outline.svg
+description: ""
+documentation: ""
+historizeGolden: true
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: InternalIDID
+    label: Internal IDID
+    physicalName: INTERNAL_IDID
+    dataType: String
+    length: 32
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: IdentifierKey
+    label: Identifier Key
+    physicalName: IDENTIFIER_KEY
+    dataType: String
+    length: 32
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: IdentifierType
+    label: Identifier Type
+    physicalName: IDENTIFIER_TYPE
+    dataType: CustomerMDM.list_of_values.InternalIdentifierType
+    length: 8
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+    lovValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: SourceSystem
+    label: Source System
+    physicalName: SOURCE_SYSTEM
+    dataType: CustomerMDM.list_of_values.SourceSystem
+    length: 4
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+    lovValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: StartDate
+    label: Start Date
+    physicalName: START_DATE
+    dataType: Date
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: EndDate
+    label: End Date
+    physicalName: END_DATE
+    dataType: Date
+    mandatory: false
+    searchable: true
+sourceIdGeneration:
+  mode: MANUAL
+primaryKey: CustomerMDM.entities.InternalID.InternalID.InternalIDID
+entityType: BASIC

@@ -1,0 +1,33 @@
+_package: CustomerMDM.entities.InternalID.steppers
+_type: Stepper
+_name: AuthorInternalIDS
+entity: CustomerMDM.entities.InternalID.InternalID
+label: Internal IDS
+rootStep:
+  _type: CollectionStep
+  _name: InternalIDS
+  label: Internal IDS
+  canFinishSubLevel: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  childDeleteType: HARD_DELETE
+  collectionView: CustomerMDM.entities.InternalID.collection_views.InternalIDImportCollectionView
+  defaultDisplayType: TABLE
+  customSortEnabled: false
+  userDefinedSortEnabled: true
+  displayGridAllowed: false
+  displayListAllowed: true
+  displayTableAllowed: true
+  useCustomCollectionLabel: false
+  childSteps:
+    - _type: FormStep
+      _name: InternalID
+      label: Internal ID
+      canFinishSubLevel: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      enableMasterValuePicking: false
+      formTab: CustomerMDM.entities.InternalID.forms.InternalIDForm.InternalID

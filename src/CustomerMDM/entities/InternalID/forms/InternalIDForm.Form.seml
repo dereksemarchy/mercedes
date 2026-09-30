@@ -1,0 +1,57 @@
+_package: CustomerMDM.entities.InternalID.forms
+_type: Form
+_name: InternalIDForm
+entity: CustomerMDM.entities.InternalID.InternalID
+default: true
+formTabs:
+  - _type: FormTab
+    _name: InternalID
+    label: Internal ID
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    labelWidth: "150"
+    content:
+      - _type: IdField
+        _name: InternalIDID
+        value: InternalIDID
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: IdentifierKey
+        value: IdentifierKey
+        useCustomLabel: false
+        dataType: STRING
+      - _type: MenuField
+        _name: IdentifierType
+        value: IdentifierType
+        useCustomLabel: false
+        dataType: STRING
+      - _type: MenuField
+        _name: SourceSystem
+        value: SourceSystem
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: StartDate
+        value: StartDate
+        useCustomLabel: false
+        dataType: DATE
+      - _type: TextField
+        _name: EndDate
+        value: EndDate
+        useCustomLabel: false
+        dataType: DATE
+      - _type: ReferenceField
+        _name: FDN_Individual
+        value: FDN_Individual
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.Individual.Individual
+      - _type: ReferenceField
+        _name: FDN_Company
+        value: FDN_Company
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.Company.Company

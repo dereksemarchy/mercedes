@@ -1,0 +1,33 @@
+_package: CustomerMDM.entities.ExternalID.steppers
+_type: Stepper
+_name: AuthorExternalIDS
+entity: CustomerMDM.entities.ExternalID.ExternalID
+label: External IDS
+rootStep:
+  _type: CollectionStep
+  _name: ExternalIDS
+  label: External IDS
+  canFinishSubLevel: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  childDeleteType: HARD_DELETE
+  collectionView: CustomerMDM.entities.ExternalID.collection_views.ExternalIDImportCollectionView
+  defaultDisplayType: TABLE
+  customSortEnabled: false
+  userDefinedSortEnabled: true
+  displayGridAllowed: false
+  displayListAllowed: true
+  displayTableAllowed: true
+  useCustomCollectionLabel: false
+  childSteps:
+    - _type: FormStep
+      _name: ExternalID
+      label: External ID
+      canFinishSubLevel: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      enableMasterValuePicking: false
+      formTab: CustomerMDM.entities.ExternalID.forms.ExternalIDForm.ExternalID

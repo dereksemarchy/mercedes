@@ -124,6 +124,26 @@ entityShapes:
       y: 640
     height: 160
     width: 320
+  - _type: EntityShape
+    _name: InternalID
+    entity: CustomerMDM.entities.InternalID.InternalID
+    borderColor: "#e06406"
+    fontTitleColor: "#FFFFFF"
+    position:
+      x: 820
+      y: 640
+    height: 200
+    width: 320
+  - _type: EntityShape
+    _name: ExternalID
+    entity: CustomerMDM.entities.ExternalID.ExternalID
+    borderColor: "#e06406"
+    fontTitleColor: "#FFFFFF"
+    position:
+      x: 1200
+      y: 640
+    height: 200
+    width: 320
 referenceLinks:
   - bendPoints: []
     reference: CustomerMDM.references.CountryLanguageHasCountry
@@ -149,4 +169,12 @@ referenceLinks:
     reference: CustomerMDM.references.EmailIndividualContextHasEmail
   - bendPoints: []
     reference: CustomerMDM.references.EmailIndividualContextHasIndividualContext
+  - bendPoints: []
+    reference: CustomerMDM.references.InternalIDHasCompany
+  - bendPoints: []
+    reference: CustomerMDM.references.InternalIDHasIndividual
+  - bendPoints: []
+    reference: CustomerMDM.references.ExternalIDHasCompany
+  - bendPoints: []
+    reference: CustomerMDM.references.ExternalIDHasIndividual
 inheritLinks: []

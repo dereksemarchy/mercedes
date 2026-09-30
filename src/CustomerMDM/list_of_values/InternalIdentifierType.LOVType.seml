@@ -1,0 +1,12 @@
+_name: InternalIdentifierType
+_type: LOVType
+_package: CustomerMDM.list_of_values
+label: Internal Identifier Type
+length: 8
+lovValues:
+  - label: TOAS_ID
+    code: TOAS_ID
+  - label: DOC_ID
+    code: DOC_ID
+  - label: CIAM_ID
+    code: CIAM_ID

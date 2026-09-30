@@ -1,0 +1,16 @@
+_package: CustomerMDM.entities.InternalID.display_cards
+_type: DisplayCard
+_name: InternalIDDisplayCard
+entity: CustomerMDM.entities.InternalID.InternalID
+default: true
+primaryTextExpression: InternalIDID
+primaryImageValueInterpreter: LITERAL
+avatarImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageFallbackValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+avatarImageValueInterpreter: LITERAL
+primaryImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT

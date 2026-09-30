@@ -1,0 +1,106 @@
+_package: CustomerMDM.entities.ExternalID.collection_views
+_type: CollectionView
+_name: ExternalIDImportCollectionView
+entity: CustomerMDM.entities.ExternalID.ExternalID
+default: true
+displayCard: CustomerMDM.entities.ExternalID.display_cards.ExternalIDDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 1
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: External ID
+tableRowLines: 1
+tableShowDisplayCard: true
+tableColumns:
+  - _type: IdColumn
+    _name: ExternalIDID
+    value: ExternalIDID
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: IdentifierKey
+    value: IdentifierKey
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: MenuColumn
+    _name: IdentifierType
+    value: IdentifierType
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: StartDate
+    value: StartDate
+    useCustomLabel: false
+    dataType: DATE
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: EndDate
+    value: EndDate
+    useCustomLabel: false
+    dataType: DATE
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: MenuColumn
+    _name: DataSource
+    value: DataSource
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: ReferenceColumn
+    _name: FDN_Individual
+    value: FDN_Individual
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+    referencedEntity: CustomerMDM.entities.Individual.Individual
+  - _type: ReferenceColumn
+    _name: FDN_Company
+    value: FDN_Company
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+    referencedEntity: CustomerMDM.entities.Company.Company
+  - _type: TextColumn
+    _name: PublisherID_Individual
+    value: PublisherID_Individual
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: SourceID_Individual
+    value: SourceID_Individual
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: PublisherID_Company
+    value: PublisherID_Company
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: SourceID_Company
+    value: SourceID_Company
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true

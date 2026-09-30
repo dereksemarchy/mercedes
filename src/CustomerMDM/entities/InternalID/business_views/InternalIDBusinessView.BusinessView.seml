@@ -1,0 +1,36 @@
+_package: CustomerMDM.entities.InternalID.business_views
+_type: BusinessView
+_name: InternalIDBusinessView
+entity: CustomerMDM.entities.InternalID.InternalID
+rootLabel: Internal IDS
+rootPluralLabel: Internal IDS
+displayRootNodeAs: ICON_LABEL
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: InternalID
+  entity: CustomerMDM.entities.InternalID.InternalID
+  actionSet: CustomerMDM.entities.InternalID.action_sets.InternalIDActionSet
+  collection: CustomerMDM.entities.InternalID.collection_views.InternalIDCollectionView
+  form: CustomerMDM.entities.InternalID.forms.InternalIDForm
+  outlineVisible: false
+  displayRecordCount: ALWAYS
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+  overrideDefaultSort: false
+  enableUserDefinedSort: true
+  listAllowed: true
+  tableAllowed: true
+  gridAllowed: true
+enableHierarchyView: false
+useHierarchyOnOpen: false

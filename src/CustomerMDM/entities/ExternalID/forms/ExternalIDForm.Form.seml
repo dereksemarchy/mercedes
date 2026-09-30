@@ -1,0 +1,56 @@
+_package: CustomerMDM.entities.ExternalID.forms
+_type: Form
+_name: ExternalIDForm
+entity: CustomerMDM.entities.ExternalID.ExternalID
+default: true
+formTabs:
+  - _type: FormTab
+    _name: ExternalID
+    label: External ID
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    content:
+      - _type: IdField
+        _name: ExternalIDID
+        value: ExternalIDID
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: IdentifierKey
+        value: IdentifierKey
+        useCustomLabel: false
+        dataType: STRING
+      - _type: MenuField
+        _name: IdentifierType
+        value: IdentifierType
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: StartDate
+        value: StartDate
+        useCustomLabel: false
+        dataType: DATE
+      - _type: TextField
+        _name: EndDate
+        value: EndDate
+        useCustomLabel: false
+        dataType: DATE
+      - _type: MenuField
+        _name: DataSource
+        value: DataSource
+        useCustomLabel: false
+        dataType: STRING
+      - _type: ReferenceField
+        _name: FDN_Individual
+        value: FDN_Individual
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.Individual.Individual
+      - _type: ReferenceField
+        _name: FDN_Company
+        value: FDN_Company
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.Company.Company

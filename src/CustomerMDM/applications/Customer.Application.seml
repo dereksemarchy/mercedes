@@ -181,6 +181,20 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: Email Individual Context
+      - _type: BrowseBusinessViewAction
+        _name: InternalID
+        businessView: CustomerMDM.entities.InternalID.business_views.InternalIDBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Internal ID
+      - _type: BrowseBusinessViewAction
+        _name: ExternalID
+        businessView: CustomerMDM.entities.ExternalID.business_views.ExternalIDBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: External ID
     - _type : FolderAction
       _name: ReferenceData
       label: Reference Data

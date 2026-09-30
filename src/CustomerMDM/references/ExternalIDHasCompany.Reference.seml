@@ -1,0 +1,22 @@
+_name: ExternalIDHasCompany
+_type: Reference
+_package: CustomerMDM.references
+label: External ID Has Company
+deletePropagation: RESTRICT
+fromEntity: CustomerMDM.entities.ExternalID.ExternalID
+fromRoleLabel: External ID
+fromRoleName: ExternalID
+fromRolePluralLabel: External IDs
+physicalName: EXTERNAL_ID2
+toEntity: CustomerMDM.entities.Company.Company
+toRoleLabel: Company
+toRoleName: Company
+toRolePhysicalName: COMPANY_ID
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  entity: CustomerMDM.entities.Company.Company
+  _name: Company
+  label: Company
+  physicalName: COMPANY_ID
+  searchable: true

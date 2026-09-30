@@ -1,0 +1,12 @@
+_name: SourceSystem
+_type: LOVType
+_package: CustomerMDM.list_of_values
+label: Source System
+length: 4
+lovValues:
+  - label: TOAS
+    code: TOAS
+  - label: DOC
+    code: DOC
+  - label: CIAM
+    code: CIAM

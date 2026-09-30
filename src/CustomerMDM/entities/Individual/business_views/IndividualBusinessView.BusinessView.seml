@@ -231,6 +231,84 @@ rootBusinessViewEntity:
             tableAllowed: true
             gridAllowed: true
     - _type: BusinessViewTransition
+      _name: InternalID
+      transitionPath: InternalID
+      transitionType: FULLY_QUALIFIED
+      useCustomLabel: true
+      pluralLabel: Internal IDs
+      label: Internal ID
+      enableHierarchy: "1"
+      transitionVisible: any InternalID has (1=1)
+      displayFormTabAs: LABEL
+      transitionVisibleInterpreter: SEMQL
+      visibleInFormTabCondition: any InternalID has (1=1)
+      businessViewEntity:
+        _type: BusinessViewEntity
+        _name: InternalIDs
+        entity: CustomerMDM.entities.InternalID.InternalID
+        actionSet: CustomerMDM.entities.InternalID.action_sets.InternalIDActionSet
+        collection: CustomerMDM.entities.InternalID.collection_views.InternalIDCollectionView
+        form: CustomerMDM.entities.InternalID.forms.InternalIDForm
+        outlineVisible: false
+        displayRecordCount: ALWAYS
+        businessEntitySearchConfigs:
+          - _name: TextConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: TEXT
+          - _name: FormConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: BY_FORM
+          - _name: AdvancedConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: ADVANCED
+          - _name: SemqlConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: SEMQL
+        overrideDefaultSort: false
+        enableUserDefinedSort: true
+        listAllowed: true
+        tableAllowed: true
+        gridAllowed: true
+    - _type: BusinessViewTransition
+      _name: ExternalID
+      transitionPath: ExternalID
+      transitionType: FULLY_QUALIFIED
+      useCustomLabel: true
+      pluralLabel: External IDs
+      label: External ID
+      enableHierarchy: "1"
+      transitionVisible: any ExternalID has (1=1)
+      displayFormTabAs: LABEL
+      transitionVisibleInterpreter: SEMQL
+      visibleInFormTabCondition: any ExternalID has (1=1)
+      businessViewEntity:
+        _type: BusinessViewEntity
+        _name: ExternalIDs
+        entity: CustomerMDM.entities.ExternalID.ExternalID
+        actionSet: CustomerMDM.entities.ExternalID.action_sets.ExternalIDActionSet
+        collection: CustomerMDM.entities.ExternalID.collection_views.ExternalIDCollectionView
+        form: CustomerMDM.entities.ExternalID.forms.ExternalIDForm
+        outlineVisible: false
+        displayRecordCount: ALWAYS
+        businessEntitySearchConfigs:
+          - _name: TextConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: TEXT
+          - _name: FormConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: BY_FORM
+          - _name: AdvancedConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: ADVANCED
+          - _name: SemqlConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: SEMQL
+        overrideDefaultSort: false
+        enableUserDefinedSort: true
+        listAllowed: true
+        tableAllowed: true
+        gridAllowed: true
+    - _type: BusinessViewTransition
       _name: MasterRecords
       transitionPath: MasterRecords
       transitionType: FULLY_QUALIFIED

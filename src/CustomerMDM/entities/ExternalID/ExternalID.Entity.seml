@@ -1,0 +1,70 @@
+_package: CustomerMDM.entities.ExternalID
+_type: Entity
+_name: ExternalID
+label: External ID
+pluralLabel: External ID
+physicalTableName: EXTERNAL_ID
+iconUrl: images://mdi/database-arrow-right-outline.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: ExternalIDID
+    label: External IDID
+    physicalName: EXTERNAL_IDID
+    dataType: String
+    length: 32
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: IdentifierKey
+    label: Identifier Key
+    physicalName: IDENTIFIER_KEY
+    dataType: String
+    length: 32
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: IdentifierType
+    label: Identifier Type
+    physicalName: IDENTIFIER_TYPE
+    dataType: CustomerMDM.list_of_values.ExternalIdentifierType
+    length: 32
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+    lovValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: StartDate
+    label: Start Date
+    physicalName: START_DATE
+    dataType: Date
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: EndDate
+    label: End Date
+    physicalName: END_DATE
+    dataType: Date
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: DataSource
+    label: Data Source
+    physicalName: DATA_SOURCE
+    dataType: CustomerMDM.list_of_values.DataSource
+    length: 4
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+    lovValidationScope: PRE_CONSO
+sourceIdGeneration:
+  mode: MANUAL
+  startWith: 1
+primaryKey: CustomerMDM.entities.ExternalID.ExternalID.ExternalIDID
+entityType: BASIC

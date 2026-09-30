@@ -1,0 +1,63 @@
+_package: CustomerMDM.entities.InternalID.action_sets
+_type: ActionSet
+_name: InternalIDActionSet
+entity: CustomerMDM.entities.InternalID.InternalID
+label: Internal ID Action Set
+defaultActionSet: true
+actions:
+  - _type: CreateAction
+    _name: CreateAuthorInternalIDS
+    label: Create
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.InternalID.steppers.AuthorInternalIDS
+    createMultiple: false
+    createdRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: true
+  - _type: EditAction
+    _name: EditAuthorInternalIDS
+    label: Edit
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.InternalID.steppers.AuthorInternalIDS
+    multipleSelectionAllowed: true
+    availableForGoldenData: true
+    availableForMasterData: false
+    availableForErrorData: false
+    waitDialogEnabled: false
+  - _type: MassUpdateAction
+    _name: MassUpdateAuthorInternalIDS
+    label: Mass Update
+    useCustomLabel: true
+    stepper: CustomerMDM.entities.InternalID.steppers.AuthorInternalIDS
+    availableForGoldenData: true
+    availableForErrorData: false
+    availableForMasterData: false
+    waitDialogEnabled: false
+  - _type: DeleteAction
+    _name: Delete
+    label: Delete
+    useCustomLabel: true
+    multipleSelectionAllowed: true
+    deleteType: HARD_DELETE
+    waitDialogEnabled: false
+    availableForGoldenData: true
+    availableForMasterData: false
+  - _type: ExportAction
+    _name: Export
+    label: Export
+    useCustomLabel: true
+    waitDialogEnabled: false
+  - _type: ImportAction
+    _name: ImportAuthorInternalIDS
+    label: Import
+    useCustomLabel: true
+    importMode: CREATE_AND_UPDATE
+    stepper: CustomerMDM.entities.InternalID.steppers.AuthorInternalIDS
+    importedRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: true
+  - _type: BrowseGraphAction
+    _name: BrowseGraph
+    label: Browse Graph
+    useCustomLabel: true
+    waitDialogEnabled: false

@@ -1,0 +1,14 @@
+_name: ExternalIdentifierType
+_type: LOVType
+_package: CustomerMDM.list_of_values
+label: External Identifier Type
+length: 32
+lovValues:
+  - label: TAX
+    code: TAX
+  - label: ID_NUMBER
+    code: ID_NUMBER
+  - label: DRIVER_LICENSE_NUMBER
+    code: DRIVER_LICENSE_NUMBER
+  - label: COMMERCIAL_REGISTRATION
+    code: COMMERCIAL_REGISTRATION
