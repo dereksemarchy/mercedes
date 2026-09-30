@@ -1,0 +1,22 @@
+_name: SalesEntityRelHasSalesEntity
+_type: Reference
+_package: CustomerMDM.references
+label: Sales Entity Relationship Has Sales Entity
+deletePropagation: RESTRICT
+fromEntity: CustomerMDM.entities.SalesEntityRel.SalesEntityRel
+fromRoleLabel: Sales Entity Relationship
+fromRoleName: SalesEntityRel
+fromRolePluralLabel: Sales Entity Relationships
+physicalName: SALES_ENTITY_REL_ID2
+toEntity: CustomerMDM.entities.SalesEntity.SalesEntity
+toRoleLabel: Sales Entity
+toRoleName: SalesEntity
+toRolePhysicalName: SALES_ENTITY_ID
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  entity: CustomerMDM.entities.SalesEntity.SalesEntity
+  _name: SalesEntity
+  label: Sales Entity
+  physicalName: SALES_ENTITY_ID
+  searchable: true

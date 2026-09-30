@@ -1,0 +1,64 @@
+_package: CustomerMDM.entities.SalesEntityRel.collection_views
+_type: CollectionView
+_name: SalesEntityRelCollectionView
+entity: CustomerMDM.entities.SalesEntityRel.SalesEntityRel
+default: true
+displayCard: CustomerMDM.entities.SalesEntityRel.display_cards.SalesEntityRelDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 1
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Sales Entity Relationship
+tableRowLines: 1
+tableShowDisplayCard: true
+tableColumns:
+  - _type: IdColumn
+    _name: SalesEntityRelID
+    value: SalesEntityRelID
+    useCustomLabel: false
+    dataType: LONG_INTEGER
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: ReferenceColumn
+    _name: FDN_IndividualContext
+    value: FDN_IndividualContext
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+    referencedEntity: CustomerMDM.entities.IndividualContext.IndividualContext
+  - _type: ReferenceColumn
+    _name: FDN_SalesEntity
+    value: FDN_SalesEntity
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+    referencedEntity: CustomerMDM.entities.SalesEntity.SalesEntity
+  - _type: MenuColumn
+    _name: RelationshipType
+    value: RelationshipType
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: StartDate
+    value: StartDate
+    useCustomLabel: false
+    dataType: DATE
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: EndDate
+    value: EndDate
+    useCustomLabel: false
+    dataType: DATE
+    columnAlign: LEFT
+    visibleByDefault: true

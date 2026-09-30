@@ -3,7 +3,7 @@ _type: DisplayCard
 _name: SalesEntityDisplayCard
 entity: CustomerMDM.entities.SalesEntity.SalesEntity
 default: true
-primaryTextExpression: GCID
+primaryTextExpression: SalesEntityName
 primaryImageValueInterpreter: LITERAL
 avatarImageSourceType: URL
 primaryImageAlign: MIDDLE_CENTER

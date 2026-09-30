@@ -347,6 +347,18 @@
                         "label": "Sales Entity"
                     },
                     {
+                        "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.SalesEntityRel",
+                        "posInFolder": 11,
+                        "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView",
+                        "nbRecordsBadgeVisible": false,
+                        "useCustomLabel": true,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Sales Entity Relationship"
+                    },
+                    {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.ReferenceData.Country",
                         "posInFolder": 0,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.ReferenceData",
@@ -769,6 +781,26 @@
                 ]
             },
             {
+                "qualifiedName": "CustomerMDM.list_of_values.RelationshipType",
+                "_type": "LOVType",
+                "description": "",
+                "label": "Relationship Type",
+                "validationLabel": "",
+                "length": 32,
+                "lovValues": [
+                    {
+                        "description": "",
+                        "label": "DEALER_RELATIONSHIP",
+                        "code": "DEALER_RELATIONSHIP"
+                    },
+                    {
+                        "description": "",
+                        "label": "BUSINESS_RELATIONSHIP",
+                        "code": "BUSINESS_RELATIONSHIP"
+                    }
+                ]
+            },
+            {
                 "qualifiedName": "CustomerMDM.list_of_values.Salutation",
                 "_type": "LOVType",
                 "description": "",
@@ -1007,6 +1039,18 @@
                         "height": 160,
                         "borderColor": "0,0,255",
                         "fontTitleColor": "255,255,255"
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.model_diagrams.Customer.SalesEntityRel",
+                        "entity": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
+                        "position": {
+                            "x": 1200,
+                            "y": 200
+                        },
+                        "width": 320,
+                        "height": 180,
+                        "borderColor": "0,0,255",
+                        "fontTitleColor": "255,255,255"
                     }
                 ],
                 "inheritLinks": [],
@@ -1112,6 +1156,18 @@
                         "reference": "CustomerMDM.references.SalesEntityHasCountry",
                         "toEntityShape": "CustomerMDM.model_diagrams.Customer.Country",
                         "fromEntityShape": "CustomerMDM.model_diagrams.Customer.SalesEntity"
+                    },
+                    {
+                        "bendPoints": [],
+                        "reference": "CustomerMDM.references.SalesEntityRelHasIndividualContext",
+                        "toEntityShape": "CustomerMDM.model_diagrams.Customer.IndividualContext",
+                        "fromEntityShape": "CustomerMDM.model_diagrams.Customer.SalesEntityRel"
+                    },
+                    {
+                        "bendPoints": [],
+                        "reference": "CustomerMDM.references.SalesEntityRelHasSalesEntity",
+                        "toEntityShape": "CustomerMDM.model_diagrams.Customer.SalesEntity",
+                        "fromEntityShape": "CustomerMDM.model_diagrams.Customer.SalesEntityRel"
                     }
                 ],
                 "label": "Customer",
@@ -1605,11 +1661,620 @@
                     "label": "Country",
                     "searchable": true
                 }
+            },
+            {
+                "qualifiedName": "CustomerMDM.references.SalesEntityRelHasIndividualContext",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
+                "fromRoleName": "SalesEntityRel",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "SALES_ENTITY_REL_ID",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                "toRoleName": "IndividualContext",
+                "toRolePhysicalName": "INDIVIDUAL_CONTEXT_ID",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Sales Entity Relationship",
+                "fromRolePluralLabel": "Sales Entity Relationships",
+                "label": "Sales Entity Relationship Has Individual Context",
+                "toRoleLabel": "Individual Context",
+                "foreignAttribute": {
+                    "qualifiedName": "CustomerMDM.references.SalesEntityRelHasIndividualContext.IndividualContext",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "INDIVIDUAL_CONTEXT_ID",
+                    "entity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                    "label": "Individual Context",
+                    "searchable": true
+                }
+            },
+            {
+                "qualifiedName": "CustomerMDM.references.SalesEntityRelHasSalesEntity",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
+                "fromRoleName": "SalesEntityRel",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "SALES_ENTITY_REL_ID2",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "CustomerMDM.entities.SalesEntity.SalesEntity",
+                "toRoleName": "SalesEntity",
+                "toRolePhysicalName": "SALES_ENTITY_ID",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Sales Entity Relationship",
+                "fromRolePluralLabel": "Sales Entity Relationships",
+                "label": "Sales Entity Relationship Has Sales Entity",
+                "toRoleLabel": "Sales Entity",
+                "foreignAttribute": {
+                    "qualifiedName": "CustomerMDM.references.SalesEntityRelHasSalesEntity.SalesEntity",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "SALES_ENTITY_ID",
+                    "entity": "CustomerMDM.entities.SalesEntity.SalesEntity",
+                    "label": "Sales Entity",
+                    "searchable": true
+                }
             }
         ],
         "userDefinedTypes": [],
         "workflows": [],
         "entities": [
+            {
+                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
+                "dataEntryAllowed": true,
+                "historizeGolden": true,
+                "historizeMaster": false,
+                "description": "",
+                "documentation": "",
+                "enableDelete": true,
+                "entityType": "BASIC",
+                "iconUrl": "images://mdi/vector-link.svg",
+                "label": "Sales Entity Relationship",
+                "physicalTableName": "SALES_ENTITY_REL",
+                "pluralLabel": "Sales Entity Relationships",
+                "pkAttributes": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel.SalesEntityRelID",
+                        "_type": "PKAttribute",
+                        "abstractAtomicType": "LongInteger",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "mandatory": true,
+                        "multiValued": false,
+                        "physicalColName": "SALES_ENTITY_REL_ID",
+                        "valueSeparator": "",
+                        "idGenerationType": "SEQUENCE",
+                        "idSequenceStartsWith": 1,
+                        "label": "Sales Entity Rel ID",
+                        "precision": 38,
+                        "searchable": true
+                    }
+                ],
+                "atomicAttributes": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel.RelationshipType",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "CustomerMDM.list_of_values.RelationshipType",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "PRE_CONSO",
+                        "mandatory": true,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "PRE_CONSO",
+                        "multiValued": false,
+                        "physicalColName": "RELATIONSHIP_TYPE",
+                        "valueSeparator": "",
+                        "label": "Relationship Type",
+                        "length": 32,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel.StartDate",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "Date",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": true,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "PRE_CONSO",
+                        "multiValued": false,
+                        "physicalColName": "START_DATE",
+                        "valueSeparator": "",
+                        "label": "Start Date",
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel.EndDate",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "Date",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "END_DATE",
+                        "valueSeparator": "",
+                        "label": "End Date",
+                        "searchable": true
+                    }
+                ],
+                "complexAttributes": [],
+                "abstractRowCheckConstraints": [],
+                "actionSets": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.action_sets.SalesEntityRelActionSet",
+                        "defaultActionSet": true,
+                        "description": "",
+                        "label": "Sales Entity Relationship Action Set",
+                        "actions": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.action_sets.SalesEntityRelActionSet.CreateAuthorSalesEntityRels",
+                                "_type": "CreateAction",
+                                "description": "",
+                                "label": "Create",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "createdRecordType": "GOLDEN",
+                                "createMultiple": false,
+                                "stepper": "CustomerMDM.entities.SalesEntityRel.steppers.AuthorSalesEntityRels"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.action_sets.SalesEntityRelActionSet.EditAuthorSalesEntityRels",
+                                "_type": "EditAction",
+                                "description": "",
+                                "label": "Edit",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "multipleSelectionAllowed": true,
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false,
+                                "stepper": "CustomerMDM.entities.SalesEntityRel.steppers.AuthorSalesEntityRels"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.action_sets.SalesEntityRelActionSet.MassUpdateAuthorSalesEntityRels",
+                                "_type": "MassUpdateAction",
+                                "description": "",
+                                "label": "Mass Update",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "stepper": "CustomerMDM.entities.SalesEntityRel.steppers.AuthorSalesEntityRels",
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.action_sets.SalesEntityRelActionSet.Delete",
+                                "_type": "DeleteAction",
+                                "description": "",
+                                "label": "Delete",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "deleteType": "HARD_DELETE",
+                                "multipleSelectionAllowed": true,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.action_sets.SalesEntityRelActionSet.Export",
+                                "_type": "ExportAction",
+                                "description": "",
+                                "label": "Export",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.action_sets.SalesEntityRelActionSet.ImportAuthorSalesEntityRels",
+                                "_type": "ImportAction",
+                                "description": "",
+                                "label": "Import",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "importedRecordType": "GOLDEN",
+                                "importMode": "CREATE_AND_UPDATE",
+                                "stepper": "CustomerMDM.entities.SalesEntityRel.steppers.AuthorSalesEntityRels"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.action_sets.SalesEntityRelActionSet.BrowseGraph",
+                                "_type": "BrowseGraphAction",
+                                "description": "",
+                                "label": "Browse Graph",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.action_sets.SalesEntityRelActionSet.CopyAuthorSalesEntityRels",
+                                "_type": "CopyAction",
+                                "description": "",
+                                "label": "Copy",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "multipleSelectionAllowed": true,
+                                "stepper": "CustomerMDM.entities.SalesEntityRel.steppers.AuthorSalesEntityRels"
+                            }
+                        ]
+                    }
+                ],
+                "businessObjectViews": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView",
+                        "displayRootNodeAs": "ICON_LABEL",
+                        "enableHierarchyView": false,
+                        "filter": "1 = 1",
+                        "rootBoViewEntity": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel",
+                        "rootDescription": "",
+                        "rootLabel": "Sales Entity Relationships",
+                        "rootPluralLabel": "Sales Entity Relationships",
+                        "useHierarchyOnOpen": false,
+                        "visible": true,
+                        "boViewEntities": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel",
+                                "collection": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
+                                "form": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerMDM.entities.SalesEntityRel.action_sets.SalesEntityRelActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "collections": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionView",
+                        "default": true,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Sales Entity Relationship",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "CustomerMDM.entities.SalesEntityRel.display_cards.SalesEntityRelDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionView.SalesEntityRelID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "SalesEntityRelID",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionView.FDN_IndividualContext",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "FDN_IndividualContext",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionView.FDN_SalesEntity",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "FDN_SalesEntity",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.SalesEntity.SalesEntity",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionView.RelationshipType",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "RelationshipType",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionView.StartDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "StartDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionView.EndDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "EndDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "displayCards": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.display_cards.SalesEntityRelDisplayCard",
+                        "avatarImageValueInterpreter": "SEMQL",
+                        "default": true,
+                        "primaryImageFallbackValueInterpreter": "LITERAL",
+                        "primaryImageValueInterpreter": "SEMQL",
+                        "avatarImageAlign": "MIDDLE_CENTER",
+                        "avatarImageMode": "FIT",
+                        "avatarImageSourceType": "URL",
+                        "avatarImageValue": "CASE WHEN RelationshipType = 'DEALER_RELATIONSHIP' THEN 'images://mdi/alpha-d-circle-outline.svg' ELSE 'images://mdi/alpha-b-circle-outline.svg' END",
+                        "primaryImageAlign": "MIDDLE_CENTER",
+                        "primaryImageFallbackSourceType": "URL",
+                        "primaryImageMode": "FIT",
+                        "primaryImageSourceType": "URL",
+                        "primaryImageValue": "CASE WHEN RelationshipType = 'DEALER_RELATIONSHIP' THEN 'images://mdi/alpha-d-circle-outline.svg' ELSE 'images://mdi/alpha-b-circle-outline.svg' END",
+                        "primaryTextExpression": "FDN_IndividualContext||'/'||FDN_SalesEntity"
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.display_cards.SalesEntityRelInIndividualDisplayCard",
+                        "avatarImageValueInterpreter": "SEMQL",
+                        "default": false,
+                        "primaryImageFallbackValueInterpreter": "LITERAL",
+                        "primaryImageValueInterpreter": "SEMQL",
+                        "avatarImageAlign": "MIDDLE_CENTER",
+                        "avatarImageMode": "FIT",
+                        "avatarImageSourceType": "URL",
+                        "avatarImageValue": "CASE WHEN RelationshipType = 'DEALER_RELATIONSHIP' THEN 'images://mdi/alpha-d-circle-outline.svg' ELSE 'images://mdi/alpha-b-circle-outline.svg' END",
+                        "primaryImageAlign": "MIDDLE_CENTER",
+                        "primaryImageFallbackSourceType": "URL",
+                        "primaryImageMode": "FIT",
+                        "primaryImageSourceType": "URL",
+                        "primaryImageValue": "CASE WHEN RelationshipType = 'DEALER_RELATIONSHIP' THEN 'images://mdi/alpha-d-circle-outline.svg' ELSE 'images://mdi/alpha-b-circle-outline.svg' END",
+                        "primaryTextExpression": "FDN_SalesEntity"
+                    }
+                ],
+                "dupsManagers": [],
+                "enrichers": [],
+                "forms": [
+                    {
+                        "default": true,
+                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm",
+                        "formCharts": [],
+                        "formCollections": [],
+                        "formContainers": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel",
+                                "_type": "FormTab",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "visibleValueInterpreter": "LITERAL",
+                                "displayFormTabAs": "LABEL",
+                                "label": "Sales Entity Relationship",
+                                "labelWidth": "150",
+                                "visibleValue": "1"
+                            }
+                        ],
+                        "formDashboards": [],
+                        "formFields": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel.SalesEntityRelID",
+                                "_type": "FormField",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "SalesEntityRelID",
+                                "parentFormContainer": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel",
+                                "valueDataType": "LONG_INTEGER",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel.FDN_IndividualContext",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "FDN_IndividualContext",
+                                "parentFormContainer": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel",
+                                "referencedEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel.FDN_SalesEntity",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "FDN_SalesEntity",
+                                "parentFormContainer": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel",
+                                "referencedEntity": "CustomerMDM.entities.SalesEntity.SalesEntity",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel.RelationshipType",
+                                "_type": "FormField",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "RelationshipType",
+                                "parentFormContainer": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel.StartDate",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "StartDate",
+                                "parentFormContainer": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel",
+                                "valueDataType": "DATE",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel.EndDate",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "EndDate",
+                                "parentFormContainer": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel",
+                                "valueDataType": "DATE",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "searchForms": [],
+                "steppers": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.steppers.AuthorSalesEntityRels",
+                        "label": "Sales Entity Relationships",
+                        "rootCollectionStep": "CustomerMDM.entities.SalesEntityRel.steppers.AuthorSalesEntityRels.SalesEntityRels",
+                        "steps": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.steppers.AuthorSalesEntityRels.SalesEntityRels",
+                                "_type": "CollectionStep",
+                                "canFinishSubLevel": true,
+                                "childDeleteType": "HARD_DELETE",
+                                "childImportModeOnParentEdit": "CREATE_AND_UPDATE",
+                                "collectionView": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionView",
+                                "createChildUsingManyToManyPicker": false,
+                                "customSortEnabled": false,
+                                "defaultDisplayType": "TABLE",
+                                "displayGridAllowed": false,
+                                "displayListAllowed": true,
+                                "displayTableAllowed": true,
+                                "enableChildCopyOnParentCreate": false,
+                                "enableChildCopyOnParentEdit": true,
+                                "enableChildCreationOnParentCreate": false,
+                                "enableChildCreationOnParentEdit": false,
+                                "enableChildDeleteOnParentEdit": false,
+                                "enableChildEditOnParentCreate": false,
+                                "enableChildEditOnParentEdit": false,
+                                "enableChildExport": false,
+                                "enableChildImportOnParentCreate": true,
+                                "enableChildImportOnParentEdit": false,
+                                "enableChildRemoveOnParentCreate": false,
+                                "enableChildRemoveOnParentEdit": false,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "formFieldsMode": "AUTO",
+                                "linear": false,
+                                "manyToManyCustomSortEnabled": false,
+                                "manyToManyDefaultDisplayType": "GRID",
+                                "manyToManyDisplayGridAllowed": false,
+                                "manyToManyDisplayListAllowed": false,
+                                "manyToManyDisplayTableAllowed": false,
+                                "manyToManyUserDefinedSortEnabled": false,
+                                "skipToChildCreationOnParentCreate": false,
+                                "skipToChildEditingOnParentEdit": false,
+                                "useCustomCollectionLabel": false,
+                                "userDefinedSortEnabled": true,
+                                "label": "Sales Entity Relationships"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.steppers.AuthorSalesEntityRels.SalesEntityRels.SalesEntityRel",
+                                "_type": "FormStep",
+                                "canFinishSubLevel": true,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "enableMasterValuePicking": false,
+                                "formFieldsMode": "AUTO",
+                                "formTab": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel",
+                                "label": "Sales Entity Relationship",
+                                "parentCollectionStep": "CustomerMDM.entities.SalesEntityRel.steppers.AuthorSalesEntityRels.SalesEntityRels"
+                            }
+                        ]
+                    }
+                ],
+                "survivorshipRules": [],
+                "uniqueKeys": [],
+                "fuzzyLookupRules": []
+            },
             {
                 "qualifiedName": "CustomerMDM.entities.SalesEntity.SalesEntity",
                 "dataEntryAllowed": true,
@@ -1912,7 +2577,7 @@
                         "primaryImageFallbackSourceType": "URL",
                         "primaryImageMode": "FIT",
                         "primaryImageSourceType": "URL",
-                        "primaryTextExpression": "GCID"
+                        "primaryTextExpression": "SalesEntityName"
                     }
                 ],
                 "dupsManagers": [],
@@ -5380,6 +6045,23 @@
                                         "transitionVisible": "any Phone has (1=1)",
                                         "transitionVisibleInterpreter": "SEMQL",
                                         "visibleInFormTabCondition": "any Phone has (1=1)"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.SalesEntityRels",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.SalesEntityRels.SalesEntityRels",
+                                        "transitionPath": "SalesEntityRel",
+                                        "useCustomLabel": true,
+                                        "displayFormTabAs": "LABEL",
+                                        "enableHierarchy": "1",
+                                        "label": "Sales Entity Relationship",
+                                        "pluralLabel": "Sales Entity Relationships",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "any SalesEntityRel has (1=1)",
+                                        "transitionVisibleInterpreter": "SEMQL",
+                                        "visibleInFormTabCondition": "any SalesEntityRel has (1=1)"
                                     }
                                 ]
                             },
@@ -5506,6 +6188,48 @@
                                         }
                                     }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.SalesEntityRels.SalesEntityRels",
+                                "collection": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
+                                "form": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerMDM.entities.SalesEntityRel.action_sets.SalesEntityRelActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.SalesEntityRels.SalesEntityRels.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.SalesEntityRels.SalesEntityRels.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.SalesEntityRels.SalesEntityRels.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.SalesEntityRels.SalesEntityRels.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ],
+                                "displayCard": "CustomerMDM.entities.SalesEntityRel.display_cards.SalesEntityRelInIndividualDisplayCard"
                             },
                             {
                                 "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.InternalID.InternalIDs",

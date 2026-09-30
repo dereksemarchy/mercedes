@@ -1,0 +1,18 @@
+_package: CustomerMDM.entities.SalesEntityRel.display_cards
+_type: DisplayCard
+_name: SalesEntityRelInIndividualDisplayCard
+entity: CustomerMDM.entities.SalesEntityRel.SalesEntityRel
+default: false
+primaryTextExpression: FDN_SalesEntity
+primaryImageValueInterpreter: SEMQL
+primaryImageValue: CASE WHEN RelationshipType = 'DEALER_RELATIONSHIP' THEN 'images://mdi/alpha-d-circle-outline.svg' ELSE 'images://mdi/alpha-b-circle-outline.svg' END
+avatarImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageFallbackValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+avatarImageValueInterpreter: SEMQL
+avatarImageValue: CASE WHEN RelationshipType = 'DEALER_RELATIONSHIP' THEN 'images://mdi/alpha-d-circle-outline.svg' ELSE 'images://mdi/alpha-b-circle-outline.svg' END
+primaryImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT

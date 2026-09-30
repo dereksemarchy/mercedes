@@ -202,6 +202,13 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: Sales Entity
+      - _type: BrowseBusinessViewAction
+        _name: SalesEntityRel
+        businessView: CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Sales Entity Relationship
     - _type : FolderAction
       _name: ReferenceData
       label: Reference Data

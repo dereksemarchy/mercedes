@@ -1,0 +1,51 @@
+_package: CustomerMDM.entities.SalesEntityRel
+_type: Entity
+_name: SalesEntityRel
+label: Sales Entity Relationship
+pluralLabel: Sales Entity Relationships
+physicalTableName: SALES_ENTITY_REL
+iconUrl: images://mdi/vector-link.svg
+description: ""
+documentation: ""
+historizeGolden: true
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: SalesEntityRelID
+    label: Sales Entity Rel ID
+    physicalName: SALES_ENTITY_REL_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: RelationshipType
+    label: Relationship Type
+    physicalName: RELATIONSHIP_TYPE
+    dataType: CustomerMDM.list_of_values.RelationshipType
+    length: 32
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+    lovValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: StartDate
+    label: Start Date
+    physicalName: START_DATE
+    dataType: Date
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: EndDate
+    label: End Date
+    physicalName: END_DATE
+    dataType: Date
+    mandatory: false
+    searchable: true
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: CustomerMDM.entities.SalesEntityRel.SalesEntityRel.SalesEntityRelID
+entityType: BASIC
