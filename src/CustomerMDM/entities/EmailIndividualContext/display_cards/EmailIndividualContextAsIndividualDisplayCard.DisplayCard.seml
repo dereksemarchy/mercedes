@@ -1,0 +1,16 @@
+_package: CustomerMDM.entities.EmailIndividualContext.display_cards
+_type: DisplayCard
+_name: EmailIndividualContextAsIndividualDisplayCard
+entity: CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext
+default: false
+primaryTextExpression: Email.EmailAddress
+primaryImageValueInterpreter: LITERAL
+avatarImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageFallbackValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+avatarImageValueInterpreter: LITERAL
+primaryImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT

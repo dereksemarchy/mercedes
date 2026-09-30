@@ -152,6 +152,46 @@ rootBusinessViewEntity:
             tableAllowed: true
             gridAllowed: true
         - _type: BusinessViewTransition
+          _name: Emails
+          transitionPath: EmailIndividualContext
+          transitionType: FULLY_QUALIFIED
+          useCustomLabel: true
+          pluralLabel: Emails
+          label: Email
+          enableHierarchy: "1"
+          transitionVisible: any EmailIndividualContext has (1=1)
+          displayFormTabAs: LABEL
+          transitionVisibleInterpreter: SEMQL
+          visibleInFormTabCondition: any EmailIndividualContext has (1=1)
+          businessViewEntity:
+            _type: BusinessViewEntity
+            _name: Emails
+            entity: CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext
+            actionSet: CustomerMDM.entities.EmailIndividualContext.action_sets.EmailIndividualContextActionSet
+            collection: CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionView
+            form: CustomerMDM.entities.EmailIndividualContext.forms.EmailIndividualContextForm
+            displayCard: CustomerMDM.entities.EmailIndividualContext.display_cards.EmailIndividualContextAsIndividualDisplayCard
+            outlineVisible: false
+            displayRecordCount: ALWAYS
+            businessEntitySearchConfigs:
+              - _name: TextConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: TEXT
+              - _name: FormConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: BY_FORM
+              - _name: AdvancedConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: ADVANCED
+              - _name: SemqlConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: SEMQL
+            overrideDefaultSort: false
+            enableUserDefinedSort: true
+            listAllowed: true
+            tableAllowed: true
+            gridAllowed: true
+        - _type: BusinessViewTransition
           _name: Phones
           transitionPath: Phone
           transitionType: FULLY_QUALIFIED

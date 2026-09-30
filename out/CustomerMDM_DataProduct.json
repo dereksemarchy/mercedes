@@ -3721,6 +3721,23 @@
                                         "visibleInFormTabCondition": "any Address has (1=1)"
                                     },
                                     {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Emails",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Emails.Emails",
+                                        "transitionPath": "EmailIndividualContext",
+                                        "useCustomLabel": true,
+                                        "displayFormTabAs": "LABEL",
+                                        "enableHierarchy": "1",
+                                        "label": "Email",
+                                        "pluralLabel": "Emails",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "any EmailIndividualContext has (1=1)",
+                                        "transitionVisibleInterpreter": "SEMQL",
+                                        "visibleInFormTabCondition": "any EmailIndividualContext has (1=1)"
+                                    },
+                                    {
                                         "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Phones",
                                         "enableHierarchyInterpreter": "LITERAL",
                                         "expandHierarchyByDefault": false,
@@ -3779,6 +3796,48 @@
                                         }
                                     }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Emails.Emails",
+                                "collection": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
+                                "form": "CustomerMDM.entities.EmailIndividualContext.forms.EmailIndividualContextForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerMDM.entities.EmailIndividualContext.action_sets.EmailIndividualContextActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Emails.Emails.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Emails.Emails.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Emails.Emails.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Emails.Emails.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ],
+                                "displayCard": "CustomerMDM.entities.EmailIndividualContext.display_cards.EmailIndividualContextAsIndividualDisplayCard"
                             },
                             {
                                 "qualifiedName": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView.Individual.IndividualContexts.IndividualContexts.Phones.Phones",
@@ -4950,6 +5009,21 @@
                 ],
                 "displayCards": [
                     {
+                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.display_cards.EmailIndividualContextAsIndividualDisplayCard",
+                        "avatarImageValueInterpreter": "LITERAL",
+                        "default": false,
+                        "primaryImageFallbackValueInterpreter": "LITERAL",
+                        "primaryImageValueInterpreter": "LITERAL",
+                        "avatarImageAlign": "MIDDLE_CENTER",
+                        "avatarImageMode": "FIT",
+                        "avatarImageSourceType": "URL",
+                        "primaryImageAlign": "MIDDLE_CENTER",
+                        "primaryImageFallbackSourceType": "URL",
+                        "primaryImageMode": "FIT",
+                        "primaryImageSourceType": "URL",
+                        "primaryTextExpression": "Email.EmailAddress"
+                    },
+                    {
                         "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.display_cards.EmailIndividualContextDisplayCard",
                         "avatarImageValueInterpreter": "LITERAL",
                         "default": true,
@@ -4982,6 +5056,7 @@
                                 "visibleValueInterpreter": "LITERAL",
                                 "displayFormTabAs": "LABEL",
                                 "label": "Email Individual Context",
+                                "labelWidth": "150",
                                 "visibleValue": "1"
                             }
                         ],

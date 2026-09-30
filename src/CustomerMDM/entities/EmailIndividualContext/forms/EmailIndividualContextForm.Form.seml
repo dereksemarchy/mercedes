@@ -11,6 +11,7 @@ formTabs:
     visibleValue: "1"
     visibleValueInterpreter: LITERAL
     displayFormTabAs: LABEL
+    labelWidth: "150"
     content:
       - _type: IdField
         _name: EmailIndividualContextID
