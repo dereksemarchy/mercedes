@@ -1,0 +1,10 @@
+_name: RelationshipType
+_type: LOVType
+_package: CustomerMDM.list_of_values
+label: Relationship Type
+length: 32
+lovValues:
+  - label: DEALER_RELATIONSHIP
+    code: DEALER_RELATIONSHIP
+  - label: BUSINESS_RELATIONSHIP
+    code: BUSINESS_RELATIONSHIP
