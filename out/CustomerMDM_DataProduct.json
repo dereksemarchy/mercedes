@@ -227,8 +227,23 @@
                         "label": "Individual"
                     },
                     {
-                        "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.IndividualAccount",
+                        "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.IndividualError",
                         "posInFolder": 1,
+                        "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "CustomerMDM.entities.Individual.business_views.IndividualBusinessView",
+                        "nbRecordsBadgeVisible": true,
+                        "useCustomLabel": true,
+                        "icon": "images://mdi/account-question.svg",
+                        "iconColor": "RED",
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Individual Error",
+                        "viewType": "SDWE"
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.IndividualAccount",
+                        "posInFolder": 2,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "CustomerMDM.entities.IndividualAccount.business_views.IndividualAccountBusinessView",
@@ -240,7 +255,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.IndividualContext",
-                        "posInFolder": 2,
+                        "posInFolder": 3,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "CustomerMDM.entities.IndividualContext.business_views.IndividualContextBusinessView",
@@ -252,7 +267,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.Company",
-                        "posInFolder": 3,
+                        "posInFolder": 4,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "CustomerMDM.entities.Company.business_views.CompanyBusinessView",
@@ -264,7 +279,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.Address",
-                        "posInFolder": 4,
+                        "posInFolder": 5,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "CustomerMDM.entities.Address.business_views.AddressBusinessView",
@@ -276,7 +291,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.Phone",
-                        "posInFolder": 5,
+                        "posInFolder": 6,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "CustomerMDM.entities.Phone.business_views.PhoneBusinessView",
@@ -288,7 +303,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.Email",
-                        "posInFolder": 6,
+                        "posInFolder": 7,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "CustomerMDM.entities.Email.business_views.EmailBusinessView",
@@ -300,7 +315,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.EmailIndividualContext",
-                        "posInFolder": 7,
+                        "posInFolder": 8,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView",
@@ -312,7 +327,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.InternalID",
-                        "posInFolder": 8,
+                        "posInFolder": 9,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "CustomerMDM.entities.InternalID.business_views.InternalIDBusinessView",
@@ -324,7 +339,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.ExternalID",
-                        "posInFolder": 9,
+                        "posInFolder": 10,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "CustomerMDM.entities.ExternalID.business_views.ExternalIDBusinessView",
@@ -336,7 +351,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.SalesEntity",
-                        "posInFolder": 10,
+                        "posInFolder": 11,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "CustomerMDM.entities.SalesEntity.business_views.SalesEntityBusinessView",
@@ -348,7 +363,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.SalesEntityRel",
-                        "posInFolder": 11,
+                        "posInFolder": 12,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView",

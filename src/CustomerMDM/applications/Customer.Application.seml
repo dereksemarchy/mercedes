@@ -124,6 +124,17 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: Individual
+      - _type: BrowseBusinessViewAction
+        _name: IndividualError
+        businessView: CustomerMDM.entities.Individual.business_views.IndividualBusinessView
+        nbRecordsBadgeVisible: true
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Individual Error
+        viewType: SDWE
+        iconColor: RED
+        icon: images://mdi/account-question.svg
+        
       # - _type: ImportDataAppAction
       #   _name: ImportIndividual
       #   label: Import Individual
