@@ -94,6 +94,12 @@ matcher:
       condition: Record1.FirstName = Record2.FirstName AND Record1.LastName = Record2.LastName AND Record1.Birthday = Record2.Birthday
       matchScore: 100
       usingMatchOn: false
+    - _type: SemQLMatchRule
+      _name: SimilarNameAndSameBirthday
+      label: Similar Name And Same Birthday
+      condition: ( SEM_EDIT_DISTANCE_SIMILARITY( Record1.FirstName, Record2.FirstName ) > 75 AND SEM_EDIT_DISTANCE_SIMILARITY(Record1.LastName, Record2.LastName ) > 75 ) AND Record1.Birthday = Record2.Birthday
+      matchScore: 70
+      usingMatchOn: false
   useTransitiveMatchScore: true
   useMultiIterationGrouping: true
   mergeThresholdNewGroup: 75

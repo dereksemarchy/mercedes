@@ -81,3 +81,10 @@ tableColumns:
     dataType: STRING
     columnAlign: LEFT
     visibleByDefault: true
+  - _type: TextColumn
+    _name: HasSuggestedMerge
+    value: HasSuggestedMerge
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true

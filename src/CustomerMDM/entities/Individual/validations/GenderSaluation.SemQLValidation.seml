@@ -1,0 +1,7 @@
+_name: GenderSaluation
+_type: SemQLValidation
+_package: CustomerMDM.entities.Individual.validations
+entity: CustomerMDM.entities.Individual.Individual
+label: Valid Gender and Salutation Combination
+condition: (Gender = 'MALE' AND Salutation IN ('MR')) OR (Gender = 'FEMALE' AND Salutation IN ('MS', 'MRS', 'MISS', 'MME')) OR (Salutation ='-')
+validationScope: PRE_CONSO

@@ -5617,10 +5617,26 @@
                             "matchScore": 100,
                             "label": "Exact Name And Birthday",
                             "usingMatchOn": false
+                        },
+                        {
+                            "qualifiedName": "CustomerMDM.entities.Individual.Individual.Matcher.SimilarNameAndSameBirthday",
+                            "condition": "( SEM_EDIT_DISTANCE_SIMILARITY( Record1.FirstName, Record2.FirstName ) > 75 AND SEM_EDIT_DISTANCE_SIMILARITY(Record1.LastName, Record2.LastName ) > 75 ) AND Record1.Birthday = Record2.Birthday",
+                            "matchScore": 70,
+                            "label": "Similar Name And Same Birthday",
+                            "usingMatchOn": false
                         }
                     ]
                 },
-                "abstractRowCheckConstraints": [],
+                "abstractRowCheckConstraints": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Individual.validations.GenderSaluation",
+                        "_type": "CheckConstraint",
+                        "condition": "(Gender = 'MALE' AND Salutation IN ('MR')) OR (Gender = 'FEMALE' AND Salutation IN ('MS', 'MRS', 'MISS', 'MME')) OR (Salutation ='-')",
+                        "validationLabel": "",
+                        "validationScope": "PRE_CONSO",
+                        "label": "Valid Gender and Salutation Combination"
+                    }
+                ],
                 "actionSets": [
                     {
                         "qualifiedName": "CustomerMDM.entities.Individual.action_sets.IndividualActionSet",
@@ -6534,6 +6550,19 @@
                                 "posInParent": 8,
                                 "useCustomLabel": false,
                                 "value": "MastersCount",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.collection_views.IndividualCollectionView.HasSuggestedMerge",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "HasSuggestedMerge",
                                 "visibleByDefault": true,
                                 "valueDataType": "STRING",
                                 "componentProperties": []
