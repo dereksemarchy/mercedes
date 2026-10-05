@@ -101,15 +101,15 @@ rootFolder:
         lineageEnabled: true
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
-      # - _name: Dashboard
-      #   image: images://idh/dq-dashboard.png
-      #   label: Dashboard
-      #   imageAlign: MIDDLE_CENTER
-      #   imageMode: FIT
-      #   _type: OpenDashboardAction
-      #   dashboard: Dashboard
-      #   dashboardApplication: SariaDashboard
-      #   parameters: []
+      - _name: Dashboard
+        image: images://mdi/dashboard.svg
+        label: Dashboard
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        _type: OpenDashboardAction
+        dashboard: Dashboard
+        dashboardApplication: Customer
+        parameters: []
     - _type : FolderAction
       _name: MasterData
       label: Master Data
@@ -264,7 +264,7 @@ rootFolder:
         nbRecordsBadgeVisible: true
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
-        label: Source Error
+        label: Source Individual Error
         viewType: SDWE
         iconColor: RED
         icon: images://mdi/account-question.svg

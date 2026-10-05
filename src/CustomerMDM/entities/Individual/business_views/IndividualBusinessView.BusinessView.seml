@@ -42,7 +42,7 @@ rootBusinessViewEntity:
       label: Individual Account
       enableHierarchy: "1"
       transitionVisible: any IndividualAccount has (1=1)
-      displayFormTabAs: LABEL
+      displayFormTabAs: ICON_LABEL
       transitionVisibleInterpreter: SEMQL
       visibleInFormTabCondition: any IndividualAccount has (1=1)
       businessViewEntity:
@@ -81,7 +81,7 @@ rootBusinessViewEntity:
       label: Individual Context
       enableHierarchy: "1"
       transitionVisible: any IndividualContext has (1=1)
-      displayFormTabAs: LABEL
+      displayFormTabAs: ICON_LABEL
       transitionVisibleInterpreter: SEMQL
       visibleInFormTabCondition: any IndividualContext has (1=1)
       businessViewEntity:
@@ -279,7 +279,7 @@ rootBusinessViewEntity:
       label: Internal ID
       enableHierarchy: "1"
       transitionVisible: any InternalID has (1=1)
-      displayFormTabAs: LABEL
+      displayFormTabAs: ICON_LABEL
       transitionVisibleInterpreter: SEMQL
       visibleInFormTabCondition: any InternalID has (1=1)
       businessViewEntity:
@@ -318,7 +318,7 @@ rootBusinessViewEntity:
       label: External ID
       enableHierarchy: "1"
       transitionVisible: any ExternalID has (1=1)
-      displayFormTabAs: LABEL
+      displayFormTabAs: ICON_LABEL
       transitionVisibleInterpreter: SEMQL
       visibleInFormTabCondition: any ExternalID has (1=1)
       businessViewEntity:
@@ -357,7 +357,7 @@ rootBusinessViewEntity:
       label: Master Record
       enableHierarchy: "0"
       transitionVisible: "1"
-      displayFormTabAs: LABEL
+      displayFormTabAs: ICON_LABEL
       businessViewEntity:
         _type: BusinessViewEntity
         _name: MasterRecords
@@ -390,7 +390,7 @@ rootBusinessViewEntity:
       transitionPath: GoldenHistoryRecords
       transitionType: FULLY_QUALIFIED
       useCustomLabel: false
-      displayFormTabAs: LABEL
+      displayFormTabAs: ICON_LABEL
       displayTransitionNodeAs: ICON_LABEL
       enableHierarchy: "0"
       enableHierarchyInterpreter: LITERAL
