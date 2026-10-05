@@ -2,7 +2,7 @@ _package: CustomerMDM.entities.ExternalID.collection_views
 _type: CollectionView
 _name: ExternalIDImportCollectionView
 entity: CustomerMDM.entities.ExternalID.ExternalID
-default: true
+default: false
 displayCard: CustomerMDM.entities.ExternalID.display_cards.ExternalIDDisplayCard
 gridAllowed: false
 gridColumns: 4

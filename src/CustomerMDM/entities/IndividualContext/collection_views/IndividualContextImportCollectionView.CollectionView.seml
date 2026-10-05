@@ -2,7 +2,7 @@ _package: CustomerMDM.entities.IndividualContext.collection_views
 _type: CollectionView
 _name: IndividualContextImportCollectionView
 entity: CustomerMDM.entities.IndividualContext.IndividualContext
-default: true
+default: false
 displayCard: CustomerMDM.entities.IndividualContext.display_cards.IndividualContextDisplayCard
 gridAllowed: false
 gridColumns: 4

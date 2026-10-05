@@ -2,7 +2,7 @@ _package: CustomerMDM.entities.Individual.collection_views
 _type: CollectionView
 _name: IndividualCollectionViewMR
 entity: CustomerMDM.entities.Individual.Individual
-default: true
+default: false
 displayCard: CustomerMDM.entities.Individual.display_cards.IndividualDisplayCard
 gridAllowed: false
 gridColumns: 4

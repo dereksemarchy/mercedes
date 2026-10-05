@@ -2,7 +2,7 @@ _package: CustomerMDM.entities.Phone.collection_views
 _type: CollectionView
 _name: PhoneImportCollectionView
 entity: CustomerMDM.entities.Phone.Phone
-default: true
+default: false
 displayCard: CustomerMDM.entities.Phone.display_cards.PhoneDisplayCard
 gridAllowed: false
 gridColumns: 4

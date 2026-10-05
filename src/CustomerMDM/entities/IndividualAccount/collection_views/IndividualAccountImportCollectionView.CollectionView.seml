@@ -2,7 +2,7 @@ _package: CustomerMDM.entities.IndividualAccount.collection_views
 _type: CollectionView
 _name: IndividualAccountImportCollectionView
 entity: CustomerMDM.entities.IndividualAccount.IndividualAccount
-default: true
+default: false
 displayCard: CustomerMDM.entities.IndividualAccount.display_cards.IndividualAccountDisplayCard
 gridAllowed: false
 gridColumns: 4

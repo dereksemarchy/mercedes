@@ -2,7 +2,7 @@ _package: CustomerMDM.entities.InternalID.collection_views
 _type: CollectionView
 _name: InternalIDImportCollectionView
 entity: CustomerMDM.entities.InternalID.InternalID
-default: true
+default: false
 displayCard: CustomerMDM.entities.InternalID.display_cards.InternalIDDisplayCard
 gridAllowed: false
 gridColumns: 4

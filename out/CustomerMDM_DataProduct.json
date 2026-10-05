@@ -1,5 +1,5 @@
 {
-    "dataHubModelSchemaVersion": "1.1.0",
+    "dataHubModelSchemaVersion": "1.2.0",
     "dataHubModel": {
         "qualifiedName": "CustomerMDM",
         "label": "Customer MDM",
@@ -3103,7 +3103,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.entities.Phone.collection_views.PhoneImportCollectionView",
-                        "default": true,
+                        "default": false,
                         "gridAllowed": false,
                         "gridColumns": 4,
                         "gridTextPosition": "BOTTOM",
@@ -3786,7 +3786,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.entities.InternalID.collection_views.InternalIDImportCollectionView",
-                        "default": true,
+                        "default": false,
                         "gridAllowed": false,
                         "gridColumns": 4,
                         "gridTextPosition": "BOTTOM",
@@ -4547,7 +4547,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView",
-                        "default": true,
+                        "default": false,
                         "gridAllowed": false,
                         "gridColumns": 4,
                         "gridTextPosition": "BOTTOM",
@@ -5193,7 +5193,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountImportCollectionView",
-                        "default": true,
+                        "default": false,
                         "gridAllowed": false,
                         "gridColumns": 4,
                         "gridTextPosition": "BOTTOM",
@@ -6586,7 +6586,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.entities.Individual.collection_views.IndividualCollectionViewGH",
-                        "default": true,
+                        "default": false,
                         "gridAllowed": false,
                         "gridColumns": 4,
                         "gridTextPosition": "BOTTOM",
@@ -6775,7 +6775,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.entities.Individual.collection_views.IndividualCollectionViewMR",
-                        "default": true,
+                        "default": false,
                         "gridAllowed": false,
                         "gridColumns": 4,
                         "gridTextPosition": "BOTTOM",
@@ -7218,7 +7218,7 @@
                         "description": "",
                         "documentation": "",
                         "defaultRule": true,
-                        "overrideStrategy": "NO_OVERRIDE"
+                        "overrideStrategy": "UNTIL_CONSOLIDATED_VAL_CHANGE"
                     },
                     {
                         "qualifiedName": "CustomerMDM.entities.Individual.survivorship_rules.IdSurvivorshipRule",
@@ -7624,7 +7624,7 @@
                     },
                     {
                         "qualifiedName": "CustomerMDM.entities.ExternalID.collection_views.ExternalIDImportCollectionView",
-                        "default": true,
+                        "default": false,
                         "gridAllowed": false,
                         "gridColumns": 4,
                         "gridTextPosition": "BOTTOM",

@@ -8,4 +8,4 @@ documentation: ""
 defaultRule: true
 consolidationStrategy: CUSTOM_RANKING
 consolidationSkipNulls: false
-overrideStrategy: NO_OVERRIDE
+overrideStrategy: UNTIL_CONSOLIDATED_VAL_CHANGE
