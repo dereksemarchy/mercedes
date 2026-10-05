@@ -79,11 +79,12 @@ rootBusinessViewEntity:
       useCustomLabel: true
       pluralLabel: External IDs
       label: External ID
-      enableHierarchy: "1"
       transitionVisible: any ExternalID has (1=1)
       displayFormTabAs: LABEL
       transitionVisibleInterpreter: SEMQL
       visibleInFormTabCondition: any ExternalID has (1=1)
+      enableHierarchyInterpreter: SEMQL
+      enableHierarchy: any ExternalID has (1=1)
       businessViewEntity:
         _type: BusinessViewEntity
         _name: ExternalIDs

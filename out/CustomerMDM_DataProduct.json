@@ -1,5 +1,5 @@
 {
-    "dataHubModelSchemaVersion": "1.2.0",
+    "dataHubModelSchemaVersion": "1.1.0",
     "dataHubModel": {
         "qualifiedName": "CustomerMDM",
         "label": "Customer MDM",
@@ -7902,13 +7902,14 @@
                 "displayCards": [
                     {
                         "qualifiedName": "CustomerMDM.entities.Individual.display_cards.IndividualDisplayCard",
-                        "avatarImageValueInterpreter": "LITERAL",
+                        "avatarImageValueInterpreter": "SEMQL",
                         "default": true,
                         "primaryImageFallbackValueInterpreter": "LITERAL",
                         "primaryImageValueInterpreter": "LITERAL",
                         "avatarImageAlign": "MIDDLE_CENTER",
                         "avatarImageMode": "FIT",
                         "avatarImageSourceType": "URL",
+                        "avatarImageValue": "CASE WHEN Gender = 'MALE' THEN 'images://mdi/human-male.svg' ELSE 'images://mdi/human-female.svg' END",
                         "primaryImageAlign": "MIDDLE_CENTER",
                         "primaryImageFallbackSourceType": "URL",
                         "primaryImageMode": "FIT",
@@ -10818,7 +10819,7 @@
                 "displayCards": [
                     {
                         "qualifiedName": "CustomerMDM.entities.Country.display_cards.CountryDisplayCard",
-                        "avatarImageValueInterpreter": "LITERAL",
+                        "avatarImageValueInterpreter": "SEMQL",
                         "default": true,
                         "primaryImageFallbackValueInterpreter": "LITERAL",
                         "primaryImageValueInterpreter": "LITERAL",
@@ -11380,14 +11381,14 @@
                                     },
                                     {
                                         "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.ExternalID",
-                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "enableHierarchyInterpreter": "SEMQL",
                                         "expandHierarchyByDefault": false,
                                         "filter": "1 = 1",
                                         "targetBoViewEntity": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.ExternalID.ExternalIDs",
                                         "transitionPath": "ExternalID",
                                         "useCustomLabel": true,
                                         "displayFormTabAs": "LABEL",
-                                        "enableHierarchy": "1",
+                                        "enableHierarchy": "any ExternalID has (1=1)",
                                         "label": "External ID",
                                         "pluralLabel": "External IDs",
                                         "transitionType": "FULLY_QUALIFIED",

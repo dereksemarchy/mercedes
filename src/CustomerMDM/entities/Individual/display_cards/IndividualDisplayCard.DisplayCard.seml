@@ -10,7 +10,8 @@ primaryImageAlign: MIDDLE_CENTER
 primaryImageMode: FIT
 primaryImageFallbackValueInterpreter: LITERAL
 primaryImageFallbackSourceType: URL
-avatarImageValueInterpreter: LITERAL
+avatarImageValueInterpreter: SEMQL
 primaryImageSourceType: URL
 avatarImageAlign: MIDDLE_CENTER
 avatarImageMode: FIT
+avatarImageValue: CASE WHEN Gender = 'MALE' THEN 'images://mdi/human-male.svg' ELSE 'images://mdi/human-female.svg' END

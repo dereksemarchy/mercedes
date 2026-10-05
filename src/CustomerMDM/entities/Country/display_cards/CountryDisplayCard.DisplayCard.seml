@@ -5,12 +5,13 @@ entity: CustomerMDM.entities.Country.Country
 default: true
 primaryTextExpression: CountryCode
 primaryImageValueInterpreter: LITERAL
-avatarImageSourceType: URL
 primaryImageAlign: MIDDLE_CENTER
 primaryImageMode: FIT
 primaryImageFallbackValueInterpreter: LITERAL
 primaryImageFallbackSourceType: URL
-avatarImageValueInterpreter: LITERAL
 primaryImageSourceType: URL
+avatarImageValueInterpreter: SEMQL
+avatarImageSourceType: URL
 avatarImageAlign: MIDDLE_CENTER
+# avatarImageValue: 'https://semarchy-tutorials.s3.amazonaws.com/iso-3166/' || CountryCode || '.svg'
 avatarImageMode: FIT
