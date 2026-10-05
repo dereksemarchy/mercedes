@@ -125,16 +125,15 @@ rootFolder:
         imageMode: FIT
         label: Individual
       - _type: BrowseBusinessViewAction
-        _name: IndividualError
-        businessView: CustomerMDM.entities.Individual.business_views.IndividualBusinessView
+        _name: IndividualReviewSuggestion
+        businessView: CustomerMDM.entities.Individual.business_views.IndividualReviewSuggestionBusinessView
         nbRecordsBadgeVisible: true
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
-        label: Individual Error
-        viewType: SDWE
-        iconColor: RED
-        icon: images://mdi/account-question.svg
-        
+        label: Review Suggestion
+        viewType: GD
+        iconColor: ORANGE
+        icon: images://mdi/account-question-outline.svg
       # - _type: ImportDataAppAction
       #   _name: ImportIndividual
       #   label: Import Individual
@@ -259,6 +258,16 @@ rootFolder:
         _name: ImportIndividual
         label: Import Individual
         importAction: CustomerMDM.entities.Individual.action_sets.IndividualActionSet.ImportAuthorIndividuals
+      - _type: BrowseBusinessViewAction
+        _name: IndividualError
+        businessView: CustomerMDM.entities.Individual.business_views.IndividualBusinessView
+        nbRecordsBadgeVisible: true
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Source Error
+        viewType: SDWE
+        iconColor: RED
+        icon: images://mdi/account-question.svg
       - _type: ImportDataAppAction
         _name: ImportCompany
         label: Import Company

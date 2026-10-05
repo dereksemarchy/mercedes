@@ -1,0 +1,31 @@
+_type: JavaPluginEnricher
+_package: CustomerMDM.entities.Phone.enrichers
+_name: StandardizePhone
+entity: CustomerMDM.entities.Phone.Phone
+label: Standardize Phone
+pluginId: com.semarchy.engine.plugins.convergence.phone
+batchUpdateSize: 1
+numberOfRetry: 0
+onErrorBehavior: FAIL_JOB
+enricherExecutionScope: PRE_CONSO
+processingBatchSize: 1
+threadPoolSize: 1
+pluginInputs:
+  - inputName: IN_COUNTRY_CODE
+    expression: "''"
+  - inputName: IN_REGION_CALLING_FROM
+    expression: "''"
+  - inputName: IN_PHONE
+    expression: PhoneNumber
+  - inputName: IN_PHONE_FORMAT
+    expression: "'E123_INTERNATIONAL'"
+pluginOutputs:
+  - outputName: ENRICHED_PHONE
+    attributeName: StandardizedPhone
+  - outputName: GEOCODE_DATA
+    attributeName: PhoneGeocodingData
+  - outputName: STATUS_CODE
+    attributeName: StatusCode
+  - outputName: STATUS_TEXT
+    attributeName: StatusText
+# afterEnrichers: IntelligentDataHub.entities.CustomerB2C.enrichers.CleanseEmail

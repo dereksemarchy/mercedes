@@ -11,29 +11,54 @@ formTabs:
     visibleValue: "1"
     visibleValueInterpreter: LITERAL
     displayFormTabAs: LABEL
+    labelWidth: "150"
     content:
-      - _type: IdField
-        _name: EmailID
-        value: EmailID
-        useCustomLabel: false
-        dataType: LONG_INTEGER
-      - _type: TextField
-        _name: EmailAddress
-        value: EmailAddress
-        useCustomLabel: false
-        dataType: STRING
-      - _type: CheckboxField
-        _name: Primary
-        value: Primary
-        useCustomLabel: false
-        dataType: BOOLEAN
-      - _type: CheckboxField
-        _name: InCriticalUse
-        value: InCriticalUse
-        useCustomLabel: false
-        dataType: BOOLEAN
-      - _type: ChipsField
-        _name: EmailUsage
-        value: EmailUsage
-        useCustomLabel: false
-        dataType: STRING
+      - _type: FormContainer
+        _name: MainRow
+        layoutDirection: ROW
+        content:
+          - _type: FormContainer
+            _name: LeftColumn
+            layoutDirection: COLUMN
+            relativeWidth: 50
+            content:
+              - _type: IdField
+                _name: EmailID
+                value: EmailID
+                useCustomLabel: false
+                dataType: LONG_INTEGER
+              - _type: TextField
+                _name: EmailAddress
+                value: EmailAddress
+                useCustomLabel: false
+                dataType: STRING
+              - _type: CheckboxField
+                _name: Primary
+                value: Primary
+                useCustomLabel: false
+                dataType: BOOLEAN
+              - _type: CheckboxField
+                _name: InCriticalUse
+                value: InCriticalUse
+                useCustomLabel: false
+                dataType: BOOLEAN
+              - _type: ChipsField
+                _name: EmailUsage
+                value: EmailUsage
+                useCustomLabel: false
+                dataType: STRING
+          - _type: FormContainer
+            _name: RightColumn
+            layoutDirection: COLUMN
+            relativeWidth: 50
+            content:
+              - _type: TextField
+                _name: CleansedEmail
+                value: CleansedEmail
+                useCustomLabel: false
+                dataType: STRING
+              - _type: TextField
+                _name: ValidEmailDomain
+                value: ValidEmailDomain
+                useCustomLabel: false
+                dataType: STRING

@@ -55,6 +55,22 @@ attributes:
     lovValidationScope: PRE_CONSO
     multiValued: true
     valueSeparator: ';'
+  - _type: EntityAttribute
+    _name: CleansedEmail
+    label: Cleansed Email
+    physicalName: CLEANSED_EMAIL
+    dataType: String
+    length: 255
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: ValidEmailDomain
+    label: Valid Email Domain
+    physicalName: VALID_EMAIL_DOMAIN
+    dataType: String
+    length: 128
+    mandatory: false
+    searchable: true
 sourceIdGeneration:
   mode: SEQUENCE
   startWith: 1

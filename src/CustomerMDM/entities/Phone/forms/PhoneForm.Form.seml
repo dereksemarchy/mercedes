@@ -13,34 +13,68 @@ formTabs:
     displayFormTabAs: LABEL
     labelWidth: "150"
     content:
-      - _type: IdField
-        _name: PhoneID
-        value: PhoneID
-        useCustomLabel: false
-        dataType: LONG_INTEGER
-      - _type: TextField
-        _name: PhoneNumber
-        value: PhoneNumber
-        useCustomLabel: false
-        dataType: STRING
-      - _type: CheckboxField
-        _name: Primary
-        value: Primary
-        useCustomLabel: false
-        dataType: BOOLEAN
-      - _type: CheckboxField
-        _name: InCriticalUse
-        value: InCriticalUse
-        useCustomLabel: false
-        dataType: BOOLEAN
-      - _type: MenuField
-        _name: PhoneUsage
-        value: PhoneUsage
-        useCustomLabel: false
-        dataType: STRING
-      - _type: ReferenceField
-        _name: FDN_IndividualContext
-        value: FDN_IndividualContext
-        useCustomLabel: false
-        dataType: STRING
-        referencedEntity: CustomerMDM.entities.IndividualContext.IndividualContext
+      - _type: FormContainer
+        _name: MainRow
+        layoutDirection: ROW
+        content:
+          - _type: FormContainer
+            _name: LeftColumn
+            layoutDirection: COLUMN
+            relativeWidth: 50
+            content:
+              - _type: IdField
+                _name: PhoneID
+                value: PhoneID
+                useCustomLabel: false
+                dataType: LONG_INTEGER
+              - _type: TextField
+                _name: PhoneNumber
+                value: PhoneNumber
+                useCustomLabel: false
+                dataType: STRING
+              - _type: CheckboxField
+                _name: Primary
+                value: Primary
+                useCustomLabel: false
+                dataType: BOOLEAN
+              - _type: CheckboxField
+                _name: InCriticalUse
+                value: InCriticalUse
+                useCustomLabel: false
+                dataType: BOOLEAN
+              - _type: MenuField
+                _name: PhoneUsage
+                value: PhoneUsage
+                useCustomLabel: false
+                dataType: STRING
+              - _type: ReferenceField
+                _name: FDN_IndividualContext
+                value: FDN_IndividualContext
+                useCustomLabel: false
+                dataType: STRING
+                referencedEntity: CustomerMDM.entities.IndividualContext.IndividualContext
+          - _type: FormContainer
+            _name: RightColumn
+            layoutDirection: COLUMN
+            relativeWidth: 50
+            content:
+              - _type: TextField
+                _name: StandardizedPhone
+                value: StandardizedPhone
+                useCustomLabel: false
+                dataType: STRING
+              - _type: TextField
+                _name: PhoneGeocodingData
+                value: PhoneGeocodingData
+                useCustomLabel: false
+                dataType: STRING
+              - _type: TextField
+                _name: StatusCode
+                value: StatusCode
+                useCustomLabel: false
+                dataType: STRING
+              - _type: TextField
+                _name: StatusText
+                value: StatusText
+                useCustomLabel: false
+                dataType: STRING

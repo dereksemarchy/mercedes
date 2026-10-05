@@ -61,3 +61,38 @@ tableColumns:
     columnAlign: LEFT
     visibleByDefault: true
     referencedEntity: CustomerMDM.entities.IndividualContext.IndividualContext
+  # - _type: TextColumn
+  #   value: lookup first IndividualAccount.FDN_Country from IndividualContext.Individual end
+  #   _name: FirstName
+  #   useCustomLabel: false
+  #   dataType: STRING
+  #   columnAlign: LEFT
+  #   visibleByDefault: true
+  - _type: TextColumn
+    _name: StandardizedPhone
+    value: StandardizedPhone
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: PhoneGeocodingData
+    value: PhoneGeocodingData
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: StatusCode
+    value: StatusCode
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: StatusText
+    value: StatusText
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true

@@ -1,0 +1,21 @@
+_type: JavaPluginEnricher
+_package: CustomerMDM.entities.Email.enrichers
+_name: CleanseEmail
+entity: CustomerMDM.entities.Email.Email
+label: Cleanse Email
+pluginId: com.semarchy.engine.plugins.convergence.email
+batchUpdateSize: 1
+numberOfRetry: 0
+onErrorBehavior: FAIL_JOB
+enricherExecutionScope: PRE_CONSO
+processingBatchSize: 1
+threadPoolSize: 1
+pluginInputs:
+  - inputName: IN_EMAIL_ADDRESS
+    expression: EmailAddress
+pluginOutputs:
+  - outputName: OUT_CLEANSED_EMAIL
+    attributeName: CleansedEmail
+  - outputName: OUT_CLEANSED_HOST_VALID
+    attributeName: ValidEmailDomain
+# afterEnrichers: IntelligentDataHub.entities.CustomerB2C.enrichers.NormalizeAddress

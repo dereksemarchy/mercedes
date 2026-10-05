@@ -55,6 +55,38 @@ attributes:
     searchable: true
     mandatoryValidationScope: PRE_CONSO
     lovValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: PhoneGeocodingData
+    label: Phone Geocoding Data
+    physicalName: PHONE_GEOCODING_DATA
+    dataType: String
+    length: 128
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: StandardizedPhone
+    label: Standardized Phone
+    physicalName: STANDARDIZED_PHONE
+    dataType: String
+    length: 128
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: StatusCode
+    label: Status Code
+    physicalName: STATUS_CODE
+    dataType: String
+    length: 128
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: StatusText
+    label: Status Text
+    physicalName: STATUS_TEXT
+    dataType: String
+    length: 128
+    mandatory: false
+    searchable: true
 sourceIdGeneration:
   mode: SEQUENCE
   startWith: 1
