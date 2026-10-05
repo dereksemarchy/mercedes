@@ -13,5 +13,5 @@ primaryImageSourceType: URL
 avatarImageValueInterpreter: SEMQL
 avatarImageSourceType: URL
 avatarImageAlign: MIDDLE_CENTER
-# avatarImageValue: 'https://semarchy-tutorials.s3.amazonaws.com/iso-3166/' || CountryCode || '.svg'
+avatarImageValue: "'https://semarchy-tutorials.s3.amazonaws.com/iso-3166/' || LOWER(CountryCode) || '.svg'"
 avatarImageMode: FIT

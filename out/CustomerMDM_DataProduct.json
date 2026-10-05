@@ -1,5 +1,5 @@
 {
-    "dataHubModelSchemaVersion": "1.1.0",
+    "dataHubModelSchemaVersion": "1.2.0",
     "dataHubModel": {
         "qualifiedName": "CustomerMDM",
         "label": "Customer MDM",
@@ -10826,6 +10826,7 @@
                         "avatarImageAlign": "MIDDLE_CENTER",
                         "avatarImageMode": "FIT",
                         "avatarImageSourceType": "URL",
+                        "avatarImageValue": "'https://semarchy-tutorials.s3.amazonaws.com/iso-3166/' || LOWER(CountryCode) || '.svg'",
                         "primaryImageAlign": "MIDDLE_CENTER",
                         "primaryImageFallbackSourceType": "URL",
                         "primaryImageMode": "FIT",
