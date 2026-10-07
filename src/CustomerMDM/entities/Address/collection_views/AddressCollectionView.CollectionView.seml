@@ -25,14 +25,34 @@ tableColumns:
     dataType: LONG_INTEGER
     columnAlign: LEFT
     visibleByDefault: true
-  - _type: ReferenceColumn
-    _name: FDN_AddressDefinition
-    value: FDN_AddressDefinition
+  - _type: TextColumn
+    _name: HouseNumber
+    value: HouseNumber
     useCustomLabel: false
     dataType: STRING
     columnAlign: LEFT
     visibleByDefault: true
-    referencedEntity: CustomerMDM.entities.AddressDefinition.AddressDefinition
+  - _type: TextColumn
+    _name: Street
+    value: Street
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: City
+    value: City
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: PostalCode
+    value: PostalCode
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
   - _type: ReferenceColumn
     _name: FDN_Country
     value: FDN_Country
@@ -45,6 +65,14 @@ tableColumns:
       displayType: chip
       useAvatarInChip: '1'
   - _type: ReferenceColumn
+    _name: FDN_AddressDefinition
+    value: FDN_AddressDefinition
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+    referencedEntity: CustomerMDM.entities.AddressDefinition.AddressDefinition
+  - _type: ReferenceColumn
     _name: FDN_IndividualContext
     value: FDN_IndividualContext
     useCustomLabel: false
@@ -52,34 +80,6 @@ tableColumns:
     columnAlign: LEFT
     visibleByDefault: true
     referencedEntity: CustomerMDM.entities.IndividualContext.IndividualContext
-  - _type: TextColumn
-    _name: Street
-    value: Street
-    useCustomLabel: false
-    dataType: STRING
-    columnAlign: LEFT
-    visibleByDefault: true
-  - _type: TextColumn
-    _name: HouseNumber
-    value: HouseNumber
-    useCustomLabel: false
-    dataType: STRING
-    columnAlign: LEFT
-    visibleByDefault: true
-  - _type: TextColumn
-    _name: PostalCode
-    value: PostalCode
-    useCustomLabel: false
-    dataType: STRING
-    columnAlign: LEFT
-    visibleByDefault: true
-  - _type: TextColumn
-    _name: City
-    value: City
-    useCustomLabel: false
-    dataType: STRING
-    columnAlign: LEFT
-    visibleByDefault: true
   - _type: CheckboxColumn
     _name: Primary
     value: Primary

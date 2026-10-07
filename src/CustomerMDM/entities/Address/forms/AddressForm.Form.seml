@@ -13,64 +13,135 @@ formTabs:
     displayFormTabAs: LABEL
     labelWidth: "150"
     content:
-      - _type: IdField
-        _name: AddressID
-        value: AddressID
-        useCustomLabel: false
-        dataType: LONG_INTEGER
-      - _type: TextField
-        _name: Street
-        value: Street
-        useCustomLabel: false
-        dataType: STRING
-      - _type: TextField
-        _name: HouseNumber
-        value: HouseNumber
-        useCustomLabel: false
-        dataType: STRING
-      - _type: TextField
-        _name: PostalCode
-        value: PostalCode
-        useCustomLabel: false
-        dataType: STRING
-      - _type: TextField
-        _name: City
-        value: City
-        useCustomLabel: false
-        dataType: STRING
-      - _type: MenuField
-        _name: AddressUsage
-        value: AddressUsage
-        useCustomLabel: false
-        dataType: STRING
-      - _type: CheckboxField
-        _name: Primary
-        value: Primary
-        useCustomLabel: false
-        dataType: BOOLEAN
-      - _type: CheckboxField
-        _name: InCriticalUse
-        value: InCriticalUse
-        useCustomLabel: false
-        dataType: BOOLEAN
-      - _type: ReferenceField
-        _name: FDN_AddressDefinition
-        value: FDN_AddressDefinition
-        useCustomLabel: false
-        dataType: STRING
-        referencedEntity: CustomerMDM.entities.AddressDefinition.AddressDefinition
-      - _type: ReferenceField
-        _name: FDN_Country
-        value: FDN_Country
-        useCustomLabel: false
-        dataType: STRING
-        referencedEntity: CustomerMDM.entities.Country.Country
-        componentProperties:
-          displayType: chip
-          useAvatarInChip: '1'
-      - _type: ReferenceField
-        _name: FDN_IndividualContext
-        value: FDN_IndividualContext
-        useCustomLabel: false
-        dataType: STRING
-        referencedEntity: CustomerMDM.entities.IndividualContext.IndividualContext
+      - _type: FormContainer
+        _name: MainRow
+        layoutDirection: ROW
+        content:
+          - _type: FormContainer
+            _name: LeftColumn
+            layoutDirection: COLUMN
+            relativeWidth: 50
+            content:
+              - _type: IdField
+                _name: AddressID
+                value: AddressID
+                useCustomLabel: false
+                dataType: LONG_INTEGER
+              - _type: TextField
+                _name: HouseNumber
+                value: HouseNumber
+                useCustomLabel: false
+                dataType: STRING
+              - _type: TextField
+                _name: Street
+                value: Street
+                useCustomLabel: false
+                dataType: STRING
+              - _type: TextField
+                _name: City
+                value: City
+                useCustomLabel: false
+                dataType: STRING
+              - _type: TextField
+                _name: PostalCode
+                value: PostalCode
+                useCustomLabel: false
+                dataType: STRING
+              - _type: ReferenceField
+                _name: FDN_Country
+                value: FDN_Country
+                useCustomLabel: false
+                dataType: STRING
+                referencedEntity: CustomerMDM.entities.Country.Country
+                componentProperties:
+                  displayType: chip
+                  useAvatarInChip: '1'
+              - _type: MenuField
+                _name: AddressUsage
+                value: AddressUsage
+                useCustomLabel: false
+                dataType: STRING
+              - _type: CheckboxField
+                _name: Primary
+                value: Primary
+                useCustomLabel: false
+                dataType: BOOLEAN
+              - _type: CheckboxField
+                _name: InCriticalUse
+                value: InCriticalUse
+                useCustomLabel: false
+                dataType: BOOLEAN
+              - _type: ReferenceField
+                _name: FDN_AddressDefinition
+                value: FDN_AddressDefinition
+                useCustomLabel: false
+                dataType: STRING
+                referencedEntity: CustomerMDM.entities.AddressDefinition.AddressDefinition
+              - _type: ReferenceField
+                _name: FDN_IndividualContext
+                value: FDN_IndividualContext
+                useCustomLabel: false
+                dataType: STRING
+                referencedEntity: CustomerMDM.entities.IndividualContext.IndividualContext
+          - _type: FormContainer
+            _name: RightColumn
+            layoutDirection: COLUMN
+            relativeWidth: 50
+            content:
+            - _type: ObjectField
+              _name: GoogleMaps
+              dataType: STRING
+              label: Google Maps View
+              useCustomLabel: true
+              visibleValue: "1"
+              visibleValueInterpreter: LITERAL
+              # visibleValue: case when enrichedAddress is null then "0" else "1" end
+              # visibleValueInterpreter: SEMQL
+              authoringMode: auto
+              value: |
+                    '<html>
+                    <head>
+                    <meta charset="utf-8">
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_Yyr4bb_JPuAM9gPp2GyXYCxUwl3vpkI&sensor=false"></script>
+                    <script>
+                    var address = "'||SEM_CONCAT(' ', HouseNumber, ' ', Street, ' ', City, ' ', PostalCode) ||'";
+                    var zoom = 18;
+                    var mapType = google.maps.MapTypeId.ROADMAP;
+                    var useMarker = true;
+                    var map;
+                    function initialize() {
+                        var geocoder = new google.maps.Geocoder();
+                        geocoder.geocode({"address": address}, function(results, status){
+                            if(status==google.maps.GeocoderStatus.OK){ displayMap(results[0].geometry.location); }
+                        });
+                        window.onresize = resize;
+                    }
+                    function displayMap(latlng){
+                        var mapOptions = {zoom: zoom, center: latlng, mapTypeId: mapType};
+                        map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+                        if(useMarker){ var marker = new google.maps.Marker({map: map, position: latlng}); }
+                        resize("");
+                    }
+                    function resize(e){
+                        var center = map.getCenter();
+                        map.getDiv().style.height = window.innerHeight + "px";
+                        map.getDiv().style.width = window.innerWidth + "px";
+                        google.maps.event.trigger(map, "resize");
+                        map.setCenter(center);
+                    }
+                    google.maps.event.addDomListener(window, "load", initialize);
+                    </script>
+                    </head>
+                    <body style="margin:0px;">
+                    <div id="map_canvas" style="margin:0px;"></div>
+                    </body>
+                    </html>'
+              componentProperties:
+                sourceType: content
+                textTypography: body-1
+                objectHeight: "600"
+              labelProperties:
+                isVisible: '0'
+                alignment: left
+                position: left
+                typography: caption
