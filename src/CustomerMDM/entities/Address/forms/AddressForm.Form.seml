@@ -18,6 +18,41 @@ formTabs:
         value: AddressID
         useCustomLabel: false
         dataType: LONG_INTEGER
+      - _type: TextField
+        _name: Street
+        value: Street
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: HouseNumber
+        value: HouseNumber
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: PostalCode
+        value: PostalCode
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: City
+        value: City
+        useCustomLabel: false
+        dataType: STRING
+      - _type: MenuField
+        _name: AddressUsage
+        value: AddressUsage
+        useCustomLabel: false
+        dataType: STRING
+      - _type: CheckboxField
+        _name: Primary
+        value: Primary
+        useCustomLabel: false
+        dataType: BOOLEAN
+      - _type: CheckboxField
+        _name: InCriticalUse
+        value: InCriticalUse
+        useCustomLabel: false
+        dataType: BOOLEAN
       - _type: ReferenceField
         _name: FDN_AddressDefinition
         value: FDN_AddressDefinition
