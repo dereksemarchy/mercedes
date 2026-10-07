@@ -13396,7 +13396,20 @@
                                 "visibleByDefault": true,
                                 "referencedEntity": "CustomerMDM.entities.Country.Country",
                                 "valueDataType": "STRING",
-                                "componentProperties": []
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionView.FDN_Country.displayType",
+                                        "dataType": "STRING",
+                                        "value": "chip",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionView.FDN_Country.useAvatarInChip",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
                             },
                             {
                                 "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionView.FDN_IndividualContext",
