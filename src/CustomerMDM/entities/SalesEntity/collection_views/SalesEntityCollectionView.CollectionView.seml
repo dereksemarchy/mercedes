@@ -47,3 +47,6 @@ tableColumns:
     columnAlign: LEFT
     visibleByDefault: true
     referencedEntity: CustomerMDM.entities.Country.Country
+    componentProperties:
+      displayType: chip
+      useAvatarInChip: '1'

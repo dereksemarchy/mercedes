@@ -28,6 +28,9 @@ formTabs:
         useCustomLabel: false
         dataType: STRING
         referencedEntity: CustomerMDM.entities.Country.Country
+        componentProperties:
+          displayType: chip
+          useAvatarInChip: '1'
       - _type: ReferenceField
         _name: FDN_Individual
         value: FDN_Individual

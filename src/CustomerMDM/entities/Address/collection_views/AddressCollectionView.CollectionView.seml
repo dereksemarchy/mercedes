@@ -41,6 +41,9 @@ tableColumns:
     columnAlign: LEFT
     visibleByDefault: true
     referencedEntity: CustomerMDM.entities.Country.Country
+    componentProperties:
+      displayType: chip
+      useAvatarInChip: '1'
   - _type: ReferenceColumn
     _name: FDN_IndividualContext
     value: FDN_IndividualContext

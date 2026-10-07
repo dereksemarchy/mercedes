@@ -32,6 +32,9 @@ tableColumns:
     dataType: STRING
     columnAlign: LEFT
     visibleByDefault: true
+    componentProperties:
+      displayType: chip
+      useAvatarInChip: '1'
     referencedEntity: CustomerMDM.entities.Country.Country
   - _type: MenuColumn
     _name: Language

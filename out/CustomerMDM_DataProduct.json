@@ -2728,7 +2728,20 @@
                                 "visibleByDefault": true,
                                 "referencedEntity": "CustomerMDM.entities.Country.Country",
                                 "valueDataType": "STRING",
-                                "componentProperties": []
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntity.collection_views.SalesEntityCollectionView.FDN_Country.displayType",
+                                        "dataType": "STRING",
+                                        "value": "chip",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntity.collection_views.SalesEntityCollectionView.FDN_Country.useAvatarInChip",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -2828,7 +2841,20 @@
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
-                                "componentProperties": []
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntity.forms.SalesEntityForm.SalesEntity.FDN_Country.displayType",
+                                        "dataType": "STRING",
+                                        "value": "chip",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntity.forms.SalesEntityForm.SalesEntity.FDN_Country.useAvatarInChip",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -5581,7 +5607,20 @@
                                 "visibleByDefault": true,
                                 "referencedEntity": "CustomerMDM.entities.Country.Country",
                                 "valueDataType": "STRING",
-                                "componentProperties": []
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountCollectionView.FDN_Country.displayType",
+                                        "dataType": "STRING",
+                                        "value": "chip",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountCollectionView.FDN_Country.useAvatarInChip",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
                             },
                             {
                                 "qualifiedName": "CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountCollectionView.FDN_Individual",
@@ -5780,7 +5819,20 @@
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
-                                "componentProperties": []
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.IndividualAccount.forms.IndividualAccountForm.IndividualAccount.FDN_Country.displayType",
+                                        "dataType": "STRING",
+                                        "value": "chip",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.IndividualAccount.forms.IndividualAccountForm.IndividualAccount.FDN_Country.useAvatarInChip",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
                             },
                             {
                                 "qualifiedName": "CustomerMDM.entities.IndividualAccount.forms.IndividualAccountForm.IndividualAccount.FDN_Individual",
@@ -10427,7 +10479,20 @@
                                 "visibleByDefault": true,
                                 "referencedEntity": "CustomerMDM.entities.Country.Country",
                                 "valueDataType": "STRING",
-                                "componentProperties": []
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.CountryLanguage.collection_views.CountryLanguageCollectionView.FDN_Country.displayType",
+                                        "dataType": "STRING",
+                                        "value": "chip",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.CountryLanguage.collection_views.CountryLanguageCollectionView.FDN_Country.useAvatarInChip",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
                             },
                             {
                                 "qualifiedName": "CustomerMDM.entities.CountryLanguage.collection_views.CountryLanguageCollectionView.Language",
@@ -10553,7 +10618,20 @@
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
-                                "componentProperties": []
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.CountryLanguage.forms.CountryLanguageForm.CountryLanguage.FDN_Country.displayType",
+                                        "dataType": "STRING",
+                                        "value": "chip",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.CountryLanguage.forms.CountryLanguageForm.CountryLanguage.FDN_Country.useAvatarInChip",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -12755,7 +12833,20 @@
                                 "visibleByDefault": true,
                                 "referencedEntity": "CustomerMDM.entities.Country.Country",
                                 "valueDataType": "STRING",
-                                "componentProperties": []
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionView.FDN_Country.displayType",
+                                        "dataType": "STRING",
+                                        "value": "chip",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionView.FDN_Country.useAvatarInChip",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -12854,7 +12945,20 @@
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
-                                "componentProperties": []
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.AddressDefinition.forms.AddressDefinitionForm.AddressDefinition.FDN_Country.displayType",
+                                        "dataType": "STRING",
+                                        "value": "chip",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.AddressDefinition.forms.AddressDefinitionForm.AddressDefinition.FDN_Country.useAvatarInChip",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -13484,7 +13588,20 @@
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
-                                "componentProperties": []
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Address.forms.AddressForm.Address.FDN_Country.displayType",
+                                        "dataType": "STRING",
+                                        "value": "chip",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Address.forms.AddressForm.Address.FDN_Country.useAvatarInChip",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
                             },
                             {
                                 "qualifiedName": "CustomerMDM.entities.Address.forms.AddressForm.Address.FDN_IndividualContext",

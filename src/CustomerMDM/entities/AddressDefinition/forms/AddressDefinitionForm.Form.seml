@@ -33,3 +33,6 @@ formTabs:
         useCustomLabel: false
         dataType: STRING
         referencedEntity: CustomerMDM.entities.Country.Country
+        componentProperties:
+          displayType: chip
+          useAvatarInChip: '1'
