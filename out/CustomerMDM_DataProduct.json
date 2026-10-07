@@ -34,7 +34,7 @@
                 "entitiesListEnabled": true,
                 "errorsNavigationEnabled": true,
                 "favIcon": "https://car-brand-names.com/wp-content/uploads/2015/05/Mercedes-Benz-Logo-1933-720x405.png",
-                "historyBrowsingEnabled": false,
+                "historyBrowsingEnabled": true,
                 "historyBrowsingRequiredRole": "",
                 "homeSectionEnabled": true,
                 "lineageEnabled": true,
@@ -92,6 +92,114 @@
                             "maxResults": 100,
                             "position": 3,
                             "searchTypeConfig": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.TextConfig"
+                        },
+                        {
+                            "qualifiedName": "CustomerMDM.applications.Customer.IndividualReviewSuggestion",
+                            "viewType": "GD",
+                            "businessObjectView": "CustomerMDM.entities.Individual.business_views.IndividualReviewSuggestionBusinessView",
+                            "label": "Individual - Review Suggestions",
+                            "maxResults": 100,
+                            "position": 4,
+                            "searchTypeConfig": "CustomerMDM.entities.Individual.business_views.IndividualReviewSuggestionBusinessView.Individual.TextConfig"
+                        },
+                        {
+                            "qualifiedName": "CustomerMDM.applications.Customer.Address",
+                            "viewType": "GD",
+                            "businessObjectView": "CustomerMDM.entities.Address.business_views.AddressBusinessView",
+                            "label": "Address",
+                            "maxResults": 100,
+                            "position": 5,
+                            "searchTypeConfig": "CustomerMDM.entities.Address.business_views.AddressBusinessView.Address.TextConfig"
+                        },
+                        {
+                            "qualifiedName": "CustomerMDM.applications.Customer.AddressDefinition",
+                            "viewType": "GD",
+                            "businessObjectView": "CustomerMDM.entities.AddressDefinition.business_views.AddressDefinitionBusinessView",
+                            "label": "Address Definition",
+                            "maxResults": 100,
+                            "position": 6,
+                            "searchTypeConfig": "CustomerMDM.entities.AddressDefinition.business_views.AddressDefinitionBusinessView.AddressDefinition.TextConfig"
+                        },
+                        {
+                            "qualifiedName": "CustomerMDM.applications.Customer.Country",
+                            "viewType": "GD",
+                            "businessObjectView": "CustomerMDM.entities.Country.business_views.CountryBusinessView",
+                            "label": "Country",
+                            "maxResults": 100,
+                            "position": 7,
+                            "searchTypeConfig": "CustomerMDM.entities.Country.business_views.CountryBusinessView.Country.TextConfig"
+                        },
+                        {
+                            "qualifiedName": "CustomerMDM.applications.Customer.CountryLanguage",
+                            "viewType": "GD",
+                            "businessObjectView": "CustomerMDM.entities.CountryLanguage.business_views.CountryLanguageBusinessView",
+                            "label": "Country Language",
+                            "maxResults": 100,
+                            "position": 8,
+                            "searchTypeConfig": "CustomerMDM.entities.CountryLanguage.business_views.CountryLanguageBusinessView.CountryLanguage.TextConfig"
+                        },
+                        {
+                            "qualifiedName": "CustomerMDM.applications.Customer.Email",
+                            "viewType": "GD",
+                            "businessObjectView": "CustomerMDM.entities.Email.business_views.EmailBusinessView",
+                            "label": "Email",
+                            "maxResults": 100,
+                            "position": 9,
+                            "searchTypeConfig": "CustomerMDM.entities.Email.business_views.EmailBusinessView.Email.TextConfig"
+                        },
+                        {
+                            "qualifiedName": "CustomerMDM.applications.Customer.EmailIndividualContext",
+                            "viewType": "GD",
+                            "businessObjectView": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView",
+                            "label": "Email Individual Context",
+                            "maxResults": 100,
+                            "position": 10,
+                            "searchTypeConfig": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView.EmailIndividualContext.TextConfig"
+                        },
+                        {
+                            "qualifiedName": "CustomerMDM.applications.Customer.ExternalID",
+                            "viewType": "GD",
+                            "businessObjectView": "CustomerMDM.entities.ExternalID.business_views.ExternalIDBusinessView",
+                            "label": "External ID",
+                            "maxResults": 100,
+                            "position": 11,
+                            "searchTypeConfig": "CustomerMDM.entities.ExternalID.business_views.ExternalIDBusinessView.ExternalID.TextConfig"
+                        },
+                        {
+                            "qualifiedName": "CustomerMDM.applications.Customer.InternalID",
+                            "viewType": "GD",
+                            "businessObjectView": "CustomerMDM.entities.InternalID.business_views.InternalIDBusinessView",
+                            "label": "Internal ID",
+                            "maxResults": 100,
+                            "position": 12,
+                            "searchTypeConfig": "CustomerMDM.entities.InternalID.business_views.InternalIDBusinessView.InternalID.TextConfig"
+                        },
+                        {
+                            "qualifiedName": "CustomerMDM.applications.Customer.Phone",
+                            "viewType": "GD",
+                            "businessObjectView": "CustomerMDM.entities.Phone.business_views.PhoneBusinessView",
+                            "label": "Phone",
+                            "maxResults": 100,
+                            "position": 13,
+                            "searchTypeConfig": "CustomerMDM.entities.Phone.business_views.PhoneBusinessView.Phone.TextConfig"
+                        },
+                        {
+                            "qualifiedName": "CustomerMDM.applications.Customer.SalesEntity",
+                            "viewType": "GD",
+                            "businessObjectView": "CustomerMDM.entities.SalesEntity.business_views.SalesEntityBusinessView",
+                            "label": "Sales Entity",
+                            "maxResults": 100,
+                            "position": 14,
+                            "searchTypeConfig": "CustomerMDM.entities.SalesEntity.business_views.SalesEntityBusinessView.SalesEntity.TextConfig"
+                        },
+                        {
+                            "qualifiedName": "CustomerMDM.applications.Customer.SalesEntityRel",
+                            "viewType": "GD",
+                            "businessObjectView": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView",
+                            "label": "Sales Entity Relationship",
+                            "maxResults": 100,
+                            "position": 15,
+                            "searchTypeConfig": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel.TextConfig"
                         }
                     ]
                 },
@@ -1226,7 +1334,25 @@
             }
         ],
         "modelEditionVariables": [],
-        "modelJobs": [],
+        "modelJobs": [
+            {
+                "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL",
+                "jobType": "INTEGRATION",
+                "queueName": "Default",
+                "modelTasks": [
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.Individual",
+                        "entity": "CustomerMDM.entities.Individual.Individual",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "matchEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    }
+                ]
+            }
+        ],
         "modelPrivGrants": [
             {
                 "qualifiedName": "CustomerMDM.data_product_priv_grants.semarchyAdmin",
@@ -5931,7 +6057,7 @@
                         "condition": "(Gender = 'MALE' AND Salutation IN ('MR')) OR (Gender = 'FEMALE' AND Salutation IN ('MS', 'MRS', 'MISS', 'MME')) OR (Salutation ='-')",
                         "validationLabel": "",
                         "validationScope": "PRE_CONSO",
-                        "label": "Valid Gender and Salutation Combination"
+                        "label": "Invalid Gender and Salutation Combination"
                     }
                 ],
                 "actionSets": [
@@ -5961,9 +6087,9 @@
                                 "useCustomLabel": true,
                                 "waitDialogEnabled": false,
                                 "multipleSelectionAllowed": true,
-                                "availableForErrorData": false,
+                                "availableForErrorData": true,
                                 "availableForGoldenData": true,
-                                "availableForMasterData": false,
+                                "availableForMasterData": true,
                                 "stepper": "CustomerMDM.entities.Individual.steppers.AuthorIndividuals"
                             },
                             {
@@ -11001,8 +11127,8 @@
             {
                 "qualifiedName": "CustomerMDM.entities.Company.Company",
                 "dataEntryAllowed": true,
-                "historizeGolden": false,
-                "historizeMaster": false,
+                "historizeGolden": true,
+                "historizeMaster": true,
                 "description": "",
                 "documentation": "",
                 "enableDelete": true,
@@ -11396,6 +11522,36 @@
                                         "transitionVisible": "any ExternalID has (1=1)",
                                         "transitionVisibleInterpreter": "SEMQL",
                                         "visibleInFormTabCondition": "any ExternalID has (1=1)"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.MasterRecords",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.MasterRecords.MasterRecords",
+                                        "transitionPath": "MasterRecords",
+                                        "useCustomLabel": true,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "enableHierarchy": "0",
+                                        "label": "Master Record",
+                                        "pluralLabel": "Master Records",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "1"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.GoldenHistoryRecords",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.GoldenHistoryRecords.CompanyGH",
+                                        "transitionPath": "GoldenHistoryRecords",
+                                        "useCustomLabel": false,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "displayTransitionNodeAs": "ICON_LABEL",
+                                        "enableHierarchy": "0",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "1",
+                                        "transitionVisibleInterpreter": "LITERAL"
                                     }
                                 ]
                             },
@@ -11480,6 +11636,92 @@
                                         }
                                     }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.MasterRecords.MasterRecords",
+                                "collection": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewMR",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.Company.Company",
+                                "form": "CustomerMDM.entities.Company.forms.CompanyForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerMDM.entities.Company.action_sets.CompanyActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.MasterRecords.MasterRecords.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.MasterRecords.MasterRecords.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.MasterRecords.MasterRecords.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.MasterRecords.MasterRecords.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.GoldenHistoryRecords.CompanyGH",
+                                "collection": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewGH",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.Company.Company",
+                                "form": "CustomerMDM.entities.Company.forms.CompanyForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.GoldenHistoryRecords.CompanyGH.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.GoldenHistoryRecords.CompanyGH.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.GoldenHistoryRecords.CompanyGH.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.GoldenHistoryRecords.CompanyGH.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL",
+                                            "enabled": true
+                                        }
+                                    }
+                                ],
+                                "businessEntityBuiltInFilters": []
                             }
                         ]
                     }
@@ -11601,6 +11843,384 @@
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "MastersCount",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewGH",
+                        "default": false,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Company",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "CustomerMDM.entities.Company.display_cards.CompanyDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewGH.CompanyID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "CompanyID",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewGH.UpdateDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "UpdateDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewGH.Updator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "Updator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewGH.CreationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "CreationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewGH.Creator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Creator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewGH.CompanyMEID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "CompanyMEID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewGH.FullName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "FullName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewGH.ShortName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "ShortName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewGH.FullNameLocal",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "FullNameLocal",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewGH.ShortNameLocal",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "ShortNameLocal",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewGH.LegalForm",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "LegalForm",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewGH.MastersCount",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 11,
+                                "useCustomLabel": false,
+                                "value": "MastersCount",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewMR",
+                        "default": false,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Company",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "CustomerMDM.entities.Company.display_cards.CompanyDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewMR.CompanyID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "CompanyID",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewMR.PublisherID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "PublisherID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewMR.SourceID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "SourceID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewMR.UpdateDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "UpdateDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewMR.Updator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Updator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewMR.CreationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "CreationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewMR.Creator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "Creator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewMR.CompanyMEID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "CompanyMEID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewMR.FullName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "FullName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewMR.ShortName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "ShortName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewMR.FullNameLocal",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "FullNameLocal",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewMR.ShortNameLocal",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 11,
+                                "useCustomLabel": false,
+                                "value": "ShortNameLocal",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewMR.LegalForm",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 12,
+                                "useCustomLabel": false,
+                                "value": "LegalForm",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.collection_views.CompanyCollectionViewMR.MastersCount",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 13,
                                 "useCustomLabel": false,
                                 "value": "MastersCount",
                                 "visibleByDefault": true,

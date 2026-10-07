@@ -1,0 +1,121 @@
+﻿gc_id,sales_entity_name,country,legal_entity
+GC000001,Mercedes-Benz Germany Dealer 01,DE,false
+GC000002,Mercedes-Benz Germany Dealer 02,DE,false
+GC000003,Mercedes-Benz Germany Dealer 03,DE,false
+GC000004,Mercedes-Benz Germany Dealer 04,DE,false
+GC000005,Mercedes-Benz Germany Dealer 05,DE,false
+GC000006,Mercedes-Benz Germany Dealer 06,DE,false
+GC000007,Mercedes-Benz Germany Dealer 07,DE,false
+GC000008,Mercedes-Benz Germany Dealer 08,DE,false
+GC000009,Mercedes-Benz Germany Dealer 09,DE,false
+GC000010,Mercedes-Benz Germany Dealer 10,DE,false
+GC000011,Mercedes-Benz Germany Dealer 11,DE,false
+GC000012,Mercedes-Benz Germany Dealer 12,DE,false
+GC000013,Mercedes-Benz Germany Dealer 13,DE,false
+GC000014,Mercedes-Benz Germany Dealer 14,DE,false
+GC000015,Mercedes-Benz Germany Dealer 15,DE,false
+GC000016,Mercedes-Benz Germany Dealer 16,DE,false
+GC000017,Mercedes-Benz Germany Dealer 17,DE,false
+GC000018,Mercedes-Benz Germany Dealer 18,DE,false
+GC000019,Mercedes-Benz Germany Dealer 19,DE,false
+GC000020,Mercedes-Benz Germany Dealer 20,DE,false
+GC000021,Mercedes-Benz United Kingdom Dealer 01,GB,false
+GC000022,Mercedes-Benz United Kingdom Dealer 02,GB,false
+GC000023,Mercedes-Benz United Kingdom Dealer 03,GB,false
+GC000024,Mercedes-Benz United Kingdom Dealer 04,GB,false
+GC000025,Mercedes-Benz United Kingdom Dealer 05,GB,false
+GC000026,Mercedes-Benz United Kingdom Dealer 06,GB,false
+GC000027,Mercedes-Benz United Kingdom Dealer 07,GB,false
+GC000028,Mercedes-Benz United Kingdom Dealer 08,GB,false
+GC000029,Mercedes-Benz United Kingdom Dealer 09,GB,false
+GC000030,Mercedes-Benz United Kingdom Dealer 10,GB,false
+GC000031,Mercedes-Benz United Kingdom Dealer 11,GB,false
+GC000032,Mercedes-Benz United Kingdom Dealer 12,GB,false
+GC000033,Mercedes-Benz United Kingdom Dealer 13,GB,false
+GC000034,Mercedes-Benz United Kingdom Dealer 14,GB,false
+GC000035,Mercedes-Benz United Kingdom Dealer 15,GB,false
+GC000036,Mercedes-Benz United Kingdom Dealer 16,GB,false
+GC000037,Mercedes-Benz United Kingdom Dealer 17,GB,false
+GC000038,Mercedes-Benz United Kingdom Dealer 18,GB,false
+GC000039,Mercedes-Benz United Kingdom Dealer 19,GB,false
+GC000040,Mercedes-Benz United Kingdom Dealer 20,GB,false
+GC000041,Mercedes-Benz Italy Dealer 01,IT,false
+GC000042,Mercedes-Benz Italy Dealer 02,IT,false
+GC000043,Mercedes-Benz Italy Dealer 03,IT,false
+GC000044,Mercedes-Benz Italy Dealer 04,IT,false
+GC000045,Mercedes-Benz Italy Dealer 05,IT,false
+GC000046,Mercedes-Benz Italy Dealer 06,IT,false
+GC000047,Mercedes-Benz Italy Dealer 07,IT,false
+GC000048,Mercedes-Benz Italy Dealer 08,IT,false
+GC000049,Mercedes-Benz Italy Dealer 09,IT,false
+GC000050,Mercedes-Benz Italy Dealer 10,IT,false
+GC000051,Mercedes-Benz Italy Dealer 11,IT,false
+GC000052,Mercedes-Benz Italy Dealer 12,IT,false
+GC000053,Mercedes-Benz Italy Dealer 13,IT,false
+GC000054,Mercedes-Benz Italy Dealer 14,IT,false
+GC000055,Mercedes-Benz Italy Dealer 15,IT,false
+GC000056,Mercedes-Benz Italy Dealer 16,IT,false
+GC000057,Mercedes-Benz Italy Dealer 17,IT,false
+GC000058,Mercedes-Benz Italy Dealer 18,IT,false
+GC000059,Mercedes-Benz Italy Dealer 19,IT,false
+GC000060,Mercedes-Benz Italy Dealer 20,IT,false
+GC000061,Mercedes-Benz Switzerland Dealer 01,CH,false
+GC000062,Mercedes-Benz Switzerland Dealer 02,CH,false
+GC000063,Mercedes-Benz Switzerland Dealer 03,CH,false
+GC000064,Mercedes-Benz Switzerland Dealer 04,CH,false
+GC000065,Mercedes-Benz Switzerland Dealer 05,CH,false
+GC000066,Mercedes-Benz Switzerland Dealer 06,CH,false
+GC000067,Mercedes-Benz Switzerland Dealer 07,CH,false
+GC000068,Mercedes-Benz Switzerland Dealer 08,CH,false
+GC000069,Mercedes-Benz Switzerland Dealer 09,CH,false
+GC000070,Mercedes-Benz Switzerland Dealer 10,CH,false
+GC000071,Mercedes-Benz Switzerland Dealer 11,CH,false
+GC000072,Mercedes-Benz Switzerland Dealer 12,CH,false
+GC000073,Mercedes-Benz Switzerland Dealer 13,CH,false
+GC000074,Mercedes-Benz Switzerland Dealer 14,CH,false
+GC000075,Mercedes-Benz Switzerland Dealer 15,CH,false
+GC000076,Mercedes-Benz Switzerland Dealer 16,CH,false
+GC000077,Mercedes-Benz Switzerland Dealer 17,CH,false
+GC000078,Mercedes-Benz Switzerland Dealer 18,CH,false
+GC000079,Mercedes-Benz Switzerland Dealer 19,CH,false
+GC000080,Mercedes-Benz Switzerland Dealer 20,CH,false
+GC000081,Mercedes-Benz United States Dealer 01,US,false
+GC000082,Mercedes-Benz United States Dealer 02,US,false
+GC000083,Mercedes-Benz United States Dealer 03,US,false
+GC000084,Mercedes-Benz United States Dealer 04,US,false
+GC000085,Mercedes-Benz United States Dealer 05,US,false
+GC000086,Mercedes-Benz United States Dealer 06,US,false
+GC000087,Mercedes-Benz United States Dealer 07,US,false
+GC000088,Mercedes-Benz United States Dealer 08,US,false
+GC000089,Mercedes-Benz United States Dealer 09,US,false
+GC000090,Mercedes-Benz United States Dealer 10,US,false
+GC000091,Mercedes-Benz United States Dealer 11,US,false
+GC000092,Mercedes-Benz United States Dealer 12,US,false
+GC000093,Mercedes-Benz United States Dealer 13,US,false
+GC000094,Mercedes-Benz United States Dealer 14,US,false
+GC000095,Mercedes-Benz United States Dealer 15,US,false
+GC000096,Mercedes-Benz United States Dealer 16,US,false
+GC000097,Mercedes-Benz United States Dealer 17,US,false
+GC000098,Mercedes-Benz United States Dealer 18,US,false
+GC000099,Mercedes-Benz United States Dealer 19,US,false
+GC000100,Mercedes-Benz United States Dealer 20,US,false
+GC000101,"Mercedes-Benz Korea, Republic of Dealer 01",KR,false
+GC000102,"Mercedes-Benz Korea, Republic of Dealer 02",KR,false
+GC000103,"Mercedes-Benz Korea, Republic of Dealer 03",KR,false
+GC000104,"Mercedes-Benz Korea, Republic of Dealer 04",KR,false
+GC000105,"Mercedes-Benz Korea, Republic of Dealer 05",KR,false
+GC000106,"Mercedes-Benz Korea, Republic of Dealer 06",KR,false
+GC000107,"Mercedes-Benz Korea, Republic of Dealer 07",KR,false
+GC000108,"Mercedes-Benz Korea, Republic of Dealer 08",KR,false
+GC000109,"Mercedes-Benz Korea, Republic of Dealer 09",KR,false
+GC000110,"Mercedes-Benz Korea, Republic of Dealer 10",KR,false
+GC000111,"Mercedes-Benz Korea, Republic of Dealer 11",KR,false
+GC000112,"Mercedes-Benz Korea, Republic of Dealer 12",KR,false
+GC000113,"Mercedes-Benz Korea, Republic of Dealer 13",KR,false
+GC000114,"Mercedes-Benz Korea, Republic of Dealer 14",KR,false
+GC000115,"Mercedes-Benz Korea, Republic of Dealer 15",KR,false
+GC000116,"Mercedes-Benz Korea, Republic of Dealer 16",KR,false
+GC000117,"Mercedes-Benz Korea, Republic of Dealer 17",KR,false
+GC000118,"Mercedes-Benz Korea, Republic of Dealer 18",KR,false
+GC000119,"Mercedes-Benz Korea, Republic of Dealer 19",KR,false
+GC000120,"Mercedes-Benz Korea, Republic of Dealer 20",KR,false

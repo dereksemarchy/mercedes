@@ -21,8 +21,8 @@ actions:
     stepper: CustomerMDM.entities.Individual.steppers.AuthorIndividuals
     multipleSelectionAllowed: true
     availableForGoldenData: true
-    availableForMasterData: false
-    availableForErrorData: false
+    availableForMasterData: true
+    availableForErrorData: true
     waitDialogEnabled: false
   - _type: MassUpdateAction
     _name: MassUpdateAuthorIndividuals

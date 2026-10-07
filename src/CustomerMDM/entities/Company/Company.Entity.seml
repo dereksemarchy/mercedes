@@ -7,8 +7,8 @@ physicalTableName: COMPANY
 iconUrl: images://mdi/domain.svg
 description: ""
 documentation: ""
-historizeGolden: false
-historizeMaster: false
+historizeGolden: true
+historizeMaster: true
 enableDelete: true
 attributes:
   - _type: EntityAttribute

@@ -1,0 +1,501 @@
+﻿company_id,company_me_id,full_name,short_name,full_name_local,short_name_local,legal_form
+3eb13b90-4668-4257-bdd6-40fb06671ad1,ccc23b8c392456de,(유) 보람마음기획,(유) 보람마음기획,,,SRL
+972a8469-1641-4f82-8b9d-2434e465e150,ccc0822e6c031199,Cilea SPA,Cilea SPA,,,SRL
+06cb0fb3-9a1d-4644-815e-f6d13b8faa18,ccc32e708fadc1a6,Weihmann,Weihmann,,,AG
+de8a774b-cf36-458b-8737-819096da1dac,cccc241301a9e71f,Christoph,Christoph,,,GMBH
+371ecd7b-27cd-4130-8722-9389571aa876,cccc3745f50bea63,"Querini, Balbi e Baggio SPA",Querini,,,SRL
+d8f56413-5be6-428e-98c2-67976142ea7d,ccc9a8dc580d7b71,Filippelli SPAx,Filippelli SPAx,,,AG
+1ff49b78-8946-4e85-b59c-de66bacfb3d0,cccec1b8f91e1d4c,"Johnson, Gonzalez and Santos",Johnson,,,CORPORATION
+9e574f7a-a0ee-49ae-9453-dd324b0dbb41,cccdc98de2acf72f,Lindner,Lindner,,,AG
+a9488d99-0bbb-4599-91ce-5dd2b45ed1f0,cccc5e7c3a578a8e,Margraf Group,Margraf Group,,,SRL
+19db3ad0-ddd1-4fb2-bb98-2ef8daf61a26,ccc47294614ff3d7,Ernst Group,Ernst Group,,,CORPORATION
+5af30553-5ec4-4e08-a9a3-b2e95d65a441,cccab90935a240ae,Lettiere-Cremonesi e figli,Lettiere-Cremonesi e figli,,,SRL
+9bf00273-1247-4f57-a5e5-a5abaefcfad8,ccc2bcfba28defe3,Brun Bolliger & Co.,Brun Bolliger & Co.,,,AG
+ece66fa2-fd51-46e6-851b-4cf36123fdf7,cccb02b6a3d70628,Klemt GmbH,Klemt GmbH,,,GMBH
+0e51f30d-c6a7-4e39-84b0-32ccd7c524a5,cccd261a3aa2e4f9,"Iannucci, Battaglia e Sauro SPA",Iannucci,,,SRL
+3602f8ac-10f1-4c81-848a-aa9e66b2bc5b,cccf1628e9c349e0,Stroh,Stroh,,,CORPORATION
+ea1fca65-e27a-484d-a548-21d07fcd9eb1,ccc75775a491f0b2,Schönland,Schönland,,,GMBH
+89fa6a68-8fb5-427b-beb7-99193f22faf8,cccbf3c4434308bc,Rust Gröttner Stiftung & Co. KG,Rust Gröttner Stiftung & Co. KG,,,AG
+ff50bde4-3825-47b8-9cab-cc97663f1c97,ccc2369bff5e9ff0,Williams and Sons,Williams and Sons,,,CORPORATION
+27209bdf-1c11-4735-9c71-3d960c0fd195,ccc28f49a0a04dc4,Budig Heintze AG,Budig Heintze AG,,,AG
+ff01cf99-988c-44c9-a1b1-cd2262801c45,ccc8774077d21e02,Lettiere-Sanguineti Group,Lettiere-Sanguineti Group,,,SRL
+ae270da7-02f0-4b90-b143-262fdc5c0eed,ccc1d534b88139b9,(유) 비전상사,(유) 비전상사,,,CORPORATION
+6f4cc69a-4b22-4308-9c8e-aee95715bd6f,ccc74273287d06ca,Suter Stocker AG,Suter Stocker AG,,,AG
+f8cda88b-436d-46e2-b83c-fe0be037e5ed,cccc30ff8026695f,주식회사 이노,주식회사 이노,,,CORPORATION
+4c66e0a8-a013-4c6e-9eda-4e161b3dbd5c,ccca3923d777a477,"Smith, Hall and Dixon",Smith,,,LTD
+f4188f3f-8a14-4e62-a95b-4715c333e861,cccec24ac754108f,Stroh,Stroh,,,GMBH
+edd96831-1ca3-4cfb-84fc-6d827d154385,ccce0f3e5cec4eb5,"Galilei, Mocenigo e Bertolucci e figli",Galilei,,,SRL
+f26b4776-913e-4de2-a0c5-3cb83da9c2a9,ccc15ed614296c07,Kade Jungfer OHG mbHx,Kade Jungfer OHG mbHx,,,AG
+c40db9b4-885f-4e66-82b6-d2c5fa5d3100,ccc20de42031d750,Jones-Gentry,Jones-Gentry,,,CORPORATION
+df57c59a-8715-4103-83da-c0432a45c2ab,ccc6c52c9b49bd26,(유) 라온,(유) 라온,,,CORPORATION
+337ea2df-b09b-4a5c-badc-c32ac1590f53,ccc4fccab683d2e6,유한회사 신라,유한회사 신라,,,CORPORATION
+e64d1bcb-7027-43a1-9f98-7c71a65e688e,ccc73949847fd9b4,유한회사 나루,유한회사 나루,,,CORPORATION
+969b6662-0562-4059-968c-c69b1064005c,ccc3ae8c8dcdcd03,Etzold Hentschel Stiftung & Co. KGaA,Etzold Hentschel Stiftung & Co. KGaA,,,GMBH
+3a9bedd4-0f12-49e0-a18f-f6b6b535106e,ccce7c99114125c6,Renner,Renner,,,GMBH
+474a493b-3ced-4f2d-839f-bc501223b513,ccc7c441ab4220a7,Burgess-Patterson,Burgess-Patterson,,,CORPORATION
+922fe15a-e1e3-4b63-af7d-dc76b92da22b,ccc7900f93829b43,"Matthews, Lloyd and Turner",Matthews,,,LTD
+1825bc54-30be-445f-a835-14f2ceb81f9d,ccca8b3118d0752b,Bolliger Wenger AG,Bolliger Wenger AG,,,AG
+baa4b71a-dd24-47ac-b78e-edb3693dffbc,cccac6190dde29a6,Fliegner KGaA,Fliegner KGaA,,,GMBH
+dc96925e-ccf3-4171-96dc-8907ba6c34ab,ccc3fa7f1bf90e27,Zorbach OHG mbH,Zorbach OHG mbH,,,GMBH
+2ef91276-6c00-4f61-a3e2-fcb472d8567d,ccc766ec474ebc19,Schenk Bolnbach GmbH,Schenk Bolnbach GmbH,,,GMBH
+dc815fe7-ceda-4bbb-b171-0434134c6c92,ccc8ce21db20a56e,Carlson-Mcdonald,Carlson-Mcdonald,,,CORPORATION
+03c72ba8-d605-4770-8a63-f881ffd0f9d5,ccc17e01f8102383,Röhrdanz Atzler OHG mbH,Röhrdanz Atzler OHG mbH,,,GMBH
+dd59ba71-36b8-4481-bb3a-4e3e7c52fa17,ccce706766aa9385,Drewes,Drewes,,,GMBH
+43e458fc-63f2-4e24-bc3d-3348008d4127,cccc8b8ded3049cf,Reising,Reising,,,AG
+fed4057d-bb02-4576-b512-c4c3b253d218,ccc8e46dc88a618e,Wilmsen Segebahn GmbH,Wilmsen Segebahn GmbH,,,AG
+0ef8c2d6-f7fd-4646-b7bb-3eec4bf50b52,cccbc594944528c0,Hornig GmbH & Co. KG,Hornig GmbH & Co. KG,,,GMBH
+7a0ecfea-958c-49ba-8cd6-20c20ea2622b,ccceb5cf80bacd64,Martin AG,Martin AG,,,AG
+2f923996-d9f1-45d0-9482-2f5382010c62,ccc98543118a9d29,Zollinger Egger & Cie.,Zollinger Egger & Cie.,,,GMBH
+f10c718b-1eb0-438a-a75d-d5af3c365296,ccc91d63e3e9de99,Tasca-Emo SPA,Tasca-Emo SPA,,,SRL
+6b5252e3-14fc-4d54-9e8f-c9650a2c827e,ccc956b8a8499b92,"Mancini, Tomaselli e Filangieri e figli",Mancini,,,SRL
+506e5a9a-b758-488d-ab73-295b344a54b8,ccc43ff53d1a85dd,주식회사 이노유니온개발,주식회사 이노유니온개발,,,CORPORATION
+50f0fd0a-750c-4b75-8ccc-9bc2a53f8a28,cccc07a3edd4253b,Junitz,Junitz,,,GMBH
+ff002d4d-9020-49e4-bf9a-b5c29f044aed,ccc12c1319985f15,Bähr Dowerg GmbH,Bähr Dowerg GmbH,,,GMBH
+e1805081-5958-4499-aeea-163e21e8ac68,ccce117d119c4ea3,Smith-Smith,Smith-Smith,,,LTD
+8b10550c-d570-4f32-b02c-dd20286218b8,ccc4d71cb41b3143,Tasca-Emo SPA,Tasca-Emo SPA,,,GMBH
+a9d3d7c7-ee87-405e-8ca4-15ea8dfa6a56,cccf05db1a84a51a,Speri SPA,Speri SPA,,,SRL
+8da01097-be0f-451b-9b66-b5a9e3c43657,ccc45b8927cb6f2a,Wilms,Wilms,,,AG
+afffcfd2-341e-440b-97c7-00aab7b56ea7,cccda587a25d6b29,Ceri s.r.l.,Ceri s.r.l.,,,SRL
+d89a40c0-e87d-4c78-a7c4-21c740497b71,ccc17a0d0d01280f,"O'Brien, Hill and Jenkins",O'Brien,,,LTD
+c56811cd-5563-4616-80e8-5ece0b49452d,ccca319d217d65a0,Hickman Ltd,Hickman Ltd,,,CORPORATION
+6d7ce3c9-b4a6-4f3c-8d3a-ed99711c21c9,ccc0279b8f9797b0,Gute,Gute,,,GMBH
+26286bfb-e767-4cea-b0e6-a969e21342b0,ccc093928babce3b,Gnatz Binner GbR,Gnatz Binner GbR,,,AG
+0ab54bde-20a0-4502-ae06-809725e97977,ccc5d59c4eea04e7,Palombi-Roncalli s.r.l.,Palombi-Roncalli s.r.l.,,,SRL
+aabc25fa-3fe1-4e47-ae9b-ec3635c7936c,ccc5a8aa1a50aec3,Wright Inc,Wright Inc,,,CORPORATION
+ee0caeb5-ecfe-4b99-a790-cebdbfddc3d9,cccdd56c3c9ad14c,(주) 조선인포센터,(주) 조선인포센터,,,CORPORATION
+698c206f-e1a4-4e10-ad53-4dd0cf8ebc5a,ccc2dea90658663a,주식회사 가람,주식회사 가람,,,CORPORATION
+dd334cc7-ab7f-489a-8d5f-4822696608aa,ccccf8d4bc2cbb0d,Tanner AG,Tanner AG,,,AG
+61ee411a-1bac-47a7-b386-f7a4c991603f,ccc09e9ddf465290,Börner AG,Börner AG,,,AG
+598336e3-75d6-4ed4-ab1f-a9f2d10bd1d0,cccd20ea4e20fd1a,Boucsein Pieper GbR,Boucsein Pieper GbR,,,GMBH
+5408f9ac-6601-4dd0-b170-f437a8f7ef5a,cccdd463475287aa,Staude Neureuther AG & Co. OHG,Staude Neureuther AG & Co. OHG,,,GMBH
+8268690b-a438-45b5-99e4-b6714774bc58,cccadf4e6651529e,주식회사 한강,주식회사 한강,,,CORPORATION
+42deffcc-f86c-4ca2-a085-96db1d870966,ccc94a182db69edb,유한회사 마음,유한회사 마음,,,CORPORATION
+ba81edd9-587e-4344-af3f-920c98b8e4cc,ccc504d2c9535b63,Ladeck Grein Groth AG,Ladeck Grein Groth AG,,,AG
+e645f129-629c-4ae3-9d9a-f65982ec9f2d,ccc30a90939b462d,Todd LLC Group,Todd LLC Group,,,SRL
+ecf27e76-8519-4ff4-806e-d6e36fa17735,ccc89d7fce777f00,Langern Mosemann Stiftung & Co. KGaA,Langern Mosemann Stiftung & Co. KGaA,,,GMBH
+ebb7a385-aa0b-4b14-b2e9-702d11e9cdaa,ccc9f8715487fd4f,Steinberg KGaA,Steinberg KGaA,,,AG
+4ce1eb90-e669-4833-b841-d0a01fe771d6,ccc4f2d481d2c7de,"Caironi, Bignardi e Pinamonte Group",Caironi,,,SRL
+2095eef6-8ded-49fb-8bb0-0f20b27c4026,ccc6ba25311c6eb6,Hering AG & Co. OHG,Hering AG & Co. OHG,,,AG
+91b0e1d9-9d92-42af-ac8d-0e44e71e43a6,ccc67f484d0b0d1a,Martin AG,Martin AG,,,SRL
+9479e1e6-c927-4d9b-ae0d-264835ce8841,ccca79ac9b4e2c24,Löchel AG & Co. KGaA,Löchel AG & Co. KGaA,,,AG
+82dc4c8e-36b5-429a-acf5-e81e71316269,ccccb3237922bac2,Hall-Gardiner,Hall-Gardiner,,,LTD
+a2086977-a9f2-4336-83f4-a9a948a639d0,ccc55cee9e87e04c,Ruberto SPA,Ruberto SPA,,,SRL
+4f77a665-ac3c-4640-bc20-592fc04a96c4,cccce7ae39820cff,Pearson PLC,Pearson PLC,,,CORPORATION
+79a28903-fbe3-4b24-beae-00320bd4a990,cccd98869c7c7377,Davids e.G.,Davids e.G.,,,GMBH
+31c681ec-935f-4b0a-a138-4ddce2d9de5d,cccb2444b7e58481,Jones Inc Group,Jones Inc Group,,,LTD
+b00805cc-a7f3-4ae9-a5c7-3c443e75c3b4,ccce4855016b6287,Dobson-Alexander,Dobson-Alexander,,,LTD
+f53d4330-cdda-44ba-ad06-e8cf3805f907,ccc8498eb227462c,Felber & Co.,Felber & Co.,,,AG
+1f115b76-d92c-4227-aadf-50853fcb7546,ccc2222874daaebf,Krebs GbR,Krebs GbR,,,AG
+513a7052-986f-4025-8f15-ba58fce68504,cccc1581f335cba3,Lucchesi-Ramazzotti s.r.l.,Lucchesi-Ramazzotti s.r.l.,,,SRL
+6d3ee1dc-8139-4443-a45b-712eb8225688,ccce827ad4a02e53,Faugno Group,Faugno Group,,,SRL
+7337c599-7984-4388-9c8a-ee30be6033f7,cccc0747425a609f,Novak PLC,Novak PLC,,,CORPORATION
+8573e793-c715-42b9-840c-5d9146fde062,ccca07297c0e8cd8,"Daniels, Adkins and Brown",Daniels,,,CORPORATION
+3c07c574-4925-4af1-b6aa-e05b13d5f2f7,ccc55fa1458f1f19,Müller,Müller,,,AG
+3b33f3d8-269c-4696-a36c-7b8714a0bccb,cccb1a6b620e99d3,"Calhoun, Schmidt and Brown",Calhoun,,,CORPORATION
+54b4a482-6858-4eba-aa34-c85410714d51,ccc7746d8ae8905b,Forster AG,Forster AG,,,AG
+e7a37e81-63b4-408b-ab8e-869fd5385b0e,ccc95863c51155ff,Gertz GbRx,Gertz GbRx,,,GMBH
+7a1b5806-6160-46b4-9360-715fc3fe0183,cccf1578018267c4,"Hensley, Powell and David",Hensley,,,CORPORATION
+f41402b1-e442-4ebb-9a7b-909563d62a39,ccc6b44fd5f25073,Hentschel,Hentschel,,,GMBH
+076e2bba-7c53-48bf-af92-f25e45df16b6,ccc560c9638c254c,"Wright, Bibi and Burton",Wright,,,LTD
+20ac3703-eb67-446a-b7a6-e17cd72b6108,ccc9f4c3fb10987f,Hafner Fuchs GmbH,Hafner Fuchs GmbH,,,AG
+06f028ff-a9ba-4a27-907b-fe36978648f8,ccca48b3157d94a1,(유) 신라랩스,(유) 신라랩스,,,CORPORATION
+42999aa4-0cdf-442b-ae85-cb217631de9d,ccc53cd6610cf373,Seidel,Seidel,,,GMBH
+610e6a64-e130-4617-82df-f33556666f9f,cccc083b473bd358,Murphy-Murray,Murphy-Murray,,,LTD
+bfc00dc8-04f6-4d86-b866-076514f7ce8d,ccc0d5578a175dfe,Anders GmbH & Co. KG,Anders GmbH & Co. KG,,,AG
+a6d964a3-f510-4b53-87fe-e39f1190f938,cccc11560a4e5b70,Rose,Rose,,,GMBH
+9f0fda8d-0537-4ff6-96d7-b3b833094d35,ccc3d1142702878b,(주) 이노상사,(주) 이노상사,,,CORPORATION
+37cc863b-f2a0-4459-9060-4f621d48a071,cccb3102770c7798,"Pritchard, McDonald and Wallace",Pritchard,,,LTD
+f6b751f7-9b74-4245-9b1b-c8952af43ab7,cccb7e64bf780e3f,Kaufmann GmbH,Kaufmann GmbH,,,AG
+1bac5c15-4fa0-4f26-b6f7-f0cc29ec8e49,ccc0692d9424aed5,Lutz & Cie.,Lutz & Cie.,,,AG
+658b2523-6014-4de9-b54a-d0a2e87466d7,cccb70b3f1043785,"Marazzi, Trupiano e Alfonsi Group",Marazzi,,,SRL
+3e2b6091-a092-452a-94a0-57a7b0cc1b3b,cccb27b31a16342c,Döhn,Döhn,,,AG
+cbd58bf6-1efd-46e9-8e37-14af99b49350,ccc90e0ffbdd3933,Baker Inc,Baker Inc,,,CORPORATION
+11a72609-5edd-4bbf-a959-76636daa2e68,ccca5c568186a576,Röhrdanz,Röhrdanz,,,AG
+1b049863-7d7d-4bed-9284-476c6b88f83d,cccf5f626efb63b1,"Powell, Nelson and Fernandez",Powell,,,AG
+272a6d8e-b512-4df8-b5b1-7a55d4262982,ccc2d1746f7c15ea,"Fracci, Mozart e Fiorucci Group",Fracci,,,SRL
+7bc67e1f-c64e-46e3-89c5-b31aeb6c1016,ccc6f81c7701f7bb,"Staglieno, Gregorio e Berengario SPA",Staglieno,,,SRL
+162f8a24-ef43-413c-94aa-c9a33ed8c56c,ccce1b294767d76c,Löchel,Löchel,,,AG
+ab0e664e-9c3e-42d5-91e1-aa9676f72255,ccc561e16105716b,Beyer Adler GmbH,Beyer Adler GmbH,,,GMBH
+364d7c87-7cd0-429d-ae8d-0e87533420e6,ccccc3eb5ad5cf06,Todd LLC,Todd LLC,,,LTD
+e14eb70d-b380-473a-989d-9d4ae15ca666,ccc8e48546b98991,Weihmann GmbH & Co. KG,Weihmann GmbH & Co. KG,,,GMBH
+b856d035-3dc9-4290-95ea-bb2730e912f2,ccc7d137680bac63,Ruberto SPAx,Ruberto SPAx,,,LTD
+72bb912d-7da6-4785-b63b-4dc3a559e463,ccc046a0cafda613,"Contarini, Verga e Barcaccia Group",Contarini,,,SRL
+4e6384bb-3e49-4f43-b118-f68d6786d506,ccc94e0da9f948b2,"Fracci, Mozart e Fiorucci Group Group",Fracci,,,AG
+ff233d5f-6ced-415d-9800-7c0287ea7ff5,ccc8ce64bef59fe6,Sykes Inc,Sykes Inc,,,LTD
+405bfdc9-4e7e-4827-855a-c7627428a656,ccc1ee343b048a8b,Knappe Benthin GmbH,Knappe Benthin GmbH,,,GMBH
+c31edbbc-f36c-462b-892e-6161be2d740a,ccc2f65fb0ae8f08,Stoll GbR,Stoll GbR,,,GMBH
+96ef2ad6-b97e-4703-86c8-adfe7bf47042,cccc29cffa02eaec,Dobes,Dobes,,,AG
+3a3c563e-4bd6-4ee6-b1b1-b099d52721e7,ccc2defe5c62b3a2,유한회사 중앙한빛바이오,유한회사 중앙한빛바이오,,,CORPORATION
+0ba6eab9-4639-447b-a067-bdac88bd13d1,ccc0df56f96b648a,Fröhlich e.V.,Fröhlich e.V.,,,AG
+c0b6fce2-de53-490a-a34b-6cf62053da42,ccc1a4327daa39f0,Pometta SPA,Pometta SPA,,,SRL
+5738811d-70c2-403f-ba8d-03aa782a65e0,cccf72ad2f32751e,Montanelli s.r.l.,Montanelli s.r.l.,,,SRL
+d2762bdc-1d34-408e-ba4c-75d4dc99e04c,ccc6694c10ba58e3,Wähner,Wähner,,,AG
+26d794d3-0db9-4301-afbb-411aa1235a8c,ccccfa702631d00b,Hethur AG & Co. KGaA,Hethur AG & Co. KGaA,,,AG
+c3b290d0-8edd-4fcd-9e52-d7703f897142,ccc9b37a6a8a616f,Dörr,Dörr,,,GMBH
+715629ee-e893-4e3d-b354-ea6f61607459,cccdc33e4c1f55ab,Bättig Meili GmbH,Bättig Meili GmbH,,,AG
+f5c9b047-9c10-4572-8f6b-40d09efba58b,ccc19675bd767e35,Mies GmbH,Mies GmbH,,,GMBH
+2834e4c0-14c8-43b4-a911-d19243bfd931,ccc2c7f03d67cde9,Gentilini-Garobbio SPA,Gentilini-Garobbio SPA,,,SRL
+980402a2-b07a-4066-b354-35ea68949b8d,ccc4a8ff784c2f29,Gröttner,Gröttner,,,GMBH
+dc0f2fcf-b3f6-4e0d-8860-3b32b4fb0eb9,ccc1238d743b65a2,Jüttner Holsten AG,Jüttner Holsten AG,,,GMBH
+96fc734d-a003-4d28-8a8f-3653c9af18f8,ccccdccca9434aa0,(유) 코리아윈드은행,(유) 코리아윈드은행,,,CORPORATION
+26242b40-a5cb-43a2-b98d-1ca68b6870b5,ccc44007e88da719,"Robinson, Wilkinson and Singh",Robinson,,,LTD
+9854ce4e-4ebf-45c3-8ae9-b4a72a79ea68,cccd3016bfbbb17f,Heß AG & Co. KGaA,Heß AG & Co. KGaA,,,AG
+b321bf21-4dd8-4b85-b04d-337677fc9703,cccf1533670acc5c,"Hunt, Phillips and Griffiths",Hunt,,,LTD
+9918ee46-1497-4658-b010-f7197e695d0d,ccce3b130a3450fc,Ward-Fitzgerald,Ward-Fitzgerald,,,LTD
+176132ed-069f-44f1-8018-1c6e9a8cfa3c,cccf63fc3a9aca5e,Schürch Peter AG,Schürch Peter AG,,,AG
+9384ec2b-44fe-4cae-9248-a9a7ac1aa554,cccc35b10a4c9f7f,주식회사 모두가온전자,주식회사 모두가온전자,,,CORPORATION
+473544f9-ea83-4f00-b135-f221a6c9537f,cccff37d2e76128b,Reynolds PLC,Reynolds PLC,,,LTD
+785299f4-175b-498d-b814-01027de1bdfe,ccc688985913f9d3,"Ferrucci, Ortolani e Ricolfi SPA",Ferrucci,,,SRL
+546e035a-292b-4156-9b94-65701ac70ec0,cccb19496961929e,Kabus,Kabus,,,AG
+c2b01cfd-d045-4d1c-a684-09e3f1f8343e,ccc0964f8cd321b0,Johann,Johann,,,AG
+f85e06a1-1dad-49b2-92c2-1221409d3602,ccc67780c5c5b37a,Ebert,Ebert,,,GMBH
+0de051a6-69ca-47d2-b644-14fd8ae769ed,ccc84b87300568d2,Wallis Ltd,Wallis Ltd,,,SRL
+c28ebd70-7129-4889-a01a-c9927f9d3e64,ccc341c60d366dfc,Johann,Johann,,,SRL
+e17f29e1-7028-4046-89bc-473fed7bf656,ccc7c161b2c08394,Burton Group,Burton Group,,,LTD
+3d42993c-cc9f-4334-9bdf-0377a14923c2,ccc288b7b5b453ca,Weiß,Weiß,,,AG
+3985fb62-17dc-4eff-a872-13f98d605936,cccd7665fe049059,Manunta s.r.l.,Manunta s.r.l.,,,SRL
+276aa6ce-d507-45d9-a5d0-4d531e1242e3,ccceec257f95897c,Baker Incx,Baker Incx,,,LTD
+7b85179a-d5b0-47e0-aa5d-932b45ff2c83,ccc78e36faf14ff0,"Jenkins, Stanley and Williams",Jenkins,,,LTD
+ebff8d15-30cb-4755-a232-b17a25074181,ccc821c19970cf60,"Dobson, Jones and Hutchinson",Dobson,,,LTD
+dabac50d-ca3d-4859-85ce-099c46b82659,ccc570216a39aaa6,"Jackson, Miller and Robertson",Jackson,,,CORPORATION
+d664d264-4c6e-47ff-b9de-7a3a486822b9,ccc9475d96418ced,"Harvey, Davis and Crane",Harvey,,,CORPORATION
+585a0afa-7bfd-4c12-89e0-6ab37250ee18,ccc8d4a7551ac8ea,Chambers and Sons,Chambers and Sons,,,CORPORATION
+fb140bc3-304b-4590-9e9e-37575260001e,ccc3d225b28f41de,Kennedy Inc,Kennedy Inc,,,LTD
+517400f8-0b2c-482a-a928-8e92c68a152f,ccc7914fbea4ff31,(유) 아름코스메틱 Group,(유) 아름코스메틱 Group,,,AG
+a6eab79e-d21c-42f8-8ada-4f80a9e782d4,ccc26f05fb16e5db,Meyer GmbH & Co. KG,Meyer GmbH & Co. KG,,,AG
+9716108e-f721-49bb-8096-27182051acef,cccdea4a54fd9ad3,주식회사 한가람,주식회사 한가람,,,CORPORATION
+e912b4bf-86a4-4ae4-9986-b4b270b7e868,ccc03edd74f93d17,"Cruz, Ross and Hernandez",Cruz,,,CORPORATION
+1327f1bc-2784-478f-b84f-16b3a79fbfaf,cccc812078308930,"Burgess, Myers and Moran",Burgess,,,LTD
+148f8b74-a65b-41f2-a5c1-7795b15516bc,ccc541cdda0d4a5f,Wulff GmbH & Co. KG,Wulff GmbH & Co. KG,,,AG
+c268283e-e32f-4e63-b7fd-dd71a075e927,cccdf5477cea2045,주식회사 하나플랫폼,주식회사 하나플랫폼,,,CORPORATION
+ebc2026f-af34-4f65-a193-c4b23c19e71d,cccff5744991ab9b,Benigni-Volterra e figli,Benigni-Volterra e figli,,,SRL
+c2a79689-1933-418c-ba74-57616f18c108,cccb4323a23d4c2f,Martin AG,Martin AG,,,AG
+0769165f-e746-4cb9-8ca9-cf07b1aa0f6a,ccc530a30bc61066,King-Scott,King-Scott,,,LTD
+3e83b91f-2544-4fe0-ae41-7d475ff595ea,ccc697c387fa841a,Junck,Junck,,,GMBH
+61ee6c5b-deef-480f-9c07-a75114374509,cccaee1e9ea556aa,Schmidtke Tschentscher GmbH & Co. OHG,Schmidtke Tschentscher GmbH & Co. OHG,,,GMBH
+760debbb-3b70-43a1-a4a3-5cf29549c931,ccc4104aa34db7c5,Burke-French,Burke-French,,,LTD
+771ad655-cdfc-4ee0-a61e-de900267deb3,ccc49a23e6b5a92c,Weimer GmbH & Co. KGaA,Weimer GmbH & Co. KGaA,,,GMBH
+966b1964-fcd6-4dca-9876-fd09f1faf665,ccca39174c955f6a,Heser Weitzel GbR,Heser Weitzel GbR,,,AG
+32ffe294-4d57-4880-9865-d69a74f33103,ccc627b4ffd6f232,"Lerner, Tremonti e Spadafora e figli",Lerner,,,SRL
+9326dffd-5be4-4f51-9269-869861a11729,cccfe2114bbe4aff,Mans Buchholz Stiftung & Co. KG,Mans Buchholz Stiftung & Co. KG,,,AG
+464458b4-6553-467d-a881-bfd3d47d577b,ccc90e0b0212b554,Heinz Heydrich GmbH,Heinz Heydrich GmbH,,,GMBH
+e776b886-d534-4e1d-bf29-84f5bec39a37,ccc49440e726be23,"Wright, Price and Mortonx",Wright,,,CORPORATION
+30ac7d7b-a2f9-43a3-b810-ae665a31b4cc,ccc402919ef2b93e,Corradi-Gabba SPA,Corradi-Gabba SPA,,,SRL
+0a17991e-a576-4411-a0a1-1839e7457704,cccc9e264f1639a0,Pistoletto-Montalti s.r.l.,Pistoletto-Montalti s.r.l.,,,SRL
+1712fb16-21a4-444f-bb7b-ee035d678bb1,ccc4b8c5e8dd5e5a,Bolander Haering GmbH & Co. KG,Bolander Haering GmbH & Co. KG,,,AG
+c958e75e-21d5-4971-b367-49b52cf6bf75,ccce05fb8a16a06c,Wirth Schmidt AG,Wirth Schmidt AG,,,AG
+2a1f955a-d499-4a99-85c4-5a3ee9da484a,ccce9ff141c8ca8c,"Palmer, Bailey and Parsons",Palmer,,,LTD
+56b60afc-ded2-45d0-bf1e-83664b8e63d4,ccc1d7bccde22f1c,유한회사 이노한빛항공,유한회사 이노한빛항공,,,CORPORATION
+39c1e262-f76c-4ede-8110-12662408a6dc,cccad238dc322c97,주식회사 월드,주식회사 월드,,,CORPORATION
+171e16cc-5da3-4f1b-8eac-0a33cdf974a7,ccc6502dca6a2224,(유) 아름코스메틱,(유) 아름코스메틱,,,CORPORATION
+ac3e7b0d-5e5b-413d-b46c-db771fa382e8,cccac1e8bfbf397b,Krebs GmbH,Krebs GmbH,,,AG
+5f18e583-f0b6-483f-a377-f6f1d289f0ab,cccacc211bbc91f7,"Pirandello, Deledda e Schicchi e figli",Pirandello,,,SRL
+8fb864e4-f173-4856-a25d-36eb9e9a9f83,cccea4e353f8382b,"Wilkinson, Walker and Wright",Wilkinson,,,LTD
+e8cda0cc-76da-4ca0-92e8-2f38a2a9d4d8,ccc4d5c5b379cb1e,"Babati, Brancaccio e Renzi e figli",Babati,,,SRL
+4dead645-0986-4beb-b23e-323d0b9bd934,ccc7e1cafef518a6,Gnatz Binner GbR,Gnatz Binner GbR,,,GMBH
+637e4b01-22ba-410e-899c-a782e3236d1a,ccc5efa97421ff46,Junken Hahn GmbH & Co. KG,Junken Hahn GmbH & Co. KG,,,AG
+6a35df59-e2aa-4a5d-a78e-d00dba0266ef,ccc19597a7a8f636,Moresi-Parini Group,Moresi-Parini Group,,,SRL
+08601833-479d-4cda-b396-ea37f065c817,ccc5edb0b0b63bcf,Grifeo-Bragadin s.r.l.,Grifeo-Bragadin s.r.l.,,,SRL
+5cd8fe1a-dafe-48a9-bc71-e0bef3579560,cccfb1e1196f4dfa,Morris Inc,Morris Inc,,,LTD
+0f8035f5-5bd2-4c98-a513-5ea0fa53e34d,ccc46a0265ec7acd,Wilson-Rees,Wilson-Rees,,,LTD
+74685b98-d2fe-4fde-9918-b3e5f2f25eef,ccca9ab31777e8cb,"Carnera, Murri e Riccati SPA",Carnera,,,CORPORATION
+0cf2b69b-0577-4ea9-b899-924698de8ebb,ccc5560dc96b5edb,Filippelli SPA,Filippelli SPA,,,SRL
+11906f50-3488-4a46-9088-2eafc9776598,cccc3e15d46ef104,주식회사 마음,주식회사 마음,,,CORPORATION
+541c7a86-3ba5-4d2f-9ea4-5c19d0243d72,ccc25c61c63d04ee,Sforza SPA,Sforza SPA,,,SRL
+21472a15-fcce-46f6-a50a-4578fbe94499,ccc402ad8a4b8f7c,Harloff,Harloff,,,GMBH
+03cde2e3-21bd-4b41-8699-8731ddcf8766,cccca3c65bb5c40c,Thies Hertrampf e.G.,Thies Hertrampf e.G.,,,GMBH
+0d6a05b3-43ef-4016-ac9b-662e040a3aae,cccbde1320733f6d,Detti-Carocci e figli,Detti-Carocci e figli,,,SRL
+72c22a16-79eb-4168-9045-56e5bee3eb79,ccc5cae9c72c1fe3,Baum Girschner GbRx,Baum Girschner GbRx,,,LTD
+0b19f88e-9d77-445e-b206-c26938b77c07,cccc8819ba2c98ce,Allen-Walker,Allen-Walker,,,LTD
+ffa361be-0f92-40e1-87f9-7d05f6ca6b8b,cccd8e887a9e8eef,Frost-Edwards,Frost-Edwards,,,LTD
+e8e22743-b65f-4ea9-bd82-42641ba362e7,ccc12d04718d4d05,Bättig Meili GmbHx,Bättig Meili GmbHx,,,LTD
+466772ce-204e-478c-90d0-8d1125f934bf,ccca21159fd34579,Dobes Stiftung & Co. KG,Dobes Stiftung & Co. KG,,,AG
+7426b193-4b7e-4b3c-87d2-92a698eeac2b,ccc9afd4816bcb9f,Stolze Schinke e.V.,Stolze Schinke e.V.,,,AG
+a79b44b6-da50-4fed-9d4a-3d81b3a7d0e0,ccce0b15a6a27967,Rosemann e.V.,Rosemann e.V.,,,GMBH
+56c438e4-69ef-4fb1-ba7e-8e14e359eee1,ccc74188d3d1bf0f,Ward Group,Ward Group,,,LTD
+50018b7b-6d40-47f4-9003-2b3518578baf,ccc41407aa448259,"Middleton, Lowe and Cook",Middleton,,,LTD
+112fa612-7969-4ed2-ac48-bf55afd380c4,cccd4ef0175a81ec,유한회사 국민아름연구소,유한회사 국민아름연구소,,,CORPORATION
+5f65c8ce-bd21-4c11-be9d-61ee18b87245,ccc214f3cfd01cbd,Mies,Mies,,,GMBH
+ab85fd59-5463-4dc7-8fca-7b6a8fc42092,ccc692ac1f4a8ca1,"Correr, Rocca e Durante Group",Correr,,,SRL
+de3b496f-6c45-46f6-8012-a0fff0ede303,cccb8976ea74bb18,"Morton, Medina and Webb",Morton,,,CORPORATION
+1a85910d-5a05-4c11-8ffc-a6b199b479d4,ccc81e5c93f277cc,(유) 보람마음기획,(유) 보람마음기획,,,CORPORATION
+1bb43332-d8e7-412f-b968-1c817b70c3b8,cccd86a659a1120e,Mende Henk e.G.,Mende Henk e.G.,,,AG
+cea60f4c-39e5-4ff0-92f8-37d447503f1d,cccd85c16dda4f8d,Roskoth Schmidt OHG mbH,Roskoth Schmidt OHG mbH,,,GMBH
+44777442-b187-43e6-9457-8ad9a867a096,ccc2e2fb076979d6,Morandi-Bacosi s.r.l.,Morandi-Bacosi s.r.l.,,,SRL
+59dcabd0-56fe-4fb9-abe9-e2074f199ec0,ccc2e70901902620,Flückiger Meyer GmbH,Flückiger Meyer GmbH,,,AG
+bdb025ff-2451-45a4-91d0-59b26699cd99,cccf8c88a2178f84,Guicciardini-Morricone Group,Guicciardini-Morricone Group,,,SRL
+6b7a2460-604e-46cb-b712-f2d187cdb6a1,ccc5744f74222167,Tintzmann,Tintzmann,,,GMBH
+f10013a7-c6de-42f0-930a-c1c7b8ba8368,ccc98a21914dcfae,Röhricht Atzler GmbH & Co. OHG,Röhricht Atzler GmbH & Co. OHG,,,GMBH
+9e2aa4ac-c122-45b3-a84c-03d227d415b6,cccac8930cbd3c03,Miller Ltd,Miller Ltd,,,CORPORATION
+9b69554d-7c54-435f-ac8c-3b6aa974d079,ccc6a07f7129cec7,Niemeier Röhricht e.G.,Niemeier Röhricht e.G.,,,AG
+6e0ed1e8-585d-4f86-9d23-24e6832920b7,ccc4882d1c6345ab,Stumpf GmbH & Co. KGaA,Stumpf GmbH & Co. KGaA,,,AG
+652ffb49-3873-457f-8ba0-78e84ef492c1,ccc996d5fc04a168,"Ellis, Parkin and Brown",Ellis,,,LTD
+c47104c0-3613-4e15-b200-c2614d29d1ab,cccc3a002321d1e1,Hartung Lachmann Stiftung & Co. KG,Hartung Lachmann Stiftung & Co. KG,,,AG
+bf3c5140-7f54-4511-81fa-964e1eb74b56,ccc2cfa56e3f683a,Curiel Group Group,Curiel Group Group,,,GMBH
+8f0881ee-8011-416b-bae8-8926b423ccde,cccab053d556b37d,Koch,Koch,,,AG
+6fac1673-0ad4-4230-bdf6-6ba5dc9c96de,ccc75b2704cc3ede,Röhrdanz Radisch GmbH,Röhrdanz Radisch GmbH,,,GMBH
+67884209-92ca-425a-ade5-93329364f3d0,ccca3e05b5a1b949,Barajas-Pierce,Barajas-Pierce,,,CORPORATION
+532401fc-f758-4ce2-8556-daea67b03283,ccccd2372bffe17b,Tintzmann Metz GbR,Tintzmann Metz GbR,,,AG
+6fcc57dd-168f-4e12-9ca2-60c9eb7607c9,ccc1b19dd8302081,King-Martinez,King-Martinez,,,CORPORATION
+6550f74a-1422-473f-8622-68d16683e107,ccc4f6e2dedab027,Saunders Ltd,Saunders Ltd,,,LTD
+82af085c-138d-494c-ab0a-beddc77444cb,ccc1d30da21b0307,Wieloch,Wieloch,,,GMBH
+f54e2019-ba35-444e-99e1-ac095970a859,ccca53bcd1a69d87,주식회사 다올,주식회사 다올,,,CORPORATION
+2c6a6e9a-3280-47a1-8187-222b257d5e52,ccc272279a36d1ec,Warmer GmbH & Co. KGaA,Warmer GmbH & Co. KGaA,,,GMBH
+76c5a0dc-7e7e-4419-a0c1-4035c5d95f51,ccc9050fc1235c91,Ullrich Schacht e.G.,Ullrich Schacht e.G.,,,AG
+a2a2e91f-a49b-4cd9-9082-889be1cde87f,ccc9fe0afc8d5b93,"Longhena, Callegari e Ferrara Group",Longhena,,,SRL
+70944bdb-26a5-44e3-90ee-7a92a09151e0,ccc780b3117b355b,Ward LLC,Ward LLC,,,CORPORATION
+0e614bcd-9767-4900-8651-0367cbdc4318,ccc81e0d5a18e2a3,Udinese e figli,Udinese e figli,,,SRL
+5e659654-0e90-48b6-89a0-a0f673b0a091,ccc497ded4ea120a,Bien Bloch KG,Bien Bloch KG,,,GMBH
+9d713084-171d-4bf9-9af4-81a7fa34d2e8,ccc81cf398159d6c,Ceci-Stradivari SPA,Ceci-Stradivari SPA,,,SRL
+bd29ede9-cab4-423b-b448-83858de7ad6c,ccc0a807e5582e16,Allen Group,Allen Group,,,LTD
+524f93ff-3030-4633-a6de-d1d8925817b7,ccc79c2d9ae1a991,유한회사 브레인넥스트금고,유한회사 브레인넥스트금고,,,CORPORATION
+e62d2d06-cf9b-4558-9a7f-195b73557b9d,ccc57eb8d65e59dd,유한회사 글로벌고구려은행,유한회사 글로벌고구려은행,,,CORPORATION
+b526b22d-3f6c-41f7-8a05-37f02c2cd22b,cccfdb147010ed13,Ford-Johnson,Ford-Johnson,,,LTD
+5f733a3e-5d28-4aa4-a8a3-97799c1c3517,ccc486bbeafde7d9,Hayes PLC,Hayes PLC,,,LTD
+0d67d38e-990f-4c5b-adcc-3daf569f3ab3,ccca181cca0ac6ac,Cunningham-Smith,Cunningham-Smith,,,LTD
+62f5df2b-adaa-44ca-8ed6-ad5e18318aa3,ccc4082c48bddb3e,Wieloch,Wieloch,,,GMBH
+eaafe543-2434-4678-a9e2-7ba9952e6abb,ccc4f6b5598ddaec,auch Schlauchin Schenk e.V.,auch Schlauchin Schenk e.V.,,,AG
+4f40c22f-15b0-4530-b020-e992b576255e,ccc606e08f158449,Hecker,Hecker,,,AG
+f275b5f3-d436-47a8-b3ec-b951ab8cbf97,cccff462bd20563b,(유) 비전상사,(유) 비전상사,,,CORPORATION
+04aac1b7-5ca0-4428-822c-4d326c645c15,ccc4f11d5cd33369,"Respighi, Marino e Bignami SPA",Respighi,,,SRL
+7c7c404e-c422-403e-b29a-6339577bc55a,ccc39feb31274148,주식회사 모두기획,주식회사 모두기획,,,CORPORATION
+19e45c6a-c9c2-4e69-982c-75654bb907ec,cccc558081f7f3fb,Henck AG & Co. KGaA,Henck AG & Co. KGaA,,,GMBH
+218c6e1c-9e37-4f7a-842c-bc39e05b46c5,ccc6070b98e52499,"Borromeo, Crisafulli e Acerbi s.r.l.",Borromeo,,,SRL
+9feefdff-c566-4a81-b15e-54f6d4d30795,ccce7147cf1d7d3a,Stroh Scheibe GmbH & Co. KGaA,Stroh Scheibe GmbH & Co. KGaA,,,GMBH
+ad261ec5-5d42-49e9-a92e-07b60b2f6d5c,ccc3ccecb836c448,Bär Gloor GmbH,Bär Gloor GmbH,,,AG
+72ecf16e-c8a7-43e9-bfa0-16c2c09cb506,ccc88b4f3be79df4,"Longhena, Sansoni e Bondumier e figli",Longhena,,,SRL
+e76adca9-7811-4802-88cc-7cfecf01f944,ccc31ab0d5c9fdc7,Zirme Zorbach KGaA,Zirme Zorbach KGaA,,,AG
+7630a8a7-70ca-4dd8-bc04-3f0892070158,ccc48223c4f9eccd,"Ficino, Raurica e Carosone e figli",Ficino,,,SRL
+d11fc8c0-297c-44ff-b75d-599f6b2d5b09,ccccd1f5331f63fb,"Bray, Phillips and Sanders",Bray,,,LTD
+dfc620ce-7b07-4d31-a424-4f230d5ba7cd,ccc8df665f07c1a5,Martin LLC,Martin LLC,,,CORPORATION
+48f9e3d0-1fea-41e0-99e6-04b38412a335,cccc35b91578d709,Lutz Burri & Partner,Lutz Burri & Partner,,,AG
+d4bf7a4b-25b8-442f-836b-15c7e7c225da,ccc177a86ffe33b3,Jähn,Jähn,,,GMBH
+06d3db93-ee33-488d-997e-6845e27718c5,ccc0da236a36af18,"Powell, Nelson and Fernandez",Powell,,,CORPORATION
+14e4180c-fe99-46a3-a2db-c8503c5bf3a7,ccc397b55ffa46ef,Francis-Thomas,Francis-Thomas,,,LTD
+a663d2cd-b6f6-4bf1-96d4-41cc195d82f8,cccca97e55d596af,Wähner Junitz KG,Wähner Junitz KG,,,GMBH
+78f2ce6b-d46b-415d-aada-79a34970ed9a,cccd4c3ab231c60b,Bauer Conradi GbR,Bauer Conradi GbR,,,GMBH
+01582463-9d87-46a0-b2d7-8bdd781799ff,ccc14482e7e646c7,Widmer GmbH,Widmer GmbH,,,AG
+f0b2a5d1-8c7e-4f42-a646-eaf9d5c0244d,ccc9bdf9ba2c0f19,King-Wilson,King-Wilson,,,AG
+1f317405-4d18-4eba-bcd5-fd7f49c10669,ccc3d0a50c394ec7,Möchlichen GmbH & Co. OHG,Möchlichen GmbH & Co. OHG,,,AG
+1c612ec2-1014-4131-b505-65f59f708368,ccce7b7bd6312a80,"Roth, Lettiere e Fabrizi s.r.l.",Roth,,,SRL
+93364f7e-83ef-49f3-a1c7-cc8a04351b64,cccb7f283defa849,"Stucchi, Burcardo e Segni Group",Stucchi,,,SRL
+3d959e3f-5a52-46e6-9d64-29320066853d,ccc6aa4292170475,Kade Jungfer OHG mbH,Kade Jungfer OHG mbH,,,GMBH
+5c508720-f982-44e0-8603-156a15eacbcf,cccf412411536e99,Curiel Group,Curiel Group,,,SRL
+630aa767-a2bb-422b-8b25-1279785ac5d0,ccc5f90bfb25664d,Täsche Oderwald GmbH,Täsche Oderwald GmbH,,,AG
+5844f9fc-114b-4547-89dc-72b85b6a8102,cccbba203dba6da8,Zürcher Wettstein & Cie.,Zürcher Wettstein & Cie.,,,AG
+2227219f-551f-4086-81b5-b5cabc3536df,ccc5a3040b599562,Martin AG,Martin AG,,,AG
+af475b49-c775-4395-9494-05f02cd2a404,cccfb16f76f186ab,King-Wilson,King-Wilson,,,CORPORATION
+b74eba93-1027-4b53-a285-b2efcfbe4fe9,cccf1901c6b469ef,Toso-Abba s.r.l.,Toso-Abba s.r.l.,,,SRL
+33107475-ca86-4225-8b36-e356339b77a8,ccc0aba5e2c328aa,Bloch Graf GmbH & Co. OHG,Bloch Graf GmbH & Co. OHG,,,AG
+d0be73ee-fd37-4539-a5f2-02f983f02dc7,ccc7930b8b040f49,유한회사 첨단에코금고,유한회사 첨단에코금고,,,CORPORATION
+5b62a8df-493e-404d-b0ec-2796a59b457f,cccc7e53dcb51c53,Hethur KG,Hethur KG,,,GMBH
+cca1b45c-1fdd-480a-85f1-861954f90429,ccc6fdc05e368127,Pennington Group,Pennington Group,,,CORPORATION
+56cb1ab0-62fb-46d7-b4db-ca07e506f670,ccc2fd34f945f2fd,Burri Bader & Söhne,Burri Bader & Söhne,,,AG
+84ef4324-cc1b-4157-ac9f-9c545e0a72ab,ccccd1804447ceab,Cugia Group,Cugia Group,,,SRL
+febec0db-9a3a-4103-ae3c-453214348f62,ccc2e326d284f54e,Schär & Co.,Schär & Co.,,,AG
+4baf0f5e-a932-4094-93f2-8f11147f6570,ccc722784e76833a,Hecker AG,Hecker AG,,,AG
+0ad7c9a2-7277-46ec-99fe-fbbc71a3fad2,cccdebacba108217,Drubin Seifert AG & Co. KG,Drubin Seifert AG & Co. KG,,,AG
+fae3114b-a3b4-42bd-8649-42966f5842c3,cccf2a9dca9e4a62,Maffei-Tomei Group,Maffei-Tomei Group,,,SRL
+83599af6-5d01-455f-a7fd-64c4a334058a,cccbff95cd14a03e,Nette Mude GbR,Nette Mude GbR,,,GMBH
+ad973b67-9b89-45cb-9942-644c248d31ec,ccc702c1c8040fb7,주식회사 시너지다올테크,주식회사 시너지다올테크,,,CORPORATION
+5dc7b3e6-a529-44ff-874c-c8903c6a3174,ccc6202b5cb5e69c,Ernst,Ernst,,,GMBH
+5ef787b8-f2e6-495f-b32e-2016add702c9,ccc71a605f3c44dc,Leopardi s.r.l.,Leopardi s.r.l.,,,SRL
+507b9072-65e5-4f34-9df0-6e8c878aaed9,ccc47583a6499cdc,Tomaselli-Interminei SPA,Tomaselli-Interminei SPA,,,SRL
+7fc15858-2fa0-4842-bc55-300b06a241af,ccc63119848af440,(유) 조선조선코스메틱,(유) 조선조선코스메틱,,,CORPORATION
+36ee1640-723e-4466-b43b-d27f42a259a6,ccc9ca3fff11c8ba,Burke-French Group,Burke-French Group,,,AG
+1f652a87-333e-4344-bdbf-4bc1ffa623d0,cccda52d22bf18f5,Murri-Montanelli s.r.l.,Murri-Montanelli s.r.l.,,,SRL
+ff4c96d6-71f2-4e8f-b69f-68c3e60fd420,ccccf7dc1679742f,Begum-Taylor,Begum-Taylor,,,LTD
+8acbbe09-8ccc-4cea-909f-d8eeb5a47200,ccce42e54a552ea0,"Giovine, Pasqua e Giannotti s.r.l.",Giovine,,,SRL
+b34191b8-ed65-42b4-b5a5-f8e6b6391f04,ccc2c913a3404f08,Flores Group,Flores Group,,,CORPORATION
+cac4d0eb-3373-430e-bc31-a5971f119c0f,ccc3c9ab238d6f44,"Johnston, Palmer and Scott",Johnston,,,LTD
+77a7e8b7-5e70-465f-9280-c5aa8dd4595b,cccfba6acdbcc653,Flantz,Flantz,,,GMBH
+65edcfe3-4f2d-4d3f-90d4-de39161237c9,cccb788fffe575f6,Barese-Ceci Group,Barese-Ceci Group,,,SRL
+932cae01-d2c6-4ee4-a8d0-a2a8c4e7f7dd,ccc2015612e153a6,Cameron Group,Cameron Group,,,LTD
+8471b4b0-ae1b-4f69-b740-d83173318749,ccc20da858321ee4,Trobbiani s.r.l.,Trobbiani s.r.l.,,,SRL
+e9247069-80bb-4e52-aec0-126921084dd9,ccc0e2f8de431e06,Pistoletto-Montalti s.r.l. Group,Pistoletto-Montalti s.r.l. Group,,,AG
+5299e505-2976-4ab2-aa26-f7704ddb1b36,cccb596cef4afa88,Carr-Morgan,Carr-Morgan,,,LTD
+48b763d5-e519-4d7e-84d6-7c4ff0df1684,ccc14302d88f1c94,Möchlichen e.V.,Möchlichen e.V.,,,AG
+200b2903-4642-4c45-8d03-f17af4d375c1,ccc4d85ea0017720,Kambs Scholz Stiftung & Co. KG,Kambs Scholz Stiftung & Co. KG,,,GMBH
+94a53fde-f10d-47c8-9780-c2152b2bb8e9,ccc2bd3c27794685,Brooks-Barton,Brooks-Barton,,,LTD
+dd20c3bf-d342-4f08-8a8b-b5b490494583,ccc14cb007437c3b,Röhrdanzx,Röhrdanzx,,,CORPORATION
+a6b07458-43c0-4d43-93a7-4792c561b8dc,cccc457635f789bc,유한회사 이노,유한회사 이노,,,CORPORATION
+a08dd21b-e395-4cb1-bf7f-6c0a07c0d116,ccc4a27e8baaf744,Bombieri e figli,Bombieri e figli,,,SRL
+67f5ae02-af5b-4f47-8eae-71cfce000af0,ccc741b74c24a053,"Richardson, Hussain and Wilson",Richardson,,,LTD
+7bf7e1d3-6a66-4fce-b089-fc6d2877f5d9,ccc343ad76e5ae78,Ritacca SPA,Ritacca SPA,,,SRL
+51beb80e-b7e6-414c-9c8a-49225005680f,cccfcef1bbf483ce,"Callegari, Ruffini e Dellucci Group",Callegari,,,SRL
+83d5bceb-5edb-48ee-82ba-f0e02179e3f0,ccc1b2ed8fc85fc0,(주) 보람금고,(주) 보람금고,,,CORPORATION
+3f779cae-7318-496d-8479-06121f5d988f,ccc18c8a24108e9a,Klemt Köster GmbH & Co. KG,Klemt Köster GmbH & Co. KG,,,GMBH
+6b0ae0e3-9d89-4047-9d39-d7936257a4a2,cccf67293f8ea40a,Henschel GmbH & Co. OHG,Henschel GmbH & Co. OHG,,,GMBH
+500e15c0-b89b-4f7f-93e3-4c35ef0a573d,cccc35be3098f7b2,Knight-Sparks,Knight-Sparks,,,CORPORATION
+e10b1a47-7fae-4748-b781-321e83c501cb,ccc7f53a4efc8248,Jarvis PLC,Jarvis PLC,,,LTD
+f778c676-750d-412e-8164-ceec64ab851b,ccc3713b3da06476,Scholl Stoll GbR,Scholl Stoll GbR,,,AG
+e1e0fffc-98f6-4d7f-beb1-62f14806f804,ccca77d9d7c4fe9c,Säuberlich Fechner GbR,Säuberlich Fechner GbR,,,AG
+6e51484d-1b84-4dc3-98e0-49de0217ea0e,ccce1e8922498f66,Schweitzer Hermighausen GmbH & Co. KG,Schweitzer Hermighausen GmbH & Co. KG,,,AG
+0b95017c-5dae-4201-a73b-a8bdc38c1dec,ccc0d18a668c8477,Steiger Albrecht & Partner,Steiger Albrecht & Partner,,,AG
+8116e3fc-62e7-41a6-92d2-fa0649e1cd13,cccc3aff734a6ca3,Stey Ritter AG & Co. KGaA,Stey Ritter AG & Co. KGaA,,,AG
+1e6a6628-9c6d-42d5-ae2e-9af99f8cc29f,cccf99f020f0156a,Alexander LLC,Alexander LLC,,,CORPORATION
+8ece1128-56ce-4b42-bc9e-1dcbcb7e6268,ccc5d986f05eeefe,Jacob,Jacob,,,GMBH
+0a4e2552-8005-4b10-a6c1-4dca8255da61,ccc09f640b990034,Löffler,Löffler,,,GMBH
+74fd33d1-84f2-4d0f-b947-4bfacdd0b4d4,ccc9b33e2620f9a9,주식회사 하나플랫폼,주식회사 하나플랫폼,,,AG
+6498abe9-2999-4bef-918b-2f219cf20859,ccc9dd2ffd98fe33,Nette Döring GbR,Nette Döring GbR,,,AG
+88476c56-827c-4f8c-940a-c5e981df6517,cccb56ff7d66971e,Oliboni-Malaparte Group,Oliboni-Malaparte Group,,,SRL
+ac7e937c-54cc-4e2a-9e4c-b287044251db,cccfada91c0f0bdc,Stewart Ltd,Stewart Ltd,,,LTD
+df41e335-b9ae-48e4-a615-99c8cbf81f86,ccca1173b023a0ea,Leoncavallo-Alfonsi SPA,Leoncavallo-Alfonsi SPA,,,SRL
+c86c6544-a7d4-4f50-b791-f1e543f9cd6b,cccc6b28f8d8b7f1,"Tamburi, Luciani e Giammusso Group",Tamburi,,,SRL
+86341718-2ba6-4db3-bafe-b1149561c813,cccb89f7a107cc46,Siegrist GmbH,Siegrist GmbH,,,AG
+9293f705-0815-4147-be00-980eae441e21,cccb3555f2bd92f2,Hermann,Hermann,,,GMBH
+26c432f6-6b35-4f85-904e-268770e7e756,cccb0c4a69b7c0fa,Killer Vogt KGaA,Killer Vogt KGaA,,,GMBH
+78bb22a5-eba7-42d2-9c89-d374c66495a7,cccd92f3df70fb2a,Schacht GmbHx,Schacht GmbHx,,,LTD
+5336723b-8f96-4685-b514-589084c86c46,ccca987bff84faef,Senn AG,Senn AG,,,AG
+75ac824c-2c55-4ef7-b4e9-573450521700,ccc887b0e980f808,Pearson-Rhodes,Pearson-Rhodes,,,LTD
+b88e830f-de1e-494a-85a1-1f5cad05b912,ccca4afeae455cc6,Hope-Green,Hope-Green,,,LTD
+476cf68c-3f1b-40d0-b514-105831383975,ccc4c6a78edec44d,Molesini-Prada e figli,Molesini-Prada e figli,,,SRL
+49fc2cd8-c56b-4d4c-8c30-77c4fb756923,ccc35102b4746349,주식회사 이노연구소,주식회사 이노연구소,,,CORPORATION
+ef3a6f27-ef06-4ccb-8f7c-1d59594b2a3a,cccb8befcb9faf6d,Otto,Otto,,,AG
+6133a34d-8b0e-4eb1-ad37-1d9e92cf6021,cccfaebce5508ea2,Gehringer Hertrampf GmbH & Co. KGaA,Gehringer Hertrampf GmbH & Co. KGaA,,,AG
+257f7595-cdfb-4db9-85e7-8b23f4613f09,ccc0ac4d4a5b1aff,Francis-Morgan,Francis-Morgan,,,CORPORATION
+713f8f8c-ec8b-4537-98ab-4778143b45e3,ccc41a64a7edc8d8,유한회사 고구려바이오,유한회사 고구려바이오,,,CORPORATION
+eedaa802-4568-4426-89e0-3e22d3f4a49b,cccb23848fe069b6,Kaufmann GmbHx,Kaufmann GmbHx,,,AG
+3d4196fe-963a-4617-bdab-07e79d9d028e,ccc0cfef3e11bafe,Martin Kaufmann & Cie. Group,Martin Kaufmann & Cie. Group,,,GMBH
+548e1f6b-69ce-4e4e-99a6-92c90d700ea4,ccc78ef7b7a4c719,"Ostinelli, Bulzoni e Peruzzi SPA",Ostinelli,,,SRL
+8ce3e7c3-f6ea-43a0-8153-922123310a28,cccedd97fa585b27,Wilson-Rees,Wilson-Rees,,,SRL
+79c773a0-e0de-4c3d-a172-1c83ef5e4376,ccca689b7a3a10e1,Davies-Davies,Davies-Davies,,,LTD
+a55990e7-4910-4ade-9238-0bf24988e418,ccce86e80f25477d,Sigrist Keller AG,Sigrist Keller AG,,,AG
+b91e3d6e-bd1a-4f4b-88ff-bd403b72c86d,cccefc99d9af6e09,"Giannotti, Serao e Asmundo Group",Giannotti,,,SRL
+d66d4627-e1da-4e6a-aafa-828c2cd10b9f,cccef1582d007d05,주식회사 코리아,주식회사 코리아,,,CORPORATION
+2fb21e66-7ed1-4aab-89b7-c9bc65a16fa9,cccbfbeaefc59738,유한회사 하나신문,유한회사 하나신문,,,CORPORATION
+9a4ffc0c-9165-42ed-8c63-6e95025f5543,cccedaf31b780ede,"Ortiz, Taylor and Shah",Ortiz,,,CORPORATION
+8639bd41-8b15-4d94-a42d-0cd7fd359f6a,ccce3a687e710b55,Nohlmans Drub AG,Nohlmans Drub AG,,,GMBH
+cf0e6d2b-315c-467a-85d8-a6ad77d0359e,ccc54a7b1cd66b09,Clay and Sons,Clay and Sons,,,CORPORATION
+2faabe0b-b7f6-4cdf-81dc-1c60a5f60735,cccbc92f039b058c,Martin Kaufmann & Cie.,Martin Kaufmann & Cie.,,,AG
+317304b5-c1dd-484a-aca5-8d95915a1c30,ccc9c6782ced3c0d,Schneider Wegmann AG,Schneider Wegmann AG,,,AG
+669d01ff-1634-425b-93f3-007383e96ef4,ccc186b2ab545a15,Pena-Bass,Pena-Bass,,,CORPORATION
+3f800385-ef92-40b6-92d7-8f107a3a6e96,ccc42c2d01bf9e73,유한회사 미래,유한회사 미래,,,CORPORATION
+546252e7-f43b-4052-8459-bd6ec0f63229,ccc951c24d4c5280,Stumpf GmbH,Stumpf GmbH,,,GMBH
+0fe76149-3c7e-4368-b159-48475c0b9b10,ccc1e43faaf407f7,Martin GmbH & Co. KG,Martin GmbH & Co. KG,,,AG
+ec50ace4-80a5-4e65-afa2-855967c96204,ccce346fe5267a2b,Klotz AG,Klotz AG,,,AG
+4b87959f-f0cd-4f05-aa87-855ea38295d3,ccc9d5815e175b66,"Pace, Verdi e Offredi SPA",Pace,,,SRL
+74797b61-2737-4b52-ba6a-210722319050,cccfd247bf6b8cdf,Hofmann Grein Groth AG,Hofmann Grein Groth AG,,,AG
+c1e1b94a-7888-4058-a9ad-0e9b8c9aa1e9,ccccd4f8899ac252,Green-Kelly,Green-Kelly,,,LTD
+df85c777-9887-4bfe-8136-9c65ae2ae341,ccc14f57c9912032,Baumgartner GmbH,Baumgartner GmbH,,,AG
+906d5c8c-ead0-4c89-93fe-8a295c9deee0,ccc0fcf61cb9b73a,Scott PLC,Scott PLC,,,LTD
+dabf984e-53ff-4461-aa1f-1b61265cb9d9,ccc711c785351a69,Bombieri e figli,Bombieri e figli,,,SRL
+1747f387-7d23-4479-9549-2a82b787ef8d,ccc82a7fe61d9cde,"Gaggini, Giannone e Mondaini e figli",Gaggini,,,SRL
+6a5943ce-8364-45e3-a1c7-1aa3741423b5,ccc905c774f0beae,"Smith, Garrison and Thomas",Smith,,,CORPORATION
+b928e23f-4ee4-434e-8e92-0136ac3a812f,ccc655ce0592bfa5,Vecoli Group,Vecoli Group,,,SRL
+12b2102d-940c-4503-b7c8-6152beed0af9,ccc6c7760b981ccd,Rodriguez Inc,Rodriguez Inc,,,CORPORATION
+ef40d162-0f6c-49bf-be7e-e3628a89b0f0,ccc11ab3e4eb8000,Ammann GmbH,Ammann GmbH,,,AG
+22ab7752-c4db-4a62-ae13-418d68ab80ea,ccca43afc40d4874,Schacht GmbH,Schacht GmbH,,,AG
+de9f6f5b-72d3-4458-a1ea-2f30e42e707a,ccce821eeac80da1,Gertz GbR,Gertz GbR,,,AG
+dfe2c0a0-a96b-4c42-b6d2-2a7baec76a82,ccc220b98a0f9508,Eberth Stiftung & Co. KGaA,Eberth Stiftung & Co. KGaA,,,AG
+87623997-649f-4d88-8989-c5abfe2b34d8,cccba54e2099d180,Putz Drewes Stiftung & Co. KGaA,Putz Drewes Stiftung & Co. KGaA,,,GMBH
+4c61845e-fa7e-4d94-85d1-fb63c194f97f,cccac6a776876c62,Alvarez LLC,Alvarez LLC,,,CORPORATION
+75eb89c2-3f5c-42f3-bacb-43a3d2c7bffb,ccc27b60589decb0,"Wright, Price and Morton",Wright,,,LTD
+1ce362f8-c3f7-45fe-b99b-2b5ae00da49d,ccccf39f083f64c3,Ward Group Group,Ward Group Group,,,AG
+04015ced-e398-46bb-a23d-dfaaefad49e9,ccc34c1c3d9c4e64,"Tremonti, Manzoni e Satta SPA",Tremonti,,,SRL
+ac09bdb7-9908-4e47-b249-f62c08987462,cccdf495b40a9181,Naser GmbH,Naser GmbH,,,GMBH
+3bfda8a6-705f-4df5-a6fa-dca00b531932,ccc379ef8a2db2e6,Striebitz Dörr GmbH & Co. KGaA,Striebitz Dörr GmbH & Co. KGaA,,,GMBH
+d0d75e37-3bf2-425f-8a0d-2b73fe54ee4b,cccbb44bea98fef8,Martin,Martin,,,AG
+52171bf3-d181-43d1-ac2b-0cfcc5c51060,ccc4d4063ca5be29,Bottigliero Group,Bottigliero Group,,,SRL
+4ceda164-69df-44e9-b896-41dd8570b59f,ccc0f9ae46707cd6,주식회사 고구려,주식회사 고구려,,,CORPORATION
+0c00988a-7ee1-411a-8e4c-3ab56d5d0477,ccc582b9f8e8035b,Pena-Bass,Pena-Bass,,,SRL
+6883ac6e-6a94-4054-b241-4482519894d8,ccc4cc5726332018,Schoch Ritter GmbH,Schoch Ritter GmbH,,,AG
+d96e684f-3db0-474e-b938-878a89b5aab0,ccc4cfd039b02e2a,Pärtzelt Schleich GmbH & Co. KG,Pärtzelt Schleich GmbH & Co. KG,,,GMBH
+69a53b4f-8ff8-469d-8ec0-713dea2c7a51,ccc6aa04f7c0d5f7,Mcguire Inc,Mcguire Inc,,,CORPORATION
+a58e83dd-548c-4d84-b40d-e04941476506,cccec170143df5b3,"Smith, Garrison and Thomas",Smith,,,AG
+d453f867-b97e-4224-891f-691217abb863,ccc0d31830c36756,"Le, Lewis and Hayes",Le,,,CORPORATION
+dfa59722-0a1f-49df-9a59-19749adf4709,ccc302b712a1fe7d,Lehmann GmbH,Lehmann GmbH,,,GMBH
+4d9dbaeb-553d-4625-a833-4da5de95d695,ccce8b3df4ff3f3a,Barajas-Pierce,Barajas-Pierce,,,LTD
+1e086f20-bdd1-41b0-b64a-b6ec30a5648e,cccffe3fbf337a15,Loos Johann OHG mbH,Loos Johann OHG mbH,,,AG
+345af934-b42a-4d93-9aba-0f15b2149062,cccea45b6589ada1,(유) 나루푸른출판,(유) 나루푸른출판,,,CORPORATION
+775c30b5-6173-4c48-8876-9153c68813fe,ccca6129889d4b76,Burcardo SPA,Burcardo SPA,,,SRL
+7f4d908c-e1ff-46c0-8347-f1da5c11ab6d,ccc193e6774c0afa,Löwer AG,Löwer AG,,,AG
+5ee68495-3400-49c3-aa11-905b51facefa,ccc69f75501ba851,Zollinger Egger & Cie.,Zollinger Egger & Cie.,,,AG
+0426fcc9-255b-40e2-bdc2-b74b38a56b49,ccc8da5d42c21797,Zampa Group,Zampa Group,,,SRL
+613d2de9-3ae2-4023-9472-0d2d32399ffb,cccd557491ddb9bf,Eberhardt,Eberhardt,,,GMBH
+566a9ce7-af52-4b94-b186-e47aa7946320,cccc36b941e02a89,Nixon-King,Nixon-King,,,LTD
+75f8e3a8-7d97-4c0f-bd56-09c4a4461663,cccbb96f2b115c36,(주) 발해종합신문,(주) 발해종합신문,,,CORPORATION
+2f1dc121-7d02-4c6d-8bea-75c1b86677aa,ccce3ad6eab9eb02,Döhn Rust GmbH & Co. OHG,Döhn Rust GmbH & Co. OHG,,,GMBH
+f1f7d904-1307-4157-98c1-28e7d6cd3155,cccab102d1682e09,Nash Group,Nash Group,,,LTD
+a175a9c3-d7b1-42a9-a332-a50e6992896e,ccc116653b3f3800,Brunner GmbH,Brunner GmbH,,,AG
+0f79a8a7-5f8a-44bd-b4bd-0c938177b661,ccca34229e2a7324,"Silvestri, Tasso e Contrafatto SPAx",Silvestri,,,AG
+8d388327-883f-43c6-81b1-58e90406ff44,ccc0308a694d7b00,Ligorio e figli,Ligorio e figli,,,SRL
+49646b96-fa3c-4628-8926-21df465568b7,ccc809130463750e,Brady-Simpson,Brady-Simpson,,,LTD
+eb053fc4-1b65-4dab-ade4-6e91e8e6e840,ccc863e118a806ef,"Austin, Day and Johnson",Austin,,,CORPORATION
+d0b1e3eb-409e-4a80-86c5-d1d69ea9f508,ccc446f65abca6e5,Täsche,Täsche,,,AG
+90a3fbbf-7580-4050-a7f1-698cf5948a54,cccfd7fe3e42df5b,Baum Girschner GbR,Baum Girschner GbR,,,GMBH
+a75b395a-14a3-4f7f-990d-d19bd3fbe043,cccdbb44fdde64af,Wiek,Wiek,,,GMBH
+79db7862-8d7d-4772-a08e-2f5c61177270,ccca301e0e5d8c6a,Kambs Killer AG,Kambs Killer AG,,,GMBH
+6f14b3f6-d867-488b-bff6-b824152aeaec,cccc8ccea518a418,Erni & Söhne,Erni & Söhne,,,AG
+e5110961-1869-4217-b94d-8fcbdba3496f,ccceb4d8873570a2,"Piccio, Bonanno e Civaschi SPA",Piccio,,,SRL
+e336c243-b139-4476-9e3c-e88be6b9d31a,ccc79ba69118c400,Weinhold GmbH & Co. OHG,Weinhold GmbH & Co. OHG,,,AG
+47c68688-ecf3-4053-af36-b8cc13087974,ccc8b040e63949d4,Kohl GmbH & Co. KG,Kohl GmbH & Co. KG,,,GMBH
+f622d842-0402-4b3c-9082-11a5d9b59f84,ccc9647f3508507a,Karge Franke GmbH,Karge Franke GmbH,,,GMBH
+edcabf94-65f6-4a53-9226-a8b3b674410d,ccc4c9d613b22cec,Vogel Hürlimann & Söhne,Vogel Hürlimann & Söhne,,,AG
+639fc471-d975-4f00-95ab-a8ae9112fbc0,ccce582bad5229dd,"Brenna, Bernardi e Cremonesi e figli",Brenna,,,SRL
+fd0ce433-ca5e-451b-a3d3-cd4cbd5ff093,cccb962cb076a7dc,Binner,Binner,,,GMBH
+1901ef87-0dbf-4caf-988a-3f87f96d40f8,ccc3b6dc6fe5040b,"Reeves, Williams and Douglas",Reeves,,,LTD
+9879cf35-f471-4986-9d26-4599c4dd8df5,cccf80b2658e54a2,Margraf,Margraf,,,AG
+735741e5-fe1a-4ba9-8896-9c5b45f8c28d,ccc3a6747d98302f,Heydrich Hande e.G.,Heydrich Hande e.G.,,,AG
+ae007b7e-2f8c-43e5-ae8d-9644601bfbcb,ccca921c95fbe976,"Carnera, Murri e Riccati SPA",Carnera,,,SRL
+3f175534-cc4d-4819-8b9d-fd589e5d9c7a,ccc12d15b68e47fa,Stiebitz Stiebitz KG,Stiebitz Stiebitz KG,,,GMBH
+a247541d-c8ad-4899-b630-794d6147adeb,cccbd5a0277eb0aa,Putz Stahr GmbH,Putz Stahr GmbH,,,AG
+f165d779-0154-4950-976d-e21f1b46ebdc,ccc71da34eea9db8,Hartmann GmbH,Hartmann GmbH,,,AG
+2ff8e87e-1659-4c89-a1eb-faa91a2bd69c,ccc72e766e54ac6d,Aebi GmbH,Aebi GmbH,,,AG
+17d30f32-8de1-496c-9a9a-206a16f142a2,ccc9919698d00c2c,Hahn Wilms AG & Co. KG,Hahn Wilms AG & Co. KG,,,AG
+6346d4ef-69ef-44e3-8ab6-821c0328c136,ccc15aedc777a07f,Roberts-Wilson,Roberts-Wilson,,,CORPORATION
+2b64777c-6177-4771-af70-de702b69c95e,ccc44d7d238b05b7,Ricci-Duodo e figli,Ricci-Duodo e figli,,,SRL
+6f46f1b1-2ace-4aa9-9032-46b3255bfc1c,ccc6bcd546a56fe8,Reichmann Tlustek GbR,Reichmann Tlustek GbR,,,AG
+f1b88d65-406f-44d6-9c72-aebd13b11e59,cccb88cd3f2086c2,"Doherty, King and Nixon",Doherty,,,LTD
+22af711f-1b62-4a9d-b536-6b9f320f72c0,ccc01bb84dfe1117,Basso-Roero SPA,Basso-Roero SPA,,,SRL
+dcb9075e-cdd7-4460-a140-77d39ec4ea48,ccc70b27545cd88d,Buchholz Johann KG,Buchholz Johann KG,,,AG
+f966d59f-a6aa-49e5-9c08-bf29d2d33488,ccc22d90982a2277,Allen-Ellis,Allen-Ellis,,,LTD
+7aa061e9-336b-40cb-b1fe-ad13f280df1d,ccc2d79a506e50c7,Hoffmann Drewes GmbH,Hoffmann Drewes GmbH,,,AG
+a205e54f-b1e8-409d-bc20-b9f24a9c589e,cccf7bf57db2a7aa,(유) 네오제조,(유) 네오제조,,,CORPORATION
+64976593-c92e-4c93-9105-c8d647c1c017,ccc1d27c5d71a898,Klotz,Klotz,,,GMBH
+c4829b71-ae84-481c-ae0f-b5b38bae591e,ccc06e3f8cd34c62,Romagnoli SPA,Romagnoli SPA,,,SRL
+4a94ae9f-cc35-4e4f-b03e-957f35ab8466,cccb15dad4cee27c,유한회사 조선은행,유한회사 조선은행,,,CORPORATION
+ac484366-68bd-40d7-8b88-1c32cbb02a8b,ccc23a137fd255ee,Roberts-Wilson,Roberts-Wilson,,,CORPORATION
+6c521d13-b719-4b68-a775-ee42a89e22f2,ccc60827ca00ef58,Kade e.G.,Kade e.G.,,,GMBH
+669b29b8-950d-41a0-baaf-20019912316a,ccc81b1588cc4d49,Wallis Ltd,Wallis Ltd,,,LTD
+b39e4df2-5c0a-4feb-b7ea-e66eca6caf9b,ccccff2be53f9644,Wilms,Wilms,,,LTD
+5ae1dbad-aa29-40fd-a858-94df3f8c1097,ccca5a1c2a9528c3,Killer Vogt KGaA,Killer Vogt KGaA,,,GMBH
+664d5922-a590-4d3c-ad6e-cc57a520c3d0,cccc0afdf780ef2f,Gilardoni SPA,Gilardoni SPA,,,SRL
+193e4783-02b3-4254-9b1f-2eb16e3255a8,ccc38d51423cad9d,(유) 다올보안,(유) 다올보안,,,CORPORATION
+adf75924-c5b8-486b-b68b-4f7e64215e66,cccb0c0796add4df,"Gould, Carter and Tucker",Gould,,,LTD
+4ba17233-1ac3-4f31-bb96-e2d10649bcf6,ccceba906a7d5d96,Nohlmans,Nohlmans,,,GMBH
+592c1107-2444-4301-baeb-286bf0d0270f,ccc57d334fd80bbb,Wende Rose e.G.,Wende Rose e.G.,,,AG
+79e5c9aa-592a-4549-bba1-09d08567c805,ccc702ba18fdd2b9,Stocker Scheidegger & Söhne,Stocker Scheidegger & Söhne,,,AG
+b5f59cb0-cf68-4878-8b70-59334cde1b6b,ccc05c821d763a66,Schottin Jopich AG & Co. KG,Schottin Jopich AG & Co. KG,,,AG
+ee0f65a8-2a13-4c1f-8cd0-15c1ad5900dd,cccbd90bfbe0e6b8,Boldù-Scotto s.r.l.,Boldù-Scotto s.r.l.,,,SRL
+8f5242d3-54bb-4cf8-a8fe-a7618d49fe3f,cccf55dc6d268b37,"Stokes, Robertson and George",Stokes,,,LTD
+2fb70dab-2f38-4b43-a137-f8e467b13040,ccca8455a3f66c61,Briemer,Briemer,,,AG
+3283daa4-e212-4b7c-9d36-1cb6bcc57be0,ccc979aa7317591a,Misicher Mentzel AG,Misicher Mentzel AG,,,AG
+47419b48-34ae-4abd-b6fc-e0acb4698db3,cccb4299c0986750,(유) 다올보안,(유) 다올보안,,,GMBH
+2fdc9992-8971-4eea-9f3a-098accac2fb5,ccc5373b5da49cb9,Wirth Schmidt AG,Wirth Schmidt AG,,,SRL
+7d4ed26e-dcd5-4fae-abb3-16a743299780,cccf7464871854c1,유한회사 고구려바이오x,유한회사 고구려바이오x,,,LTD
+1d3e503a-9645-40e4-a47d-c3929c7eb575,ccc5a1ba591196dc,Allen-Ellis,Allen-Ellis,,,SRL
+ccf4ffb0-b4bb-473f-ac70-51d1d051267f,ccceb2ec4c255823,"Silvestri, Tasso e Contrafatto SPA",Silvestri,,,SRL
+4e2d6255-3d13-4a3d-9e2c-2e7d502cf0ee,ccc2edc01df05d18,Schenk Bolnbach GmbH Group,Schenk Bolnbach GmbH Group,,,SRL
+98af5cca-6b11-47cb-a372-542482c56b21,ccc93267234b4562,"Dossetti, Barracco e Granatelli s.r.l.",Dossetti,,,SRL
+b184d1fc-8991-401a-a2b0-3c4b7c966b55,ccca52fceb4e2281,Barry-John,Barry-John,,,LTD
+2fe5b140-23ea-4956-89f1-137d7d592e19,cccd78c5508850d3,Palmisano-Longhena s.r.l.,Palmisano-Longhena s.r.l.,,,SRL
+02740f73-f3ab-4a0d-9be9-fdb3dd92dd7c,ccc22f3f7c0f549d,Moretti-Bernardi Group,Moretti-Bernardi Group,,,SRL
+a72f947d-8164-42cb-8fc3-d7d3f6bd80c7,ccc68bd07eb6581e,Rivera PLC,Rivera PLC,,,CORPORATION
+2ad11fe8-7d1b-495e-b1a0-449dd703262f,ccc90bde1529e6f5,"Cooper, Smith and Barton",Cooper,,,LTD
+465cc2cb-085e-4489-8ac6-678038749f3c,ccc89a0b398f569b,Isler AG,Isler AG,,,AG
+c5c5ae8a-be15-4d12-90ce-77e9751303b9,ccc7eccdc4134dc2,Spieß,Spieß,,,GMBH
+d2c2a960-8b09-41ab-866d-ceb344945e09,ccc5deaafdab3441,Nibali Group,Nibali Group,,,SRL
+fd61f13b-37f2-4d36-8bdd-cee370fd6672,ccc1a37f6cd6f011,Egger Schoch AG,Egger Schoch AG,,,AG
+4347dbca-7321-48b2-8840-405affd2f491,cccdcb91593c572b,Römer Kohl KGaA,Römer Kohl KGaA,,,GMBH
+cfd7f3b9-c68f-4ba5-9e0d-02b5fe7402cd,ccc35ba93ca87f31,Bradley-Davies,Bradley-Davies,,,LTD
+2a7dc57c-6d9c-4b50-a1fd-41879c3a1e0b,ccc23a4e9dbc15c0,"Osborn, Gaines and Davis",Osborn,,,CORPORATION
+59cf0b0d-91f0-447d-8f32-1333ce315937,ccc47f5388438de2,"Henderson, Cox and Cox",Henderson,,,CORPORATION
+929ecc92-4a11-4e44-8aea-1b8fb43cde0a,cccf3d0444709848,Hamann GmbH,Hamann GmbH,,,GMBH
+eb346d3a-695e-4ea9-8923-0c64c0062b5b,cccfe1390f2d5c15,Gröttner Hecker AG & Co. KG,Gröttner Hecker AG & Co. KG,,,AG
+21f8072d-ddb7-470e-b390-b059207bbe21,ccc257033fead90a,Jones Inc,Jones Inc,,,CORPORATION
+64880945-ad1d-4537-97f3-4368c2efeecb,ccc246557d4d2add,Brun Bolliger & Co.,Brun Bolliger & Co.,,,CORPORATION
+a2356dd4-1355-48d0-b3b5-bad5600b4b35,ccce14fecb6ad0c7,Morandini e figli,Morandini e figli,,,SRL
+efb3b939-b1d8-4887-8739-cc7bbff30c8d,ccc5e7b7e097dedb,"Patel, Marsden and Holden",Patel,,,LTD
+de70bd30-00a2-4367-94fb-09f053c93ae7,cccd8dffc62dbaea,주식회사 한강,주식회사 한강,,,CORPORATION
+b28187c4-aa05-4442-a284-e8fd755cee2a,cccd9a095bb47c18,Baumann Lanz GmbH,Baumann Lanz GmbH,,,AG

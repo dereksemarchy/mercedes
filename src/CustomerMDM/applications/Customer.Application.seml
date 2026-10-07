@@ -9,7 +9,7 @@ logoUrl: https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-4-logo-png-t
 coverImageUrl: https://mercedes-benz-media.co.uk/assets/images/thumbnail/48568-mercedes-cla-250e-0012.jpg
 favIcon: https://car-brand-names.com/wp-content/uploads/2015/05/Mercedes-Benz-Logo-1933-720x405.png
 sortStrategy: POSITION
-historyBrowsingEnabled: false
+historyBrowsingEnabled: true
 historyBrowsingRequiredRole: ""
 defaultAction: CustomerMDM.applications.Customer.Root.TopActions.GlobalSearch
 documentationConfig:
@@ -51,6 +51,90 @@ globalSearchConfig:
     maxResults: 100
     viewType: "GD"
     searchTypeConfig: CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.TextConfig
+  - _type: GlobalSearchBoView
+    _name: IndividualReviewSuggestion
+    label: Individual - Review Suggestions
+    businessView: CustomerMDM.entities.Individual.business_views.IndividualReviewSuggestionBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.Individual.business_views.IndividualReviewSuggestionBusinessView.Individual.TextConfig
+  - _type: GlobalSearchBoView
+    _name: Address
+    label: Address
+    businessView: CustomerMDM.entities.Address.business_views.AddressBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.Address.business_views.AddressBusinessView.Address.TextConfig
+  - _type: GlobalSearchBoView
+    _name: AddressDefinition
+    label: Address Definition
+    businessView: CustomerMDM.entities.AddressDefinition.business_views.AddressDefinitionBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.AddressDefinition.business_views.AddressDefinitionBusinessView.AddressDefinition.TextConfig
+  - _type: GlobalSearchBoView
+    _name: Country
+    label: Country
+    businessView: CustomerMDM.entities.Country.business_views.CountryBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.Country.business_views.CountryBusinessView.Country.TextConfig
+  - _type: GlobalSearchBoView
+    _name: CountryLanguage
+    label: Country Language
+    businessView: CustomerMDM.entities.CountryLanguage.business_views.CountryLanguageBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.CountryLanguage.business_views.CountryLanguageBusinessView.CountryLanguage.TextConfig
+  - _type: GlobalSearchBoView
+    _name: Email
+    label: Email
+    businessView: CustomerMDM.entities.Email.business_views.EmailBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.Email.business_views.EmailBusinessView.Email.TextConfig
+  - _type: GlobalSearchBoView
+    _name: EmailIndividualContext
+    label: Email Individual Context
+    businessView: CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView.EmailIndividualContext.TextConfig
+  - _type: GlobalSearchBoView
+    _name: ExternalID
+    label: External ID
+    businessView: CustomerMDM.entities.ExternalID.business_views.ExternalIDBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.ExternalID.business_views.ExternalIDBusinessView.ExternalID.TextConfig
+  - _type: GlobalSearchBoView
+    _name: InternalID
+    label: Internal ID
+    businessView: CustomerMDM.entities.InternalID.business_views.InternalIDBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.InternalID.business_views.InternalIDBusinessView.InternalID.TextConfig
+  - _type: GlobalSearchBoView
+    _name: Phone
+    label: Phone
+    businessView: CustomerMDM.entities.Phone.business_views.PhoneBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.Phone.business_views.PhoneBusinessView.Phone.TextConfig
+  - _type: GlobalSearchBoView
+    _name: SalesEntity
+    label: Sales Entity
+    businessView: CustomerMDM.entities.SalesEntity.business_views.SalesEntityBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.SalesEntity.business_views.SalesEntityBusinessView.SalesEntity.TextConfig
+  - _type: GlobalSearchBoView
+    _name: SalesEntityRel
+    label: Sales Entity Relationship
+    businessView: CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel.TextConfig
 navDrawer:
   - _type: FolderNavGroup
     _name: RootFolder

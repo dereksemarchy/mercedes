@@ -1,0 +1,15 @@
+_name: JOB_ALL
+_type: CertificationJob
+_package: CustomerMDM.certification_jobs
+jobType: INTEGRATION
+queueName: Default
+modelTasks:
+  - _type: ModelJobTask
+    entity: CustomerMDM.entities.Individual.Individual
+    _name: Individual
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    matchEnabled: true
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true
