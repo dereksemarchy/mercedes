@@ -2123,7 +2123,69 @@
                                             "searchType": "SEMQL"
                                         }
                                     }
+                                ],
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel.GoldenHistoryRecords",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel.GoldenHistoryRecords.SalesEntityRelGH",
+                                        "transitionPath": "GoldenHistoryRecords",
+                                        "useCustomLabel": false,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "displayTransitionNodeAs": "ICON_LABEL",
+                                        "enableHierarchy": "0",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "1",
+                                        "transitionVisibleInterpreter": "LITERAL"
+                                    }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel.GoldenHistoryRecords.SalesEntityRelGH",
+                                "collection": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionViewGH",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
+                                "form": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel.GoldenHistoryRecords.SalesEntityRelGH.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel.GoldenHistoryRecords.SalesEntityRelGH.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel.GoldenHistoryRecords.SalesEntityRelGH.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel.GoldenHistoryRecords.SalesEntityRelGH.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL",
+                                            "enabled": true
+                                        }
+                                    }
+                                ],
+                                "businessEntityBuiltInFilters": []
                             }
                         ]
                     }
@@ -2221,6 +2283,158 @@
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "EndDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionViewGH",
+                        "default": false,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Sales Entity Relationship",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "CustomerMDM.entities.SalesEntityRel.display_cards.SalesEntityRelDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionViewGH.SalesEntityRelID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "SalesEntityRelID",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionViewGH.UpdateDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "UpdateDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionViewGH.Updator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "Updator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionViewGH.CreationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "CreationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionViewGH.Creator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Creator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionViewGH.FDN_IndividualContext",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "FDN_IndividualContext",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionViewGH.FDN_SalesEntity",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "FDN_SalesEntity",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.SalesEntity.SalesEntity",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionViewGH.RelationshipType",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "RelationshipType",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionViewGH.StartDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "StartDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntityRel.collection_views.SalesEntityRelCollectionViewGH.EndDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
                                 "useCustomLabel": false,
                                 "value": "EndDate",
                                 "visibleByDefault": true,
@@ -2653,7 +2867,69 @@
                                             "searchType": "SEMQL"
                                         }
                                     }
+                                ],
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntity.business_views.SalesEntityBusinessView.SalesEntity.GoldenHistoryRecords",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.SalesEntity.business_views.SalesEntityBusinessView.SalesEntity.GoldenHistoryRecords.SalesEntityGH",
+                                        "transitionPath": "GoldenHistoryRecords",
+                                        "useCustomLabel": false,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "displayTransitionNodeAs": "ICON_LABEL",
+                                        "enableHierarchy": "0",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "1",
+                                        "transitionVisibleInterpreter": "LITERAL"
+                                    }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntity.business_views.SalesEntityBusinessView.SalesEntity.GoldenHistoryRecords.SalesEntityGH",
+                                "collection": "CustomerMDM.entities.SalesEntity.collection_views.SalesEntityCollectionViewGH",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.SalesEntity.SalesEntity",
+                                "form": "CustomerMDM.entities.SalesEntity.forms.SalesEntityForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntity.business_views.SalesEntityBusinessView.SalesEntity.GoldenHistoryRecords.SalesEntityGH.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntity.business_views.SalesEntityBusinessView.SalesEntity.GoldenHistoryRecords.SalesEntityGH.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntity.business_views.SalesEntityBusinessView.SalesEntity.GoldenHistoryRecords.SalesEntityGH.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntity.business_views.SalesEntityBusinessView.SalesEntity.GoldenHistoryRecords.SalesEntityGH.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL",
+                                            "enabled": true
+                                        }
+                                    }
+                                ],
+                                "businessEntityBuiltInFilters": []
                             }
                         ]
                     }
@@ -2737,6 +3013,144 @@
                                     },
                                     {
                                         "qualifiedName": "CustomerMDM.entities.SalesEntity.collection_views.SalesEntityCollectionView.FDN_Country.useAvatarInChip",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.SalesEntity.collection_views.SalesEntityCollectionViewGH",
+                        "default": false,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Sales Entity",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": false,
+                        "displayCard": "CustomerMDM.entities.SalesEntity.display_cards.SalesEntityDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntity.collection_views.SalesEntityCollectionViewGH.GCID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "GCID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntity.collection_views.SalesEntityCollectionViewGH.UpdateDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "UpdateDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntity.collection_views.SalesEntityCollectionViewGH.Updator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "Updator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntity.collection_views.SalesEntityCollectionViewGH.CreationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "CreationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntity.collection_views.SalesEntityCollectionViewGH.Creator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Creator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntity.collection_views.SalesEntityCollectionViewGH.SalesEntityName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "SalesEntityName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntity.collection_views.SalesEntityCollectionViewGH.LegalEntity",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "LegalEntity",
+                                "visibleByDefault": true,
+                                "valueDataType": "BOOLEAN",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.SalesEntity.collection_views.SalesEntityCollectionViewGH.FDN_Country",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "FDN_Country",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Country.Country",
+                                "valueDataType": "STRING",
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntity.collection_views.SalesEntityCollectionViewGH.FDN_Country.displayType",
+                                        "dataType": "STRING",
+                                        "value": "chip",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.SalesEntity.collection_views.SalesEntityCollectionViewGH.FDN_Country.useAvatarInChip",
                                         "dataType": "BOOLEAN",
                                         "value": "1",
                                         "valueInterpreter": "LITERAL"
@@ -3245,7 +3659,69 @@
                                             "searchType": "SEMQL"
                                         }
                                     }
+                                ],
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Phone.business_views.PhoneBusinessView.Phone.GoldenHistoryRecords",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.Phone.business_views.PhoneBusinessView.Phone.GoldenHistoryRecords.PhoneGH",
+                                        "transitionPath": "GoldenHistoryRecords",
+                                        "useCustomLabel": false,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "displayTransitionNodeAs": "ICON_LABEL",
+                                        "enableHierarchy": "0",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "1",
+                                        "transitionVisibleInterpreter": "LITERAL"
+                                    }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Phone.business_views.PhoneBusinessView.Phone.GoldenHistoryRecords.PhoneGH",
+                                "collection": "CustomerMDM.entities.Phone.collection_views.PhoneCollectionViewGH",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.Phone.Phone",
+                                "form": "CustomerMDM.entities.Phone.forms.PhoneForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Phone.business_views.PhoneBusinessView.Phone.GoldenHistoryRecords.PhoneGH.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Phone.business_views.PhoneBusinessView.Phone.GoldenHistoryRecords.PhoneGH.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Phone.business_views.PhoneBusinessView.Phone.GoldenHistoryRecords.PhoneGH.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Phone.business_views.PhoneBusinessView.Phone.GoldenHistoryRecords.PhoneGH.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL",
+                                            "enabled": true
+                                        }
+                                    }
+                                ],
+                                "businessEntityBuiltInFilters": []
                             }
                         ]
                     }
@@ -3394,6 +3870,209 @@
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "StatusText",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Phone.collection_views.PhoneCollectionViewGH",
+                        "default": false,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Phone",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": false,
+                        "displayCard": "CustomerMDM.entities.Phone.display_cards.PhoneDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Phone.collection_views.PhoneCollectionViewGH.PhoneID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "PhoneID",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Phone.collection_views.PhoneCollectionViewGH.UpdateDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "UpdateDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Phone.collection_views.PhoneCollectionViewGH.Updator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "Updator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Phone.collection_views.PhoneCollectionViewGH.CreationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "CreationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Phone.collection_views.PhoneCollectionViewGH.Creator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Creator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Phone.collection_views.PhoneCollectionViewGH.PhoneNumber",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "PhoneNumber",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Phone.collection_views.PhoneCollectionViewGH.Primary",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "Primary",
+                                "visibleByDefault": true,
+                                "valueDataType": "BOOLEAN",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Phone.collection_views.PhoneCollectionViewGH.InCriticalUse",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "InCriticalUse",
+                                "visibleByDefault": true,
+                                "valueDataType": "BOOLEAN",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Phone.collection_views.PhoneCollectionViewGH.PhoneUsage",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "PhoneUsage",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Phone.collection_views.PhoneCollectionViewGH.FDN_IndividualContext",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "FDN_IndividualContext",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Phone.collection_views.PhoneCollectionViewGH.StandardizedPhone",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "StandardizedPhone",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Phone.collection_views.PhoneCollectionViewGH.PhoneGeocodingData",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 11,
+                                "useCustomLabel": false,
+                                "value": "PhoneGeocodingData",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Phone.collection_views.PhoneCollectionViewGH.StatusCode",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 12,
+                                "useCustomLabel": false,
+                                "value": "StatusCode",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Phone.collection_views.PhoneCollectionViewGH.StatusText",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 13,
                                 "useCustomLabel": false,
                                 "value": "StatusText",
                                 "visibleByDefault": true,
@@ -4086,7 +4765,69 @@
                                             "searchType": "SEMQL"
                                         }
                                     }
+                                ],
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.InternalID.business_views.InternalIDBusinessView.InternalID.GoldenHistoryRecords",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.InternalID.business_views.InternalIDBusinessView.InternalID.GoldenHistoryRecords.InternalIDGH",
+                                        "transitionPath": "GoldenHistoryRecords",
+                                        "useCustomLabel": false,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "displayTransitionNodeAs": "ICON_LABEL",
+                                        "enableHierarchy": "0",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "1",
+                                        "transitionVisibleInterpreter": "LITERAL"
+                                    }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.InternalID.business_views.InternalIDBusinessView.InternalID.GoldenHistoryRecords.InternalIDGH",
+                                "collection": "CustomerMDM.entities.InternalID.collection_views.InternalIDCollectionViewGH",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.InternalID.InternalID",
+                                "form": "CustomerMDM.entities.InternalID.forms.InternalIDForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.InternalID.business_views.InternalIDBusinessView.InternalID.GoldenHistoryRecords.InternalIDGH.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.InternalID.business_views.InternalIDBusinessView.InternalID.GoldenHistoryRecords.InternalIDGH.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.InternalID.business_views.InternalIDBusinessView.InternalID.GoldenHistoryRecords.InternalIDGH.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.InternalID.business_views.InternalIDBusinessView.InternalID.GoldenHistoryRecords.InternalIDGH.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL",
+                                            "enabled": true
+                                        }
+                                    }
+                                ],
+                                "businessEntityBuiltInFilters": []
                             }
                         ]
                     }
@@ -4209,6 +4950,184 @@
                                 "componentName": "semReferenceField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "FDN_Company",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Company.Company",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.InternalID.collection_views.InternalIDCollectionViewGH",
+                        "default": false,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Internal ID",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": false,
+                        "displayCard": "CustomerMDM.entities.InternalID.display_cards.InternalIDDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.InternalID.collection_views.InternalIDCollectionViewGH.InternalIDID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "InternalIDID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.InternalID.collection_views.InternalIDCollectionViewGH.UpdateDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "UpdateDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.InternalID.collection_views.InternalIDCollectionViewGH.Updator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "Updator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.InternalID.collection_views.InternalIDCollectionViewGH.CreationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "CreationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.InternalID.collection_views.InternalIDCollectionViewGH.Creator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Creator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.InternalID.collection_views.InternalIDCollectionViewGH.IdentifierKey",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "IdentifierKey",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.InternalID.collection_views.InternalIDCollectionViewGH.IdentifierType",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "IdentifierType",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.InternalID.collection_views.InternalIDCollectionViewGH.SourceSystem",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "SourceSystem",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.InternalID.collection_views.InternalIDCollectionViewGH.StartDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "StartDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.InternalID.collection_views.InternalIDCollectionViewGH.EndDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "EndDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.InternalID.collection_views.InternalIDCollectionViewGH.FDN_Individual",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "FDN_Individual",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Individual.Individual",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.InternalID.collection_views.InternalIDCollectionViewGH.FDN_Company",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 11,
                                 "useCustomLabel": false,
                                 "value": "FDN_Company",
                                 "visibleByDefault": true,
@@ -4860,7 +5779,69 @@
                                             "searchType": "SEMQL"
                                         }
                                     }
+                                ],
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.IndividualContext.business_views.IndividualContextBusinessView.IndividualContext.GoldenHistoryRecords",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.IndividualContext.business_views.IndividualContextBusinessView.IndividualContext.GoldenHistoryRecords.IndividualContextGH",
+                                        "transitionPath": "GoldenHistoryRecords",
+                                        "useCustomLabel": false,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "displayTransitionNodeAs": "ICON_LABEL",
+                                        "enableHierarchy": "0",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "1",
+                                        "transitionVisibleInterpreter": "LITERAL"
+                                    }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.business_views.IndividualContextBusinessView.IndividualContext.GoldenHistoryRecords.IndividualContextGH",
+                                "collection": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionViewGH",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                                "form": "CustomerMDM.entities.IndividualContext.forms.IndividualContextForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.IndividualContext.business_views.IndividualContextBusinessView.IndividualContext.GoldenHistoryRecords.IndividualContextGH.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.IndividualContext.business_views.IndividualContextBusinessView.IndividualContext.GoldenHistoryRecords.IndividualContextGH.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.IndividualContext.business_views.IndividualContextBusinessView.IndividualContext.GoldenHistoryRecords.IndividualContextGH.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.IndividualContext.business_views.IndividualContextBusinessView.IndividualContext.GoldenHistoryRecords.IndividualContextGH.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL",
+                                            "enabled": true
+                                        }
+                                    }
+                                ],
+                                "businessEntityBuiltInFilters": []
                             }
                         ]
                     }
@@ -4970,6 +5951,171 @@
                                 "componentName": "semReferenceField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "FDN_Company",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Company.Company",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionViewGH",
+                        "default": false,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Individual Context",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "CustomerMDM.entities.IndividualContext.display_cards.IndividualContextDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionViewGH.IndividualContextID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "IndividualContextID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionViewGH.UpdateDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "UpdateDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionViewGH.Updator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "Updator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionViewGH.CreationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "CreationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionViewGH.Creator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Creator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionViewGH.ContextType",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "ContextType",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionViewGH.BusinessRole",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "BusinessRole",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionViewGH.StartDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "StartDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionViewGH.EndDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "EndDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionViewGH.FDN_Individual",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "FDN_Individual",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Individual.Individual",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextCollectionViewGH.FDN_Company",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
                                 "useCustomLabel": false,
                                 "value": "FDN_Company",
                                 "visibleByDefault": true,
@@ -5545,7 +6691,69 @@
                                             "searchType": "SEMQL"
                                         }
                                     }
+                                ],
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.IndividualAccount.business_views.IndividualAccountBusinessView.IndividualAccount.GoldenHistoryRecords",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.IndividualAccount.business_views.IndividualAccountBusinessView.IndividualAccount.GoldenHistoryRecords.IndividualAccountGH",
+                                        "transitionPath": "GoldenHistoryRecords",
+                                        "useCustomLabel": false,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "displayTransitionNodeAs": "ICON_LABEL",
+                                        "enableHierarchy": "0",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "1",
+                                        "transitionVisibleInterpreter": "LITERAL"
+                                    }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualAccount.business_views.IndividualAccountBusinessView.IndividualAccount.GoldenHistoryRecords.IndividualAccountGH",
+                                "collection": "CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountCollectionViewGH",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.IndividualAccount.IndividualAccount",
+                                "form": "CustomerMDM.entities.IndividualAccount.forms.IndividualAccountForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.IndividualAccount.business_views.IndividualAccountBusinessView.IndividualAccount.GoldenHistoryRecords.IndividualAccountGH.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.IndividualAccount.business_views.IndividualAccountBusinessView.IndividualAccount.GoldenHistoryRecords.IndividualAccountGH.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.IndividualAccount.business_views.IndividualAccountBusinessView.IndividualAccount.GoldenHistoryRecords.IndividualAccountGH.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.IndividualAccount.business_views.IndividualAccountBusinessView.IndividualAccount.GoldenHistoryRecords.IndividualAccountGH.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL",
+                                            "enabled": true
+                                        }
+                                    }
+                                ],
+                                "businessEntityBuiltInFilters": []
                             }
                         ]
                     }
@@ -5629,6 +6837,145 @@
                                 "componentName": "semReferenceField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "FDN_Individual",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Individual.Individual",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountCollectionViewGH",
+                        "default": false,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Individual Account",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "CustomerMDM.entities.IndividualAccount.display_cards.IndividualAccountDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountCollectionViewGH.IndividualAccountID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "IndividualAccountID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountCollectionViewGH.UpdateDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "UpdateDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountCollectionViewGH.Updator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "Updator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountCollectionViewGH.CreationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "CreationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountCollectionViewGH.Creator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Creator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountCollectionViewGH.CiamID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "CiamID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountCollectionViewGH.FDN_Country",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "FDN_Country",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Country.Country",
+                                "valueDataType": "STRING",
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountCollectionViewGH.FDN_Country.displayType",
+                                        "dataType": "STRING",
+                                        "value": "chip",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountCollectionViewGH.FDN_Country.useAvatarInChip",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.IndividualAccount.collection_views.IndividualAccountCollectionViewGH.FDN_Individual",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
                                 "useCustomLabel": false,
                                 "value": "FDN_Individual",
                                 "visibleByDefault": true,
@@ -8338,7 +9685,7 @@
             {
                 "qualifiedName": "CustomerMDM.entities.ExternalID.ExternalID",
                 "dataEntryAllowed": true,
-                "historizeGolden": false,
+                "historizeGolden": true,
                 "historizeMaster": false,
                 "description": "",
                 "documentation": "",
@@ -8592,7 +9939,69 @@
                                             "searchType": "SEMQL"
                                         }
                                     }
+                                ],
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.ExternalID.business_views.ExternalIDBusinessView.ExternalID.GoldenHistoryRecords",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.ExternalID.business_views.ExternalIDBusinessView.ExternalID.GoldenHistoryRecords.ExternalIDGH",
+                                        "transitionPath": "GoldenHistoryRecords",
+                                        "useCustomLabel": false,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "displayTransitionNodeAs": "ICON_LABEL",
+                                        "enableHierarchy": "0",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "1",
+                                        "transitionVisibleInterpreter": "LITERAL"
+                                    }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.ExternalID.business_views.ExternalIDBusinessView.ExternalID.GoldenHistoryRecords.ExternalIDGH",
+                                "collection": "CustomerMDM.entities.ExternalID.collection_views.ExternalIDCollectionViewGH",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.ExternalID.ExternalID",
+                                "form": "CustomerMDM.entities.ExternalID.forms.ExternalIDForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.ExternalID.business_views.ExternalIDBusinessView.ExternalID.GoldenHistoryRecords.ExternalIDGH.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.ExternalID.business_views.ExternalIDBusinessView.ExternalID.GoldenHistoryRecords.ExternalIDGH.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.ExternalID.business_views.ExternalIDBusinessView.ExternalID.GoldenHistoryRecords.ExternalIDGH.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.ExternalID.business_views.ExternalIDBusinessView.ExternalID.GoldenHistoryRecords.ExternalIDGH.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL",
+                                            "enabled": true
+                                        }
+                                    }
+                                ],
+                                "businessEntityBuiltInFilters": []
                             }
                         ]
                     }
@@ -8715,6 +10124,184 @@
                                 "componentName": "semReferenceField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "FDN_Company",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Company.Company",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.ExternalID.collection_views.ExternalIDCollectionViewGH",
+                        "default": false,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "External ID",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": false,
+                        "displayCard": "CustomerMDM.entities.ExternalID.display_cards.ExternalIDDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.ExternalID.collection_views.ExternalIDCollectionViewGH.ExternalIDID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "ExternalIDID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.ExternalID.collection_views.ExternalIDCollectionViewGH.UpdateDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "UpdateDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.ExternalID.collection_views.ExternalIDCollectionViewGH.Updator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "Updator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.ExternalID.collection_views.ExternalIDCollectionViewGH.CreationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "CreationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.ExternalID.collection_views.ExternalIDCollectionViewGH.Creator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Creator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.ExternalID.collection_views.ExternalIDCollectionViewGH.IdentifierKey",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "IdentifierKey",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.ExternalID.collection_views.ExternalIDCollectionViewGH.IdentifierType",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "IdentifierType",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.ExternalID.collection_views.ExternalIDCollectionViewGH.StartDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "StartDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.ExternalID.collection_views.ExternalIDCollectionViewGH.EndDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "EndDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.ExternalID.collection_views.ExternalIDCollectionViewGH.DataSource",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "DataSource",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.ExternalID.collection_views.ExternalIDCollectionViewGH.FDN_Individual",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "FDN_Individual",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Individual.Individual",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.ExternalID.collection_views.ExternalIDCollectionViewGH.FDN_Company",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 11,
                                 "useCustomLabel": false,
                                 "value": "FDN_Company",
                                 "visibleByDefault": true,
@@ -9129,7 +10716,7 @@
             {
                 "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
                 "dataEntryAllowed": true,
-                "historizeGolden": false,
+                "historizeGolden": true,
                 "historizeMaster": false,
                 "description": "",
                 "documentation": "",
@@ -9309,7 +10896,69 @@
                                             "searchType": "SEMQL"
                                         }
                                     }
+                                ],
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView.EmailIndividualContext.GoldenHistoryRecords",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView.EmailIndividualContext.GoldenHistoryRecords.EmailIndividualContextGH",
+                                        "transitionPath": "GoldenHistoryRecords",
+                                        "useCustomLabel": false,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "displayTransitionNodeAs": "ICON_LABEL",
+                                        "enableHierarchy": "0",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "1",
+                                        "transitionVisibleInterpreter": "LITERAL"
+                                    }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView.EmailIndividualContext.GoldenHistoryRecords.EmailIndividualContextGH",
+                                "collection": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionViewGH",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
+                                "form": "CustomerMDM.entities.EmailIndividualContext.forms.EmailIndividualContextForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView.EmailIndividualContext.GoldenHistoryRecords.EmailIndividualContextGH.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView.EmailIndividualContext.GoldenHistoryRecords.EmailIndividualContextGH.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView.EmailIndividualContext.GoldenHistoryRecords.EmailIndividualContextGH.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.business_views.EmailIndividualContextBusinessView.EmailIndividualContext.GoldenHistoryRecords.EmailIndividualContextGH.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL",
+                                            "enabled": true
+                                        }
+                                    }
+                                ],
+                                "businessEntityBuiltInFilters": []
                             }
                         ]
                     }
@@ -9367,6 +11016,119 @@
                                 "componentName": "semReferenceField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "FDN_IndividualContext",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionViewGH",
+                        "default": false,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Email Individual Context",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "CustomerMDM.entities.EmailIndividualContext.display_cards.EmailIndividualContextDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionViewGH.EmailIndividualContextID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "EmailIndividualContextID",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionViewGH.UpdateDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "UpdateDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionViewGH.Updator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "Updator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionViewGH.CreationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "CreationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionViewGH.Creator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Creator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionViewGH.FDN_Email",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "FDN_Email",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Email.Email",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionViewGH.FDN_IndividualContext",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
                                 "useCustomLabel": false,
                                 "value": "FDN_IndividualContext",
                                 "visibleByDefault": true,
@@ -9832,7 +11594,69 @@
                                             "searchType": "SEMQL"
                                         }
                                     }
+                                ],
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Email.business_views.EmailBusinessView.Email.GoldenHistoryRecords",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.Email.business_views.EmailBusinessView.Email.GoldenHistoryRecords.EmailGH",
+                                        "transitionPath": "GoldenHistoryRecords",
+                                        "useCustomLabel": false,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "displayTransitionNodeAs": "ICON_LABEL",
+                                        "enableHierarchy": "0",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "1",
+                                        "transitionVisibleInterpreter": "LITERAL"
+                                    }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.business_views.EmailBusinessView.Email.GoldenHistoryRecords.EmailGH",
+                                "collection": "CustomerMDM.entities.Email.collection_views.EmailCollectionViewGH",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.Email.Email",
+                                "form": "CustomerMDM.entities.Email.forms.EmailForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Email.business_views.EmailBusinessView.Email.GoldenHistoryRecords.EmailGH.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Email.business_views.EmailBusinessView.Email.GoldenHistoryRecords.EmailGH.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Email.business_views.EmailBusinessView.Email.GoldenHistoryRecords.EmailGH.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Email.business_views.EmailBusinessView.Email.GoldenHistoryRecords.EmailGH.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL",
+                                            "enabled": true
+                                        }
+                                    }
+                                ],
+                                "businessEntityBuiltInFilters": []
                             }
                         ]
                     }
@@ -9941,6 +11765,169 @@
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "ValidEmailDomain",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionViewGH",
+                        "default": false,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Email",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": false,
+                        "displayCard": "CustomerMDM.entities.Email.display_cards.EmailDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionViewGH.EmailID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "EmailID",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionViewGH.UpdateDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "UpdateDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionViewGH.Updator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "Updator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionViewGH.CreationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "CreationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionViewGH.Creator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Creator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionViewGH.EmailAddress",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "EmailAddress",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionViewGH.Primary",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "Primary",
+                                "visibleByDefault": true,
+                                "valueDataType": "BOOLEAN",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionViewGH.InCriticalUse",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "InCriticalUse",
+                                "visibleByDefault": true,
+                                "valueDataType": "BOOLEAN",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionViewGH.EmailUsage",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semChipsField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "EmailUsage",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionViewGH.CleansedEmail",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "CleansedEmail",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Email.collection_views.EmailCollectionViewGH.ValidEmailDomain",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
                                 "useCustomLabel": false,
                                 "value": "ValidEmailDomain",
                                 "visibleByDefault": true,
@@ -10430,7 +12417,69 @@
                                             "searchType": "SEMQL"
                                         }
                                     }
+                                ],
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.CountryLanguage.business_views.CountryLanguageBusinessView.CountryLanguage.GoldenHistoryRecords",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.CountryLanguage.business_views.CountryLanguageBusinessView.CountryLanguage.GoldenHistoryRecords.CountryLanguageGH",
+                                        "transitionPath": "GoldenHistoryRecords",
+                                        "useCustomLabel": false,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "displayTransitionNodeAs": "ICON_LABEL",
+                                        "enableHierarchy": "0",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "1",
+                                        "transitionVisibleInterpreter": "LITERAL"
+                                    }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.CountryLanguage.business_views.CountryLanguageBusinessView.CountryLanguage.GoldenHistoryRecords.CountryLanguageGH",
+                                "collection": "CustomerMDM.entities.CountryLanguage.collection_views.CountryLanguageCollectionViewGH",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.CountryLanguage.CountryLanguage",
+                                "form": "CustomerMDM.entities.CountryLanguage.forms.CountryLanguageForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.CountryLanguage.business_views.CountryLanguageBusinessView.CountryLanguage.GoldenHistoryRecords.CountryLanguageGH.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.CountryLanguage.business_views.CountryLanguageBusinessView.CountryLanguage.GoldenHistoryRecords.CountryLanguageGH.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.CountryLanguage.business_views.CountryLanguageBusinessView.CountryLanguage.GoldenHistoryRecords.CountryLanguageGH.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.CountryLanguage.business_views.CountryLanguageBusinessView.CountryLanguage.GoldenHistoryRecords.CountryLanguageGH.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL",
+                                            "enabled": true
+                                        }
+                                    }
+                                ],
+                                "businessEntityBuiltInFilters": []
                             }
                         ]
                     }
@@ -10514,6 +12563,144 @@
                                 "componentName": "semCheckboxField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "IsDefault",
+                                "visibleByDefault": true,
+                                "valueDataType": "BOOLEAN",
+                                "componentProperties": []
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.CountryLanguage.collection_views.CountryLanguageCollectionViewGH",
+                        "default": false,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Country Language",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "CustomerMDM.entities.CountryLanguage.display_cards.CountryLanguageDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.CountryLanguage.collection_views.CountryLanguageCollectionViewGH.CountryLanguageID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "CountryLanguageID",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.CountryLanguage.collection_views.CountryLanguageCollectionViewGH.UpdateDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "UpdateDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.CountryLanguage.collection_views.CountryLanguageCollectionViewGH.Updator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "Updator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.CountryLanguage.collection_views.CountryLanguageCollectionViewGH.CreationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "CreationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.CountryLanguage.collection_views.CountryLanguageCollectionViewGH.Creator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Creator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.CountryLanguage.collection_views.CountryLanguageCollectionViewGH.FDN_Country",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "FDN_Country",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Country.Country",
+                                "valueDataType": "STRING",
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.CountryLanguage.collection_views.CountryLanguageCollectionViewGH.FDN_Country.displayType",
+                                        "dataType": "STRING",
+                                        "value": "chip",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.CountryLanguage.collection_views.CountryLanguageCollectionViewGH.FDN_Country.useAvatarInChip",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.CountryLanguage.collection_views.CountryLanguageCollectionViewGH.Language",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "Language",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.CountryLanguage.collection_views.CountryLanguageCollectionViewGH.IsDefault",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
                                 "useCustomLabel": false,
                                 "value": "IsDefault",
                                 "visibleByDefault": true,
@@ -10927,7 +13114,69 @@
                                             "searchType": "SEMQL"
                                         }
                                     }
+                                ],
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Country.business_views.CountryBusinessView.Country.GoldenHistoryRecords",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.Country.business_views.CountryBusinessView.Country.GoldenHistoryRecords.CountryGH",
+                                        "transitionPath": "GoldenHistoryRecords",
+                                        "useCustomLabel": false,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "displayTransitionNodeAs": "ICON_LABEL",
+                                        "enableHierarchy": "0",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "1",
+                                        "transitionVisibleInterpreter": "LITERAL"
+                                    }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Country.business_views.CountryBusinessView.Country.GoldenHistoryRecords.CountryGH",
+                                "collection": "CustomerMDM.entities.Country.collection_views.CountryCollectionViewGH",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.Country.Country",
+                                "form": "CustomerMDM.entities.Country.forms.CountryForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Country.business_views.CountryBusinessView.Country.GoldenHistoryRecords.CountryGH.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Country.business_views.CountryBusinessView.Country.GoldenHistoryRecords.CountryGH.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Country.business_views.CountryBusinessView.Country.GoldenHistoryRecords.CountryGH.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Country.business_views.CountryBusinessView.Country.GoldenHistoryRecords.CountryGH.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL",
+                                            "enabled": true
+                                        }
+                                    }
+                                ],
+                                "businessEntityBuiltInFilters": []
                             }
                         ]
                     }
@@ -11010,6 +13259,144 @@
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 4,
+                                "useCustomLabel": true,
+                                "value": "LOOKUP first Language from CountryLanguage where IsDefault = '1' end",
+                                "visibleByDefault": true,
+                                "label": "Default Language",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Country.collection_views.CountryCollectionViewGH",
+                        "default": false,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Country",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "CustomerMDM.entities.Country.display_cards.CountryDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Country.collection_views.CountryCollectionViewGH.CountryCode",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "CountryCode",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Country.collection_views.CountryCollectionViewGH.UpdateDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "UpdateDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Country.collection_views.CountryCollectionViewGH.Updator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "Updator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Country.collection_views.CountryCollectionViewGH.CreationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "CreationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Country.collection_views.CountryCollectionViewGH.Creator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Creator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Country.collection_views.CountryCollectionViewGH.CountryName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "CountryName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Country.collection_views.CountryCollectionViewGH.Region",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "Region",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Country.collection_views.CountryCollectionViewGH.Active",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "Active",
+                                "visibleByDefault": true,
+                                "valueDataType": "BOOLEAN",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Country.collection_views.CountryCollectionViewGH.DefaultLanguage",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
                                 "useCustomLabel": true,
                                 "value": "LOOKUP first Language from CountryLanguage where IsDefault = '1' end",
                                 "visibleByDefault": true,
@@ -12758,7 +15145,69 @@
                                             "searchType": "SEMQL"
                                         }
                                     }
+                                ],
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.AddressDefinition.business_views.AddressDefinitionBusinessView.AddressDefinition.GoldenHistoryRecords",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.AddressDefinition.business_views.AddressDefinitionBusinessView.AddressDefinition.GoldenHistoryRecords.AddressDefinitionGH",
+                                        "transitionPath": "GoldenHistoryRecords",
+                                        "useCustomLabel": false,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "displayTransitionNodeAs": "ICON_LABEL",
+                                        "enableHierarchy": "0",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "1",
+                                        "transitionVisibleInterpreter": "LITERAL"
+                                    }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.AddressDefinition.business_views.AddressDefinitionBusinessView.AddressDefinition.GoldenHistoryRecords.AddressDefinitionGH",
+                                "collection": "CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionViewGH",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.AddressDefinition.AddressDefinition",
+                                "form": "CustomerMDM.entities.AddressDefinition.forms.AddressDefinitionForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.AddressDefinition.business_views.AddressDefinitionBusinessView.AddressDefinition.GoldenHistoryRecords.AddressDefinitionGH.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.AddressDefinition.business_views.AddressDefinitionBusinessView.AddressDefinition.GoldenHistoryRecords.AddressDefinitionGH.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.AddressDefinition.business_views.AddressDefinitionBusinessView.AddressDefinition.GoldenHistoryRecords.AddressDefinitionGH.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.AddressDefinition.business_views.AddressDefinitionBusinessView.AddressDefinition.GoldenHistoryRecords.AddressDefinitionGH.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL",
+                                            "enabled": true
+                                        }
+                                    }
+                                ],
+                                "businessEntityBuiltInFilters": []
                             }
                         ]
                     }
@@ -12842,6 +15291,144 @@
                                     },
                                     {
                                         "qualifiedName": "CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionView.FDN_Country.useAvatarInChip",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionViewGH",
+                        "default": false,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Address Definition",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": false,
+                        "displayCard": "CustomerMDM.entities.AddressDefinition.display_cards.AddressDefinitionDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionViewGH.AddressDefinitionCode",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "AddressDefinitionCode",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionViewGH.UpdateDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "UpdateDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionViewGH.Updator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "Updator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionViewGH.CreationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "CreationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionViewGH.Creator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Creator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionViewGH.IsDefault",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "IsDefault",
+                                "visibleByDefault": true,
+                                "valueDataType": "BOOLEAN",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionViewGH.Active",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "Active",
+                                "visibleByDefault": true,
+                                "valueDataType": "BOOLEAN",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionViewGH.FDN_Country",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "FDN_Country",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Country.Country",
+                                "valueDataType": "STRING",
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionViewGH.FDN_Country.displayType",
+                                        "dataType": "STRING",
+                                        "value": "chip",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.AddressDefinition.collection_views.AddressDefinitionCollectionViewGH.FDN_Country.useAvatarInChip",
                                         "dataType": "BOOLEAN",
                                         "value": "1",
                                         "valueInterpreter": "LITERAL"
@@ -13333,7 +15920,69 @@
                                             "searchType": "SEMQL"
                                         }
                                     }
+                                ],
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Address.business_views.AddressBusinessView.Address.GoldenHistoryRecords",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.Address.business_views.AddressBusinessView.Address.GoldenHistoryRecords.AddressGH",
+                                        "transitionPath": "GoldenHistoryRecords",
+                                        "useCustomLabel": false,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "displayTransitionNodeAs": "ICON_LABEL",
+                                        "enableHierarchy": "0",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "1",
+                                        "transitionVisibleInterpreter": "LITERAL"
+                                    }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.business_views.AddressBusinessView.Address.GoldenHistoryRecords.AddressGH",
+                                "collection": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.Address.Address",
+                                "form": "CustomerMDM.entities.Address.forms.AddressForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Address.business_views.AddressBusinessView.Address.GoldenHistoryRecords.AddressGH.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Address.business_views.AddressBusinessView.Address.GoldenHistoryRecords.AddressGH.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Address.business_views.AddressBusinessView.Address.GoldenHistoryRecords.AddressGH.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED",
+                                            "enabled": true
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Address.business_views.AddressBusinessView.Address.GoldenHistoryRecords.AddressGH.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL",
+                                            "enabled": true
+                                        }
+                                    }
+                                ],
+                                "businessEntityBuiltInFilters": []
                             }
                         ]
                     }
@@ -13510,6 +16159,237 @@
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "AddressUsage",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH",
+                        "default": false,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Address",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": false,
+                        "displayCard": "CustomerMDM.entities.Address.display_cards.AddressDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.AddressID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "AddressID",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.UpdateDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "UpdateDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.Updator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "Updator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.CreationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semDatepickerField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "CreationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.Creator",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Creator",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.HouseNumber",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "HouseNumber",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.Street",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "Street",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.City",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "City",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.PostalCode",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "PostalCode",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.FDN_Country",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "FDN_Country",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Country.Country",
+                                "valueDataType": "STRING",
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.FDN_Country.displayType",
+                                        "dataType": "STRING",
+                                        "value": "chip",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.FDN_Country.useAvatarInChip",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.FDN_AddressDefinition",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "FDN_AddressDefinition",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.AddressDefinition.AddressDefinition",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.FDN_IndividualContext",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 11,
+                                "useCustomLabel": false,
+                                "value": "FDN_IndividualContext",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.Primary",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 12,
+                                "useCustomLabel": false,
+                                "value": "Primary",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.InCriticalUse",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semCheckboxField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 13,
+                                "useCustomLabel": false,
+                                "value": "InCriticalUse",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Address.collection_views.AddressCollectionViewGH.AddressUsage",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 14,
                                 "useCustomLabel": false,
                                 "value": "AddressUsage",
                                 "visibleByDefault": true,

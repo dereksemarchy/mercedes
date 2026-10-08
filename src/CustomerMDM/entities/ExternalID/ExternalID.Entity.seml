@@ -7,7 +7,7 @@ physicalTableName: EXTERNAL_ID
 iconUrl: images://mdi/database-arrow-right-outline.svg
 description: ""
 documentation: ""
-historizeGolden: false
+historizeGolden: true
 historizeMaster: false
 enableDelete: true
 attributes:

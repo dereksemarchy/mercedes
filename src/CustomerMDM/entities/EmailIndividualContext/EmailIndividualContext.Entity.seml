@@ -7,7 +7,7 @@ physicalTableName: EMAIL_INDIVIDUAL_CONTEXT
 iconUrl: images://mdi/email-send-outline.svg
 description: ""
 documentation: ""
-historizeGolden: false
+historizeGolden: true
 historizeMaster: false
 enableDelete: true
 attributes:
