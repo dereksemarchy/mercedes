@@ -1033,7 +1033,7 @@
                         },
                         "width": 320,
                         "height": 220,
-                        "borderColor": "0,0,255",
+                        "borderColor": "255,0,0",
                         "fontTitleColor": "255,255,255"
                     },
                     {
@@ -1081,7 +1081,7 @@
                         },
                         "width": 280,
                         "height": 160,
-                        "borderColor": "0,0,255",
+                        "borderColor": "255,0,0",
                         "fontTitleColor": "255,255,255"
                     },
                     {
@@ -1165,7 +1165,7 @@
                         },
                         "width": 320,
                         "height": 200,
-                        "borderColor": "224,100,6",
+                        "borderColor": "0,0,255",
                         "fontTitleColor": "255,255,255"
                     },
                     {
@@ -1177,7 +1177,7 @@
                         },
                         "width": 320,
                         "height": 200,
-                        "borderColor": "224,100,6",
+                        "borderColor": "0,0,255",
                         "fontTitleColor": "255,255,255"
                     },
                     {

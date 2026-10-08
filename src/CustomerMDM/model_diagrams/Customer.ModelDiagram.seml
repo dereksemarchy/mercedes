@@ -17,7 +17,7 @@ entityShapes:
   - _type: EntityShape
     _name: Individual
     entity: CustomerMDM.entities.Individual.Individual
-    borderColor: "#0000FF"
+    borderColor: "#FF0000"
     fontTitleColor: "#FFFFFF"
     position:
       x: 0
@@ -57,7 +57,7 @@ entityShapes:
   - _type: EntityShape
     _name: Company
     entity: CustomerMDM.entities.Company.Company
-    borderColor: "#0000FF"
+    borderColor: "#FF0000"
     fontTitleColor: "#FFFFFF"
     position:
       x: 260
@@ -127,7 +127,7 @@ entityShapes:
   - _type: EntityShape
     _name: InternalID
     entity: CustomerMDM.entities.InternalID.InternalID
-    borderColor: "#e06406"
+    borderColor: "#0000FF"
     fontTitleColor: "#FFFFFF"
     position:
       x: 820
@@ -137,7 +137,7 @@ entityShapes:
   - _type: EntityShape
     _name: ExternalID
     entity: CustomerMDM.entities.ExternalID.ExternalID
-    borderColor: "#e06406"
+    borderColor: "#0000FF"
     fontTitleColor: "#FFFFFF"
     position:
       x: 1200
