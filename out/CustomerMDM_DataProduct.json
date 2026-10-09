@@ -1363,7 +1363,422 @@
                 "roleName": "semarchyAdmin"
             }
         ],
-        "namedQueries": [],
+        "namedQueries": [
+            {
+                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails",
+                "active": true,
+                "rootQueryObject": "CustomerMDM.named_queries.IndividualDetails.Individual",
+                "description": "Returns each individual with its accounts, its contexts (addresses, emails, phones and sales entity relationships) and its internal and external identifiers.",
+                "queryObjects": [
+                    {
+                        "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Individual",
+                        "entity": "CustomerMDM.entities.Individual.Individual",
+                        "description": "The individual (golden record) at the root of the query.",
+                        "objectProperties": [
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Individual.IndividualID",
+                                "type": "VALUE",
+                                "semQlExpression": "IndividualID"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Individual.Gender",
+                                "type": "VALUE",
+                                "semQlExpression": "Gender"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Individual.Salutation",
+                                "type": "VALUE",
+                                "semQlExpression": "Salutation"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Individual.FirstName",
+                                "type": "VALUE",
+                                "semQlExpression": "FirstName"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Individual.LastName",
+                                "type": "VALUE",
+                                "semQlExpression": "LastName"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Individual.NickName",
+                                "type": "VALUE",
+                                "semQlExpression": "NickName"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Individual.Birthday",
+                                "type": "VALUE",
+                                "semQlExpression": "Birthday"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Individual.NameComponents",
+                                "type": "VALUE",
+                                "semQlExpression": "NameComponents"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Individual.IndividualAccounts",
+                                "type": "MULTI_RECORDS",
+                                "semQlExpression": "IndividualAccount",
+                                "targetObject": "CustomerMDM.named_queries.IndividualDetails.IndividualAccount"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Individual.IndividualContexts",
+                                "type": "MULTI_RECORDS",
+                                "semQlExpression": "IndividualContext",
+                                "targetObject": "CustomerMDM.named_queries.IndividualDetails.IndividualContext"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Individual.InternalIDs",
+                                "type": "MULTI_RECORDS",
+                                "semQlExpression": "InternalID",
+                                "targetObject": "CustomerMDM.named_queries.IndividualDetails.InternalID"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Individual.ExternalIDs",
+                                "type": "MULTI_RECORDS",
+                                "semQlExpression": "ExternalID",
+                                "targetObject": "CustomerMDM.named_queries.IndividualDetails.ExternalID"
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.IndividualAccount",
+                        "entity": "CustomerMDM.entities.IndividualAccount.IndividualAccount",
+                        "description": "Accounts held by the individual.",
+                        "objectProperties": [
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.IndividualAccount.IndividualAccountID",
+                                "type": "VALUE",
+                                "semQlExpression": "IndividualAccountID"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.IndividualAccount.CiamID",
+                                "type": "VALUE",
+                                "semQlExpression": "CiamID"
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.IndividualContext",
+                        "entity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                        "description": "Business contexts of the individual, with their contact points and sales entity relationships.",
+                        "objectProperties": [
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.IndividualContext.IndividualContextID",
+                                "type": "VALUE",
+                                "semQlExpression": "IndividualContextID"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.IndividualContext.ContextType",
+                                "type": "VALUE",
+                                "semQlExpression": "ContextType"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.IndividualContext.BusinessRole",
+                                "type": "VALUE",
+                                "semQlExpression": "BusinessRole"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.IndividualContext.StartDate",
+                                "type": "VALUE",
+                                "semQlExpression": "StartDate"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.IndividualContext.EndDate",
+                                "type": "VALUE",
+                                "semQlExpression": "EndDate"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.IndividualContext.Addresses",
+                                "type": "MULTI_RECORDS",
+                                "semQlExpression": "Address",
+                                "targetObject": "CustomerMDM.named_queries.IndividualDetails.Address"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.IndividualContext.Emails",
+                                "type": "MULTI_RECORDS",
+                                "semQlExpression": "EmailIndividualContext",
+                                "targetObject": "CustomerMDM.named_queries.IndividualDetails.EmailIndividualContext"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.IndividualContext.Phones",
+                                "type": "MULTI_RECORDS",
+                                "semQlExpression": "Phone",
+                                "targetObject": "CustomerMDM.named_queries.IndividualDetails.Phone"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.IndividualContext.SalesEntityRelationships",
+                                "type": "MULTI_RECORDS",
+                                "semQlExpression": "SalesEntityRel",
+                                "targetObject": "CustomerMDM.named_queries.IndividualDetails.SalesEntityRel"
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Address",
+                        "entity": "CustomerMDM.entities.Address.Address",
+                        "description": "Postal addresses of the individual context.",
+                        "objectProperties": [
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Address.AddressID",
+                                "type": "VALUE",
+                                "semQlExpression": "AddressID"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Address.Street",
+                                "type": "VALUE",
+                                "semQlExpression": "Street"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Address.HouseNumber",
+                                "type": "VALUE",
+                                "semQlExpression": "HouseNumber"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Address.PostalCode",
+                                "type": "VALUE",
+                                "semQlExpression": "PostalCode"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Address.City",
+                                "type": "VALUE",
+                                "semQlExpression": "City"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Address.AddressUsage",
+                                "type": "VALUE",
+                                "semQlExpression": "AddressUsage"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Address.Primary",
+                                "type": "VALUE",
+                                "semQlExpression": "Primary"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Address.InCriticalUse",
+                                "type": "VALUE",
+                                "semQlExpression": "InCriticalUse"
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.EmailIndividualContext",
+                        "entity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
+                        "description": "Email addresses of the individual context.",
+                        "objectProperties": [
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.EmailIndividualContext.EmailIndividualContextID",
+                                "type": "VALUE",
+                                "semQlExpression": "EmailIndividualContextID"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.EmailIndividualContext.EmailID",
+                                "type": "VALUE",
+                                "semQlExpression": "Email.EmailID"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.EmailIndividualContext.EmailAddress",
+                                "type": "VALUE",
+                                "semQlExpression": "Email.EmailAddress"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.EmailIndividualContext.CleansedEmail",
+                                "type": "VALUE",
+                                "semQlExpression": "Email.CleansedEmail"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.EmailIndividualContext.ValidEmailDomain",
+                                "type": "VALUE",
+                                "semQlExpression": "Email.ValidEmailDomain"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.EmailIndividualContext.EmailUsage",
+                                "type": "VALUE",
+                                "semQlExpression": "Email.EmailUsage"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.EmailIndividualContext.Primary",
+                                "type": "VALUE",
+                                "semQlExpression": "Email.Primary"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.EmailIndividualContext.InCriticalUse",
+                                "type": "VALUE",
+                                "semQlExpression": "Email.InCriticalUse"
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Phone",
+                        "entity": "CustomerMDM.entities.Phone.Phone",
+                        "description": "Phone numbers of the individual context.",
+                        "objectProperties": [
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Phone.PhoneID",
+                                "type": "VALUE",
+                                "semQlExpression": "PhoneID"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Phone.PhoneNumber",
+                                "type": "VALUE",
+                                "semQlExpression": "PhoneNumber"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Phone.StandardizedPhone",
+                                "type": "VALUE",
+                                "semQlExpression": "StandardizedPhone"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Phone.PhoneUsage",
+                                "type": "VALUE",
+                                "semQlExpression": "PhoneUsage"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Phone.Primary",
+                                "type": "VALUE",
+                                "semQlExpression": "Primary"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Phone.InCriticalUse",
+                                "type": "VALUE",
+                                "semQlExpression": "InCriticalUse"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Phone.StatusCode",
+                                "type": "VALUE",
+                                "semQlExpression": "StatusCode"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Phone.StatusText",
+                                "type": "VALUE",
+                                "semQlExpression": "StatusText"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.Phone.PhoneGeocodingData",
+                                "type": "VALUE",
+                                "semQlExpression": "PhoneGeocodingData"
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.SalesEntityRel",
+                        "entity": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
+                        "description": "Relationships between the individual context and sales entities.",
+                        "objectProperties": [
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.SalesEntityRel.SalesEntityRelID",
+                                "type": "VALUE",
+                                "semQlExpression": "SalesEntityRelID"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.SalesEntityRel.RelationshipType",
+                                "type": "VALUE",
+                                "semQlExpression": "RelationshipType"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.SalesEntityRel.StartDate",
+                                "type": "VALUE",
+                                "semQlExpression": "StartDate"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.SalesEntityRel.EndDate",
+                                "type": "VALUE",
+                                "semQlExpression": "EndDate"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.SalesEntityRel.GCID",
+                                "type": "VALUE",
+                                "semQlExpression": "SalesEntity.GCID"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.SalesEntityRel.SalesEntityName",
+                                "type": "VALUE",
+                                "semQlExpression": "SalesEntity.SalesEntityName"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.SalesEntityRel.LegalEntity",
+                                "type": "VALUE",
+                                "semQlExpression": "SalesEntity.LegalEntity"
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.InternalID",
+                        "entity": "CustomerMDM.entities.InternalID.InternalID",
+                        "description": "Internal identifiers of the individual.",
+                        "objectProperties": [
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.InternalID.InternalIDID",
+                                "type": "VALUE",
+                                "semQlExpression": "InternalIDID"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.InternalID.IdentifierKey",
+                                "type": "VALUE",
+                                "semQlExpression": "IdentifierKey"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.InternalID.IdentifierType",
+                                "type": "VALUE",
+                                "semQlExpression": "IdentifierType"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.InternalID.SourceSystem",
+                                "type": "VALUE",
+                                "semQlExpression": "SourceSystem"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.InternalID.StartDate",
+                                "type": "VALUE",
+                                "semQlExpression": "StartDate"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.InternalID.EndDate",
+                                "type": "VALUE",
+                                "semQlExpression": "EndDate"
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.ExternalID",
+                        "entity": "CustomerMDM.entities.ExternalID.ExternalID",
+                        "description": "External identifiers of the individual.",
+                        "objectProperties": [
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.ExternalID.ExternalIDID",
+                                "type": "VALUE",
+                                "semQlExpression": "ExternalIDID"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.ExternalID.IdentifierKey",
+                                "type": "VALUE",
+                                "semQlExpression": "IdentifierKey"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.ExternalID.IdentifierType",
+                                "type": "VALUE",
+                                "semQlExpression": "IdentifierType"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.ExternalID.DataSource",
+                                "type": "VALUE",
+                                "semQlExpression": "DataSource"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.ExternalID.StartDate",
+                                "type": "VALUE",
+                                "semQlExpression": "StartDate"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.named_queries.IndividualDetails.ExternalID.EndDate",
+                                "type": "VALUE",
+                                "semQlExpression": "EndDate"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
         "publishers": [
             {
                 "qualifiedName": "CustomerMDM.publishers.CRM",

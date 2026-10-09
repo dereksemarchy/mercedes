@@ -266,7 +266,12 @@ Screens, forms and views are the sibling skill `/seml-ui`. SemQL expressions are
   `<PKG>.named_queries.<NQ>.<queryObject _name>`); optional `description`, `defaultLimit`, `filter`, `sort`.
   `queryObjects[]` = `{_type: QueryObject, _name, entity, description?, objectProperties[]}`; each
   `objectProperty` = `{_type: ObjectProperty, _name, type: VALUE|SINGLE_RECORD|MULTI_RECORDS,
-  semQlExpression?, targetObject?, filter?, sort?}`. Two traps: **`ObjectProperty` accepts NO `description`**
+  semQlExpression?, targetObject?, filter?, sort?}`. **Child navigation (build-validated, CLI 2.0):** a
+  `MULTI_RECORDS` property's `semQlExpression` is the child reference's **`fromRoleName`** (e.g. `IndividualContext`
+  on the parent `Individual`) + `targetObject` = the child QueryObject's full QN. A **`SINGLE_RECORD`** property
+  given the to-one role (`semQlExpression: Email`) fails with `invalid qualified name: Email, last attribute is a
+  reference`; omitting the expression builds green but compiles with **no navigation at all** (runtime behaviour
+  unverified) — so flatten to-one parents as `VALUE` properties (`Email.EmailAddress`) instead. Two traps: **`ObjectProperty` accepts NO `description`**
   (`Property description is not allowed` — like `documentation` on an enricher; only the QueryObject and the
   NamedQuery take one), and a **`bindingName` must match `^[A-Z][A-Z_$0-9]*`** (upper snake) — it is then
   referenced in the query's SemQL as **`:BINDING_NAME`** (`$`/`#`/bare all fail). **A deployed named query is served on its OWN route**
