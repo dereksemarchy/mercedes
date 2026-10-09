@@ -100,6 +100,51 @@
       "response": []
     },
     {
+      "name": "Get IndividualDetails",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/named-query/CustomerMDM/IndividualDetails/GD?$f=FirstName='Paoletta'",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "named-query",
+            "CustomerMDM",
+            "IndividualDetails",
+            "GD"
+          ],
+          "query": [
+            {
+              "key": "$f",
+              "value": "FirstName='Paoletta'"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Create Load",
       "request": {
         "method": "POST",
