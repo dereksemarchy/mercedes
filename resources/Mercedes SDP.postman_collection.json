@@ -166,7 +166,7 @@
           }
         },
         "url": {
-          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/named-query/CustomerMDM/IndividualDetails/GD?$f=FirstName='Paoletta'",
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/named-query/CustomerMDM/IndividualDetails/GD?FirstName=Paoletta&LastName=Galilei&Email=paoletta.galilei.001@example.test",
           "protocol": "https",
           "host": [
             "poc-mercedes",
@@ -185,8 +185,16 @@
           ],
           "query": [
             {
-              "key": "$f",
-              "value": "FirstName='Paoletta'"
+              "key": "FirstName",
+              "value": "Paoletta"
+            },
+            {
+              "key": "LastName",
+              "value": "Galilei"
+            },
+            {
+              "key": "Email",
+              "value": "paoletta.galilei.001@example.test"
             }
           ]
         }

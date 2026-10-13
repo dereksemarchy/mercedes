@@ -4,6 +4,8 @@ _package: CustomerMDM.named_queries
 active: true
 description: Returns each individual with its accounts, its contexts (addresses, emails, phones and sales entity relationships) and its internal and external identifiers.
 rootQueryObject: CustomerMDM.named_queries.IndividualDetails.Individual
+# filter: FirstName = :QUERY_PARAM_FIRST_NAME AND LastName = :QUERY_PARAM_LAST_NAME AND ANY IndividualContext have ()
+filter: FirstName = :QUERY_PARAM_FIRST_NAME AND LastName = :QUERY_PARAM_LAST_NAME AND any IndividualContext have (any EmailIndividualContext have (Email.EmailAddress = :QUERY_PARAM_EMAIL))
 queryObjects:
   - _type: QueryObject
     _name: Individual
@@ -149,3 +151,19 @@ queryObjects:
       - {_type: ObjectProperty, _name: DataSource, type: VALUE, semQlExpression: DataSource}
       - {_type: ObjectProperty, _name: StartDate, type: VALUE, semQlExpression: StartDate}
       - {_type: ObjectProperty, _name: EndDate, type: VALUE, semQlExpression: EndDate}
+queryParameters:
+  - _type: QueryParameter
+    _name: FirstName
+    bindingName: QUERY_PARAM_FIRST_NAME
+    dataType: STRING
+    mandatory: true
+  - _type: QueryParameter
+    _name: LastName
+    bindingName: QUERY_PARAM_LAST_NAME
+    dataType: STRING
+    mandatory: true
+  - _type: QueryParameter
+    _name: Email
+    bindingName: QUERY_PARAM_EMAIL
+    dataType: STRING
+    mandatory: true
