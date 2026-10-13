@@ -5964,7 +5964,7 @@
                             {
                                 "qualifiedName": "CustomerMDM.entities.InternalID.forms.InternalIDForm.InternalID.StartDate",
                                 "_type": "FormField",
-                                "componentName": "semTextField",
+                                "componentName": "semDatepickerField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 4,
                                 "useCustomLabel": false,
@@ -5978,7 +5978,7 @@
                             {
                                 "qualifiedName": "CustomerMDM.entities.InternalID.forms.InternalIDForm.InternalID.EndDate",
                                 "_type": "FormField",
-                                "componentName": "semTextField",
+                                "componentName": "semDatepickerField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 5,
                                 "useCustomLabel": false,
@@ -6925,7 +6925,7 @@
                             {
                                 "qualifiedName": "CustomerMDM.entities.IndividualContext.forms.IndividualContextForm.IndividualContext.StartDate",
                                 "_type": "FormField",
-                                "componentName": "semTextField",
+                                "componentName": "semDatepickerField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 3,
                                 "useCustomLabel": false,
@@ -6939,7 +6939,7 @@
                             {
                                 "qualifiedName": "CustomerMDM.entities.IndividualContext.forms.IndividualContextForm.IndividualContext.EndDate",
                                 "_type": "FormField",
-                                "componentName": "semTextField",
+                                "componentName": "semDatepickerField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 4,
                                 "useCustomLabel": false,
@@ -11123,7 +11123,7 @@
                             {
                                 "qualifiedName": "CustomerMDM.entities.ExternalID.forms.ExternalIDForm.ExternalID.StartDate",
                                 "_type": "FormField",
-                                "componentName": "semTextField",
+                                "componentName": "semDatepickerField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 3,
                                 "useCustomLabel": false,
@@ -11137,7 +11137,7 @@
                             {
                                 "qualifiedName": "CustomerMDM.entities.ExternalID.forms.ExternalIDForm.ExternalID.EndDate",
                                 "_type": "FormField",
-                                "componentName": "semTextField",
+                                "componentName": "semDatepickerField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 4,
                                 "useCustomLabel": false,

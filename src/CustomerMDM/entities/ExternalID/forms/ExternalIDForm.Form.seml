@@ -27,12 +27,12 @@ formTabs:
         value: IdentifierType
         useCustomLabel: false
         dataType: STRING
-      - _type: TextField
+      - _type: DateField
         _name: StartDate
         value: StartDate
         useCustomLabel: false
         dataType: DATE
-      - _type: TextField
+      - _type: DateField
         _name: EndDate
         value: EndDate
         useCustomLabel: false
