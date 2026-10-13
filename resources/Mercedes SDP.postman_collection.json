@@ -56,6 +56,55 @@
       "response": []
     },
     {
+      "name": "Create Individual with Phone",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "lVHD1UW.OdmUCq6uvo4kZJRhv_UNHWoVgV6ZN_f7M3W",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "Api-Key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"Postman\",\r\n  \"loadDescription\": \"Load Individual\",\r\n  \"jobName\": \"JOB_INDIVIDUAL\",\r\n  \"submitAs\": \"derek.leung@semarchy.com\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY_AND_RECORDS\",\r\n    \"persistMode\": \"ALWAYS\",\r\n    \"defaultPublisherId\": \"CRM\",\r\n    \"optionsPerEntity\": {\r\n      \"Individual\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"IndividualContext\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"Phone\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      }\r\n    },\r\n    \"missingIdBehavior\": \"GENERATE\"\r\n  },\r\n  \"persistRecords\": {\r\n    \"Individual\": [\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"44444444\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Derek\",\r\n            \"LastName\": \"Leung\",\r\n            \"NickName\": \"Derek\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        }\r\n    ],\r\n    \"IndividualContext\": [\r\n    {\r\n    \"IndividualContextID\": \"CTX-444444\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"44444444\"\r\n    }\r\n    ],\r\n    \"Phone\": [\r\n    {\r\n    \"PhoneNumber\": \"+447788990011\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"PhoneUsage\": \"MOBILE\",\r\n    \"FID_IndividualContext\": \"CTX-444444\"\r\n    }\r\n    ]\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Load Template",
       "protocolProfileBehavior": {
         "disableBodyPruning": true

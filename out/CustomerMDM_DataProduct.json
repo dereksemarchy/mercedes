@@ -1336,16 +1336,150 @@
         "modelEditionVariables": [],
         "modelJobs": [
             {
-                "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL",
+                "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL",
                 "jobType": "INTEGRATION",
                 "queueName": "Default",
                 "modelTasks": [
                     {
-                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.Individual",
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.Company",
+                        "entity": "CustomerMDM.entities.Company.Company",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "matchEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.Individual",
                         "entity": "CustomerMDM.entities.Individual.Individual",
                         "consolidatedDataEnrichmentEnabled": true,
                         "consolidationEnabled": true,
                         "matchEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.Email",
+                        "entity": "CustomerMDM.entities.Email.Email",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.SalesEntity",
+                        "entity": "CustomerMDM.entities.SalesEntity.SalesEntity",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.IndividualAccount",
+                        "entity": "CustomerMDM.entities.IndividualAccount.IndividualAccount",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.InternalID",
+                        "entity": "CustomerMDM.entities.InternalID.InternalID",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.ExternalID",
+                        "entity": "CustomerMDM.entities.ExternalID.ExternalID",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.IndividualContext",
+                        "entity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.Address",
+                        "entity": "CustomerMDM.entities.Address.Address",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.Phone",
+                        "entity": "CustomerMDM.entities.Phone.Phone",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.EmailIndividualContext",
+                        "entity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.SalesEntityRel",
+                        "entity": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    }
+                ]
+            },
+            {
+                "qualifiedName": "CustomerMDM.certification_jobs.JOB_REF",
+                "jobType": "INTEGRATION",
+                "queueName": "Default",
+                "modelTasks": [
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_REF.Country",
+                        "entity": "CustomerMDM.entities.Country.Country",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_REF.CountryLanguage",
+                        "entity": "CustomerMDM.entities.CountryLanguage.CountryLanguage",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_REF.AddressDefinition",
+                        "entity": "CustomerMDM.entities.AddressDefinition.AddressDefinition",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
                         "postConsoValidationEnabled": true,
                         "sourceDataEnrichmentEnabled": true,
                         "sourceValidationEnabled": true
@@ -2979,7 +3113,7 @@
                             {
                                 "qualifiedName": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel.StartDate",
                                 "_type": "FormField",
-                                "componentName": "semTextField",
+                                "componentName": "semDatepickerField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 4,
                                 "useCustomLabel": false,
@@ -2993,7 +3127,7 @@
                             {
                                 "qualifiedName": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel.EndDate",
                                 "_type": "FormField",
-                                "componentName": "semTextField",
+                                "componentName": "semDatepickerField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 5,
                                 "useCustomLabel": false,
