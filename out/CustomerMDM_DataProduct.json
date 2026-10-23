@@ -3285,26 +3285,7 @@
                     }
                 ],
                 "dupsManagers": [],
-                "enrichers": [
-                    {
-                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.enrichers.DefaultStartDateEndDate",
-                        "_type": "SemQLEnricher",
-                        "condition": "",
-                        "enricherExecutionScope": "PRE_CONSO",
-                        "description": "Defaults the Start Date to today and the End Date to two years after today when they are not provided.",
-                        "label": "Default Start Date and End Date",
-                        "semQlEnricherExpressions": [
-                            {
-                                "attributeName": "StartDate",
-                                "expression": "COALESCE(StartDate, CURRENT_DATE())"
-                            },
-                            {
-                                "attributeName": "EndDate",
-                                "expression": "COALESCE(EndDate, SEM_CAST_DATE(CURRENT_DATE() + MAKE_INTERVAL(2, 0, 0, 0, 0, 0, 0)))"
-                            }
-                        ]
-                    }
-                ],
+                "enrichers": [],
                 "forms": [
                     {
                         "default": true,

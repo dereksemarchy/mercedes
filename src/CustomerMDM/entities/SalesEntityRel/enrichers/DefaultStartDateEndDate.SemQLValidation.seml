@@ -1,9 +1,0 @@
-_name: DefaultStartDateEndDate
-_type: SemQLValidation
-_package: CustomerMDM.entities.SalesEntityRel.enrichers
-entity: CustomerMDM.entities.SalesEntityRel.SalesEntityRel
-label: Populate default Start Date and End Date
-condition: 
-validationScope:
-description: 
-validationLabel: 
