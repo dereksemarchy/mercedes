@@ -532,6 +532,18 @@
                         "label": "Address Definition"
                     },
                     {
+                        "qualifiedName": "CustomerMDM.applications.Customer.Root.ReferenceData.City",
+                        "posInFolder": 3,
+                        "parentFolder": "CustomerMDM.applications.Customer.Root.ReferenceData",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "CustomerMDM.entities.City.business_views.CityBusinessView",
+                        "nbRecordsBadgeVisible": false,
+                        "useCustomLabel": true,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "City"
+                    },
+                    {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.ImportData.ImportIndividual",
                         "posInFolder": 0,
                         "parentFolder": "CustomerMDM.applications.Customer.Root.ImportData",
@@ -1336,12 +1348,12 @@
         "modelEditionVariables": [],
         "modelJobs": [
             {
-                "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL",
+                "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL",
                 "jobType": "INTEGRATION",
                 "queueName": "Default",
                 "modelTasks": [
                     {
-                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.Company",
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.Company",
                         "entity": "CustomerMDM.entities.Company.Company",
                         "consolidatedDataEnrichmentEnabled": true,
                         "consolidationEnabled": true,
@@ -1350,6 +1362,113 @@
                         "sourceDataEnrichmentEnabled": true,
                         "sourceValidationEnabled": true
                     },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.Individual",
+                        "entity": "CustomerMDM.entities.Individual.Individual",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "matchEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.Email",
+                        "entity": "CustomerMDM.entities.Email.Email",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.SalesEntity",
+                        "entity": "CustomerMDM.entities.SalesEntity.SalesEntity",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.IndividualAccount",
+                        "entity": "CustomerMDM.entities.IndividualAccount.IndividualAccount",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.InternalID",
+                        "entity": "CustomerMDM.entities.InternalID.InternalID",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.ExternalID",
+                        "entity": "CustomerMDM.entities.ExternalID.ExternalID",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.IndividualContext",
+                        "entity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.Address",
+                        "entity": "CustomerMDM.entities.Address.Address",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.Phone",
+                        "entity": "CustomerMDM.entities.Phone.Phone",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.EmailIndividualContext",
+                        "entity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.SalesEntityRel",
+                        "entity": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    }
+                ]
+            },
+            {
+                "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL",
+                "jobType": "INTEGRATION",
+                "queueName": "Default",
+                "modelTasks": [
                     {
                         "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.Individual",
                         "entity": "CustomerMDM.entities.Individual.Individual",
@@ -1363,42 +1482,6 @@
                     {
                         "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.Email",
                         "entity": "CustomerMDM.entities.Email.Email",
-                        "consolidatedDataEnrichmentEnabled": true,
-                        "consolidationEnabled": true,
-                        "postConsoValidationEnabled": true,
-                        "sourceDataEnrichmentEnabled": true,
-                        "sourceValidationEnabled": true
-                    },
-                    {
-                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.SalesEntity",
-                        "entity": "CustomerMDM.entities.SalesEntity.SalesEntity",
-                        "consolidatedDataEnrichmentEnabled": true,
-                        "consolidationEnabled": true,
-                        "postConsoValidationEnabled": true,
-                        "sourceDataEnrichmentEnabled": true,
-                        "sourceValidationEnabled": true
-                    },
-                    {
-                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.IndividualAccount",
-                        "entity": "CustomerMDM.entities.IndividualAccount.IndividualAccount",
-                        "consolidatedDataEnrichmentEnabled": true,
-                        "consolidationEnabled": true,
-                        "postConsoValidationEnabled": true,
-                        "sourceDataEnrichmentEnabled": true,
-                        "sourceValidationEnabled": true
-                    },
-                    {
-                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.InternalID",
-                        "entity": "CustomerMDM.entities.InternalID.InternalID",
-                        "consolidatedDataEnrichmentEnabled": true,
-                        "consolidationEnabled": true,
-                        "postConsoValidationEnabled": true,
-                        "sourceDataEnrichmentEnabled": true,
-                        "sourceValidationEnabled": true
-                    },
-                    {
-                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.ExternalID",
-                        "entity": "CustomerMDM.entities.ExternalID.ExternalID",
                         "consolidatedDataEnrichmentEnabled": true,
                         "consolidationEnabled": true,
                         "postConsoValidationEnabled": true,
@@ -1435,15 +1518,6 @@
                     {
                         "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.EmailIndividualContext",
                         "entity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
-                        "consolidatedDataEnrichmentEnabled": true,
-                        "consolidationEnabled": true,
-                        "postConsoValidationEnabled": true,
-                        "sourceDataEnrichmentEnabled": true,
-                        "sourceValidationEnabled": true
-                    },
-                    {
-                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.SalesEntityRel",
-                        "entity": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
                         "consolidatedDataEnrichmentEnabled": true,
                         "consolidationEnabled": true,
                         "postConsoValidationEnabled": true,
@@ -1488,6 +1562,166 @@
             }
         ],
         "modelPrivGrants": [
+            {
+                "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT",
+                "description": "Reviews requests of the division and resolves data-quality issues.",
+                "label": "Local data steward Italy",
+                "roleName": "DataStewardIT",
+                "entityPrivGrants": [
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT.Individual",
+                        "entity": "CustomerMDM.entities.Individual.Individual",
+                        "checkoutAllowed": true,
+                        "createAllowed": false,
+                        "defaultAccessType": "READ",
+                        "deleteAllowed": false,
+                        "exportAllowed": true,
+                        "filter": "Any IndividualAccount have (FID_Country = 'IT')",
+                        "removeAllowed": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT.IndividualAccount",
+                        "entity": "CustomerMDM.entities.IndividualAccount.IndividualAccount",
+                        "checkoutAllowed": true,
+                        "createAllowed": false,
+                        "defaultAccessType": "READ",
+                        "deleteAllowed": false,
+                        "exportAllowed": true,
+                        "filter": "FID_Country = 'IT'",
+                        "removeAllowed": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT.IndividualContext",
+                        "entity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                        "checkoutAllowed": true,
+                        "createAllowed": false,
+                        "defaultAccessType": "READ",
+                        "deleteAllowed": false,
+                        "exportAllowed": true,
+                        "removeAllowed": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT.InternalID",
+                        "entity": "CustomerMDM.entities.InternalID.InternalID",
+                        "checkoutAllowed": true,
+                        "createAllowed": false,
+                        "defaultAccessType": "READ",
+                        "deleteAllowed": false,
+                        "exportAllowed": true,
+                        "removeAllowed": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT.ExternalID",
+                        "entity": "CustomerMDM.entities.ExternalID.ExternalID",
+                        "checkoutAllowed": true,
+                        "createAllowed": false,
+                        "defaultAccessType": "READ",
+                        "deleteAllowed": false,
+                        "exportAllowed": true,
+                        "removeAllowed": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT.Address",
+                        "entity": "CustomerMDM.entities.Address.Address",
+                        "checkoutAllowed": true,
+                        "createAllowed": false,
+                        "defaultAccessType": "READ",
+                        "deleteAllowed": false,
+                        "exportAllowed": true,
+                        "removeAllowed": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT.AddressDefinition",
+                        "entity": "CustomerMDM.entities.AddressDefinition.AddressDefinition",
+                        "checkoutAllowed": true,
+                        "createAllowed": false,
+                        "defaultAccessType": "READ",
+                        "deleteAllowed": false,
+                        "exportAllowed": true,
+                        "removeAllowed": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT.Company",
+                        "entity": "CustomerMDM.entities.Company.Company",
+                        "checkoutAllowed": true,
+                        "createAllowed": false,
+                        "defaultAccessType": "READ",
+                        "deleteAllowed": false,
+                        "exportAllowed": true,
+                        "removeAllowed": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT.Country",
+                        "entity": "CustomerMDM.entities.Country.Country",
+                        "checkoutAllowed": true,
+                        "createAllowed": false,
+                        "defaultAccessType": "READ",
+                        "deleteAllowed": false,
+                        "exportAllowed": true,
+                        "removeAllowed": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT.CountryLanguage",
+                        "entity": "CustomerMDM.entities.CountryLanguage.CountryLanguage",
+                        "checkoutAllowed": true,
+                        "createAllowed": false,
+                        "defaultAccessType": "READ",
+                        "deleteAllowed": false,
+                        "exportAllowed": true,
+                        "removeAllowed": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT.Email",
+                        "entity": "CustomerMDM.entities.Email.Email",
+                        "checkoutAllowed": true,
+                        "createAllowed": false,
+                        "defaultAccessType": "READ",
+                        "deleteAllowed": false,
+                        "exportAllowed": true,
+                        "removeAllowed": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT.EmailIndividualContext",
+                        "entity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
+                        "checkoutAllowed": true,
+                        "createAllowed": false,
+                        "defaultAccessType": "READ",
+                        "deleteAllowed": false,
+                        "exportAllowed": true,
+                        "removeAllowed": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT.Phone",
+                        "entity": "CustomerMDM.entities.Phone.Phone",
+                        "checkoutAllowed": true,
+                        "createAllowed": false,
+                        "defaultAccessType": "READ",
+                        "deleteAllowed": false,
+                        "exportAllowed": true,
+                        "removeAllowed": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT.SalesEntity",
+                        "entity": "CustomerMDM.entities.SalesEntity.SalesEntity",
+                        "checkoutAllowed": true,
+                        "createAllowed": false,
+                        "defaultAccessType": "READ",
+                        "deleteAllowed": false,
+                        "exportAllowed": true,
+                        "removeAllowed": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT.SalesEntityRel",
+                        "entity": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
+                        "checkoutAllowed": true,
+                        "createAllowed": false,
+                        "defaultAccessType": "READ",
+                        "deleteAllowed": false,
+                        "exportAllowed": true,
+                        "removeAllowed": false
+                    }
+                ]
+            },
             {
                 "qualifiedName": "CustomerMDM.data_product_priv_grants.semarchyAdmin",
                 "allowApiPublishingAsUser": true,
@@ -2270,7 +2504,7 @@
             {
                 "qualifiedName": "CustomerMDM.references.IndividualContextHasIndividual",
                 "brokenValidationLabel": "",
-                "deletePropagation": "RESTRICT",
+                "deletePropagation": "CASCADE",
                 "fromEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
                 "fromRoleName": "IndividualContext",
                 "mandatoryValidationLabel": "",
@@ -2351,7 +2585,7 @@
             {
                 "qualifiedName": "CustomerMDM.references.PhoneHasIndividualContext",
                 "brokenValidationLabel": "",
-                "deletePropagation": "RESTRICT",
+                "deletePropagation": "CASCADE",
                 "fromEntity": "CustomerMDM.entities.Phone.Phone",
                 "fromRoleName": "Phone",
                 "mandatoryValidationLabel": "",
@@ -3051,7 +3285,26 @@
                     }
                 ],
                 "dupsManagers": [],
-                "enrichers": [],
+                "enrichers": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.enrichers.DefaultStartDateEndDate",
+                        "_type": "SemQLEnricher",
+                        "condition": "",
+                        "enricherExecutionScope": "PRE_CONSO",
+                        "description": "Defaults the Start Date to today and the End Date to two years after today when they are not provided.",
+                        "label": "Default Start Date and End Date",
+                        "semQlEnricherExpressions": [
+                            {
+                                "attributeName": "StartDate",
+                                "expression": "COALESCE(StartDate, CURRENT_DATE())"
+                            },
+                            {
+                                "attributeName": "EndDate",
+                                "expression": "COALESCE(EndDate, SEM_CAST_DATE(CURRENT_DATE() + MAKE_INTERVAL(2, 0, 0, 0, 0, 0, 0)))"
+                            }
+                        ]
+                    }
+                ],
                 "forms": [
                     {
                         "default": true,
@@ -8006,7 +8259,7 @@
                         {
                             "qualifiedName": "CustomerMDM.entities.Individual.Individual.Matcher.ExactNameAndBirthday",
                             "condition": "Record1.FirstName = Record2.FirstName AND Record1.LastName = Record2.LastName AND Record1.Birthday = Record2.Birthday",
-                            "matchScore": 100,
+                            "matchScore": 99,
                             "label": "Exact Name And Birthday",
                             "usingMatchOn": false
                         },
@@ -15505,6 +15758,387 @@
                         "documentation": ""
                     }
                 ],
+                "uniqueKeys": [],
+                "fuzzyLookupRules": []
+            },
+            {
+                "qualifiedName": "CustomerMDM.entities.City.City",
+                "dataEntryAllowed": true,
+                "historizeGolden": true,
+                "historizeMaster": false,
+                "description": "",
+                "documentation": "",
+                "enableDelete": true,
+                "entityType": "BASIC",
+                "iconUrl": "images://mdi/book.svg",
+                "label": "City",
+                "physicalTableName": "CITY",
+                "pluralLabel": "City",
+                "pkAttributes": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.City.City.CityID",
+                        "_type": "PKAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "mandatory": true,
+                        "multiValued": false,
+                        "physicalColName": "CITY_ID",
+                        "valueSeparator": "",
+                        "idGenerationType": "MANUAL",
+                        "idSequenceStartsWith": 1,
+                        "label": "City ID",
+                        "length": 38,
+                        "searchable": true
+                    }
+                ],
+                "atomicAttributes": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.City.City.CityName",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": true,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "PRE_CONSO",
+                        "multiValued": false,
+                        "physicalColName": "CITY_NAME",
+                        "valueSeparator": "",
+                        "label": "City Name",
+                        "length": 255,
+                        "searchable": true
+                    }
+                ],
+                "complexAttributes": [],
+                "abstractRowCheckConstraints": [],
+                "actionSets": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.City.action_sets.CityActionSet",
+                        "defaultActionSet": true,
+                        "description": "",
+                        "label": "City Action Set",
+                        "actions": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.City.action_sets.CityActionSet.CreateAuthorCities",
+                                "_type": "CreateAction",
+                                "description": "",
+                                "label": "Create",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "createdRecordType": "GOLDEN",
+                                "createMultiple": false,
+                                "stepper": "CustomerMDM.entities.City.steppers.AuthorCities"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.City.action_sets.CityActionSet.EditAuthorCities",
+                                "_type": "EditAction",
+                                "description": "",
+                                "label": "Edit",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "multipleSelectionAllowed": true,
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false,
+                                "stepper": "CustomerMDM.entities.City.steppers.AuthorCities"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.City.action_sets.CityActionSet.MassUpdateAuthorCities",
+                                "_type": "MassUpdateAction",
+                                "description": "",
+                                "label": "Mass Update",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "stepper": "CustomerMDM.entities.City.steppers.AuthorCities",
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.City.action_sets.CityActionSet.Delete",
+                                "_type": "DeleteAction",
+                                "description": "",
+                                "label": "Delete",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "deleteType": "HARD_DELETE",
+                                "multipleSelectionAllowed": true,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.City.action_sets.CityActionSet.Export",
+                                "_type": "ExportAction",
+                                "description": "",
+                                "label": "Export",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.City.action_sets.CityActionSet.ImportAuthorCities",
+                                "_type": "ImportAction",
+                                "description": "",
+                                "label": "Import",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "importedRecordType": "GOLDEN",
+                                "importMode": "CREATE_AND_UPDATE",
+                                "stepper": "CustomerMDM.entities.City.steppers.AuthorCities"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.City.action_sets.CityActionSet.BrowseGraph",
+                                "_type": "BrowseGraphAction",
+                                "description": "",
+                                "label": "Browse Graph",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            }
+                        ]
+                    }
+                ],
+                "businessObjectViews": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.City.business_views.CityBusinessView",
+                        "displayRootNodeAs": "ICON_LABEL",
+                        "enableHierarchyView": false,
+                        "filter": "1 = 1",
+                        "rootBoViewEntity": "CustomerMDM.entities.City.business_views.CityBusinessView.City",
+                        "rootDescription": "",
+                        "rootLabel": "Cities",
+                        "rootPluralLabel": "Cities",
+                        "useHierarchyOnOpen": false,
+                        "visible": true,
+                        "boViewEntities": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.City.business_views.CityBusinessView.City",
+                                "collection": "CustomerMDM.entities.City.collection_views.CityCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.City.City",
+                                "form": "CustomerMDM.entities.City.forms.CityForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerMDM.entities.City.action_sets.CityActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.City.business_views.CityBusinessView.City.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.City.business_views.CityBusinessView.City.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.City.business_views.CityBusinessView.City.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.City.business_views.CityBusinessView.City.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "collections": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.City.collection_views.CityCollectionView",
+                        "default": true,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "City",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "CustomerMDM.entities.City.display_cards.CityDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.City.collection_views.CityCollectionView.CityID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "CityID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.City.collection_views.CityCollectionView.CityName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "CityName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "displayCards": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.City.display_cards.CityDisplayCard",
+                        "avatarImageValueInterpreter": "LITERAL",
+                        "default": true,
+                        "primaryImageFallbackValueInterpreter": "LITERAL",
+                        "primaryImageValueInterpreter": "LITERAL",
+                        "avatarImageAlign": "MIDDLE_CENTER",
+                        "avatarImageMode": "FIT",
+                        "avatarImageSourceType": "URL",
+                        "primaryImageAlign": "MIDDLE_CENTER",
+                        "primaryImageFallbackSourceType": "URL",
+                        "primaryImageMode": "FIT",
+                        "primaryImageSourceType": "URL",
+                        "primaryTextExpression": "CityID"
+                    }
+                ],
+                "dupsManagers": [],
+                "enrichers": [],
+                "forms": [
+                    {
+                        "default": true,
+                        "qualifiedName": "CustomerMDM.entities.City.forms.CityForm",
+                        "formCharts": [],
+                        "formCollections": [],
+                        "formContainers": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.City.forms.CityForm.City",
+                                "_type": "FormTab",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "visibleValueInterpreter": "LITERAL",
+                                "displayFormTabAs": "LABEL",
+                                "label": "City",
+                                "visibleValue": "1"
+                            }
+                        ],
+                        "formDashboards": [],
+                        "formFields": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.City.forms.CityForm.City.CityID",
+                                "_type": "FormField",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "CityID",
+                                "parentFormContainer": "CustomerMDM.entities.City.forms.CityForm.City",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.City.forms.CityForm.City.CityName",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "CityName",
+                                "parentFormContainer": "CustomerMDM.entities.City.forms.CityForm.City",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "searchForms": [],
+                "steppers": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.City.steppers.AuthorCities",
+                        "label": "Cities",
+                        "rootCollectionStep": "CustomerMDM.entities.City.steppers.AuthorCities.Cities",
+                        "steps": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.City.steppers.AuthorCities.Cities",
+                                "_type": "CollectionStep",
+                                "canFinishSubLevel": true,
+                                "childDeleteType": "HARD_DELETE",
+                                "childImportModeOnParentEdit": "CREATE_AND_UPDATE",
+                                "collectionView": "CustomerMDM.entities.City.collection_views.CityCollectionView",
+                                "createChildUsingManyToManyPicker": false,
+                                "customSortEnabled": false,
+                                "defaultDisplayType": "TABLE",
+                                "displayGridAllowed": false,
+                                "displayListAllowed": true,
+                                "displayTableAllowed": true,
+                                "enableChildCopyOnParentCreate": false,
+                                "enableChildCopyOnParentEdit": false,
+                                "enableChildCreationOnParentCreate": false,
+                                "enableChildCreationOnParentEdit": false,
+                                "enableChildDeleteOnParentEdit": false,
+                                "enableChildEditOnParentCreate": false,
+                                "enableChildEditOnParentEdit": false,
+                                "enableChildExport": false,
+                                "enableChildImportOnParentCreate": true,
+                                "enableChildImportOnParentEdit": false,
+                                "enableChildRemoveOnParentCreate": false,
+                                "enableChildRemoveOnParentEdit": false,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "formFieldsMode": "AUTO",
+                                "linear": false,
+                                "manyToManyCustomSortEnabled": false,
+                                "manyToManyDefaultDisplayType": "GRID",
+                                "manyToManyDisplayGridAllowed": false,
+                                "manyToManyDisplayListAllowed": false,
+                                "manyToManyDisplayTableAllowed": false,
+                                "manyToManyUserDefinedSortEnabled": false,
+                                "skipToChildCreationOnParentCreate": false,
+                                "skipToChildEditingOnParentEdit": false,
+                                "useCustomCollectionLabel": false,
+                                "userDefinedSortEnabled": true,
+                                "label": "Cities"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.City.steppers.AuthorCities.Cities.City",
+                                "_type": "FormStep",
+                                "canFinishSubLevel": true,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "enableMasterValuePicking": false,
+                                "formFieldsMode": "AUTO",
+                                "formTab": "CustomerMDM.entities.City.forms.CityForm.City",
+                                "label": "City",
+                                "parentCollectionStep": "CustomerMDM.entities.City.steppers.AuthorCities.Cities"
+                            }
+                        ]
+                    }
+                ],
+                "survivorshipRules": [],
                 "uniqueKeys": [],
                 "fuzzyLookupRules": []
             },

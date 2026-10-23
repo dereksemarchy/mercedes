@@ -1,0 +1,36 @@
+_package: CustomerMDM.entities.City.business_views
+_type: BusinessView
+_name: CityBusinessView
+entity: CustomerMDM.entities.City.City
+rootLabel: Cities
+rootPluralLabel: Cities
+displayRootNodeAs: ICON_LABEL
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: City
+  entity: CustomerMDM.entities.City.City
+  actionSet: CustomerMDM.entities.City.action_sets.CityActionSet
+  collection: CustomerMDM.entities.City.collection_views.CityCollectionView
+  form: CustomerMDM.entities.City.forms.CityForm
+  outlineVisible: false
+  displayRecordCount: ALWAYS
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+  overrideDefaultSort: false
+  enableUserDefinedSort: true
+  listAllowed: true
+  tableAllowed: true
+  gridAllowed: true
+enableHierarchyView: false
+useHierarchyOnOpen: false

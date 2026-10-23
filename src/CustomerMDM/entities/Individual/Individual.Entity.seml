@@ -88,11 +88,22 @@ matcher:
   _name: Matcher
   description: IndividualSemQLMatcher
   matchRules:
+    # - _type: SemQLMatchRule
+    #   _name: SameNameBirthdayAndEmailAddress
+    #   label: Same Name, Birthday And Email Address
+    #   condition: Record1.EmailAddress = Record2.EmailAddress
+    #   matchScore: 100
+    #   usingMatchOn: true
+    #   matchOnExpression: IndividualContext.EmailIndividualContext
+    #   binningExpressions:
+    #     - expression: IndividualContext.Individual.FirstName
+    #     - expression: IndividualContext.Individual.LastName
+    #     - expression: IndividualContext.Individual.Birthday
     - _type: SemQLMatchRule
       _name: ExactNameAndBirthday
       label: Exact Name And Birthday
       condition: Record1.FirstName = Record2.FirstName AND Record1.LastName = Record2.LastName AND Record1.Birthday = Record2.Birthday
-      matchScore: 100
+      matchScore: 99
       usingMatchOn: false
     - _type: SemQLMatchRule
       _name: SimilarNameAndSameBirthday

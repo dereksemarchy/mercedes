@@ -1,0 +1,24 @@
+_package: CustomerMDM.entities.City.forms
+_type: Form
+_name: CityForm
+entity: CustomerMDM.entities.City.City
+default: true
+formTabs:
+  - _type: FormTab
+    _name: City
+    label: City
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    content:
+      - _type: IdField
+        _name: CityID
+        value: CityID
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: CityName
+        value: CityName
+        useCustomLabel: false
+        dataType: STRING

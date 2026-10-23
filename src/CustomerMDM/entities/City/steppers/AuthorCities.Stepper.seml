@@ -1,0 +1,33 @@
+_package: CustomerMDM.entities.City.steppers
+_type: Stepper
+_name: AuthorCities
+entity: CustomerMDM.entities.City.City
+label: Cities
+rootStep:
+  _type: CollectionStep
+  _name: Cities
+  label: Cities
+  canFinishSubLevel: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  childDeleteType: HARD_DELETE
+  collectionView: CustomerMDM.entities.City.collection_views.CityCollectionView
+  defaultDisplayType: TABLE
+  customSortEnabled: false
+  userDefinedSortEnabled: true
+  displayGridAllowed: false
+  displayListAllowed: true
+  displayTableAllowed: true
+  useCustomCollectionLabel: false
+  childSteps:
+    - _type: FormStep
+      _name: City
+      label: City
+      canFinishSubLevel: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      enableMasterValuePicking: false
+      formTab: CustomerMDM.entities.City.forms.CityForm.City

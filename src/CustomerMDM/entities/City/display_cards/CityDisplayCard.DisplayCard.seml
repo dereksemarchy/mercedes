@@ -1,0 +1,16 @@
+_package: CustomerMDM.entities.City.display_cards
+_type: DisplayCard
+_name: CityDisplayCard
+entity: CustomerMDM.entities.City.City
+default: true
+primaryTextExpression: CityID
+primaryImageValueInterpreter: LITERAL
+avatarImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageFallbackValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+avatarImageValueInterpreter: LITERAL
+primaryImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT

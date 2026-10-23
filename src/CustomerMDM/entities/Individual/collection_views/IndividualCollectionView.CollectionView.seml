@@ -88,3 +88,10 @@ tableColumns:
     dataType: STRING
     columnAlign: LEFT
     visibleByDefault: true
+  # - _type: TextColumn
+  #   _name: ProfileCountry
+  #   value: :V_USER_COUNTRY
+  #   useCustomLabel: false
+  #   dataType: STRING
+  #   columnAlign: LEFT
+  #   visibleByDefault: true

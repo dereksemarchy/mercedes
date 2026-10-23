@@ -331,6 +331,13 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: Address Definition
+      - _type: BrowseBusinessViewAction
+        _name: City
+        businessView: CustomerMDM.entities.City.business_views.CityBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: City
     - _type : FolderAction
       _name: ImportData
       label: Import Data

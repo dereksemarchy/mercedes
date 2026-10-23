@@ -5,15 +5,6 @@ jobType: INTEGRATION
 queueName: Default
 modelTasks:
   - _type: ModelJobTask
-    entity: CustomerMDM.entities.Company.Company
-    _name: Company
-    consolidatedDataEnrichmentEnabled: true
-    consolidationEnabled: true
-    matchEnabled: true
-    postConsoValidationEnabled: true
-    sourceDataEnrichmentEnabled: true
-    sourceValidationEnabled: true
-  - _type: ModelJobTask
     entity: CustomerMDM.entities.Individual.Individual
     _name: Individual
     consolidatedDataEnrichmentEnabled: true
@@ -30,38 +21,14 @@ modelTasks:
     postConsoValidationEnabled: true
     sourceDataEnrichmentEnabled: true
     sourceValidationEnabled: true
-  - _type: ModelJobTask
-    entity: CustomerMDM.entities.SalesEntity.SalesEntity
-    _name: SalesEntity
-    consolidatedDataEnrichmentEnabled: true
-    consolidationEnabled: true
-    postConsoValidationEnabled: true
-    sourceDataEnrichmentEnabled: true
-    sourceValidationEnabled: true
-  - _type: ModelJobTask
-    entity: CustomerMDM.entities.IndividualAccount.IndividualAccount
-    _name: IndividualAccount
-    consolidatedDataEnrichmentEnabled: true
-    consolidationEnabled: true
-    postConsoValidationEnabled: true
-    sourceDataEnrichmentEnabled: true
-    sourceValidationEnabled: true
-  - _type: ModelJobTask
-    entity: CustomerMDM.entities.InternalID.InternalID
-    _name: InternalID
-    consolidatedDataEnrichmentEnabled: true
-    consolidationEnabled: true
-    postConsoValidationEnabled: true
-    sourceDataEnrichmentEnabled: true
-    sourceValidationEnabled: true
-  - _type: ModelJobTask
-    entity: CustomerMDM.entities.ExternalID.ExternalID
-    _name: ExternalID
-    consolidatedDataEnrichmentEnabled: true
-    consolidationEnabled: true
-    postConsoValidationEnabled: true
-    sourceDataEnrichmentEnabled: true
-    sourceValidationEnabled: true
+  # - _type: ModelJobTask
+  #   entity: CustomerMDM.entities.IndividualAccount.IndividualAccount
+  #   _name: IndividualAccount
+  #   consolidatedDataEnrichmentEnabled: true
+  #   consolidationEnabled: true
+  #   postConsoValidationEnabled: true
+  #   sourceDataEnrichmentEnabled: true
+  #   sourceValidationEnabled: true
   - _type: ModelJobTask
     entity: CustomerMDM.entities.IndividualContext.IndividualContext
     _name: IndividualContext
@@ -89,14 +56,6 @@ modelTasks:
   - _type: ModelJobTask
     entity: CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext
     _name: EmailIndividualContext
-    consolidatedDataEnrichmentEnabled: true
-    consolidationEnabled: true
-    postConsoValidationEnabled: true
-    sourceDataEnrichmentEnabled: true
-    sourceValidationEnabled: true
-  - _type: ModelJobTask
-    entity: CustomerMDM.entities.SalesEntityRel.SalesEntityRel
-    _name: SalesEntityRel
     consolidatedDataEnrichmentEnabled: true
     consolidationEnabled: true
     postConsoValidationEnabled: true

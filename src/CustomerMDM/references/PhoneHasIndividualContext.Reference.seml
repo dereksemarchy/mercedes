@@ -2,7 +2,7 @@ _name: PhoneHasIndividualContext
 _type: Reference
 _package: CustomerMDM.references
 label: Phone Has Individual Context
-deletePropagation: RESTRICT
+deletePropagation: CASCADE
 fromEntity: CustomerMDM.entities.Phone.Phone
 fromRoleLabel: Phone
 fromRoleName: Phone

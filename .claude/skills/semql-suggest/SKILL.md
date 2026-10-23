@@ -140,6 +140,11 @@ over both the vendor tooling's advice and the online docs (the findings below, a
 - **Niladic functions require parentheses**: `CURRENT_DATE()` builds; bare `CURRENT_DATE` is parsed
   as an attribute qualified name and fails (`invalid qualified name … can't access CURRENT_DATE`).
   The CLI bundle registers it as a 0-argument function. Same expectation for `SYSDATE()` etc.
+- **Date arithmetic on PostgreSQL — no `ADD_MONTHS`; `MAKE_INTERVAL` takes all 7 arguments**
+  (build-validated, CLI 2.0): `ADD_MONTHS(...)` fails with `function ADD_MONTHS does not exist`, and
+  `MAKE_INTERVAL(2)` fails with `expects 7 to 7 parameters`. "Today + 2 years" as a Date:
+  `SEM_CAST_DATE(CURRENT_DATE() + MAKE_INTERVAL(2, 0, 0, 0, 0, 0, 0))` (years, months, weeks, days,
+  hours, mins, secs). Runtime value not yet checked on a load.
 - **User-defined Boolean attributes cannot be predicated bare NOR compared to a literal**
   (build-validated): `where MyFlag` and `MyFlag OR OtherFlag` fail parse (`no viable alternative`),
   and there is no boolean literal. The working form is **`SEM_CAST_STRING(MyFlag) = 'true'`** — in
@@ -171,6 +176,23 @@ The build is authoritative for syntax and references — but note that several o
 
 Measured against the CLI build or a running platform. Where one contradicts the online
 documentation or your prior assumption, it wins.
+
+- **Matching two records on a CHILD attribute ("share ANY email/phone"): nested `any … have` reaching the
+  other alias through `ParentRecord`** (build-validated, CLI 2.0, with negative controls; runtime still to
+  confirm). A bare `Record2` inside `any Record1.<role> have (…)` or inside a lookup's `where` is unreachable
+  (`can't access Record2`) — but `ParentRecord.Record2` is: `ParentRecord` climbs back to the matcher context.
+  Each nesting level shifts `ParentRecord` one level up, so the inner block compares to the outer child row:
+  `any Record1.IndividualContext.EmailIndividualContext have (any ParentRecord.Record2.IndividualContext.EmailIndividualContext
+  have (Email.EmailAddress = ParentRecord.Email.EmailAddress))` — multi-hop role paths are fine, and a wrong
+  attribute on either side fails the build (the check is real). This supersedes the older
+  `(lookup min … from Record1.… end) = (lookup min … from Record2.… end)` workaround, which compares ONE
+  representative value, not "any shared". **Do not reach for `usingMatchOn` for this**: its `matchOnExpression`
+  accepts only a DIRECT to-many role of the matched entity (`IndividualContext` builds,
+  `IndividualContext.EmailIndividualContext` fails `can't access …`), and once set, `Record1`/`Record2` become
+  the CHILD rows (the parent's attributes move to `Record1.<toRole>.<attr>`; bare `Record1.FirstName` fails) —
+  it adds child-level pair matching without enabling anything the nested form cannot already express. Either
+  way, the child rows must already be certified when the matcher runs (children loaded in the same batch as
+  the parent masters may read empty — see `/platform-ops`).
 
 - **SemQL has NO token-sort / word-reordering function — get order-insensitive name matching from the MATCH
   RULES, not from a normalized key** (build-validated). Cross-source person matching keeps hitting the same

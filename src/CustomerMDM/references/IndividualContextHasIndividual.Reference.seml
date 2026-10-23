@@ -2,7 +2,7 @@ _name: IndividualContextHasIndividual
 _type: Reference
 _package: CustomerMDM.references
 label: Individual Context Has Individual
-deletePropagation: RESTRICT
+deletePropagation: CASCADE
 fromEntity: CustomerMDM.entities.IndividualContext.IndividualContext
 fromRoleLabel: Individual Context
 fromRoleName: IndividualContext

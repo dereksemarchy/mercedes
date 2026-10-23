@@ -1,0 +1,35 @@
+_package: CustomerMDM.entities.City
+_type: Entity
+_name: City
+label: City
+pluralLabel: City
+physicalTableName: CITY
+iconUrl: images://mdi/book.svg
+description: ""
+documentation: ""
+historizeGolden: true
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: CityID
+    label: City ID
+    physicalName: CITY_ID
+    dataType: String
+    length: 38
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: CityName
+    label: City Name
+    physicalName: CITY_NAME
+    dataType: String
+    length: 255
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+sourceIdGeneration:
+  mode: MANUAL
+  startWith: 1
+primaryKey: CustomerMDM.entities.City.City.CityID
+entityType: BASIC
