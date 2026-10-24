@@ -82,6 +82,20 @@ tableColumns:
     columnAlign: LEFT
     visibleByDefault: true
   - _type: TextColumn
+    _name: NormalizedFirstName
+    value: NormalizedFirstName
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: NormalizedLastName
+    value: NormalizedLastName
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
     _name: NickName
     value: NickName
     useCustomLabel: false

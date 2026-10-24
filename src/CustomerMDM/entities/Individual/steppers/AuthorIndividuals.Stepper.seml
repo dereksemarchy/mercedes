@@ -31,3 +31,13 @@ rootStep:
       formFieldsMode: AUTO
       enableMasterValuePicking: false
       formTab: CustomerMDM.entities.Individual.forms.IndividualForm.Individual
+      formStepEnrichers:
+        - enricher: CustomerMDM.entities.Individual.enrichers.NormalizeFirstName
+          executedOnButtonClick: false
+          executedOnDataChange: true
+          executedOnFormOpen: false
+        - enricher: CustomerMDM.entities.Individual.enrichers.NormalizeLastName
+          executedOnButtonClick: false
+          executedOnDataChange: true
+          executedOnFormOpen: false
+

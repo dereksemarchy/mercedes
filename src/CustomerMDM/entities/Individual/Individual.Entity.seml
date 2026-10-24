@@ -76,6 +76,22 @@ attributes:
     mandatory: false
     searchable: true
     length: 256
+  - _type: EntityAttribute
+    _name: NormalizedFirstName
+    label: Normalized First Name
+    physicalName: NORMALIZED_FIRST_NAME
+    dataType: String
+    mandatory: false
+    searchable: true
+    length: 128
+  - _type: EntityAttribute
+    _name: NormalizedLastName
+    label: Normalized Last Name
+    physicalName: NORMALIZED_LAST_NAME
+    dataType: String
+    mandatory: false
+    searchable: true
+    length: 128
 sourceIdGeneration:
   mode: MANUAL
 primaryKey: CustomerMDM.entities.Individual.Individual.IndividualID

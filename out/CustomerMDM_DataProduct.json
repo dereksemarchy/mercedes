@@ -1473,6 +1473,42 @@
                 "queueName": "Default",
                 "modelTasks": [
                     {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.Country",
+                        "entity": "CustomerMDM.entities.Country.Country",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.CountryLanguage",
+                        "entity": "CustomerMDM.entities.CountryLanguage.CountryLanguage",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.AddressDefinition",
+                        "entity": "CustomerMDM.entities.AddressDefinition.AddressDefinition",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.City",
+                        "entity": "CustomerMDM.entities.City.City",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
                         "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.Company",
                         "entity": "CustomerMDM.entities.Company.Company",
                         "consolidatedDataEnrichmentEnabled": true,
@@ -1576,6 +1612,15 @@
                     {
                         "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.SalesEntityRel",
                         "entity": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.Validation",
+                        "entity": "CustomerMDM.entities.Validation.Validation",
                         "consolidatedDataEnrichmentEnabled": true,
                         "consolidationEnabled": true,
                         "postConsoValidationEnabled": true,
@@ -10005,6 +10050,40 @@
                         "label": "Name Components",
                         "length": 256,
                         "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Individual.Individual.NormalizedFirstName",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "NORMALIZED_FIRST_NAME",
+                        "valueSeparator": "",
+                        "label": "Normalized First Name",
+                        "length": 128,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Individual.Individual.NormalizedLastName",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "NORMALIZED_LAST_NAME",
+                        "valueSeparator": "",
+                        "label": "Normalized Last Name",
+                        "length": 128,
+                        "searchable": true
                     }
                 ],
                 "complexAttributes": [],
@@ -11557,12 +11636,38 @@
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "CustomerMDM.entities.Individual.collection_views.IndividualCollectionView.NickName",
+                                "qualifiedName": "CustomerMDM.entities.Individual.collection_views.IndividualCollectionView.NormalizedFirstName",
                                 "_type": "TableColumn",
                                 "columnAlign": "LEFT",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "NormalizedFirstName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.collection_views.IndividualCollectionView.NormalizedLastName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "NormalizedLastName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.collection_views.IndividualCollectionView.NickName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
                                 "useCustomLabel": false,
                                 "value": "NickName",
                                 "visibleByDefault": true,
@@ -11575,7 +11680,7 @@
                                 "columnAlign": "LEFT",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 6,
+                                "posInParent": 8,
                                 "useCustomLabel": false,
                                 "value": "Birthday",
                                 "visibleByDefault": true,
@@ -11588,7 +11693,7 @@
                                 "columnAlign": "LEFT",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 7,
+                                "posInParent": 9,
                                 "useCustomLabel": false,
                                 "value": "NameComponents",
                                 "visibleByDefault": true,
@@ -11601,7 +11706,7 @@
                                 "columnAlign": "LEFT",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 8,
+                                "posInParent": 10,
                                 "useCustomLabel": false,
                                 "value": "MastersCount",
                                 "visibleByDefault": true,
@@ -11614,7 +11719,7 @@
                                 "columnAlign": "LEFT",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 9,
+                                "posInParent": 11,
                                 "useCustomLabel": false,
                                 "value": "HasSuggestedMerge",
                                 "visibleByDefault": true,
@@ -11759,12 +11864,38 @@
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "CustomerMDM.entities.Individual.collection_views.IndividualCollectionViewGH.NickName",
+                                "qualifiedName": "CustomerMDM.entities.Individual.collection_views.IndividualCollectionViewGH.NormalizedFirstName",
                                 "_type": "TableColumn",
                                 "columnAlign": "LEFT",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "NormalizedFirstName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.collection_views.IndividualCollectionViewGH.NormalizedLastName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "NormalizedLastName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.collection_views.IndividualCollectionViewGH.NickName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 11,
                                 "useCustomLabel": false,
                                 "value": "NickName",
                                 "visibleByDefault": true,
@@ -11777,7 +11908,7 @@
                                 "columnAlign": "LEFT",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 10,
+                                "posInParent": 12,
                                 "useCustomLabel": false,
                                 "value": "Birthday",
                                 "visibleByDefault": true,
@@ -11790,7 +11921,7 @@
                                 "columnAlign": "LEFT",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 11,
+                                "posInParent": 13,
                                 "useCustomLabel": false,
                                 "value": "NameComponents",
                                 "visibleByDefault": true,
@@ -11803,7 +11934,7 @@
                                 "columnAlign": "LEFT",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 12,
+                                "posInParent": 14,
                                 "useCustomLabel": false,
                                 "value": "MastersCount",
                                 "visibleByDefault": true,
@@ -12048,7 +12179,82 @@
                         "formTab": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual"
                     }
                 ],
-                "enrichers": [],
+                "enrichers": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Individual.enrichers.NormalizeFirstName",
+                        "_type": "PluginEnricher",
+                        "condition": "FirstName is not null",
+                        "enricherExecutionScope": "PRE_CONSO",
+                        "numberOfRetry": 0,
+                        "onErrorBehavior": "SKIP_RECORDS",
+                        "pluginId": "Pcom.semarchy.engine.plugins.convergence.text",
+                        "processingBatchSize": 1,
+                        "threadPoolSize": 1,
+                        "label": "Normalize First Name",
+                        "pluginInputs": [
+                            {
+                                "_type": "PluginEnricherInput",
+                                "expression": "FirstName",
+                                "inputName": "IN_TEXT"
+                            }
+                        ],
+                        "pluginOutputs": [
+                            {
+                                "outputName": "OUT_TRANSFORMED_TEXT",
+                                "attributeName": "NormalizedFirstName"
+                            }
+                        ],
+                        "pluginParams": [
+                            {
+                                "_type": "PluginEnricherParam",
+                                "paramName": "PARAM_INPUT_FILTER",
+                                "value": "LETTERS"
+                            },
+                            {
+                                "_type": "PluginEnricherParam",
+                                "paramName": "PARAM_TRANSFO_TYPE",
+                                "value": "TRANSLITERATE Hangul-Latin | TRANSLITERATE Latin-ASCII | NORMALIZE"
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Individual.enrichers.NormalizeLastName",
+                        "_type": "PluginEnricher",
+                        "condition": "LastName is not null",
+                        "enricherExecutionScope": "PRE_CONSO",
+                        "numberOfRetry": 0,
+                        "onErrorBehavior": "SKIP_RECORDS",
+                        "pluginId": "Pcom.semarchy.engine.plugins.convergence.text",
+                        "processingBatchSize": 1,
+                        "threadPoolSize": 1,
+                        "label": "Normalize Last Name",
+                        "pluginInputs": [
+                            {
+                                "_type": "PluginEnricherInput",
+                                "expression": "LastName",
+                                "inputName": "IN_TEXT"
+                            }
+                        ],
+                        "pluginOutputs": [
+                            {
+                                "outputName": "OUT_TRANSFORMED_TEXT",
+                                "attributeName": "NormalizedLastName"
+                            }
+                        ],
+                        "pluginParams": [
+                            {
+                                "_type": "PluginEnricherParam",
+                                "paramName": "PARAM_INPUT_FILTER",
+                                "value": "LETTERS"
+                            },
+                            {
+                                "_type": "PluginEnricherParam",
+                                "paramName": "PARAM_TRANSFO_TYPE",
+                                "value": "TRANSLITERATE Hangul-Latin | TRANSLITERATE Latin-ASCII | NORMALIZE"
+                            }
+                        ]
+                    }
+                ],
                 "forms": [
                     {
                         "default": true,
@@ -12141,11 +12347,39 @@
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.NickName",
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.NormalizedFirstName",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "NormalizedFirstName",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.NormalizedLastName",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "NormalizedLastName",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.NickName",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
                                 "useCustomLabel": false,
                                 "value": "NickName",
                                 "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
@@ -12159,7 +12393,7 @@
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 6,
+                                "posInParent": 8,
                                 "useCustomLabel": false,
                                 "value": "Birthday",
                                 "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
@@ -12173,7 +12407,7 @@
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 7,
+                                "posInParent": 9,
                                 "useCustomLabel": false,
                                 "value": "NameComponents",
                                 "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
@@ -12241,6 +12475,20 @@
                                 "enabledOnParentEdit": true,
                                 "enableMasterValuePicking": false,
                                 "formFieldsMode": "AUTO",
+                                "formStepEnrichers": [
+                                    {
+                                        "enricher": "CustomerMDM.entities.Individual.enrichers.NormalizeFirstName",
+                                        "executedOnButtonClick": false,
+                                        "executedOnDataChange": true,
+                                        "executedOnFormOpen": false
+                                    },
+                                    {
+                                        "enricher": "CustomerMDM.entities.Individual.enrichers.NormalizeLastName",
+                                        "executedOnButtonClick": false,
+                                        "executedOnDataChange": true,
+                                        "executedOnFormOpen": false
+                                    }
+                                ],
                                 "formTab": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
                                 "label": "Individual",
                                 "parentCollectionStep": "CustomerMDM.entities.Individual.steppers.AuthorIndividuals.Individuals"

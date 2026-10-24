@@ -5,6 +5,38 @@ jobType: INTEGRATION
 queueName: Default
 modelTasks:
   - _type: ModelJobTask
+    entity: CustomerMDM.entities.Country.Country
+    _name: Country
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true
+  - _type: ModelJobTask
+    entity: CustomerMDM.entities.CountryLanguage.CountryLanguage
+    _name: CountryLanguage
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true
+  - _type: ModelJobTask
+    entity: CustomerMDM.entities.AddressDefinition.AddressDefinition
+    _name: AddressDefinition
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true
+  - _type: ModelJobTask
+    entity: CustomerMDM.entities.City.City
+    _name: City
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true
+  - _type: ModelJobTask
     entity: CustomerMDM.entities.Company.Company
     _name: Company
     consolidatedDataEnrichmentEnabled: true
@@ -97,6 +129,14 @@ modelTasks:
   - _type: ModelJobTask
     entity: CustomerMDM.entities.SalesEntityRel.SalesEntityRel
     _name: SalesEntityRel
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true
+  - _type: ModelJobTask
+    entity: CustomerMDM.entities.Validation.Validation
+    _name: Validation
     consolidatedDataEnrichmentEnabled: true
     consolidationEnabled: true
     postConsoValidationEnabled: true

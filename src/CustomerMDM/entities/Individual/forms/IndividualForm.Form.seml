@@ -39,6 +39,16 @@ formTabs:
         useCustomLabel: false
         dataType: STRING
       - _type: TextField
+        _name: NormalizedFirstName
+        value: NormalizedFirstName
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: NormalizedLastName
+        value: NormalizedLastName
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
         _name: NickName
         value: NickName
         useCustomLabel: false

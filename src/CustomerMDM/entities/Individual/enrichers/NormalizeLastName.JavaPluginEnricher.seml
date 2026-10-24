@@ -1,0 +1,24 @@
+_name: NormalizeLastName
+_type: JavaPluginEnricher
+_package: CustomerMDM.entities.Individual.enrichers
+entity: CustomerMDM.entities.Individual.Individual
+label: Normalize Last Name 
+enricherExecutionScope: PRE_CONSO 
+condition: LastName is not null
+pluginId: com.semarchy.engine.plugins.convergence.text
+pluginParams:
+  - paramName: PARAM_INPUT_FILTER
+    value: LETTERS
+  - paramName: PARAM_TRANSFO_TYPE
+    value: TRANSLITERATE Hangul-Latin | TRANSLITERATE Latin-ASCII | NORMALIZE
+pluginInputs:
+  - inputName: IN_TEXT
+    expression: LastName
+pluginOutputs:
+  - outputName: OUT_TRANSFORMED_TEXT
+    attributeName: NormalizedLastName
+numberOfRetry: 0
+onErrorBehavior: SKIP_RECORDS
+processingBatchSize: 1
+threadPoolSize: 1
+afterEnrichers: CustomerMDM.entities.Individual.enrichers.NormalizeFirstName

@@ -13,14 +13,6 @@ modelTasks:
     postConsoValidationEnabled: true
     sourceDataEnrichmentEnabled: true
     sourceValidationEnabled: true
-  # - _type: ModelJobTask
-  #   entity: CustomerMDM.entities.IndividualAccount.IndividualAccount
-  #   _name: IndividualAccount
-  #   consolidatedDataEnrichmentEnabled: true
-  #   consolidationEnabled: true
-  #   postConsoValidationEnabled: true
-  #   sourceDataEnrichmentEnabled: true
-  #   sourceValidationEnabled: true
   - _type: ModelJobTask
     entity: CustomerMDM.entities.IndividualContext.IndividualContext
     _name: IndividualContext
