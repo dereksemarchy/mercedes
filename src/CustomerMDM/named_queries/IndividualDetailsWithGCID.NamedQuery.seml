@@ -1,9 +1,9 @@
-_name: IndividualDetailsByGCID
+_name: IndividualDetailsWithGCID
 _type: NamedQuery
 _package: CustomerMDM.named_queries
 active: true
 description: Returns each individual with its accounts, its contexts (addresses, emails, phones and sales entity relationships) and its internal and external identifiers.
-rootQueryObject: CustomerMDM.named_queries.IndividualDetailsByGCID.Individual
+rootQueryObject: CustomerMDM.named_queries.IndividualDetailsWithGCID.Individual
 # filter: FirstName = :QUERY_PARAM_FIRST_NAME AND LastName = :QUERY_PARAM_LAST_NAME AND any IndividualContext have (any EmailIndividualContext have (Email.EmailAddress = :QUERY_PARAM_EMAIL))
 filter: FirstName = :QUERY_PARAM_FIRST_NAME AND LastName = :QUERY_PARAM_LAST_NAME AND any IndividualContext have (any EmailIndividualContext have (Email.EmailAddress = :QUERY_PARAM_EMAIL)) AND any IndividualContext have (any SalesEntityRel have (FID_SalesEntity = :QUERY_PARAM_GCID))
 queryObjects:
@@ -24,22 +24,22 @@ queryObjects:
         _name: IndividualAccounts
         type: MULTI_RECORDS
         semQlExpression: IndividualAccount
-        targetObject: CustomerMDM.named_queries.IndividualDetailsByGCID.IndividualAccount
+        targetObject: CustomerMDM.named_queries.IndividualDetailsWithGCID.IndividualAccount
       - _type: ObjectProperty
         _name: IndividualContexts
         type: MULTI_RECORDS
         semQlExpression: IndividualContext
-        targetObject: CustomerMDM.named_queries.IndividualDetailsByGCID.IndividualContext
+        targetObject: CustomerMDM.named_queries.IndividualDetailsWithGCID.IndividualContext
       - _type: ObjectProperty
         _name: InternalIDs
         type: MULTI_RECORDS
         semQlExpression: InternalID
-        targetObject: CustomerMDM.named_queries.IndividualDetailsByGCID.InternalID
+        targetObject: CustomerMDM.named_queries.IndividualDetailsWithGCID.InternalID
       - _type: ObjectProperty
         _name: ExternalIDs
         type: MULTI_RECORDS
         semQlExpression: ExternalID
-        targetObject: CustomerMDM.named_queries.IndividualDetailsByGCID.ExternalID
+        targetObject: CustomerMDM.named_queries.IndividualDetailsWithGCID.ExternalID
   - _type: QueryObject
     _name: IndividualAccount
     entity: CustomerMDM.entities.IndividualAccount.IndividualAccount
@@ -61,22 +61,22 @@ queryObjects:
         _name: Addresses
         type: MULTI_RECORDS
         semQlExpression: Address
-        targetObject: CustomerMDM.named_queries.IndividualDetailsByGCID.Address
+        targetObject: CustomerMDM.named_queries.IndividualDetailsWithGCID.Address
       - _type: ObjectProperty
         _name: Emails
         type: MULTI_RECORDS
         semQlExpression: EmailIndividualContext
-        targetObject: CustomerMDM.named_queries.IndividualDetailsByGCID.EmailIndividualContext
+        targetObject: CustomerMDM.named_queries.IndividualDetailsWithGCID.EmailIndividualContext
       - _type: ObjectProperty
         _name: Phones
         type: MULTI_RECORDS
         semQlExpression: Phone
-        targetObject: CustomerMDM.named_queries.IndividualDetailsByGCID.Phone
+        targetObject: CustomerMDM.named_queries.IndividualDetailsWithGCID.Phone
       - _type: ObjectProperty
         _name: SalesEntityRelationships
         type: MULTI_RECORDS
         semQlExpression: SalesEntityRel
-        targetObject: CustomerMDM.named_queries.IndividualDetailsByGCID.SalesEntityRel
+        targetObject: CustomerMDM.named_queries.IndividualDetailsWithGCID.SalesEntityRel
   - _type: QueryObject
     _name: Address
     entity: CustomerMDM.entities.Address.Address
