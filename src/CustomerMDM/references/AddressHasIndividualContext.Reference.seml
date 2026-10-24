@@ -2,7 +2,7 @@ _name: AddressHasIndividualContext
 _type: Reference
 _package: CustomerMDM.references
 label: Address Has Individual Context
-deletePropagation: RESTRICT
+deletePropagation: CASCADE
 fromEntity: CustomerMDM.entities.Address.Address
 fromRoleLabel: Address
 fromRoleName: Address

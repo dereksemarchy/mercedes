@@ -41,6 +41,41 @@
       "response": []
     },
     {
+      "name": "Certify Individual",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"options\": {\r\n    \"enrichers\": [],\r\n    \"validations\": [],\r\n    \"returnEnrichedRecord\": false,\r\n    \"queryPotentialMatchesRules\": \"ALL\",\r\n    \"queryPotentialMatchesHighestScoreOnly\": true,\r\n    \"queryPotentialMatchesBaseExpressions\": \"USER_ATTRS\"\r\n  },\r\n  \"record\": {\r\n    \"FirstName\": \"Derik\",\r\n    \"LastName\": \"Leung\",\r\n    \"Birthday\": \"1989-01-05\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/certify/CustomerMDM/Individual",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "certify",
+            "CustomerMDM",
+            "Individual"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Create Individual with Phone",
       "request": {
         "auth": {
@@ -326,7 +361,7 @@
           }
         },
         "url": {
-          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM/86",
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM/645",
           "protocol": "https",
           "host": [
             "poc-mercedes",
@@ -340,14 +375,14 @@
             "rest",
             "loads",
             "CustomerMDM",
-            "86"
+            "645"
           ]
         }
       },
       "response": []
     },
     {
-      "name": "List Loads",
+      "name": "Get Running Loads",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -379,6 +414,82 @@
             "data-locations",
             "CustomerMDM",
             "loads"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List jobs",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/data-locations/CustomerMDM/jobs",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "data-locations",
+            "CustomerMDM",
+            "jobs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Batch ID",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM/",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM",
+            ""
           ]
         }
       },

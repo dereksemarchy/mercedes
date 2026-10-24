@@ -1480,15 +1480,6 @@
                         "sourceValidationEnabled": true
                     },
                     {
-                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.Email",
-                        "entity": "CustomerMDM.entities.Email.Email",
-                        "consolidatedDataEnrichmentEnabled": true,
-                        "consolidationEnabled": true,
-                        "postConsoValidationEnabled": true,
-                        "sourceDataEnrichmentEnabled": true,
-                        "sourceValidationEnabled": true
-                    },
-                    {
                         "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.IndividualContext",
                         "entity": "CustomerMDM.entities.IndividualContext.IndividualContext",
                         "consolidatedDataEnrichmentEnabled": true,
@@ -1518,6 +1509,15 @@
                     {
                         "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.EmailIndividualContext",
                         "entity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.Email",
+                        "entity": "CustomerMDM.entities.Email.Email",
                         "consolidatedDataEnrichmentEnabled": true,
                         "consolidationEnabled": true,
                         "postConsoValidationEnabled": true,
