@@ -200,6 +200,15 @@
                             "maxResults": 100,
                             "position": 15,
                             "searchTypeConfig": "CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel.TextConfig"
+                        },
+                        {
+                            "qualifiedName": "CustomerMDM.applications.Customer.Validation",
+                            "viewType": "GD",
+                            "businessObjectView": "CustomerMDM.entities.Validation.business_views.ValidationBusinessView",
+                            "label": "Validation",
+                            "maxResults": 100,
+                            "position": 16,
+                            "searchTypeConfig": "CustomerMDM.entities.Validation.business_views.ValidationBusinessView.Validation.TextConfig"
                         }
                     ]
                 },
@@ -494,6 +503,18 @@
                         "imageAlign": "MIDDLE_CENTER",
                         "imageMode": "FIT",
                         "label": "Sales Entity Relationship"
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.applications.Customer.Root.MasterData.Validation",
+                        "posInFolder": 13,
+                        "parentFolder": "CustomerMDM.applications.Customer.Root.MasterData",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "CustomerMDM.entities.Validation.business_views.ValidationBusinessView",
+                        "nbRecordsBadgeVisible": false,
+                        "useCustomLabel": true,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Validation"
                     },
                     {
                         "qualifiedName": "CustomerMDM.applications.Customer.Root.ReferenceData.Country",
@@ -905,6 +926,26 @@
                 ]
             },
             {
+                "qualifiedName": "CustomerMDM.list_of_values.LiableParty",
+                "_type": "LOVType",
+                "description": "",
+                "label": "Liable Party",
+                "validationLabel": "",
+                "length": 16,
+                "lovValues": [
+                    {
+                        "description": "",
+                        "label": "INTERNAL",
+                        "code": "INTERNAL"
+                    },
+                    {
+                        "description": "",
+                        "label": "EXTERNAL",
+                        "code": "EXTERNAL"
+                    }
+                ]
+            },
+            {
                 "qualifiedName": "CustomerMDM.list_of_values.PhoneUsage",
                 "_type": "LOVType",
                 "description": "",
@@ -1026,6 +1067,31 @@
                         "description": "",
                         "label": "CIAM",
                         "code": "CIAM"
+                    }
+                ]
+            },
+            {
+                "qualifiedName": "CustomerMDM.list_of_values.ValidationMethod",
+                "_type": "LOVType",
+                "description": "",
+                "label": "Validation Method",
+                "validationLabel": "",
+                "length": 32,
+                "lovValues": [
+                    {
+                        "description": "",
+                        "label": "POST_IDENT",
+                        "code": "POST_IDENT"
+                    },
+                    {
+                        "description": "",
+                        "label": "VALIDATION_AT_POINT_OF_SALE",
+                        "code": "VALIDATION_AT_POINT_OF_SALE"
+                    },
+                    {
+                        "description": "",
+                        "label": "TECHNICAL",
+                        "code": "TECHNICAL"
                     }
                 ]
             }
@@ -1215,6 +1281,18 @@
                         "height": 180,
                         "borderColor": "0,0,255",
                         "fontTitleColor": "255,255,255"
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.model_diagrams.Customer.Validation",
+                        "entity": "CustomerMDM.entities.Validation.Validation",
+                        "position": {
+                            "x": 400,
+                            "y": 900
+                        },
+                        "width": 320,
+                        "height": 360,
+                        "borderColor": "0,0,255",
+                        "fontTitleColor": "255,255,255"
                     }
                 ],
                 "inheritLinks": [],
@@ -1332,6 +1410,48 @@
                         "reference": "CustomerMDM.references.SalesEntityRelHasSalesEntity",
                         "toEntityShape": "CustomerMDM.model_diagrams.Customer.SalesEntity",
                         "fromEntityShape": "CustomerMDM.model_diagrams.Customer.SalesEntityRel"
+                    },
+                    {
+                        "bendPoints": [],
+                        "reference": "CustomerMDM.references.ValidationHasIndividual",
+                        "toEntityShape": "CustomerMDM.model_diagrams.Customer.Individual",
+                        "fromEntityShape": "CustomerMDM.model_diagrams.Customer.Validation"
+                    },
+                    {
+                        "bendPoints": [],
+                        "reference": "CustomerMDM.references.ValidationHasCompany",
+                        "toEntityShape": "CustomerMDM.model_diagrams.Customer.Company",
+                        "fromEntityShape": "CustomerMDM.model_diagrams.Customer.Validation"
+                    },
+                    {
+                        "bendPoints": [],
+                        "reference": "CustomerMDM.references.ValidationHasIndividualContext",
+                        "toEntityShape": "CustomerMDM.model_diagrams.Customer.IndividualContext",
+                        "fromEntityShape": "CustomerMDM.model_diagrams.Customer.Validation"
+                    },
+                    {
+                        "bendPoints": [],
+                        "reference": "CustomerMDM.references.ValidationHasPhone",
+                        "toEntityShape": "CustomerMDM.model_diagrams.Customer.Phone",
+                        "fromEntityShape": "CustomerMDM.model_diagrams.Customer.Validation"
+                    },
+                    {
+                        "bendPoints": [],
+                        "reference": "CustomerMDM.references.ValidationHasAddress",
+                        "toEntityShape": "CustomerMDM.model_diagrams.Customer.Address",
+                        "fromEntityShape": "CustomerMDM.model_diagrams.Customer.Validation"
+                    },
+                    {
+                        "bendPoints": [],
+                        "reference": "CustomerMDM.references.ValidationHasEmail",
+                        "toEntityShape": "CustomerMDM.model_diagrams.Customer.Email",
+                        "fromEntityShape": "CustomerMDM.model_diagrams.Customer.Validation"
+                    },
+                    {
+                        "bendPoints": [],
+                        "reference": "CustomerMDM.references.ValidationHasExternalID",
+                        "toEntityShape": "CustomerMDM.model_diagrams.Customer.ExternalID",
+                        "fromEntityShape": "CustomerMDM.model_diagrams.Customer.Validation"
                     }
                 ],
                 "label": "Customer",
@@ -1564,7 +1684,10 @@
         "modelPrivGrants": [
             {
                 "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT",
+                "allowApiPublishingAsUser": true,
+                "dataAdminRole": true,
                 "description": "Reviews requests of the division and resolves data-quality issues.",
+                "integrationWsRole": true,
                 "label": "Local data steward Italy",
                 "roleName": "DataStewardIT",
                 "entityPrivGrants": [
@@ -1572,9 +1695,9 @@
                         "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT.Individual",
                         "entity": "CustomerMDM.entities.Individual.Individual",
                         "checkoutAllowed": true,
-                        "createAllowed": false,
-                        "defaultAccessType": "READ",
-                        "deleteAllowed": false,
+                        "createAllowed": true,
+                        "defaultAccessType": "READ_WRITE",
+                        "deleteAllowed": true,
                         "exportAllowed": true,
                         "filter": "Any IndividualAccount have (FID_Country = 'IT')",
                         "removeAllowed": false
@@ -3130,11 +3253,1234 @@
                     "label": "Sales Entity",
                     "searchable": true
                 }
+            },
+            {
+                "qualifiedName": "CustomerMDM.references.ValidationHasAddress",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "CustomerMDM.entities.Validation.Validation",
+                "fromRoleName": "Validation",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "VALIDATION_ID_ADDR",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "CustomerMDM.entities.Address.Address",
+                "toRoleName": "Address",
+                "toRolePhysicalName": "ADDRESS_ID",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Validation",
+                "fromRolePluralLabel": "Validations",
+                "label": "Validation Has Address",
+                "toRoleLabel": "Address",
+                "foreignAttribute": {
+                    "qualifiedName": "CustomerMDM.references.ValidationHasAddress.Address",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "ADDRESS_ID",
+                    "entity": "CustomerMDM.entities.Address.Address",
+                    "label": "Address",
+                    "searchable": true
+                }
+            },
+            {
+                "qualifiedName": "CustomerMDM.references.ValidationHasCompany",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "CustomerMDM.entities.Validation.Validation",
+                "fromRoleName": "Validation",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "VALIDATION_ID_COMP",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "CustomerMDM.entities.Company.Company",
+                "toRoleName": "Company",
+                "toRolePhysicalName": "COMPANY_ID",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Validation",
+                "fromRolePluralLabel": "Validations",
+                "label": "Validation Has Company",
+                "toRoleLabel": "Company",
+                "foreignAttribute": {
+                    "qualifiedName": "CustomerMDM.references.ValidationHasCompany.Company",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "COMPANY_ID",
+                    "entity": "CustomerMDM.entities.Company.Company",
+                    "label": "Company",
+                    "searchable": true
+                }
+            },
+            {
+                "qualifiedName": "CustomerMDM.references.ValidationHasEmail",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "CustomerMDM.entities.Validation.Validation",
+                "fromRoleName": "Validation",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "VALIDATION_ID_EMAIL",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "CustomerMDM.entities.Email.Email",
+                "toRoleName": "Email",
+                "toRolePhysicalName": "EMAIL_ID",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Validation",
+                "fromRolePluralLabel": "Validations",
+                "label": "Validation Has Email",
+                "toRoleLabel": "Email",
+                "foreignAttribute": {
+                    "qualifiedName": "CustomerMDM.references.ValidationHasEmail.Email",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "EMAIL_ID",
+                    "entity": "CustomerMDM.entities.Email.Email",
+                    "label": "Email",
+                    "searchable": true
+                }
+            },
+            {
+                "qualifiedName": "CustomerMDM.references.ValidationHasExternalID",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "CustomerMDM.entities.Validation.Validation",
+                "fromRoleName": "Validation",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "VALIDATION_ID_EXTID",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "CustomerMDM.entities.ExternalID.ExternalID",
+                "toRoleName": "ExternalID",
+                "toRolePhysicalName": "EXTID_ID",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Validation",
+                "fromRolePluralLabel": "Validations",
+                "label": "Validation Has External ID",
+                "toRoleLabel": "External ID",
+                "foreignAttribute": {
+                    "qualifiedName": "CustomerMDM.references.ValidationHasExternalID.ExternalID",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "EXTID_ID",
+                    "entity": "CustomerMDM.entities.ExternalID.ExternalID",
+                    "label": "External ID",
+                    "searchable": true
+                }
+            },
+            {
+                "qualifiedName": "CustomerMDM.references.ValidationHasIndividual",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "CustomerMDM.entities.Validation.Validation",
+                "fromRoleName": "Validation",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "VALIDATION_ID_IND",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "CustomerMDM.entities.Individual.Individual",
+                "toRoleName": "Individual",
+                "toRolePhysicalName": "INDIVIDUAL_ID",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Validation",
+                "fromRolePluralLabel": "Validations",
+                "label": "Validation Has Individual",
+                "toRoleLabel": "Individual",
+                "foreignAttribute": {
+                    "qualifiedName": "CustomerMDM.references.ValidationHasIndividual.Individual",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "INDIVIDUAL_ID",
+                    "entity": "CustomerMDM.entities.Individual.Individual",
+                    "label": "Individual",
+                    "searchable": true
+                }
+            },
+            {
+                "qualifiedName": "CustomerMDM.references.ValidationHasIndividualContext",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "CustomerMDM.entities.Validation.Validation",
+                "fromRoleName": "Validation",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "VALIDATION_ID_ICTX",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                "toRoleName": "IndividualContext",
+                "toRolePhysicalName": "INDIVIDUAL_CONTEXT_ID",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Validation",
+                "fromRolePluralLabel": "Validations",
+                "label": "Validation Has Individual Context",
+                "toRoleLabel": "Individual Context",
+                "foreignAttribute": {
+                    "qualifiedName": "CustomerMDM.references.ValidationHasIndividualContext.IndividualContext",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "INDIVIDUAL_CONTEXT_ID",
+                    "entity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                    "label": "Individual Context",
+                    "searchable": true
+                }
+            },
+            {
+                "qualifiedName": "CustomerMDM.references.ValidationHasPhone",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "CustomerMDM.entities.Validation.Validation",
+                "fromRoleName": "Validation",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "VALIDATION_ID_PHONE",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "CustomerMDM.entities.Phone.Phone",
+                "toRoleName": "Phone",
+                "toRolePhysicalName": "PHONE_ID",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Validation",
+                "fromRolePluralLabel": "Validations",
+                "label": "Validation Has Phone",
+                "toRoleLabel": "Phone",
+                "foreignAttribute": {
+                    "qualifiedName": "CustomerMDM.references.ValidationHasPhone.Phone",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "PHONE_ID",
+                    "entity": "CustomerMDM.entities.Phone.Phone",
+                    "label": "Phone",
+                    "searchable": true
+                }
             }
         ],
         "userDefinedTypes": [],
         "workflows": [],
         "entities": [
+            {
+                "qualifiedName": "CustomerMDM.entities.Validation.Validation",
+                "dataEntryAllowed": true,
+                "historizeGolden": false,
+                "historizeMaster": false,
+                "description": "",
+                "documentation": "",
+                "enableDelete": true,
+                "entityType": "BASIC",
+                "iconUrl": "images://mdi/account-check.svg",
+                "label": "Validation",
+                "physicalTableName": "VALIDATION",
+                "pluralLabel": "Validation",
+                "pkAttributes": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Validation.Validation.ValidationID",
+                        "_type": "PKAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "mandatory": true,
+                        "multiValued": false,
+                        "physicalColName": "VALIDATION_ID",
+                        "valueSeparator": "",
+                        "idGenerationType": "MANUAL",
+                        "label": "Validation ID",
+                        "length": 32,
+                        "searchable": true
+                    }
+                ],
+                "atomicAttributes": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Validation.Validation.ValidationProcessID",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": true,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "PRE_CONSO",
+                        "multiValued": false,
+                        "physicalColName": "VALIDATION_PROCESS_ID",
+                        "valueSeparator": "",
+                        "label": "Validation Process ID",
+                        "length": 32,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Validation.Validation.LiableParty",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "CustomerMDM.list_of_values.LiableParty",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "PRE_CONSO",
+                        "mandatory": true,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "PRE_CONSO",
+                        "multiValued": false,
+                        "physicalColName": "LIABLE_PARTY",
+                        "valueSeparator": "",
+                        "label": "Liable Party",
+                        "length": 16,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Validation.Validation.ValidatedBy",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": true,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "PRE_CONSO",
+                        "multiValued": false,
+                        "physicalColName": "VALIDATED_BY",
+                        "valueSeparator": "",
+                        "label": "Validated By",
+                        "length": 16,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Validation.Validation.ValidationDate",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "Date",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": true,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "PRE_CONSO",
+                        "multiValued": false,
+                        "physicalColName": "VALIDATION_DATE",
+                        "valueSeparator": "",
+                        "label": "Validation Date",
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Validation.Validation.ValidationMethod",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "CustomerMDM.list_of_values.ValidationMethod",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "PRE_CONSO",
+                        "mandatory": true,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "PRE_CONSO",
+                        "multiValued": false,
+                        "physicalColName": "VALIDATION_METHOD",
+                        "valueSeparator": "",
+                        "label": "Validation Method",
+                        "length": 32,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Validation.Validation.ExpiryDate",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "Date",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": true,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "PRE_CONSO",
+                        "multiValued": false,
+                        "physicalColName": "EXPIRY_DATE",
+                        "valueSeparator": "",
+                        "label": "Expiry Date",
+                        "searchable": true
+                    }
+                ],
+                "complexAttributes": [],
+                "abstractRowCheckConstraints": [],
+                "actionSets": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Validation.action_sets.ValidationActionSet",
+                        "defaultActionSet": true,
+                        "description": "",
+                        "label": "Validation Action Set",
+                        "actions": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.action_sets.ValidationActionSet.CreateAuthorValidations",
+                                "_type": "CreateAction",
+                                "description": "",
+                                "label": "Create",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "createdRecordType": "GOLDEN",
+                                "createMultiple": false,
+                                "stepper": "CustomerMDM.entities.Validation.steppers.AuthorValidations"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.action_sets.ValidationActionSet.EditAuthorValidations",
+                                "_type": "EditAction",
+                                "description": "",
+                                "label": "Edit",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "multipleSelectionAllowed": true,
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false,
+                                "stepper": "CustomerMDM.entities.Validation.steppers.AuthorValidations"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.action_sets.ValidationActionSet.MassUpdateAuthorValidations",
+                                "_type": "MassUpdateAction",
+                                "description": "",
+                                "label": "Mass Update",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "stepper": "CustomerMDM.entities.Validation.steppers.AuthorValidations",
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.action_sets.ValidationActionSet.Delete",
+                                "_type": "DeleteAction",
+                                "description": "",
+                                "label": "Delete",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "deleteType": "HARD_DELETE",
+                                "multipleSelectionAllowed": true,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.action_sets.ValidationActionSet.Export",
+                                "_type": "ExportAction",
+                                "description": "",
+                                "label": "Export",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.action_sets.ValidationActionSet.ImportAuthorValidations",
+                                "_type": "ImportAction",
+                                "description": "",
+                                "label": "Import",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "importedRecordType": "GOLDEN",
+                                "importMode": "CREATE_AND_UPDATE",
+                                "stepper": "CustomerMDM.entities.Validation.steppers.AuthorValidations"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.action_sets.ValidationActionSet.BrowseGraph",
+                                "_type": "BrowseGraphAction",
+                                "description": "",
+                                "label": "Browse Graph",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            }
+                        ]
+                    }
+                ],
+                "businessObjectViews": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Validation.business_views.ValidationBusinessView",
+                        "displayRootNodeAs": "ICON_LABEL",
+                        "enableHierarchyView": false,
+                        "filter": "1 = 1",
+                        "rootBoViewEntity": "CustomerMDM.entities.Validation.business_views.ValidationBusinessView.Validation",
+                        "rootDescription": "",
+                        "rootLabel": "Validations",
+                        "rootPluralLabel": "Validations",
+                        "useHierarchyOnOpen": false,
+                        "visible": true,
+                        "boViewEntities": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.business_views.ValidationBusinessView.Validation",
+                                "collection": "CustomerMDM.entities.Validation.collection_views.ValidationCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.Validation.Validation",
+                                "form": "CustomerMDM.entities.Validation.forms.ValidationForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerMDM.entities.Validation.action_sets.ValidationActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Validation.business_views.ValidationBusinessView.Validation.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Validation.business_views.ValidationBusinessView.Validation.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Validation.business_views.ValidationBusinessView.Validation.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Validation.business_views.ValidationBusinessView.Validation.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "collections": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationCollectionView",
+                        "default": true,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Validation",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "CustomerMDM.entities.Validation.display_cards.ValidationDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationCollectionView.ValidationID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "ValidationID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationCollectionView.ValidationProcessID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "ValidationProcessID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationCollectionView.LiableParty",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "LiableParty",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationCollectionView.ValidatedBy",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "ValidatedBy",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationCollectionView.ValidationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "ValidationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationCollectionView.ValidationMethod",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "ValidationMethod",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationCollectionView.ExpiryDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "ExpiryDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationCollectionView.FDN_Individual",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "FDN_Individual",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Individual.Individual",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationCollectionView.FDN_Company",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "FDN_Company",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Company.Company",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationCollectionView.FDN_IndividualContext",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "FDN_IndividualContext",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationCollectionView.FDN_Address",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "FDN_Address",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Address.Address",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationCollectionView.FDN_Email",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 11,
+                                "useCustomLabel": false,
+                                "value": "FDN_Email",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Email.Email",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationCollectionView.FDN_Phone",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 12,
+                                "useCustomLabel": false,
+                                "value": "FDN_Phone",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Phone.Phone",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationCollectionView.FDN_ExternalID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 13,
+                                "useCustomLabel": false,
+                                "value": "FDN_ExternalID",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.ExternalID.ExternalID",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView",
+                        "default": false,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Validation",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "CustomerMDM.entities.Validation.display_cards.ValidationDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView.ValidationID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "ValidationID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView.ValidationProcessID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "ValidationProcessID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView.LiableParty",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "LiableParty",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView.ValidatedBy",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "ValidatedBy",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView.ValidationDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "ValidationDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView.ValidationMethod",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "ValidationMethod",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView.ExpiryDate",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "ExpiryDate",
+                                "visibleByDefault": true,
+                                "valueDataType": "DATE",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView.PublisherID_Individual",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "PublisherID_Individual",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView.SourceID_Individual",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "SourceID_Individual",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView.PublisherID_Company",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "PublisherID_Company",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView.SourceID_Company",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "SourceID_Company",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView.FDN_IndividualContext",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 11,
+                                "useCustomLabel": false,
+                                "value": "FDN_IndividualContext",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView.FDN_Address",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 12,
+                                "useCustomLabel": false,
+                                "value": "FDN_Address",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Address.Address",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView.FDN_Email",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 13,
+                                "useCustomLabel": false,
+                                "value": "FDN_Email",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Email.Email",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView.FDN_Phone",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 14,
+                                "useCustomLabel": false,
+                                "value": "FDN_Phone",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.Phone.Phone",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView.FDN_ExternalID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 15,
+                                "useCustomLabel": false,
+                                "value": "FDN_ExternalID",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerMDM.entities.ExternalID.ExternalID",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "displayCards": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Validation.display_cards.ValidationDisplayCard",
+                        "avatarImageValueInterpreter": "LITERAL",
+                        "default": true,
+                        "primaryImageFallbackValueInterpreter": "LITERAL",
+                        "primaryImageValueInterpreter": "LITERAL",
+                        "avatarImageAlign": "MIDDLE_CENTER",
+                        "avatarImageMode": "FIT",
+                        "avatarImageSourceType": "URL",
+                        "primaryImageAlign": "MIDDLE_CENTER",
+                        "primaryImageFallbackSourceType": "URL",
+                        "primaryImageMode": "FIT",
+                        "primaryImageSourceType": "URL",
+                        "primaryTextExpression": "ValidationID"
+                    }
+                ],
+                "dupsManagers": [],
+                "enrichers": [],
+                "forms": [
+                    {
+                        "default": true,
+                        "qualifiedName": "CustomerMDM.entities.Validation.forms.ValidationForm",
+                        "formCharts": [],
+                        "formCollections": [],
+                        "formContainers": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation",
+                                "_type": "FormTab",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "visibleValueInterpreter": "LITERAL",
+                                "displayFormTabAs": "LABEL",
+                                "label": "Validation",
+                                "visibleValue": "1"
+                            }
+                        ],
+                        "formDashboards": [],
+                        "formFields": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation.ValidationID",
+                                "_type": "FormField",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "ValidationID",
+                                "parentFormContainer": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation.ValidationProcessID",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "ValidationProcessID",
+                                "parentFormContainer": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation.LiableParty",
+                                "_type": "FormField",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "LiableParty",
+                                "parentFormContainer": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation.ValidatedBy",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "ValidatedBy",
+                                "parentFormContainer": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation.ValidationDate",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "ValidationDate",
+                                "parentFormContainer": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation",
+                                "valueDataType": "DATE",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation.ValidationMethod",
+                                "_type": "FormField",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "ValidationMethod",
+                                "parentFormContainer": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation.ExpiryDate",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "ExpiryDate",
+                                "parentFormContainer": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation",
+                                "valueDataType": "DATE",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation.FDN_Individual",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "FDN_Individual",
+                                "parentFormContainer": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation",
+                                "referencedEntity": "CustomerMDM.entities.Individual.Individual",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation.FDN_Company",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "FDN_Company",
+                                "parentFormContainer": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation",
+                                "referencedEntity": "CustomerMDM.entities.Company.Company",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation.FDN_IndividualContext",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "FDN_IndividualContext",
+                                "parentFormContainer": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation",
+                                "referencedEntity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation.FDN_Address",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "FDN_Address",
+                                "parentFormContainer": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation",
+                                "referencedEntity": "CustomerMDM.entities.Address.Address",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation.FDN_Email",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 11,
+                                "useCustomLabel": false,
+                                "value": "FDN_Email",
+                                "parentFormContainer": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation",
+                                "referencedEntity": "CustomerMDM.entities.Email.Email",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation.FDN_Phone",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 12,
+                                "useCustomLabel": false,
+                                "value": "FDN_Phone",
+                                "parentFormContainer": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation",
+                                "referencedEntity": "CustomerMDM.entities.Phone.Phone",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation.FDN_ExternalID",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 13,
+                                "useCustomLabel": false,
+                                "value": "FDN_ExternalID",
+                                "parentFormContainer": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation",
+                                "referencedEntity": "CustomerMDM.entities.ExternalID.ExternalID",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "searchForms": [],
+                "steppers": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Validation.steppers.AuthorValidations",
+                        "label": "Validations",
+                        "rootCollectionStep": "CustomerMDM.entities.Validation.steppers.AuthorValidations.Validations",
+                        "steps": [
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.steppers.AuthorValidations.Validations",
+                                "_type": "CollectionStep",
+                                "canFinishSubLevel": true,
+                                "childDeleteType": "HARD_DELETE",
+                                "childImportModeOnParentEdit": "CREATE_AND_UPDATE",
+                                "collectionView": "CustomerMDM.entities.Validation.collection_views.ValidationImportCollectionView",
+                                "createChildUsingManyToManyPicker": false,
+                                "customSortEnabled": false,
+                                "defaultDisplayType": "TABLE",
+                                "displayGridAllowed": false,
+                                "displayListAllowed": true,
+                                "displayTableAllowed": true,
+                                "enableChildCopyOnParentCreate": false,
+                                "enableChildCopyOnParentEdit": false,
+                                "enableChildCreationOnParentCreate": false,
+                                "enableChildCreationOnParentEdit": false,
+                                "enableChildDeleteOnParentEdit": false,
+                                "enableChildEditOnParentCreate": false,
+                                "enableChildEditOnParentEdit": false,
+                                "enableChildExport": false,
+                                "enableChildImportOnParentCreate": true,
+                                "enableChildImportOnParentEdit": false,
+                                "enableChildRemoveOnParentCreate": false,
+                                "enableChildRemoveOnParentEdit": false,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "formFieldsMode": "AUTO",
+                                "linear": false,
+                                "manyToManyCustomSortEnabled": false,
+                                "manyToManyDefaultDisplayType": "GRID",
+                                "manyToManyDisplayGridAllowed": false,
+                                "manyToManyDisplayListAllowed": false,
+                                "manyToManyDisplayTableAllowed": false,
+                                "manyToManyUserDefinedSortEnabled": false,
+                                "skipToChildCreationOnParentCreate": false,
+                                "skipToChildEditingOnParentEdit": false,
+                                "useCustomCollectionLabel": false,
+                                "userDefinedSortEnabled": true,
+                                "label": "Validations"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Validation.steppers.AuthorValidations.Validations.Validation",
+                                "_type": "FormStep",
+                                "canFinishSubLevel": true,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "enableMasterValuePicking": false,
+                                "formFieldsMode": "AUTO",
+                                "formTab": "CustomerMDM.entities.Validation.forms.ValidationForm.Validation",
+                                "label": "Validation",
+                                "parentCollectionStep": "CustomerMDM.entities.Validation.steppers.AuthorValidations.Validations"
+                            }
+                        ]
+                    }
+                ],
+                "survivorshipRules": [],
+                "uniqueKeys": [],
+                "fuzzyLookupRules": []
+            },
             {
                 "qualifiedName": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
                 "dataEntryAllowed": true,

@@ -1,0 +1,22 @@
+_name: ValidationHasAddress
+_type: Reference
+_package: CustomerMDM.references
+label: Validation Has Address
+deletePropagation: RESTRICT
+fromEntity: CustomerMDM.entities.Validation.Validation
+fromRoleLabel: Validation
+fromRoleName: Validation
+fromRolePluralLabel: Validations
+physicalName: VALIDATION_ID_ADDR
+toEntity: CustomerMDM.entities.Address.Address
+toRoleLabel: Address
+toRoleName: Address
+toRolePhysicalName: ADDRESS_ID
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  entity: CustomerMDM.entities.Address.Address
+  _name: Address
+  label: Address
+  physicalName: ADDRESS_ID
+  searchable: true

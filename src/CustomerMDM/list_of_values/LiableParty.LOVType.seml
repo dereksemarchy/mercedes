@@ -1,0 +1,10 @@
+_name: LiableParty
+_type: LOVType
+_package: CustomerMDM.list_of_values
+label: Liable Party
+length: 16
+lovValues:
+  - label: INTERNAL
+    code: INTERNAL
+  - label: EXTERNAL
+    code: EXTERNAL

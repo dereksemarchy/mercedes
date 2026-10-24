@@ -1,0 +1,12 @@
+_name: ValidationMethod
+_type: LOVType
+_package: CustomerMDM.list_of_values
+label: Validation Method
+length: 32
+lovValues:
+  - label: POST_IDENT
+    code: POST_IDENT
+  - label: VALIDATION_AT_POINT_OF_SALE
+    code: VALIDATION_AT_POINT_OF_SALE
+  - label: TECHNICAL
+    code: TECHNICAL

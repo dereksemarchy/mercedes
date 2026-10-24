@@ -1,0 +1,22 @@
+_name: ValidationHasExternalID
+_type: Reference
+_package: CustomerMDM.references
+label: Validation Has External ID
+deletePropagation: RESTRICT
+fromEntity: CustomerMDM.entities.Validation.Validation
+fromRoleLabel: Validation
+fromRoleName: Validation
+fromRolePluralLabel: Validations
+physicalName: VALIDATION_ID_EXTID
+toEntity: CustomerMDM.entities.ExternalID.ExternalID
+toRoleLabel: External ID
+toRoleName: ExternalID
+toRolePhysicalName: EXTID_ID
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  entity: CustomerMDM.entities.ExternalID.ExternalID
+  _name: ExternalID
+  label: External ID
+  physicalName: EXTID_ID
+  searchable: true

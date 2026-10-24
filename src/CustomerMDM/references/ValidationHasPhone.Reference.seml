@@ -1,0 +1,22 @@
+_name: ValidationHasPhone
+_type: Reference
+_package: CustomerMDM.references
+label: Validation Has Phone
+deletePropagation: RESTRICT
+fromEntity: CustomerMDM.entities.Validation.Validation
+fromRoleLabel: Validation
+fromRoleName: Validation
+fromRolePluralLabel: Validations
+physicalName: VALIDATION_ID_PHONE
+toEntity: CustomerMDM.entities.Phone.Phone
+toRoleLabel: Phone
+toRoleName: Phone
+toRolePhysicalName: PHONE_ID
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  entity: CustomerMDM.entities.Phone.Phone
+  _name: Phone
+  label: Phone
+  physicalName: PHONE_ID
+  searchable: true

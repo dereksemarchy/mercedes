@@ -1,0 +1,79 @@
+_package: CustomerMDM.entities.Validation
+_type: Entity
+_name: Validation
+label: Validation
+pluralLabel: Validation
+physicalTableName: VALIDATION
+iconUrl: images://mdi/account-check.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: ValidationID
+    label: Validation ID
+    physicalName: VALIDATION_ID
+    dataType: String
+    length: 32
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: ValidationProcessID
+    label: Validation Process ID
+    physicalName: VALIDATION_PROCESS_ID
+    dataType: String
+    length: 32
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: LiableParty
+    label: Liable Party
+    physicalName: LIABLE_PARTY
+    dataType: CustomerMDM.list_of_values.LiableParty
+    length: 16
+    mandatory: true
+    searchable: true
+    lovValidationScope: PRE_CONSO
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: ValidatedBy
+    label: Validated By
+    physicalName: VALIDATED_BY
+    dataType: String
+    length: 16
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: ValidationDate
+    label: Validation Date
+    physicalName: VALIDATION_DATE
+    dataType: Date
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: ValidationMethod
+    label: Validation Method
+    physicalName: VALIDATION_METHOD
+    dataType: CustomerMDM.list_of_values.ValidationMethod
+    length: 32
+    mandatory: true
+    searchable: true
+    lovValidationScope: PRE_CONSO
+    mandatoryValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: ExpiryDate
+    label: Expiry Date
+    physicalName: EXPIRY_DATE
+    dataType: Date
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+sourceIdGeneration:
+  mode: MANUAL
+primaryKey: CustomerMDM.entities.Validation.Validation.ValidationID
+entityType: BASIC

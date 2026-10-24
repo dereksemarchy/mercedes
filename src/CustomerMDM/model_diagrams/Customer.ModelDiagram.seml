@@ -164,6 +164,16 @@ entityShapes:
       y: 200
     height: 180
     width: 320
+  - _type: EntityShape
+    _name: Validation
+    entity: CustomerMDM.entities.Validation.Validation
+    borderColor: "#0000FF"
+    fontTitleColor: "#FFFFFF"
+    position:
+      x: 400
+      y: 900
+    height: 360
+    width: 320
 referenceLinks:
   - bendPoints: []
     reference: CustomerMDM.references.CountryLanguageHasCountry
@@ -203,4 +213,18 @@ referenceLinks:
     reference: CustomerMDM.references.SalesEntityRelHasIndividualContext
   - bendPoints: []
     reference: CustomerMDM.references.SalesEntityRelHasSalesEntity
+  - bendPoints: []
+    reference: CustomerMDM.references.ValidationHasIndividual
+  - bendPoints: []
+    reference: CustomerMDM.references.ValidationHasCompany
+  - bendPoints: []
+    reference: CustomerMDM.references.ValidationHasIndividualContext
+  - bendPoints: []
+    reference: CustomerMDM.references.ValidationHasPhone
+  - bendPoints: []
+    reference: CustomerMDM.references.ValidationHasAddress
+  - bendPoints: []
+    reference: CustomerMDM.references.ValidationHasEmail
+  - bendPoints: []
+    reference: CustomerMDM.references.ValidationHasExternalID
 inheritLinks: []

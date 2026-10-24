@@ -135,6 +135,13 @@ globalSearchConfig:
     maxResults: 100
     viewType: "GD"
     searchTypeConfig: CustomerMDM.entities.SalesEntityRel.business_views.SalesEntityRelBusinessView.SalesEntityRel.TextConfig
+  - _type: GlobalSearchBoView
+    _name: Validation
+    label: Validation
+    businessView: CustomerMDM.entities.Validation.business_views.ValidationBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: CustomerMDM.entities.Validation.business_views.ValidationBusinessView.Validation.TextConfig
 navDrawer:
   - _type: FolderNavGroup
     _name: RootFolder
@@ -303,6 +310,13 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: Sales Entity Relationship
+      - _type: BrowseBusinessViewAction
+        _name: Validation
+        businessView: CustomerMDM.entities.Validation.business_views.ValidationBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Validation
     - _type : FolderAction
       _name: ReferenceData
       label: Reference Data

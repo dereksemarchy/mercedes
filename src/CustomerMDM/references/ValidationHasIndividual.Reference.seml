@@ -1,0 +1,22 @@
+_name: ValidationHasIndividual
+_type: Reference
+_package: CustomerMDM.references
+label: Validation Has Individual
+deletePropagation: RESTRICT
+fromEntity: CustomerMDM.entities.Validation.Validation
+fromRoleLabel: Validation
+fromRoleName: Validation
+fromRolePluralLabel: Validations
+physicalName: VALIDATION_ID_IND
+toEntity: CustomerMDM.entities.Individual.Individual
+toRoleLabel: Individual
+toRoleName: Individual
+toRolePhysicalName: INDIVIDUAL_ID
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  entity: CustomerMDM.entities.Individual.Individual
+  _name: Individual
+  label: Individual
+  physicalName: INDIVIDUAL_ID
+  searchable: true

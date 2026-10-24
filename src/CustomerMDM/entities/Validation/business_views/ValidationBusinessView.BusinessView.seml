@@ -1,0 +1,36 @@
+_package: CustomerMDM.entities.Validation.business_views
+_type: BusinessView
+_name: ValidationBusinessView
+entity: CustomerMDM.entities.Validation.Validation
+rootLabel: Validations
+rootPluralLabel: Validations
+displayRootNodeAs: ICON_LABEL
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: Validation
+  entity: CustomerMDM.entities.Validation.Validation
+  actionSet: CustomerMDM.entities.Validation.action_sets.ValidationActionSet
+  collection: CustomerMDM.entities.Validation.collection_views.ValidationCollectionView
+  form: CustomerMDM.entities.Validation.forms.ValidationForm
+  outlineVisible: false
+  displayRecordCount: ALWAYS
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+  overrideDefaultSort: false
+  enableUserDefinedSort: true
+  listAllowed: true
+  tableAllowed: true
+  gridAllowed: true
+enableHierarchyView: false
+useHierarchyOnOpen: false

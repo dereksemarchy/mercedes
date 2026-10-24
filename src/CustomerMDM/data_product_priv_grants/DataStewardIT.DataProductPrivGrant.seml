@@ -4,16 +4,19 @@ _type: DataProductPrivGrant
 roleName: DataStewardIT
 label: Local data steward Italy
 description: Reviews requests of the division and resolves data-quality issues.
+allowApiPublishingAsUser: true
+integrationWsRole: true
+dataAdminRole: true
 entityPrivGrants:
 - _type: EntityPrivGrant
   entity: CustomerMDM.entities.Individual.Individual
   _name: Individual
   checkoutAllowed: true
-  createAllowed: false
-  deleteAllowed: false
+  createAllowed: true
+  deleteAllowed: true
   exportAllowed: true
   removeAllowed: false
-  defaultAccessType: READ
+  defaultAccessType: READ_WRITE
   # filter: Any IndividualAccount have (:V_USER_COUNTRY = FID_Country)
   filter: Any IndividualAccount have (FID_Country = 'IT')  
 - _type: EntityPrivGrant

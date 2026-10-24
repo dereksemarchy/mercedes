@@ -1,0 +1,22 @@
+_name: ValidationHasCompany
+_type: Reference
+_package: CustomerMDM.references
+label: Validation Has Company
+deletePropagation: RESTRICT
+fromEntity: CustomerMDM.entities.Validation.Validation
+fromRoleLabel: Validation
+fromRoleName: Validation
+fromRolePluralLabel: Validations
+physicalName: VALIDATION_ID_COMP
+toEntity: CustomerMDM.entities.Company.Company
+toRoleLabel: Company
+toRoleName: Company
+toRolePhysicalName: COMPANY_ID
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  entity: CustomerMDM.entities.Company.Company
+  _name: Company
+  label: Company
+  physicalName: COMPANY_ID
+  searchable: true

@@ -1,0 +1,91 @@
+_package: CustomerMDM.entities.Validation.forms
+_type: Form
+_name: ValidationForm
+entity: CustomerMDM.entities.Validation.Validation
+default: true
+formTabs:
+  - _type: FormTab
+    _name: Validation
+    label: Validation
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    content:
+      - _type: IdField
+        _name: ValidationID
+        value: ValidationID
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: ValidationProcessID
+        value: ValidationProcessID
+        useCustomLabel: false
+        dataType: STRING
+      - _type: MenuField
+        _name: LiableParty
+        value: LiableParty
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: ValidatedBy
+        value: ValidatedBy
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: ValidationDate
+        value: ValidationDate
+        useCustomLabel: false
+        dataType: DATE
+      - _type: MenuField
+        _name: ValidationMethod
+        value: ValidationMethod
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: ExpiryDate
+        value: ExpiryDate
+        useCustomLabel: false
+        dataType: DATE
+      - _type: ReferenceField
+        _name: FDN_Individual
+        value: FDN_Individual
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.Individual.Individual
+      - _type: ReferenceField
+        _name: FDN_Company
+        value: FDN_Company
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.Company.Company
+      - _type: ReferenceField
+        _name: FDN_IndividualContext
+        value: FDN_IndividualContext
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.IndividualContext.IndividualContext
+      - _type: ReferenceField
+        _name: FDN_Address
+        value: FDN_Address
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.Address.Address
+      - _type: ReferenceField
+        _name: FDN_Email
+        value: FDN_Email
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.Email.Email
+      - _type: ReferenceField
+        _name: FDN_Phone
+        value: FDN_Phone
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.Phone.Phone
+      - _type: ReferenceField
+        _name: FDN_ExternalID
+        value: FDN_ExternalID
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: CustomerMDM.entities.ExternalID.ExternalID

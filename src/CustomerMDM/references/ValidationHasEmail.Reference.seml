@@ -1,0 +1,22 @@
+_name: ValidationHasEmail
+_type: Reference
+_package: CustomerMDM.references
+label: Validation Has Email
+deletePropagation: RESTRICT
+fromEntity: CustomerMDM.entities.Validation.Validation
+fromRoleLabel: Validation
+fromRoleName: Validation
+fromRolePluralLabel: Validations
+physicalName: VALIDATION_ID_EMAIL
+toEntity: CustomerMDM.entities.Email.Email
+toRoleLabel: Email
+toRoleName: Email
+toRolePhysicalName: EMAIL_ID
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  entity: CustomerMDM.entities.Email.Email
+  _name: Email
+  label: Email
+  physicalName: EMAIL_ID
+  searchable: true
