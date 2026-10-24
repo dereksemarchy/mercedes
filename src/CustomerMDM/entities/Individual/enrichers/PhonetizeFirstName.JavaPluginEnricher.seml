@@ -1,0 +1,24 @@
+_name: PhonetizeFirstName
+_type: JavaPluginEnricher
+_package: CustomerMDM.entities.Individual.enrichers
+entity: CustomerMDM.entities.Individual.Individual
+label: Phonetize First Name
+description: >
+  Generates a phonetic representation of the FirstName using the Metaphone algorithm.
+pluginId: com.semarchy.engine.plugins.convergence.text
+batchUpdateSize: 1
+numberOfRetry: 0
+onErrorBehavior: FAIL_JOB
+enricherExecutionScope: PRE_CONSO
+processingBatchSize: 1
+threadPoolSize: 1
+pluginParams:
+  - paramName: PARAM_TRANSFO_TYPE
+    value: PHONETIC METAPHONE
+pluginInputs:
+  - inputName: IN_TEXT
+    expression: NormalizedFirstName
+pluginOutputs:
+  - outputName: OUT_TRANSFORMED_TEXT
+    attributeName: PhoneticFirstName
+afterEnrichers: CustomerMDM.entities.Individual.enrichers.NormalizeLastName

@@ -68,6 +68,20 @@ tableColumns:
     columnAlign: LEFT
     visibleByDefault: true
   - _type: TextColumn
+    _name: PhoneticFirstName
+    value: PhoneticFirstName
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: PhoneticLastName
+    value: PhoneticLastName
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
     _name: NickName
     value: NickName
     useCustomLabel: false

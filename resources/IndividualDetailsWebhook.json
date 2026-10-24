@@ -1,0 +1,25 @@
+{
+  "name": "IndividualDetailsWebhook",
+  "description": "Demo: push certified IndividualDetails to a webhook sink",
+  "lowBatchId": "5568",
+  "namedQuery": "IndividualDetailsWebhook",
+  "runAsUser": "semadmin",
+  "namedQueryViewType": "GD",
+  "rootRecordsLimit": "1000",
+  "namedQueryParams": {
+    "PREVIOUS_BATCH": { "type": "VARIABLE", "value": "LOW_BATCH_ID" },
+    "CURRENT_BATCH": { "type": "VARIABLE", "value": "HIGH_BATCH_ID" }
+  },
+  "triggerActive": true,
+  "triggerType": "ON_BATCH_COMPLETE",
+  "cronExpression": "",
+  "recordsPerMessage": "",
+  "notifyOnEmptyDataset": true,
+  "maxRetries": "1",
+  "retryInterval": "10",
+  "targetType": "REST",
+  "rest": {
+    "requestUrl": "https://webhook.site/c072b680-8aa6-4418-bab4-6714fd5fccf1",
+    "httpTimeout": "30"
+  }
+}

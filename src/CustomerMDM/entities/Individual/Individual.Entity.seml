@@ -92,6 +92,22 @@ attributes:
     mandatory: false
     searchable: true
     length: 128
+  - _type: EntityAttribute
+    _name: PhoneticFirstName
+    label: Phonetic First Name
+    physicalName: PHONETIC_FIRST_NAME
+    dataType: String
+    mandatory: false
+    searchable: true
+    length: 128
+  - _type: EntityAttribute
+    _name: PhoneticLastName
+    label: Phonetic Last Name
+    physicalName: PHONETIC_LAST_NAME
+    dataType: String
+    mandatory: false
+    searchable: true
+    length: 128
 sourceIdGeneration:
   mode: MANUAL
 primaryKey: CustomerMDM.entities.Individual.Individual.IndividualID
@@ -121,10 +137,16 @@ matcher:
       condition: Record1.FirstName = Record2.FirstName AND Record1.LastName = Record2.LastName AND Record1.Birthday = Record2.Birthday
       matchScore: 99
       usingMatchOn: false
+    # - _type: SemQLMatchRule
+    #   _name: SimilarNameAndSameBirthday
+    #   label: Similar Name And Same Birthday
+    #   condition: ( SEM_EDIT_DISTANCE_SIMILARITY( Record1.FirstName, Record2.FirstName ) > 75 AND SEM_EDIT_DISTANCE_SIMILARITY(Record1.LastName, Record2.LastName ) > 75 ) AND Record1.Birthday = Record2.Birthday
+    #   matchScore: 70
+    #   usingMatchOn: false
     - _type: SemQLMatchRule
-      _name: SimilarNameAndSameBirthday
-      label: Similar Name And Same Birthday
-      condition: ( SEM_EDIT_DISTANCE_SIMILARITY( Record1.FirstName, Record2.FirstName ) > 75 AND SEM_EDIT_DISTANCE_SIMILARITY(Record1.LastName, Record2.LastName ) > 75 ) AND Record1.Birthday = Record2.Birthday
+      _name: SamePhoneticNameAndSameBirthday
+      label: Same Phonetic Name And Same Birthday
+      condition: Record1.PhoneticFirstName = Record2.PhoneticFirstName AND Record1.PhoneticLastName = Record2.PhoneticLastName AND Record1.Birthday = Record2.Birthday
       matchScore: 70
       usingMatchOn: false
   useTransitiveMatchScore: true

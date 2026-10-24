@@ -1,0 +1,24 @@
+_name: PhonetizeLastName
+_type: JavaPluginEnricher
+_package: CustomerMDM.entities.Individual.enrichers
+entity: CustomerMDM.entities.Individual.Individual
+label: Phonetize Last Name
+description: >
+  Generates a phonetic representation of the LastName using the Metaphone algorithm.
+pluginId: com.semarchy.engine.plugins.convergence.text
+batchUpdateSize: 1
+numberOfRetry: 0
+onErrorBehavior: FAIL_JOB
+enricherExecutionScope: PRE_CONSO
+processingBatchSize: 1
+threadPoolSize: 1
+pluginParams:
+  - paramName: PARAM_TRANSFO_TYPE
+    value: PHONETIC METAPHONE
+pluginInputs:
+  - inputName: IN_TEXT
+    expression: NormalizedLastName
+pluginOutputs:
+  - outputName: OUT_TRANSFORMED_TEXT
+    attributeName: PhoneticLastName
+afterEnrichers: CustomerMDM.entities.Individual.enrichers.PhonetizeFirstName

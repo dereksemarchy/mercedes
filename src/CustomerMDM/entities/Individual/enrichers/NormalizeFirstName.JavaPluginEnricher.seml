@@ -2,7 +2,14 @@ _name: NormalizeFirstName
 _type: JavaPluginEnricher
 _package: CustomerMDM.entities.Individual.enrichers
 entity: CustomerMDM.entities.Individual.Individual
-label: Normalize First Name 
+label: Normalize First Name (English / Korean)
+description: >
+  Builds a script-neutral match key from FirstName. Hangul is romanized
+  (Hangul-Latin), any remaining accents/special Latin letters are reduced to
+  ASCII (Latin-ASCII), then the result is normalized (case folding, width,
+  dash and space folding). The LETTERS filter drops spaces, hyphens and
+  punctuation so "Min-jun", "Min Jun", "MINJUN" and "민준" give the same key.
+  The original FirstName is left untouched.
 enricherExecutionScope: PRE_CONSO 
 condition: FirstName is not null
 pluginId: com.semarchy.engine.plugins.convergence.text

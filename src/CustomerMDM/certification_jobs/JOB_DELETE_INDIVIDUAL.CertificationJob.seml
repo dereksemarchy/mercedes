@@ -1,0 +1,62 @@
+_name: JOB_DELETE_INDIVIDUAL
+_type: CertificationJob
+_package: CustomerMDM.certification_jobs
+jobType: INTEGRATION
+queueName: Default
+modelTasks:
+  - _type: ModelJobTask
+    entity: CustomerMDM.entities.Individual.Individual
+    _name: Individual
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    matchEnabled: true
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true
+  - _type: ModelJobTask
+    entity: CustomerMDM.entities.IndividualContext.IndividualContext
+    _name: IndividualContext
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true
+  - _type: ModelJobTask
+    entity: CustomerMDM.entities.Address.Address
+    _name: Address
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true
+  - _type: ModelJobTask
+    entity: CustomerMDM.entities.Phone.Phone
+    _name: Phone
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true
+  - _type: ModelJobTask
+    entity: CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext
+    _name: EmailIndividualContext
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true
+  - _type: ModelJobTask
+    entity: CustomerMDM.entities.Email.Email
+    _name: Email
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true
+jobParams:
+  - _name: PARAM_ANALYZE_STATS
+    _type: ModelJobParam
+    value: "1"          # 0 = skip statistics collection, 1 = collect (default)
+  - _name: PARAM_ENABLE_DELETE_PHASE
+    _type: ModelJobParam
+    value: "1"          # 0 = disable delete phase, 1 = enable delete phase (default)

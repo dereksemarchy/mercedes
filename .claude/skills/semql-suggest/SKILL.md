@@ -287,6 +287,9 @@ documentation or your prior assumption, it wins.
   the steward *why* a record is in the queue. Both really are validated at build: a wrong attribute inside the
   block fails with `invalid qualified name: MasterRecords.<x>`. Applies to any matched entity (FUZZY_MATCHED or
   ID_MATCHED), and the population re-evaluates itself on every load — no stored flag to maintain.
+  **Also usable in a `NamedQuery`** (build-validated, CLI 2.0): an `ObjectProperty` `type: MULTI_RECORDS`,
+  `semQlExpression: MasterRecords`, whose `targetObject` is a `QueryObject` on the **same entity** exposing
+  `PublisherID`, `SourceID` and the entity's attributes — returns the golden record's masters (runtime to confirm).
   **Scope limit, build-validated: the lineage arrays exist ONLY in the VIEW contexts.** The CLI injects them
   through `addMastersLineage`, called by the GD / GE / GH4B view builders alone — so `MasterRecords` is absent
   from the MD and SD contexts, and it is rejected outright in a **DisplayCard** expression and in a

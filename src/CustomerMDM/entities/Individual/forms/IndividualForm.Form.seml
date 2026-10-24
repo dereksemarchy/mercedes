@@ -49,6 +49,16 @@ formTabs:
         useCustomLabel: false
         dataType: STRING
       - _type: TextField
+        _name: PhoneticFirstName
+        value: PhoneticFirstName
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: PhoneticLastName
+        value: PhoneticLastName
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
         _name: NickName
         value: NickName
         useCustomLabel: false
