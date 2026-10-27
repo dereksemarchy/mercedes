@@ -120,23 +120,51 @@ matcher:
   _name: Matcher
   description: IndividualSemQLMatcher
   matchRules:
+    - _type: SemQLMatchRule
+      _name: SameNameBirthdayAndEmailAddress
+      label: Same Name, Birthday And Email Address
+      condition: Record1.Email.EmailAddress = Record2.Email.EmailAddress
+      matchScore: 100
+      usingMatchOn: true
+      matchOnExpression: IndividualContext.EmailIndividualContext
+      binningExpressions:
+        - expression: IndividualContext.Individual.FirstName
+        - expression: IndividualContext.Individual.LastName
+        - expression: IndividualContext.Individual.Birthday
     # - _type: SemQLMatchRule
-    #   _name: SameNameBirthdayAndEmailAddress
-    #   label: Same Name, Birthday And Email Address
-    #   condition: Record1.EmailAddress = Record2.EmailAddress
-    #   matchScore: 100
+    #   _name: ExactNameAndBirthday
+    #   label: Exact Name And Birthday
+    #   condition: Record1.FirstName = Record2.FirstName AND Record1.LastName = Record2.LastName AND Record1.Birthday = Record2.Birthday
+    #   matchScore: 99
+    #   usingMatchOn: false
+    # - _type: SemQLMatchRule
+    #   _name: ExactNameAndBirthdayForUS
+    #   label: Exact Name And Birthday For US
+    #   condition: |-
+    #     Record1.FirstName = Record2.FirstName
+    #     AND Record1.LastName = Record2.LastName
+    #     AND Record1.Birthday = Record2.Birthday
+    #     AND any Record1.IndividualContext.SalesEntityRel have (
+    #       SalesEntity.Country.CountryCode = 'US'
+    #       AND any ParentRecord.Record2.IndividualContext.SalesEntityRel have (
+    #         SalesEntity.GCID = ParentRecord.SalesEntity.GCID
+    #       )
+    #     )
+    #   matchScore: 99
     #   usingMatchOn: true
-    #   matchOnExpression: IndividualContext.EmailIndividualContext
+    # - _type: SemQLMatchRule
+    #   _name: ExactNameAndBirthdayForUS
+    #   label: Exact Name And Birthday For US
+    #   matchScore: 99
+    #   usingMatchOn: true
+    #   condition: Record1.SalesEntity.GCID = Record2.SalesEntity.GCID
+    #     AND Record1.SalesEntity.Country.CountryCode = 'US'
+    #     AND Record2.SalesEntity.Country.CountryCode = 'US'
+    #   matchOnExpression: IndividualContext.SalesEntityRel
     #   binningExpressions:
     #     - expression: IndividualContext.Individual.FirstName
     #     - expression: IndividualContext.Individual.LastName
     #     - expression: IndividualContext.Individual.Birthday
-    - _type: SemQLMatchRule
-      _name: ExactNameAndBirthday
-      label: Exact Name And Birthday
-      condition: Record1.FirstName = Record2.FirstName AND Record1.LastName = Record2.LastName AND Record1.Birthday = Record2.Birthday
-      matchScore: 99
-      usingMatchOn: false
     # - _type: SemQLMatchRule
     #   _name: SimilarNameAndSameBirthday
     #   label: Similar Name And Same Birthday
@@ -147,7 +175,7 @@ matcher:
       _name: SamePhoneticNameAndSameBirthday
       label: Same Phonetic Name And Same Birthday
       condition: Record1.PhoneticFirstName = Record2.PhoneticFirstName AND Record1.PhoneticLastName = Record2.PhoneticLastName AND Record1.Birthday = Record2.Birthday
-      matchScore: 70
+      matchScore: 60
       usingMatchOn: false
   useTransitiveMatchScore: true
   useMultiIterationGrouping: true

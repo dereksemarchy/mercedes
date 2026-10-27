@@ -2,8 +2,12 @@ _package: CustomerMDM.applications
 _type: Application
 _name: Customer
 label: Customer MDM
+# label: Customer MDM (DEV)
 visibility: VISIBLE
 applicationTitle: Customer MDM
+# applicationTitle: Customer MDM (DEV)
+description: Customer MDM
+# description: Development environment for Customer MDM
 avatarImageUrl: https://car-brand-names.com/wp-content/uploads/2015/05/Mercedes-Benz-Logo-1933-720x405.png
 logoUrl: https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-4-logo-png-transparent.png
 coverImageUrl: https://mercedes-benz-media.co.uk/assets/images/thumbnail/48568-mercedes-cla-250e-0012.jpg

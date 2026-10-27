@@ -13,7 +13,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"Postman\",\r\n  \"loadDescription\": \"Load Individual\",\r\n  \"jobName\": \"JOB_INDIVIDUAL\",\r\n  \"submitAs\": \"derek.leung@semarchy.com\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY_AND_RECORDS\",\r\n    \"persistMode\": \"ALWAYS\",\r\n    \"defaultPublisherId\": \"CRM\",\r\n    \"optionsPerEntity\": {\r\n      \"Individual\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      }\r\n    },\r\n    \"missingIdBehavior\": \"GENERATE\"\r\n  },\r\n  \"persistRecords\": {\r\n    \"Individual\": [\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"1234567890\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Stewart\",\r\n            \"LastName\": \"Hadley\",\r\n            \"NickName\": \"Stewart\",\r\n            \"Birthday\": \"1980-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"1234567891\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Trevor\",\r\n            \"LastName\": \"Dobbin\",\r\n            \"NickName\": \"Trevor\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        }\r\n    ]\r\n  }\r\n}",
+          "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"Postman\",\r\n  \"loadDescription\": \"Load Individual\",\r\n  \"jobName\": \"JOB_INDIVIDUAL\",\r\n  \"submitAs\": \"derek.leung@semarchy.com\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY_AND_RECORDS\",\r\n    \"persistMode\": \"ALWAYS\",\r\n    \"defaultPublisherId\": \"CRM\",\r\n    \"optionsPerEntity\": {\r\n      \"Individual\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      }\r\n    },\r\n    \"missingIdBehavior\": \"GENERATE\"\r\n  },\r\n  \"persistRecords\": {\r\n    \"Individual\": [\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"1234567890\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Stewart\",\r\n            \"LastName\": \"Hadley\",\r\n            \"NickName\": \"Stewart\",\r\n            \"Birthday\": \"1980-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"1234567891\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Trevor\",\r\n            \"LastName\": \"Dobbin\",\r\n            \"NickName\": \"Trevor\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"1234567892\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Michael\",\r\n            \"LastName\": \"Dobbon\",\r\n            \"NickName\": \"Michael\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"1234567893\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Michael\",\r\n            \"LastName\": \"Dobbin\",\r\n            \"NickName\": \"Michael\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        }\r\n    ]\r\n  }\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -169,6 +169,148 @@
       "response": []
     },
     {
+      "name": "Count Individuals",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/count/CustomerMDM/Individual/GD",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "count",
+            "CustomerMDM",
+            "Individual",
+            "GD"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Count Individuals DataStewardIT",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "8elxNlR.Ct8X9FwkWY4w39t62YL0Y757TD6R61gMdIR",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "Api-Key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/count/CustomerMDM/Individual/GD",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "count",
+            "CustomerMDM",
+            "Individual",
+            "GD"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reprocess Individual DataStewardIT",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "8elxNlR.Ct8X9FwkWY4w39t62YL0Y757TD6R61gMdIR",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "Api-Key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"recertify\",\r\n  \"loadDescription\": \"Reprocess Italy Individuals\",\r\n  \"jobName\": \"JOB_INDIVIDUAL\",\r\n  \"reprocessRecords\": {\r\n    \"Individual\": \"Any IndividualAccount have (FID_Country = 'IT')\"\r\n  },\r\n  \"reprocessOptions\": {\r\n    \"optionsPerEntity\": {\r\n      \"Individual\": { \"reprocessMatching\": true }\r\n    }\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Get IndividualDetails",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -222,6 +364,63 @@
       "response": []
     },
     {
+      "name": "Get IndividualDetailsWithGCID",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/named-query/CustomerMDM/IndividualDetailsWithGCID/GD?FirstName=Paoletta&LastName=Galilei&Email=paoletta.galilei.002@example.test&GCID=GC000051",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "named-query",
+            "CustomerMDM",
+            "IndividualDetailsWithGCID",
+            "GD"
+          ],
+          "query": [
+            {
+              "key": "FirstName",
+              "value": "Paoletta"
+            },
+            {
+              "key": "LastName",
+              "value": "Galilei"
+            },
+            {
+              "key": "Email",
+              "value": "paoletta.galilei.002@example.test"
+            },
+            {
+              "key": "GCID",
+              "value": "GC000051"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Create Load",
       "request": {
         "method": "POST",
@@ -250,6 +449,41 @@
             "rest",
             "loads",
             "CustomerMDM"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Set Data Location Status",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"status\": \"DL_READY\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/data-locations/CustomerMDM/set-status",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "data-locations",
+            "CustomerMDM",
+            "set-status"
           ]
         }
       },
@@ -353,7 +587,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"action\": \"CANCEL\"\r\n}",
+          "raw": "{\r\n  \"action\": \"KILL\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -361,7 +595,7 @@
           }
         },
         "url": {
-          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM/645",
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM/3240",
           "protocol": "https",
           "host": [
             "poc-mercedes",
@@ -375,7 +609,7 @@
             "rest",
             "loads",
             "CustomerMDM",
-            "645"
+            "3240"
           ]
         }
       },
@@ -420,6 +654,78 @@
       "response": []
     },
     {
+      "name": "Get API Keys",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/admin/api-keys",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "admin",
+            "api-keys"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete API Key",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/admin/api-keys/lVHD1UW",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "admin",
+            "api-keys",
+            "lVHD1UW"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "List jobs",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -458,7 +764,7 @@
       "response": []
     },
     {
-      "name": "Get Batch ID",
+      "name": "Query existing loads PROCESSING",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -475,7 +781,7 @@
           }
         },
         "url": {
-          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM/",
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM?$loadStatus=PROCESSING",
           "protocol": "https",
           "host": [
             "poc-mercedes",
@@ -488,8 +794,170 @@
             "api",
             "rest",
             "loads",
+            "CustomerMDM"
+          ],
+          "query": [
+            {
+              "key": "$loadStatus",
+              "value": "PROCESSING"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Query existing loads SCHEDULED",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Query existing loads DONE",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM?$loadStatus=DONE",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM"
+          ],
+          "query": [
+            {
+              "key": "$loadStatus",
+              "value": "DONE"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Execution ID",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/data-locations/CustomerMDM/integration-batches/5567",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "data-locations",
             "CustomerMDM",
-            ""
+            "integration-batches",
+            "5567"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Execution ID Details",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/admin/job-executions/fb20d5eb-819a-4e18-829f-fe1b0a0cbf74",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "admin",
+            "job-executions",
+            "fb20d5eb-819a-4e18-829f-fe1b0a0cbf74"
           ]
         }
       },
@@ -501,7 +969,7 @@
     "apikey": [
       {
         "key": "value",
-        "value": "lVHD1UW.OdmUCq6uvo4kZJRhv_UNHWoVgV6ZN_f7M3W",
+        "value": "_gPvTnp.d_7rMz12dRwY5MsyD2Kg83iZazSx7dcBWC8",
         "type": "string"
       },
       {

@@ -2,7 +2,7 @@ _name: EmailIndividualContextHasEmail
 _type: Reference
 _package: CustomerMDM.references
 label: Email Individual Context Has Email
-deletePropagation: RESTRICT
+deletePropagation: CASCADE
 fromEntity: CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext
 fromRoleLabel: Email Individual Context
 fromRoleName: EmailIndividualContext

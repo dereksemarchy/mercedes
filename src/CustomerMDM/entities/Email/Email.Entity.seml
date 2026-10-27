@@ -73,6 +73,6 @@ attributes:
     searchable: true
 sourceIdGeneration:
   mode: SEQUENCE
-  startWith: 1
+  startWith: 100000
 primaryKey: CustomerMDM.entities.Email.Email.EmailID
 entityType: BASIC

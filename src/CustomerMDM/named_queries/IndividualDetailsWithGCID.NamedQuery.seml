@@ -5,7 +5,10 @@ active: true
 description: Returns each individual with its accounts, its contexts (addresses, emails, phones and sales entity relationships) and its internal and external identifiers.
 rootQueryObject: CustomerMDM.named_queries.IndividualDetailsWithGCID.Individual
 # filter: FirstName = :QUERY_PARAM_FIRST_NAME AND LastName = :QUERY_PARAM_LAST_NAME AND any IndividualContext have (any EmailIndividualContext have (Email.EmailAddress = :QUERY_PARAM_EMAIL))
-filter: FirstName = :QUERY_PARAM_FIRST_NAME AND LastName = :QUERY_PARAM_LAST_NAME AND any IndividualContext have (any EmailIndividualContext have (Email.EmailAddress = :QUERY_PARAM_EMAIL)) AND any IndividualContext have (any SalesEntityRel have (FID_SalesEntity = :QUERY_PARAM_GCID))
+filter: FirstName = :QUERY_PARAM_FIRST_NAME 
+  AND LastName = :QUERY_PARAM_LAST_NAME 
+  AND any IndividualContext have (any EmailIndividualContext have (Email.EmailAddress = :QUERY_PARAM_EMAIL)) 
+  AND any IndividualContext have (any SalesEntityRel have (FID_SalesEntity = :QUERY_PARAM_GCID))
 queryObjects:
   - _type: QueryObject
     _name: Individual

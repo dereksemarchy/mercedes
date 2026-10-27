@@ -2,6 +2,7 @@
     "dataHubModelSchemaVersion": "1.2.0",
     "dataHubModel": {
         "qualifiedName": "CustomerMDM",
+        "description": "Customer MDM",
         "label": "Customer MDM",
         "modelConfiguration": {
             "type": "POSTGRESQL"
@@ -40,6 +41,7 @@
                 "lineageEnabled": true,
                 "logoUrl": "https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-4-logo-png-transparent.png",
                 "visibility": "VISIBLE",
+                "description": "Customer MDM",
                 "label": "Customer MDM",
                 "sortStrategy": "POSITION",
                 "documentationConfig": {
@@ -1754,8 +1756,8 @@
                         "sourceValidationEnabled": true
                     },
                     {
-                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.EmailIndividualContext",
-                        "entity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.Email",
+                        "entity": "CustomerMDM.entities.Email.Email",
                         "consolidatedDataEnrichmentEnabled": true,
                         "consolidationEnabled": true,
                         "postConsoValidationEnabled": true,
@@ -1763,8 +1765,8 @@
                         "sourceValidationEnabled": true
                     },
                     {
-                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.Email",
-                        "entity": "CustomerMDM.entities.Email.Email",
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.EmailIndividualContext",
+                        "entity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
                         "consolidatedDataEnrichmentEnabled": true,
                         "consolidationEnabled": true,
                         "postConsoValidationEnabled": true,
@@ -3488,7 +3490,7 @@
             {
                 "qualifiedName": "CustomerMDM.references.EmailIndividualContextHasEmail",
                 "brokenValidationLabel": "",
-                "deletePropagation": "RESTRICT",
+                "deletePropagation": "CASCADE",
                 "fromEntity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
                 "fromRoleName": "EmailIndividualContext",
                 "mandatoryValidationLabel": "",
@@ -3515,7 +3517,7 @@
             {
                 "qualifiedName": "CustomerMDM.references.EmailIndividualContextHasIndividualContext",
                 "brokenValidationLabel": "",
-                "deletePropagation": "RESTRICT",
+                "deletePropagation": "CASCADE",
                 "fromEntity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
                 "fromRoleName": "EmailIndividualContext",
                 "mandatoryValidationLabel": "",
@@ -10702,16 +10704,28 @@
                     "description": "IndividualSemQLMatcher",
                     "matchRules": [
                         {
-                            "qualifiedName": "CustomerMDM.entities.Individual.Individual.Matcher.ExactNameAndBirthday",
-                            "condition": "Record1.FirstName = Record2.FirstName AND Record1.LastName = Record2.LastName AND Record1.Birthday = Record2.Birthday",
-                            "matchScore": 99,
-                            "label": "Exact Name And Birthday",
-                            "usingMatchOn": false
+                            "qualifiedName": "CustomerMDM.entities.Individual.Individual.Matcher.SameNameBirthdayAndEmailAddress",
+                            "condition": "Record1.Email.EmailAddress = Record2.Email.EmailAddress",
+                            "matchScore": 100,
+                            "binningExpressions": [
+                                {
+                                    "expression": "IndividualContext.Individual.FirstName"
+                                },
+                                {
+                                    "expression": "IndividualContext.Individual.LastName"
+                                },
+                                {
+                                    "expression": "IndividualContext.Individual.Birthday"
+                                }
+                            ],
+                            "label": "Same Name, Birthday And Email Address",
+                            "matchOnExpression": "IndividualContext.EmailIndividualContext",
+                            "usingMatchOn": true
                         },
                         {
                             "qualifiedName": "CustomerMDM.entities.Individual.Individual.Matcher.SamePhoneticNameAndSameBirthday",
                             "condition": "Record1.PhoneticFirstName = Record2.PhoneticFirstName AND Record1.PhoneticLastName = Record2.PhoneticLastName AND Record1.Birthday = Record2.Birthday",
-                            "matchScore": 70,
+                            "matchScore": 60,
                             "label": "Same Phonetic Name And Same Birthday",
                             "usingMatchOn": false
                         }
@@ -14894,7 +14908,7 @@
                         "physicalColName": "EMAIL_ID",
                         "valueSeparator": "",
                         "idGenerationType": "SEQUENCE",
-                        "idSequenceStartsWith": 1,
+                        "idSequenceStartsWith": 100000,
                         "label": "Email ID",
                         "precision": 38,
                         "searchable": true
