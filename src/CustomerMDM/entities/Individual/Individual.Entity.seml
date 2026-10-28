@@ -124,6 +124,12 @@ matcher:
       _name: SameNameBirthdayAndEmailAddress
       label: Same Name, Birthday And Email Address
       condition: Record1.Email.EmailAddress = Record2.Email.EmailAddress
+        # AND NOT any Record1.IndividualContext.SalesEntityRel have (
+        #   SalesEntity.Country.CountryCode = 'US'
+        # )
+        # AND NOT any Record2.IndividualContext.SalesEntityRel have (
+        #   SalesEntity.Country.CountryCode = 'US'
+        # )
       matchScore: 100
       usingMatchOn: true
       matchOnExpression: IndividualContext.EmailIndividualContext

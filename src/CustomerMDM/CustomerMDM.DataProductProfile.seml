@@ -1,8 +1,8 @@
 _type: DataProductProfile
 _package: CustomerMDM
 _name: CustomerMDM
-# label: Customer MDM (DEV)
-# description: Development environment for Customer MDM
+#label: Customer MDM (DEV)
+#description: Development environment for Customer MDM
 label: Customer MDM
 description: Customer MDM
 modelConfiguration:

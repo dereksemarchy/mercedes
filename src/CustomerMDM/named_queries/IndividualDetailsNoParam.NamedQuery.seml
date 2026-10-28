@@ -1,0 +1,152 @@
+_name: IndividualDetailsNoParam
+_type: NamedQuery
+_package: CustomerMDM.named_queries
+active: true
+description: Returns each individual with its accounts, its contexts (addresses, emails, phones and sales entity relationships) and its internal and external identifiers.
+rootQueryObject: CustomerMDM.named_queries.IndividualDetailsNoParam.Individual
+# filter: FirstName = :QUERY_PARAM_FIRST_NAME AND LastName = :QUERY_PARAM_LAST_NAME AND any IndividualContext have (any EmailIndividualContext have (Email.EmailAddress = :QUERY_PARAM_EMAIL))
+queryObjects:
+  - _type: QueryObject
+    _name: Individual
+    entity: CustomerMDM.entities.Individual.Individual
+    description: The individual (golden record) at the root of the query.
+    objectProperties:
+      - {_type: ObjectProperty, _name: IndividualID, type: VALUE, semQlExpression: IndividualID}
+      - {_type: ObjectProperty, _name: Gender, type: VALUE, semQlExpression: Gender}
+      - {_type: ObjectProperty, _name: Salutation, type: VALUE, semQlExpression: Salutation}
+      - {_type: ObjectProperty, _name: FirstName, type: VALUE, semQlExpression: FirstName}
+      - {_type: ObjectProperty, _name: LastName, type: VALUE, semQlExpression: LastName}
+      - {_type: ObjectProperty, _name: NickName, type: VALUE, semQlExpression: NickName}
+      - {_type: ObjectProperty, _name: Birthday, type: VALUE, semQlExpression: Birthday}
+      - {_type: ObjectProperty, _name: NameComponents, type: VALUE, semQlExpression: NameComponents}
+      - _type: ObjectProperty
+        _name: IndividualAccounts
+        type: MULTI_RECORDS
+        semQlExpression: IndividualAccount
+        targetObject: CustomerMDM.named_queries.IndividualDetailsNoParam.IndividualAccount
+      - _type: ObjectProperty
+        _name: IndividualContexts
+        type: MULTI_RECORDS
+        semQlExpression: IndividualContext
+        targetObject: CustomerMDM.named_queries.IndividualDetailsNoParam.IndividualContext
+      - _type: ObjectProperty
+        _name: InternalIDs
+        type: MULTI_RECORDS
+        semQlExpression: InternalID
+        targetObject: CustomerMDM.named_queries.IndividualDetailsNoParam.InternalID
+      - _type: ObjectProperty
+        _name: ExternalIDs
+        type: MULTI_RECORDS
+        semQlExpression: ExternalID
+        targetObject: CustomerMDM.named_queries.IndividualDetailsNoParam.ExternalID
+  - _type: QueryObject
+    _name: IndividualAccount
+    entity: CustomerMDM.entities.IndividualAccount.IndividualAccount
+    description: Accounts held by the individual.
+    objectProperties:
+      - {_type: ObjectProperty, _name: IndividualAccountID, type: VALUE, semQlExpression: IndividualAccountID}
+      - {_type: ObjectProperty, _name: CiamID, type: VALUE, semQlExpression: CiamID}
+  - _type: QueryObject
+    _name: IndividualContext
+    entity: CustomerMDM.entities.IndividualContext.IndividualContext
+    description: Business contexts of the individual, with their contact points and sales entity relationships.
+    objectProperties:
+      - {_type: ObjectProperty, _name: IndividualContextID, type: VALUE, semQlExpression: IndividualContextID}
+      - {_type: ObjectProperty, _name: ContextType, type: VALUE, semQlExpression: ContextType}
+      - {_type: ObjectProperty, _name: BusinessRole, type: VALUE, semQlExpression: BusinessRole}
+      - {_type: ObjectProperty, _name: StartDate, type: VALUE, semQlExpression: StartDate}
+      - {_type: ObjectProperty, _name: EndDate, type: VALUE, semQlExpression: EndDate}
+      - _type: ObjectProperty
+        _name: Addresses
+        type: MULTI_RECORDS
+        semQlExpression: Address
+        targetObject: CustomerMDM.named_queries.IndividualDetailsNoParam.Address
+      - _type: ObjectProperty
+        _name: Emails
+        type: MULTI_RECORDS
+        semQlExpression: EmailIndividualContext
+        targetObject: CustomerMDM.named_queries.IndividualDetailsNoParam.EmailIndividualContext
+      - _type: ObjectProperty
+        _name: Phones
+        type: MULTI_RECORDS
+        semQlExpression: Phone
+        targetObject: CustomerMDM.named_queries.IndividualDetailsNoParam.Phone
+      - _type: ObjectProperty
+        _name: SalesEntityRelationships
+        type: MULTI_RECORDS
+        semQlExpression: SalesEntityRel
+        targetObject: CustomerMDM.named_queries.IndividualDetailsNoParam.SalesEntityRel
+  - _type: QueryObject
+    _name: Address
+    entity: CustomerMDM.entities.Address.Address
+    description: Postal addresses of the individual context.
+    objectProperties:
+      - {_type: ObjectProperty, _name: AddressID, type: VALUE, semQlExpression: AddressID}
+      - {_type: ObjectProperty, _name: Street, type: VALUE, semQlExpression: Street}
+      - {_type: ObjectProperty, _name: HouseNumber, type: VALUE, semQlExpression: HouseNumber}
+      - {_type: ObjectProperty, _name: PostalCode, type: VALUE, semQlExpression: PostalCode}
+      - {_type: ObjectProperty, _name: City, type: VALUE, semQlExpression: City}
+      - {_type: ObjectProperty, _name: AddressUsage, type: VALUE, semQlExpression: AddressUsage}
+      - {_type: ObjectProperty, _name: Primary, type: VALUE, semQlExpression: Primary}
+      - {_type: ObjectProperty, _name: InCriticalUse, type: VALUE, semQlExpression: InCriticalUse}
+  - _type: QueryObject
+    _name: EmailIndividualContext
+    entity: CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext
+    description: Email addresses of the individual context.
+    objectProperties:
+      - {_type: ObjectProperty, _name: EmailIndividualContextID, type: VALUE, semQlExpression: EmailIndividualContextID}
+      - {_type: ObjectProperty, _name: EmailID, type: VALUE, semQlExpression: Email.EmailID}
+      - {_type: ObjectProperty, _name: EmailAddress, type: VALUE, semQlExpression: Email.EmailAddress}
+      - {_type: ObjectProperty, _name: CleansedEmail, type: VALUE, semQlExpression: Email.CleansedEmail}
+      - {_type: ObjectProperty, _name: ValidEmailDomain, type: VALUE, semQlExpression: Email.ValidEmailDomain}
+      - {_type: ObjectProperty, _name: EmailUsage, type: VALUE, semQlExpression: Email.EmailUsage}
+      - {_type: ObjectProperty, _name: Primary, type: VALUE, semQlExpression: Email.Primary}
+      - {_type: ObjectProperty, _name: InCriticalUse, type: VALUE, semQlExpression: Email.InCriticalUse}
+  - _type: QueryObject
+    _name: Phone
+    entity: CustomerMDM.entities.Phone.Phone
+    description: Phone numbers of the individual context.
+    objectProperties:
+      - {_type: ObjectProperty, _name: PhoneID, type: VALUE, semQlExpression: PhoneID}
+      - {_type: ObjectProperty, _name: PhoneNumber, type: VALUE, semQlExpression: PhoneNumber}
+      - {_type: ObjectProperty, _name: StandardizedPhone, type: VALUE, semQlExpression: StandardizedPhone}
+      - {_type: ObjectProperty, _name: PhoneUsage, type: VALUE, semQlExpression: PhoneUsage}
+      - {_type: ObjectProperty, _name: Primary, type: VALUE, semQlExpression: Primary}
+      - {_type: ObjectProperty, _name: InCriticalUse, type: VALUE, semQlExpression: InCriticalUse}
+      - {_type: ObjectProperty, _name: StatusCode, type: VALUE, semQlExpression: StatusCode}
+      - {_type: ObjectProperty, _name: StatusText, type: VALUE, semQlExpression: StatusText}
+      - {_type: ObjectProperty, _name: PhoneGeocodingData, type: VALUE, semQlExpression: PhoneGeocodingData}
+  - _type: QueryObject
+    _name: SalesEntityRel
+    entity: CustomerMDM.entities.SalesEntityRel.SalesEntityRel
+    description: Relationships between the individual context and sales entities.
+    objectProperties:
+      - {_type: ObjectProperty, _name: SalesEntityRelID, type: VALUE, semQlExpression: SalesEntityRelID}
+      - {_type: ObjectProperty, _name: RelationshipType, type: VALUE, semQlExpression: RelationshipType}
+      - {_type: ObjectProperty, _name: StartDate, type: VALUE, semQlExpression: StartDate}
+      - {_type: ObjectProperty, _name: EndDate, type: VALUE, semQlExpression: EndDate}
+      - {_type: ObjectProperty, _name: GCID, type: VALUE, semQlExpression: SalesEntity.GCID}
+      - {_type: ObjectProperty, _name: SalesEntityName, type: VALUE, semQlExpression: SalesEntity.SalesEntityName}
+      - {_type: ObjectProperty, _name: LegalEntity, type: VALUE, semQlExpression: SalesEntity.LegalEntity}
+  - _type: QueryObject
+    _name: InternalID
+    entity: CustomerMDM.entities.InternalID.InternalID
+    description: Internal identifiers of the individual.
+    objectProperties:
+      - {_type: ObjectProperty, _name: InternalIDID, type: VALUE, semQlExpression: InternalIDID}
+      - {_type: ObjectProperty, _name: IdentifierKey, type: VALUE, semQlExpression: IdentifierKey}
+      - {_type: ObjectProperty, _name: IdentifierType, type: VALUE, semQlExpression: IdentifierType}
+      - {_type: ObjectProperty, _name: SourceSystem, type: VALUE, semQlExpression: SourceSystem}
+      - {_type: ObjectProperty, _name: StartDate, type: VALUE, semQlExpression: StartDate}
+      - {_type: ObjectProperty, _name: EndDate, type: VALUE, semQlExpression: EndDate}
+  - _type: QueryObject
+    _name: ExternalID
+    entity: CustomerMDM.entities.ExternalID.ExternalID
+    description: External identifiers of the individual.
+    objectProperties:
+      - {_type: ObjectProperty, _name: ExternalIDID, type: VALUE, semQlExpression: ExternalIDID}
+      - {_type: ObjectProperty, _name: IdentifierKey, type: VALUE, semQlExpression: IdentifierKey}
+      - {_type: ObjectProperty, _name: IdentifierType, type: VALUE, semQlExpression: IdentifierType}
+      - {_type: ObjectProperty, _name: DataSource, type: VALUE, semQlExpression: DataSource}
+      - {_type: ObjectProperty, _name: StartDate, type: VALUE, semQlExpression: StartDate}
+      - {_type: ObjectProperty, _name: EndDate, type: VALUE, semQlExpression: EndDate}
