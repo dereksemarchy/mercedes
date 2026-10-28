@@ -1,0 +1,28 @@
+_package: CustomerMDM.data_product_priv_grants
+_name: CriticalUseNotAllowed
+_type: DataProductPrivGrant
+roleName: CriticalUseNotAllowed
+label: CriticalUseNotAllowed
+description: If Address is CriticalUse cannot update
+allowApiPublishingAsUser: true
+integrationWsRole: true
+dataAdminRole: false
+entityPrivGrants:
+- _type: EntityPrivGrant
+  entity: CustomerMDM.entities.Address.Address
+  _name: AddressRead
+  exportAllowed: true
+  defaultAccessType: READ
+- _type: EntityPrivGrant
+  entity: CustomerMDM.entities.Address.Address
+  _name: AddressEditNotCritical
+  checkoutAllowed: true
+  createAllowed: false
+  deleteAllowed: false
+  removeAllowed: false
+  defaultAccessType: READ_WRITE
+  filter: InCriticalUse = '0' OR InCriticalUse IS NULL
+  attributePrivGrants:
+      # Finance cannot change the flag itself
+      - attribute: CustomerMDM.entities.Address.Address.InCriticalUse
+        accessType: READ

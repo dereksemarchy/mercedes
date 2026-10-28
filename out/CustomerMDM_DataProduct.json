@@ -1470,6 +1470,32 @@
         "modelEditionVariables": [],
         "modelJobs": [
             {
+                "qualifiedName": "CustomerMDM.certification_jobs.JOB_ADDRESS",
+                "jobType": "INTEGRATION",
+                "queueName": "Default",
+                "jobParams": [
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ADDRESS.PARAM_ANALYZE_STATS",
+                        "value": "0"
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ADDRESS.PARAM_ENABLE_DELETE_PHASE",
+                        "value": "0"
+                    }
+                ],
+                "modelTasks": [
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_ADDRESS.Address",
+                        "entity": "CustomerMDM.entities.Address.Address",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    }
+                ]
+            },
+            {
                 "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL",
                 "jobType": "INTEGRATION",
                 "queueName": "Default",
@@ -1623,6 +1649,78 @@
                     {
                         "qualifiedName": "CustomerMDM.certification_jobs.JOB_ALL.Validation",
                         "entity": "CustomerMDM.entities.Validation.Validation",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    }
+                ]
+            },
+            {
+                "qualifiedName": "CustomerMDM.certification_jobs.JOB_COMPANY",
+                "jobType": "INTEGRATION",
+                "queueName": "Default",
+                "jobParams": [
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_COMPANY.PARAM_ANALYZE_STATS",
+                        "value": "0"
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_COMPANY.PARAM_ENABLE_DELETE_PHASE",
+                        "value": "0"
+                    }
+                ],
+                "modelTasks": [
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_COMPANY.Company",
+                        "entity": "CustomerMDM.entities.Company.Company",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "matchEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_COMPANY.IndividualContext",
+                        "entity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_COMPANY.Address",
+                        "entity": "CustomerMDM.entities.Address.Address",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_COMPANY.Phone",
+                        "entity": "CustomerMDM.entities.Phone.Phone",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_COMPANY.Email",
+                        "entity": "CustomerMDM.entities.Email.Email",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_COMPANY.EmailIndividualContext",
+                        "entity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
                         "consolidatedDataEnrichmentEnabled": true,
                         "consolidationEnabled": true,
                         "postConsoValidationEnabled": true,
@@ -1811,6 +1909,39 @@
             }
         ],
         "modelPrivGrants": [
+            {
+                "qualifiedName": "CustomerMDM.data_product_priv_grants.CriticalUseNotAllowed",
+                "allowApiPublishingAsUser": true,
+                "dataAdminRole": false,
+                "description": "If Address is CriticalUse cannot update",
+                "integrationWsRole": true,
+                "label": "CriticalUseNotAllowed",
+                "roleName": "CriticalUseNotAllowed",
+                "entityPrivGrants": [
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.CriticalUseNotAllowed.AddressRead",
+                        "entity": "CustomerMDM.entities.Address.Address",
+                        "defaultAccessType": "READ",
+                        "exportAllowed": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.data_product_priv_grants.CriticalUseNotAllowed.AddressEditNotCritical",
+                        "entity": "CustomerMDM.entities.Address.Address",
+                        "attributePrivGrants": [
+                            {
+                                "attribute": "CustomerMDM.entities.Address.Address.InCriticalUse",
+                                "accessType": "READ"
+                            }
+                        ],
+                        "checkoutAllowed": true,
+                        "createAllowed": false,
+                        "defaultAccessType": "READ_WRITE",
+                        "deleteAllowed": false,
+                        "filter": "InCriticalUse = '0' OR InCriticalUse IS NULL",
+                        "removeAllowed": false
+                    }
+                ]
+            },
             {
                 "qualifiedName": "CustomerMDM.data_product_priv_grants.DataStewardIT",
                 "allowApiPublishingAsUser": true,
@@ -17944,6 +18075,23 @@
                                 ],
                                 "transitions": [
                                     {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts",
+                                        "transitionPath": "IndividualContext",
+                                        "useCustomLabel": true,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "enableHierarchy": "1",
+                                        "label": "Individual Context",
+                                        "pluralLabel": "Individual Contexts",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "any IndividualContext has (1=1)",
+                                        "transitionVisibleInterpreter": "SEMQL",
+                                        "visibleInFormTabCondition": "any IndividualContext has (1=1)"
+                                    },
+                                    {
                                         "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.InternalID",
                                         "enableHierarchyInterpreter": "LITERAL",
                                         "expandHierarchyByDefault": false,
@@ -18006,6 +18154,224 @@
                                         "transitionType": "FULLY_QUALIFIED",
                                         "transitionVisible": "1",
                                         "transitionVisibleInterpreter": "LITERAL"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts",
+                                "collection": "CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.IndividualContext.IndividualContext",
+                                "form": "CustomerMDM.entities.IndividualContext.forms.IndividualContextForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerMDM.entities.IndividualContext.action_sets.IndividualContextActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ],
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Addresses",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Addresses.Addresses",
+                                        "transitionPath": "Address",
+                                        "useCustomLabel": true,
+                                        "displayFormTabAs": "LABEL",
+                                        "enableHierarchy": "1",
+                                        "label": "Address",
+                                        "pluralLabel": "Addresses",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "any Address has (1=1)",
+                                        "transitionVisibleInterpreter": "SEMQL",
+                                        "visibleInFormTabCondition": "any Address has (1=1)"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Emails",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Emails.Emails",
+                                        "transitionPath": "EmailIndividualContext",
+                                        "useCustomLabel": true,
+                                        "displayFormTabAs": "LABEL",
+                                        "enableHierarchy": "1",
+                                        "label": "Email",
+                                        "pluralLabel": "Emails",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "any EmailIndividualContext has (1=1)",
+                                        "transitionVisibleInterpreter": "SEMQL",
+                                        "visibleInFormTabCondition": "any EmailIndividualContext has (1=1)"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Phones",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Phones.Phones",
+                                        "transitionPath": "Phone",
+                                        "useCustomLabel": true,
+                                        "displayFormTabAs": "LABEL",
+                                        "enableHierarchy": "1",
+                                        "label": "Phone",
+                                        "pluralLabel": "Phones",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "any Phone has (1=1)",
+                                        "transitionVisibleInterpreter": "SEMQL",
+                                        "visibleInFormTabCondition": "any Phone has (1=1)"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Addresses.Addresses",
+                                "collection": "CustomerMDM.entities.Address.collection_views.AddressCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.Address.Address",
+                                "form": "CustomerMDM.entities.Address.forms.AddressForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerMDM.entities.Address.action_sets.AddressActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Addresses.Addresses.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Addresses.Addresses.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Addresses.Addresses.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Addresses.Addresses.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Emails.Emails",
+                                "collection": "CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext",
+                                "form": "CustomerMDM.entities.EmailIndividualContext.forms.EmailIndividualContextForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerMDM.entities.EmailIndividualContext.action_sets.EmailIndividualContextActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Emails.Emails.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Emails.Emails.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Emails.Emails.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Emails.Emails.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ],
+                                "displayCard": "CustomerMDM.entities.EmailIndividualContext.display_cards.EmailIndividualContextAsIndividualDisplayCard"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Phones.Phones",
+                                "collection": "CustomerMDM.entities.Phone.collection_views.PhoneImportCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerMDM.entities.Phone.Phone",
+                                "form": "CustomerMDM.entities.Phone.forms.PhoneForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerMDM.entities.Phone.action_sets.PhoneActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Phones.Phones.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Phones.Phones.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Phones.Phones.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerMDM.entities.Company.business_views.CompanyBusinessView.Company.IndividualContexts.IndividualContexts.Phones.Phones.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
                                     }
                                 ]
                             },

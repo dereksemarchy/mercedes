@@ -125,6 +125,108 @@
       "response": []
     },
     {
+      "name": "Create Individual with Email",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"Postman\",\r\n  \"loadDescription\": \"Load Individual\",\r\n  \"jobName\": \"JOB_INDIVIDUAL\",\r\n  \"submitAs\": \"derek.leung@semarchy.com\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY_AND_RECORDS\",\r\n    \"persistMode\": \"ALWAYS\",\r\n    \"defaultPublisherId\": \"CRM\",\r\n    \"optionsPerEntity\": {\r\n      \"Individual\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"IndividualContext\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"EmailIndividualContext\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"Email\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      }\r\n    },\r\n    \"missingIdBehavior\": \"GENERATE\"\r\n  },\r\n  \"persistRecords\": {\r\n    \"Individual\": [\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"44444444\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Derek\",\r\n            \"LastName\": \"Leung\",\r\n            \"NickName\": \"Derek\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"44444445\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Derek\",\r\n            \"LastName\": \"Leung\",\r\n            \"NickName\": \"Derek\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"44444446\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Derek\",\r\n            \"LastName\": \"Leung\",\r\n            \"NickName\": \"Derek\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        }\r\n    ],\r\n    \"IndividualContext\": [\r\n    {\r\n    \"IndividualContextID\": \"CTX-444444\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"44444444\"\r\n    },\r\n   {\r\n    \"IndividualContextID\": \"CTX-444445\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"44444445\"\r\n    },\r\n   {\r\n    \"IndividualContextID\": \"CTX-444446\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"44444446\"\r\n    }\r\n    ],\r\n    \"Email\": [\r\n    {\r\n    \"EmailID\": 10000,\r\n    \"EmailAddress\": \"derek.leung@semarchy.com\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"EmailUsage\": \"BUSINESS;PRIVATE\"\r\n    },\r\n    {\r\n    \"EmailID\": 10001,\r\n    \"EmailAddress\": \"derek.leung@semarchy.com\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"EmailUsage\": \"BUSINESS;PRIVATE\"\r\n    },\r\n    {\r\n    \"EmailID\": 10002,\r\n    \"EmailAddress\": \"derek.leung@gmail.com\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"EmailUsage\": \"BUSINESS;PRIVATE\"\r\n    }\r\n    ],\r\n    \"EmailIndividualContext\": [\r\n    {\r\n    \"FID_Email\": 10000,\r\n    \"FID_IndividualContext\": \"CTX-444444\"\r\n    },\r\n    {\r\n    \"FID_Email\": 10001,\r\n    \"FID_IndividualContext\": \"CTX-444445\"\r\n    },\r\n    {\r\n    \"FID_Email\": 10002,\r\n    \"FID_IndividualContext\": \"CTX-444446\"\r\n    }\r\n    ]\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Individual with Email (DEV)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"Postman\",\r\n  \"loadDescription\": \"Load Individual\",\r\n  \"jobName\": \"JOB_INDIVIDUAL\",\r\n  \"submitAs\": \"derek.leung@semarchy.com\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY_AND_RECORDS\",\r\n    \"persistMode\": \"ALWAYS\",\r\n    \"defaultPublisherId\": \"CRM\",\r\n    \"optionsPerEntity\": {\r\n      \"Individual\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"IndividualContext\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"EmailIndividualContext\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"Email\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      }\r\n    },\r\n    \"missingIdBehavior\": \"GENERATE\"\r\n  },\r\n  \"persistRecords\": {\r\n    \"Individual\": [\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"44444444\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Derek\",\r\n            \"LastName\": \"Leung\",\r\n            \"NickName\": \"Derek\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"44444445\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Derek\",\r\n            \"LastName\": \"Leung\",\r\n            \"NickName\": \"Derek\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"44444446\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Derek\",\r\n            \"LastName\": \"Leung\",\r\n            \"NickName\": \"Derek\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        }\r\n    ],\r\n    \"IndividualContext\": [\r\n    {\r\n    \"IndividualContextID\": \"CTX-444444\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"44444444\"\r\n    },\r\n   {\r\n    \"IndividualContextID\": \"CTX-444445\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"44444445\"\r\n    },\r\n   {\r\n    \"IndividualContextID\": \"CTX-444446\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"44444446\"\r\n    }\r\n    ],\r\n    \"Email\": [\r\n    {\r\n    \"EmailID\": 10000,\r\n    \"EmailAddress\": \"derek.leung@semarchy.com\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"EmailUsage\": \"BUSINESS;PRIVATE\"\r\n    },\r\n    {\r\n    \"EmailID\": 10001,\r\n    \"EmailAddress\": \"derek.leung@semarchy.com\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"EmailUsage\": \"BUSINESS;PRIVATE\"\r\n    },\r\n    {\r\n    \"EmailID\": 10002,\r\n    \"EmailAddress\": \"derek.leung@gmail.com\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"EmailUsage\": \"BUSINESS;PRIVATE\"\r\n    }\r\n    ],\r\n    \"EmailIndividualContext\": [\r\n    {\r\n    \"FID_Email\": 10000,\r\n    \"FID_IndividualContext\": \"CTX-444444\"\r\n    },\r\n    {\r\n    \"FID_Email\": 10001,\r\n    \"FID_IndividualContext\": \"CTX-444445\"\r\n    },\r\n    {\r\n    \"FID_Email\": 10002,\r\n    \"FID_IndividualContext\": \"CTX-444446\"\r\n    }\r\n    ]\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM_DEV",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM_DEV"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Individual with Dealer (DEV)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"Postman\",\r\n  \"loadDescription\": \"Load Individual\",\r\n  \"jobName\": \"JOB_INDIVIDUAL\",\r\n  \"submitAs\": \"derek.leung@semarchy.com\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY_AND_RECORDS\",\r\n    \"persistMode\": \"ALWAYS\",\r\n    \"defaultPublisherId\": \"CRM\",\r\n    \"optionsPerEntity\": {\r\n      \"Individual\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"IndividualContext\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"EmailIndividualContext\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"Email\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      }\r\n    },\r\n    \"missingIdBehavior\": \"GENERATE\"\r\n  },\r\n  \"persistRecords\": {\r\n    \"Individual\": [\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"44444444\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Derek\",\r\n            \"LastName\": \"Leung\",\r\n            \"NickName\": \"Derek\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"44444445\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Derek\",\r\n            \"LastName\": \"Leung\",\r\n            \"NickName\": \"Derek\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"44444446\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Derek\",\r\n            \"LastName\": \"Leung\",\r\n            \"NickName\": \"Derek\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        }\r\n    ],\r\n    \"IndividualContext\": [\r\n    {\r\n    \"IndividualContextID\": \"CTX-444444\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"44444444\"\r\n    },\r\n   {\r\n    \"IndividualContextID\": \"CTX-444445\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"44444445\"\r\n    },\r\n   {\r\n    \"IndividualContextID\": \"CTX-444446\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"44444446\"\r\n    }\r\n    ],\r\n    \"Email\": [\r\n    {\r\n    \"EmailID\": 10000,\r\n    \"EmailAddress\": \"derek.leung@semarchy.com\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"EmailUsage\": \"BUSINESS;PRIVATE\"\r\n    },\r\n    {\r\n    \"EmailID\": 10001,\r\n    \"EmailAddress\": \"derek.leung@semarchy.com\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"EmailUsage\": \"BUSINESS;PRIVATE\"\r\n    },\r\n    {\r\n    \"EmailID\": 10002,\r\n    \"EmailAddress\": \"derek.leung@gmail.com\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"EmailUsage\": \"BUSINESS;PRIVATE\"\r\n    }\r\n    ],\r\n    \"EmailIndividualContext\": [\r\n    {\r\n    \"FID_Email\": 10000,\r\n    \"FID_IndividualContext\": \"CTX-444444\"\r\n    },\r\n    {\r\n    \"FID_Email\": 10001,\r\n    \"FID_IndividualContext\": \"CTX-444445\"\r\n    },\r\n    {\r\n    \"FID_Email\": 10002,\r\n    \"FID_IndividualContext\": \"CTX-444446\"\r\n    }\r\n    ]\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM_DEV",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM_DEV"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Load Template",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -364,6 +466,104 @@
       "response": []
     },
     {
+      "name": "Get IndividualDetails with Filtering",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/named-query/CustomerMDM/IndividualDetails/GD?FirstName=Paoletta&LastName=Galilei&Email=paoletta.galilei.002@example.test",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "named-query",
+            "CustomerMDM",
+            "IndividualDetails",
+            "GD"
+          ],
+          "query": [
+            {
+              "key": "FirstName",
+              "value": "Paoletta"
+            },
+            {
+              "key": "LastName",
+              "value": "Galilei"
+            },
+            {
+              "key": "Email",
+              "value": "paoletta.galilei.002@example.test"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get IndividualDetailsNoParam with Filtering",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/named-query/CustomerMDM/IndividualDetailsNoParam/GD?$f=Any IndividualContext have (any SalesEntityRel have (FID_SalesEntity = 'GC000058'))",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "named-query",
+            "CustomerMDM",
+            "IndividualDetailsNoParam",
+            "GD"
+          ],
+          "query": [
+            {
+              "key": "$f",
+              "value": "Any IndividualContext have (any SalesEntityRel have (FID_SalesEntity = 'GC000058'))"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Get IndividualDetailsWithGCID",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -469,7 +669,7 @@
           }
         },
         "url": {
-          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/data-locations/CustomerMDM/set-status",
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/data-locations/CustomerMDM_DEV/set-status",
           "protocol": "https",
           "host": [
             "poc-mercedes",
@@ -482,7 +682,7 @@
             "api",
             "rest",
             "data-locations",
-            "CustomerMDM",
+            "CustomerMDM_DEV",
             "set-status"
           ]
         }

@@ -34,6 +34,164 @@ rootBusinessViewEntity:
   gridAllowed: true
   transitions:
     - _type: BusinessViewTransition
+      _name: IndividualContexts
+      transitionPath: IndividualContext
+      transitionType: FULLY_QUALIFIED
+      useCustomLabel: true
+      pluralLabel: Individual Contexts
+      label: Individual Context
+      enableHierarchy: "1"
+      transitionVisible: any IndividualContext has (1=1)
+      displayFormTabAs: ICON_LABEL
+      transitionVisibleInterpreter: SEMQL
+      visibleInFormTabCondition: any IndividualContext has (1=1)
+      businessViewEntity:
+        _type: BusinessViewEntity
+        _name: IndividualContexts
+        entity: CustomerMDM.entities.IndividualContext.IndividualContext
+        actionSet: CustomerMDM.entities.IndividualContext.action_sets.IndividualContextActionSet
+        collection: CustomerMDM.entities.IndividualContext.collection_views.IndividualContextImportCollectionView
+        form: CustomerMDM.entities.IndividualContext.forms.IndividualContextForm
+        outlineVisible: false
+        displayRecordCount: ALWAYS
+        businessEntitySearchConfigs:
+          - _name: TextConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: TEXT
+          - _name: FormConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: BY_FORM
+          - _name: AdvancedConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: ADVANCED
+          - _name: SemqlConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: SEMQL
+        overrideDefaultSort: false
+        enableUserDefinedSort: true
+        listAllowed: true
+        tableAllowed: true
+        gridAllowed: true
+        transitions:
+        - _type: BusinessViewTransition
+          _name: Addresses
+          transitionPath: Address
+          transitionType: FULLY_QUALIFIED
+          useCustomLabel: true
+          pluralLabel: Addresses
+          label: Address
+          enableHierarchy: "1"
+          transitionVisible: any Address has (1=1)
+          displayFormTabAs: LABEL
+          transitionVisibleInterpreter: SEMQL
+          visibleInFormTabCondition: any Address has (1=1)
+          businessViewEntity:
+            _type: BusinessViewEntity
+            _name: Addresses
+            entity: CustomerMDM.entities.Address.Address
+            actionSet: CustomerMDM.entities.Address.action_sets.AddressActionSet
+            collection: CustomerMDM.entities.Address.collection_views.AddressCollectionView
+            form: CustomerMDM.entities.Address.forms.AddressForm
+            outlineVisible: false
+            displayRecordCount: ALWAYS
+            businessEntitySearchConfigs:
+              - _name: TextConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: TEXT
+              - _name: FormConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: BY_FORM
+              - _name: AdvancedConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: ADVANCED
+              - _name: SemqlConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: SEMQL
+            overrideDefaultSort: false
+            enableUserDefinedSort: true
+            listAllowed: true
+            tableAllowed: true
+            gridAllowed: true
+        - _type: BusinessViewTransition
+          _name: Emails
+          transitionPath: EmailIndividualContext
+          transitionType: FULLY_QUALIFIED
+          useCustomLabel: true
+          pluralLabel: Emails
+          label: Email
+          enableHierarchy: "1"
+          transitionVisible: any EmailIndividualContext has (1=1)
+          displayFormTabAs: LABEL
+          transitionVisibleInterpreter: SEMQL
+          visibleInFormTabCondition: any EmailIndividualContext has (1=1)
+          businessViewEntity:
+            _type: BusinessViewEntity
+            _name: Emails
+            entity: CustomerMDM.entities.EmailIndividualContext.EmailIndividualContext
+            actionSet: CustomerMDM.entities.EmailIndividualContext.action_sets.EmailIndividualContextActionSet
+            collection: CustomerMDM.entities.EmailIndividualContext.collection_views.EmailIndividualContextCollectionView
+            form: CustomerMDM.entities.EmailIndividualContext.forms.EmailIndividualContextForm
+            displayCard: CustomerMDM.entities.EmailIndividualContext.display_cards.EmailIndividualContextAsIndividualDisplayCard
+            outlineVisible: false
+            displayRecordCount: ALWAYS
+            businessEntitySearchConfigs:
+              - _name: TextConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: TEXT
+              - _name: FormConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: BY_FORM
+              - _name: AdvancedConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: ADVANCED
+              - _name: SemqlConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: SEMQL
+            overrideDefaultSort: false
+            enableUserDefinedSort: true
+            listAllowed: true
+            tableAllowed: true
+            gridAllowed: true
+        - _type: BusinessViewTransition
+          _name: Phones
+          transitionPath: Phone
+          transitionType: FULLY_QUALIFIED
+          useCustomLabel: true
+          pluralLabel: Phones
+          label: Phone
+          enableHierarchy: "1"
+          transitionVisible: any Phone has (1=1)
+          displayFormTabAs: LABEL
+          transitionVisibleInterpreter: SEMQL
+          visibleInFormTabCondition: any Phone has (1=1)
+          businessViewEntity:
+            _type: BusinessViewEntity
+            _name: Phones
+            entity: CustomerMDM.entities.Phone.Phone
+            actionSet: CustomerMDM.entities.Phone.action_sets.PhoneActionSet
+            collection: CustomerMDM.entities.Phone.collection_views.PhoneImportCollectionView
+            form: CustomerMDM.entities.Phone.forms.PhoneForm
+            outlineVisible: false
+            displayRecordCount: ALWAYS
+            businessEntitySearchConfigs:
+              - _name: TextConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: TEXT
+              - _name: FormConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: BY_FORM
+              - _name: AdvancedConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: ADVANCED
+              - _name: SemqlConfig
+                _type: BusinessEntitySearchTypeConfig
+                searchType: SEMQL
+            overrideDefaultSort: false
+            enableUserDefinedSort: true
+            listAllowed: true
+            tableAllowed: true
+            gridAllowed: true
+    - _type: BusinessViewTransition
       _name: InternalID
       transitionPath: InternalID
       transitionType: FULLY_QUALIFIED
