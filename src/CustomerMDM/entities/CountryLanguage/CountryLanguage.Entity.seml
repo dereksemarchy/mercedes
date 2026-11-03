@@ -40,6 +40,6 @@ attributes:
     mandatoryValidationScope: PRE_CONSO
 sourceIdGeneration:
   mode: SEQUENCE
-  startWith: 1
+  startWith: 10000
 primaryKey: CustomerMDM.entities.CountryLanguage.CountryLanguage.CountryLanguageID
 entityType: BASIC

@@ -1,7 +1,7 @@
 {
     "semarchy.sdp.instanceUrl": "https://poc-mercedes.eu.semarchy.net",
     "semarchy.sdp.overwriteDeploymentUrl": "",
-    "semarchy.sdp.datasource": "datasource0",
+    "semarchy.sdp.datasource": "datasource43",
     "semarchy.sdp.dataLocation": "CustomerMDM",
     "semarchy.validation.enforceStrictSemqlValidationOnFunction": false,
     "semarchy.experimental.SemqlValidation": true

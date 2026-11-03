@@ -1906,6 +1906,33 @@
                         "sourceValidationEnabled": true
                     }
                 ]
+            },
+            {
+                "qualifiedName": "CustomerMDM.certification_jobs.JOB_SALESENTITYREL",
+                "jobType": "INTEGRATION",
+                "queueName": "Default",
+                "jobParams": [
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_SALESENTITYREL.PARAM_ANALYZE_STATS",
+                        "value": "0"
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_SALESENTITYREL.PARAM_ENABLE_DELETE_PHASE",
+                        "value": "0"
+                    }
+                ],
+                "modelTasks": [
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_SALESENTITYREL.SalesEntityRel",
+                        "entity": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": false,
+                        "matchEnabled": false,
+                        "postConsoValidationEnabled": false,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": false
+                    }
+                ]
             }
         ],
         "modelPrivGrants": [
@@ -6228,7 +6255,26 @@
                     }
                 ],
                 "dupsManagers": [],
-                "enrichers": [],
+                "enrichers": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.SalesEntityRel.enrichers.SetRelationshipPeriodToToday",
+                        "_type": "SemQLEnricher",
+                        "condition": "",
+                        "enricherExecutionScope": "NONE",
+                        "description": "Sets the relationship period: Start Date is today and End Date is two years after today.\n",
+                        "label": "Set Relationship Period To Today",
+                        "semQlEnricherExpressions": [
+                            {
+                                "attributeName": "StartDate",
+                                "expression": "CURRENT_DATE()"
+                            },
+                            {
+                                "attributeName": "EndDate",
+                                "expression": "SEM_CAST_DATE(CURRENT_DATE() + MAKE_INTERVAL(2, 0, 0, 0, 0, 0, 0))"
+                            }
+                        ]
+                    }
+                ],
                 "forms": [
                     {
                         "default": true,
@@ -6395,6 +6441,14 @@
                                 "enabledOnParentEdit": true,
                                 "enableMasterValuePicking": false,
                                 "formFieldsMode": "AUTO",
+                                "formStepEnrichers": [
+                                    {
+                                        "enricher": "CustomerMDM.entities.SalesEntityRel.enrichers.SetRelationshipPeriodToToday",
+                                        "executedOnButtonClick": true,
+                                        "executedOnDataChange": false,
+                                        "executedOnFormOpen": false
+                                    }
+                                ],
                                 "formTab": "CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel",
                                 "label": "Sales Entity Relationship",
                                 "parentCollectionStep": "CustomerMDM.entities.SalesEntityRel.steppers.AuthorSalesEntityRels.SalesEntityRels"
@@ -9383,6 +9437,40 @@
                         "valueSeparator": "",
                         "label": "End Date",
                         "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.IndividualContext.IndividualContext.GCID",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "GC_ID",
+                        "valueSeparator": "",
+                        "label": "GC ID",
+                        "length": 32,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.IndividualContext.IndividualContext.SyncStatus",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "SYNC_STATUS",
+                        "valueSeparator": "",
+                        "label": "Sync Status",
+                        "length": 32,
+                        "searchable": true
                     }
                 ],
                 "complexAttributes": [],
@@ -10056,7 +10144,34 @@
                     }
                 ],
                 "dupsManagers": [],
-                "enrichers": [],
+                "enrichers": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.IndividualContext.enrichers.CallUpdateSalesEntityRelPeriod",
+                        "_type": "PluginEnricher",
+                        "condition": "IndividualContextID is not null and GCID is not null",
+                        "enricherExecutionScope": "NONE",
+                        "numberOfRetry": 0,
+                        "onErrorBehavior": "SKIP_RECORDS",
+                        "pluginId": "CUpdateSalesEntityRelPeriod",
+                        "processingBatchSize": 1,
+                        "threadPoolSize": 1,
+                        "description": "Calls the UpdateSalesEntityRelPeriod REST client to mass-update the SalesEntityRel records for this IndividualContext / SalesEntity pair and run SetRelationshipPeriodToToday.\n",
+                        "label": "Call Update Sales Entity Rel Period",
+                        "pluginInputs": [
+                            {
+                                "_type": "PluginEnricherInput",
+                                "expression": "'FID_IndividualContext = ''' || IndividualContextID || ''' and FID_SalesEntity = ''' || GCID || ''''",
+                                "inputName": "UpdateCondition"
+                            }
+                        ],
+                        "pluginOutputs": [
+                            {
+                                "outputName": "status",
+                                "attributeName": "SyncStatus"
+                            }
+                        ]
+                    }
+                ],
                 "forms": [
                     {
                         "default": true,
@@ -10237,6 +10352,14 @@
                                 "enabledOnParentEdit": true,
                                 "enableMasterValuePicking": false,
                                 "formFieldsMode": "AUTO",
+                                "formStepEnrichers": [
+                                    {
+                                        "enricher": "CustomerMDM.entities.IndividualContext.enrichers.CallUpdateSalesEntityRelPeriod",
+                                        "executedOnButtonClick": true,
+                                        "executedOnDataChange": false,
+                                        "executedOnFormOpen": false
+                                    }
+                                ],
                                 "formTab": "CustomerMDM.entities.IndividualContext.forms.IndividualContextForm.IndividualContext",
                                 "label": "Individual Context",
                                 "parentCollectionStep": "CustomerMDM.entities.IndividualContext.steppers.AuthorIndividualContexts.IndividualContexts"
@@ -16344,7 +16467,7 @@
                         "physicalColName": "COUNTRY_LANGUAGE_ID",
                         "valueSeparator": "",
                         "idGenerationType": "SEQUENCE",
-                        "idSequenceStartsWith": 1,
+                        "idSequenceStartsWith": 10000,
                         "label": "Country Language ID",
                         "precision": 38,
                         "searchable": true

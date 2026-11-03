@@ -18,6 +18,16 @@ formTabs:
         value: IndividualContextID
         useCustomLabel: false
         dataType: STRING
+      # - _type: TextField
+      #   _name: GCID
+      #   value: GCID
+      #   useCustomLabel: false
+      #   dataType: STRING
+      # - _type: TextField
+      #   _name: SyncStatus
+      #   value: SyncStatus
+      #   useCustomLabel: false
+      #   dataType: STRING
       - _type: MenuField
         _name: ContextType
         value: ContextType

@@ -31,3 +31,8 @@ rootStep:
       formFieldsMode: AUTO
       enableMasterValuePicking: false
       formTab: CustomerMDM.entities.SalesEntityRel.forms.SalesEntityRelForm.SalesEntityRel
+      formStepEnrichers:
+        - enricher: CustomerMDM.entities.SalesEntityRel.enrichers.SetRelationshipPeriodToToday
+          executedOnButtonClick: true
+          executedOnDataChange: false
+          executedOnFormOpen: false

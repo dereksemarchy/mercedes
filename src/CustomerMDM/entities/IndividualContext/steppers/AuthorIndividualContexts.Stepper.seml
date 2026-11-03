@@ -31,3 +31,8 @@ rootStep:
       formFieldsMode: AUTO
       enableMasterValuePicking: false
       formTab: CustomerMDM.entities.IndividualContext.forms.IndividualContextForm.IndividualContext
+      formStepEnrichers:
+        - enricher: CustomerMDM.entities.IndividualContext.enrichers.CallUpdateSalesEntityRelPeriod
+          executedOnButtonClick: true
+          executedOnDataChange: false
+          executedOnFormOpen: false

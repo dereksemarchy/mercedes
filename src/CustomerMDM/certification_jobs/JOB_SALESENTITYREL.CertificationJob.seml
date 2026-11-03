@@ -1,0 +1,22 @@
+_name: JOB_SALESENTITYREL
+_type: CertificationJob
+_package: CustomerMDM.certification_jobs
+jobType: INTEGRATION
+queueName: Default
+modelTasks:
+  - _type: ModelJobTask
+    entity: CustomerMDM.entities.SalesEntityRel.SalesEntityRel
+    _name: SalesEntityRel
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: false
+    matchEnabled: false
+    postConsoValidationEnabled: false
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: false
+jobParams:
+  - _name: PARAM_ANALYZE_STATS
+    _type: ModelJobParam
+    value: "0"          # 0 = skip statistics collection, 1 = collect (default)
+  - _name: PARAM_ENABLE_DELETE_PHASE
+    _type: ModelJobParam
+    value: "0"          # 0 = disable delete phase, 1 = enable delete phase (default)

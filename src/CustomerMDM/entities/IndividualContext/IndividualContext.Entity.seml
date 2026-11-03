@@ -54,6 +54,22 @@ attributes:
     dataType: Date
     mandatory: false
     searchable: true
+  - _type: EntityAttribute
+    _name: GCID
+    label: GC ID
+    physicalName: GC_ID
+    dataType: String
+    length: 32
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: SyncStatus
+    label: Sync Status
+    physicalName: SYNC_STATUS
+    dataType: String
+    length: 32
+    mandatory: false
+    searchable: true
 sourceIdGeneration:
   mode: MANUAL
 primaryKey: CustomerMDM.entities.IndividualContext.IndividualContext.IndividualContextID

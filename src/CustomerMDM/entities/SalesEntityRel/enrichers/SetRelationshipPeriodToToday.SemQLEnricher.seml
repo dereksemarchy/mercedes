@@ -1,0 +1,14 @@
+_name: SetRelationshipPeriodToToday
+_type: SemQLEnricher
+_package: CustomerMDM.entities.SalesEntityRel.enrichers
+entity: CustomerMDM.entities.SalesEntityRel.SalesEntityRel
+label: Set Relationship Period To Today
+description: >
+  Sets the relationship period: Start Date is today and End Date is two years
+  after today.
+enricherExecutionScope: NONE
+semQlEnricherExpressions:
+  - attributeName: StartDate
+    expression: CURRENT_DATE()
+  - attributeName: EndDate
+    expression: SEM_CAST_DATE(CURRENT_DATE() + MAKE_INTERVAL(2, 0, 0, 0, 0, 0, 0))

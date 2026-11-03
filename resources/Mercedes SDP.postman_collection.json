@@ -7,6 +7,40 @@
   },
   "item": [
     {
+      "name": "Create Company with Email",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"Postman\",\r\n  \"loadDescription\": \"Load Company\",\r\n  \"jobName\": \"JOB_COMPANY\",\r\n  \"submitAs\": \"derek.leung@semarchy.com\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY_AND_RECORDS\",\r\n    \"persistMode\": \"ALWAYS\",\r\n    \"defaultPublisherId\": \"CRM\",\r\n    \"optionsPerEntity\": {\r\n      \"Company\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"IndividualContext\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"EmailIndividualContext\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"Email\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      }\r\n    },\r\n    \"missingIdBehavior\": \"GENERATE\"\r\n  },\r\n  \"persistRecords\": {\r\n    \"Company\": [\r\n        {\r\n        \"PublisherID\": \"CRM\",\r\n        \"SourceID\": \"55555555\",\r\n        \"CompanyMEID\": \"55555555\",\r\n        \"FullName\": \"Semarchy Ltd\",\r\n        \"ShortName\": \"Semarchy\",\r\n        \"FullNameLocal\": \"Semarchy\",\r\n        \"ShortNameLocal\": \"Semarchy\",\r\n        \"LegalForm\": \"LTD\"\r\n        }\r\n    ],\r\n    \"IndividualContext\": [\r\n    {\r\n    \"IndividualContextID\": \"CTX-555555\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"55555555\"\r\n    }\r\n    ],\r\n    \"Email\": [\r\n    {\r\n    \"EmailID\": 15000,\r\n    \"EmailAddress\": \"support@semarchy.com\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"EmailUsage\": \"BUSINESS;PRIVATE\"\r\n    }\r\n    ],\r\n    \"EmailIndividualContext\": [\r\n    {\r\n    \"FID_Email\": 15000,\r\n    \"FID_IndividualContext\": \"CTX-555555\"\r\n    }\r\n    ]\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Create Individual",
       "request": {
         "method": "POST",
@@ -14,6 +48,104 @@
         "body": {
           "mode": "raw",
           "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"Postman\",\r\n  \"loadDescription\": \"Load Individual\",\r\n  \"jobName\": \"JOB_INDIVIDUAL\",\r\n  \"submitAs\": \"derek.leung@semarchy.com\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY_AND_RECORDS\",\r\n    \"persistMode\": \"ALWAYS\",\r\n    \"defaultPublisherId\": \"CRM\",\r\n    \"optionsPerEntity\": {\r\n      \"Individual\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      }\r\n    },\r\n    \"missingIdBehavior\": \"GENERATE\"\r\n  },\r\n  \"persistRecords\": {\r\n    \"Individual\": [\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"1234567890\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Stewart\",\r\n            \"LastName\": \"Hadley\",\r\n            \"NickName\": \"Stewart\",\r\n            \"Birthday\": \"1980-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"1234567891\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Trevor\",\r\n            \"LastName\": \"Dobbin\",\r\n            \"NickName\": \"Trevor\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"1234567892\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Michael\",\r\n            \"LastName\": \"Dobbon\",\r\n            \"NickName\": \"Michael\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"1234567893\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Michael\",\r\n            \"LastName\": \"Dobbin\",\r\n            \"NickName\": \"Michael\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        }\r\n    ]\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Address with CriticalInUse = false",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "5Drsikr.69HO1957HaR_PKFIZ7L263X7xnCm1r3K_eN",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "Api-Key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"Postman\",\r\n  \"loadDescription\": \"Update Address\",\r\n  \"jobName\": \"JOB_ADDRESS\",\r\n  \"submitAs\": \"derek.leung@semarchy.com\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY_AND_RECORDS\",\r\n    \"persistMode\": \"ALWAYS\",\r\n    \"defaultPublisherId\": \"CRM\",\r\n    \"optionsPerEntity\": {\r\n      \"Address\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      }\r\n    },\r\n    \"missingIdBehavior\": \"GENERATE\"\r\n  },\r\n  \"persistRecords\": {\r\n\"Address\": [\r\n    {\r\n        \"AddressID\": 2,\r\n        \"Street\": \"Vicolo Piane\",\r\n        \"City\": \"Roccacerro\",\r\n        \"PostalCode\": \"89064\",\r\n        \"HouseNumber\": \"25\",\r\n        \"Primary\": true,\r\n        \"AddressUsage\": \"BUSINESS\",\r\n        \"FID_AddressDefinition\": \"IT_STANDARD\",\r\n        \"FID_Country\": \"IT\",\r\n        \"FID_IndividualContext\": \"CTX-000002\"\r\n    }\r\n    ]\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Address with CriticalInUse = true",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "5Drsikr.69HO1957HaR_PKFIZ7L263X7xnCm1r3K_eN",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "Api-Key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"Postman\",\r\n  \"loadDescription\": \"Update Address\",\r\n  \"jobName\": \"JOB_ADDRESS\",\r\n  \"submitAs\": \"derek.leung@semarchy.com\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY_AND_RECORDS\",\r\n    \"persistMode\": \"ALWAYS\",\r\n    \"defaultPublisherId\": \"CRM\",\r\n    \"optionsPerEntity\": {\r\n      \"Address\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      }\r\n    },\r\n    \"missingIdBehavior\": \"GENERATE\"\r\n  },\r\n  \"persistRecords\": {\r\n\"Address\": [\r\n    {\r\n        \"AddressID\": 1,\r\n        \"Street\": \"Piazza Giacconi\",\r\n        \"City\": \"Fiumicino Aeroporto\",\r\n        \"PostalCode\": \"25034\",\r\n        \"HouseNumber\": \"56\",\r\n        \"Primary\": true,\r\n        \"AddressUsage\": \"BUSINESS\",\r\n        \"FID_AddressDefinition\": \"IT_STANDARD\",\r\n        \"FID_Country\": \"IT\",\r\n        \"FID_IndividualContext\": \"CTX-000001\"\r\n    }\r\n    ]\r\n  }\r\n}",
           "options": {
             "raw": {
               "language": "json"

@@ -387,3 +387,7 @@ Screens, forms and views are the sibling skill `/seml-ui`. SemQL expressions are
   validator, onTransitionFinish: BLOCK|SKIP}`) — there is no standalone "validate" automation.
   `SetWorkflowMetadata` expressions run in the **workflow** context (can't reference entity attributes).
   Details in the generation prompt (§ Workflows).
+- **`SemQLEnricher` outputs go under `semQlEnricherExpressions` — lower-case `l` in `Ql`** (build-validated,
+  CLI 2.0): `[{attributeName, expression}]`, file suffix `.SemQLEnricher.seml`. Spelling it
+  `semQLEnricherExpressions` (like the `_type`) does not produce a schema error. It crashes the validator with
+  `Cannot read properties of undefined (reading 'flatMap')` in `SemQLEnricherValidator`.
