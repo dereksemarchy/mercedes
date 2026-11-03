@@ -6,10 +6,12 @@
   "maxRetries": "0",
   "successStatusCodes": "2xx",
   "httpMethod": "POST",
-  "requestUrl": "https://semarchy-presales-sandbox.eu.semarchy.net/dm/api/rest/loads/CustomerMDM/CONT_SALESENTITYREL",
-  "requestHeaders": "API-Key: KLsCelU.3NQ0MIdzXZuTfCXc477v5nWJWfvKeROsRsO",
+  "requestUrl": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM/CONT_SALESENTITYREL",
+  "requestHeaders": "API-Key: _gPvTnp.d_7rMz12dRwY5MsyD2Kg83iZazSx7dcBWC8",
   "requestBodyFormat": "JSON",
-  "requestBody": "{\"action\":\"MASS_UPDATE_DATA\",\"massUpdateOptions\":{\"responsePayload\":\"SUMMARY\",\"persistMode\":\"IF_NO_ERROR_OR_MATCH\",\"optionsPerEntity\":{\"SalesEntityRel\":{\"updateCondition\":${UpdateCondition},\"updateValues\":{\"StartDate\":\"2026-01-01\"},\"enrichers\":[\"SetRelationshipPeriodToToday\"],\"validations\":\"JOB_PRE_CONSO\"}}}}",
+  "requestBody": "{\"action\":\"MASS_UPDATE_DATA\",
+  \"massUpdateOptions\":{\"responsePayload\":\"SUMMARY\",\"persistMode\":\"IF_NO_ERROR_OR_MATCH\",\"optionsPerEntity\":{\"SalesEntityRel\":{
+  \"updateCondition\":${UpdateCondition},\"updateValues\":{\"StartDate\":\"2026-01-01\"},\"enrichers\":[\"SetRelationshipPeriodToToday\"],\"validations\":\"JOB_PRE_CONSO\"}}}}",
   "requestInputs": [
     {
       "name": "UpdateCondition",

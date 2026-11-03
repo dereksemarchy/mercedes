@@ -9,6 +9,6 @@ description: >
 enricherExecutionScope: NONE
 semQlEnricherExpressions:
   - attributeName: StartDate
-    expression: CURRENT_DATE()
+    expression: CASE WHEN StartDate IS NULL THEN CURRENT_DATE() ELSE StartDate END
   - attributeName: EndDate
     expression: SEM_CAST_DATE(CURRENT_DATE() + MAKE_INTERVAL(2, 0, 0, 0, 0, 0, 0))

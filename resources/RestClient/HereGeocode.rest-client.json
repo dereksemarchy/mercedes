@@ -1,0 +1,36 @@
+{
+  "name": "HereGeocode",
+  "label": "HERE Geocode",
+  "description": "Geocodes a free-text address with the HERE Geocoding & Search API v7 (/v1/geocode). Returns the best match (items[0]): coordinates, normalized address and match score.",
+  "timeout": 10000,
+  "maxRetries": 2,
+  "errorSelector": "",
+  "successStatusCodes": "2xx",
+  "httpMethod": "GET",
+  "requestUrl": "https://geocode.search.hereapi.com/v1/geocode?q=${address}&limit=1&lang=en-US&apiKey=<YOUR_HERE_API_KEY>",
+  "requestHeaders": "Accept: application/json",
+  "requestBodyFormat": "NONE",
+  "requestBody": "",
+  "requestInputs": [
+    {
+      "name": "address",
+      "label": "Address",
+      "description": "Free-text address, e.g. '240 Washington St., Boston'. URL-encoding is handled by the platform.",
+      "dataType": "STRING"
+    }
+  ],
+  "responseOutputs": [
+    { "name": "latitude",        "label": "Latitude",          "description": "WGS84 latitude of the best match",          "dataType": "DECIMAL", "valueSelector": "$.items[0].position.lat",            "onAbsentValueBehavior": "USE_DEFAULT_VALUE", "onDataTypeMismatchBehavior": "USE_DEFAULT_VALUE" },
+    { "name": "longitude",       "label": "Longitude",         "description": "WGS84 longitude of the best match",         "dataType": "DECIMAL", "valueSelector": "$.items[0].position.lng",            "onAbsentValueBehavior": "USE_DEFAULT_VALUE", "onDataTypeMismatchBehavior": "USE_DEFAULT_VALUE" },
+    { "name": "formatted_label", "label": "Formatted Address", "description": "Full normalized address label",             "dataType": "STRING",  "valueSelector": "$.items[0].address.label",           "onAbsentValueBehavior": "USE_DEFAULT_VALUE", "onDataTypeMismatchBehavior": "USE_DEFAULT_VALUE" },
+    { "name": "house_number",    "label": "House Number",      "description": "House number",                              "dataType": "STRING",  "valueSelector": "$.items[0].address.houseNumber",     "onAbsentValueBehavior": "USE_DEFAULT_VALUE", "onDataTypeMismatchBehavior": "USE_DEFAULT_VALUE" },
+    { "name": "street",          "label": "Street",            "description": "Street name",                               "dataType": "STRING",  "valueSelector": "$.items[0].address.street",          "onAbsentValueBehavior": "USE_DEFAULT_VALUE", "onDataTypeMismatchBehavior": "USE_DEFAULT_VALUE" },
+    { "name": "city",            "label": "City",              "description": "City",                                      "dataType": "STRING",  "valueSelector": "$.items[0].address.city",            "onAbsentValueBehavior": "USE_DEFAULT_VALUE", "onDataTypeMismatchBehavior": "USE_DEFAULT_VALUE" },
+    { "name": "postal_code",     "label": "Postal Code",       "description": "Postal code",                               "dataType": "STRING",  "valueSelector": "$.items[0].address.postalCode",      "onAbsentValueBehavior": "USE_DEFAULT_VALUE", "onDataTypeMismatchBehavior": "USE_DEFAULT_VALUE" },
+    { "name": "state_code",      "label": "State Code",        "description": "State / region code",                       "dataType": "STRING",  "valueSelector": "$.items[0].address.stateCode",       "onAbsentValueBehavior": "USE_DEFAULT_VALUE", "onDataTypeMismatchBehavior": "USE_DEFAULT_VALUE" },
+    { "name": "country_code",    "label": "Country Code",      "description": "ISO 3166-1 alpha-3 country code",           "dataType": "STRING",  "valueSelector": "$.items[0].address.countryCode",     "onAbsentValueBehavior": "USE_DEFAULT_VALUE", "onDataTypeMismatchBehavior": "USE_DEFAULT_VALUE" },
+    { "name": "result_type",     "label": "Result Type",       "description": "houseNumber, street, locality, place, ...", "dataType": "STRING",  "valueSelector": "$.items[0].resultType",              "onAbsentValueBehavior": "USE_DEFAULT_VALUE", "onDataTypeMismatchBehavior": "USE_DEFAULT_VALUE" },
+    { "name": "query_score",     "label": "Query Score",       "description": "0-1 match confidence for the whole query",  "dataType": "DECIMAL", "valueSelector": "$.items[0].scoring.queryScore",      "onAbsentValueBehavior": "USE_DEFAULT_VALUE", "onDataTypeMismatchBehavior": "USE_DEFAULT_VALUE" },
+    { "name": "here_id",         "label": "HERE Id",           "description": "HERE result id (reusable with /lookup)",    "dataType": "STRING",  "valueSelector": "$.items[0].id",                      "onAbsentValueBehavior": "USE_DEFAULT_VALUE", "onDataTypeMismatchBehavior": "USE_DEFAULT_VALUE" }
+  ]
+}
