@@ -1,0 +1,25 @@
+_name: CallUpsertSalesEntityRel
+_type: RestClientEnricher
+_package: CustomerMDM.entities.IndividualContext.enrichers
+entity: CustomerMDM.entities.IndividualContext.IndividualContext
+label: Call Upsert Sales Entity Rel
+description: >
+  Creates or updates the SalesEntityRel for this IndividualContext /
+  SalesEntity / RelationshipType combination via CONT_SALESENTITYREL.
+enricherExecutionScope: NONE
+condition: IndividualContextID is not null and GCID is not null and RelationshipType is not null
+pluginId: UpsertSalesEntityRel
+pluginInputs:
+  - inputName: IndividualContextID
+    expression: IndividualContextID
+  - inputName: GCID
+    expression: GCID
+  - inputName: RelationshipType
+    expression: RelationshipType
+pluginOutputs:
+  - outputName: status
+    attributeName: SyncStatus
+numberOfRetry: 0
+onErrorBehavior: SKIP_RECORDS
+processingBatchSize: 1
+threadPoolSize: 1

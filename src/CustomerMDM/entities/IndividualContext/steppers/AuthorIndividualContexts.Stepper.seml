@@ -32,7 +32,7 @@ rootStep:
       enableMasterValuePicking: false
       formTab: CustomerMDM.entities.IndividualContext.forms.IndividualContextForm.IndividualContext
       formStepEnrichers:
-        - enricher: CustomerMDM.entities.IndividualContext.enrichers.CallUpdateSalesEntityRelPeriod
+        - enricher: CustomerMDM.entities.IndividualContext.enrichers.CallUpsertSalesEntityRel
           executedOnButtonClick: true
           executedOnDataChange: false
           executedOnFormOpen: false

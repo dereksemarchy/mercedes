@@ -61,10 +61,10 @@ actions:
     label: Browse Graph
     useCustomLabel: true
     waitDialogEnabled: false
-  - _type: CopyAction
-    _name: CopyAuthorSalesEntityRels
-    label: Copy
-    useCustomLabel: true
-    stepper: CustomerMDM.entities.SalesEntityRel.steppers.AuthorSalesEntityRels
-    multipleSelectionAllowed: true
-    waitDialogEnabled: false
+  # - _type: CopyAction
+  #   _name: CopyAuthorSalesEntityRels
+  #   label: Copy
+  #   useCustomLabel: true
+  #   stepper: CustomerMDM.entities.SalesEntityRel.steppers.AuthorSalesEntityRels
+  #   multipleSelectionAllowed: true
+  #   waitDialogEnabled: false

@@ -1,0 +1,194 @@
+# ComplexType mirroring one HERE Geocoding & Search v7 result (items[0]).
+# Place in <DataProduct>/complex_types/ and replace "CustomerB2C" with your data product.
+_name: HereGeocodedAddress
+_package: CustomerMDM.complex_types
+_type: ComplexType
+label: HERE Geocode Result
+description: Geocoding result returned by HERE /v1/geocode - normalized address, coordinates and match quality.
+
+attributes:
+  # ---------- Result metadata ----------
+  - _type: EntityAttribute
+    _name: HereId
+    label: HERE Id
+    description: items[0].id - reusable with the HERE /lookup endpoint
+    physicalName: HERE_ID
+    dataType: String
+    length: 255
+    searchable: false
+  - _type: EntityAttribute
+    _name: ResultType
+    label: Result Type
+    description: items[0].resultType - houseNumber, street, locality, place, administrativeArea...
+    physicalName: RESULT_TYPE
+    dataType: String
+    length: 30
+  - _type: EntityAttribute
+    _name: HouseNumberType
+    label: House Number Type
+    description: items[0].houseNumberType - PA (point address) or interpolated
+    physicalName: HNR_TYPE
+    dataType: String
+    length: 20
+    searchable: false
+
+  # ---------- Address (items[0].address) ----------
+  - _type: EntityAttribute
+    _name: FormattedAddress
+    label: Formatted Address
+    description: address.label - full normalized postal address
+    physicalName: LABEL
+    dataType: String
+    length: 512
+  - _type: EntityAttribute
+    _name: HouseNumber
+    label: House Number
+    physicalName: HOUSE_NUMBER
+    dataType: String
+    length: 20
+  - _type: EntityAttribute
+    _name: Street
+    label: Street
+    physicalName: STREET
+    dataType: String
+    length: 255
+  - _type: EntityAttribute
+    _name: District
+    label: District
+    physicalName: DISTRICT
+    dataType: String
+    length: 128
+  - _type: EntityAttribute
+    _name: City
+    label: City
+    physicalName: CITY
+    dataType: String
+    length: 128
+  - _type: EntityAttribute
+    _name: County
+    label: County
+    physicalName: COUNTY
+    dataType: String
+    length: 128
+  - _type: EntityAttribute
+    _name: State
+    label: State
+    physicalName: STATE
+    dataType: String
+    length: 128
+  - _type: EntityAttribute
+    _name: StateCode
+    label: State Code
+    physicalName: STATE_CODE
+    dataType: String
+    length: 10
+  - _type: EntityAttribute
+    _name: PostalCode
+    label: Postal Code
+    physicalName: POSTAL_CODE
+    dataType: String
+    length: 20
+  - _type: EntityAttribute
+    _name: CountryCode
+    label: Country Code
+    description: ISO 3166-1 alpha-3 (e.g. USA, DEU)
+    physicalName: COUNTRY_CODE
+    dataType: String
+    length: 3
+  - _type: EntityAttribute
+    _name: CountryName
+    label: Country Name
+    physicalName: COUNTRY_NAME
+    dataType: String
+    length: 128
+
+  # ---------- Position (WGS 84) ----------
+  - _type: EntityAttribute
+    _name: Latitude
+    label: Latitude
+    description: position.lat - display position
+    physicalName: LAT
+    dataType: Decimal
+    precision: 10
+    scale: 7
+    searchable: false
+  - _type: EntityAttribute
+    _name: Longitude
+    label: Longitude
+    description: position.lng - display position
+    physicalName: LNG
+    dataType: Decimal
+    precision: 10
+    scale: 7
+    searchable: false
+  - _type: EntityAttribute
+    _name: AccessLatitude
+    label: Access Latitude
+    description: access[0].lat - entrance / navigation point
+    physicalName: ACCESS_LAT
+    dataType: Decimal
+    precision: 10
+    scale: 7
+    searchable: false
+  - _type: EntityAttribute
+    _name: AccessLongitude
+    label: Access Longitude
+    description: access[0].lng - entrance / navigation point
+    physicalName: ACCESS_LNG
+    dataType: Decimal
+    precision: 10
+    scale: 7
+    searchable: false
+
+  # ---------- Map view bounding box ----------
+  - _type: EntityAttribute
+    _name: MapViewWest
+    label: Map View West
+    physicalName: MV_WEST
+    dataType: Decimal
+    precision: 10
+    scale: 7
+    searchable: false
+  - _type: EntityAttribute
+    _name: MapViewSouth
+    label: Map View South
+    physicalName: MV_SOUTH
+    dataType: Decimal
+    precision: 10
+    scale: 7
+    searchable: false
+  - _type: EntityAttribute
+    _name: MapViewEast
+    label: Map View East
+    physicalName: MV_EAST
+    dataType: Decimal
+    precision: 10
+    scale: 7
+    searchable: false
+  - _type: EntityAttribute
+    _name: MapViewNorth
+    label: Map View North
+    physicalName: MV_NORTH
+    dataType: Decimal
+    precision: 10
+    scale: 7
+    searchable: false
+
+  # ---------- Match quality ----------
+  - _type: EntityAttribute
+    _name: QueryScore
+    label: Query Score
+    description: scoring.queryScore - 0 to 1 confidence that the result matches the whole query
+    physicalName: QUERY_SCORE
+    dataType: Decimal
+    precision: 4
+    scale: 3
+    searchable: false
+
+displayName:
+  _type: ComplexTypeDisplayName
+  _name: HereGeocodeResultDisplayName
+  separator: " | "
+  displayNameAttributes:
+    - attribute: CustomerMDM.complex_types.HereGeocodedAddress.FormattedAddress
+    - attribute: CustomerMDM.complex_types.HereGeocodedAddress.ResultType

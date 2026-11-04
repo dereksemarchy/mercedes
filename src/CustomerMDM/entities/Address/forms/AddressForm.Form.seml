@@ -17,10 +17,11 @@ formTabs:
         _name: MainRow
         layoutDirection: ROW
         content:
-          - _type: FormContainer
+          - _type: FormSection
             _name: LeftColumn
+            label: "Original Address"
             layoutDirection: COLUMN
-            relativeWidth: 50
+            relativeWidth: 33
             content:
               - _type: IdField
                 _name: AddressID
@@ -83,10 +84,156 @@ formTabs:
                 useCustomLabel: false
                 dataType: STRING
                 referencedEntity: CustomerMDM.entities.IndividualContext.IndividualContext
+          - _type: FormSection
+            _name: HereGeocodeAddress
+            layoutDirection: COLUMN
+            relativeWidth: 33
+            label: "HERE Geocode Address"
+            labelWidth: "150px"
+            content:
+              - _type: TextField
+                _name: GeoHereId
+                value: GeocodeResult.HereId
+                label: "HERE Id"
+                useCustomLabel: true
+                dataType: STRING
+              - _type: TextField
+                _name: GeoResultType
+                value: GeocodeResult.ResultType
+                label: "Result Type"
+                useCustomLabel: true
+                dataType: STRING
+              - _type: TextField
+                _name: GeoHouseNumberType
+                value: GeocodeResult.HouseNumberType
+                label: "House Number Type"
+                useCustomLabel: true
+                dataType: STRING
+              - _type: TextField
+                _name: GeoFormattedAddress
+                value: GeocodeResult.FormattedAddress
+                label: "Formatted Address"
+                useCustomLabel: true
+                dataType: STRING
+              - _type: TextField
+                _name: GeoHouseNumber
+                value: GeocodeResult.HouseNumber
+                label: "House Number"
+                useCustomLabel: true
+                dataType: STRING
+              - _type: TextField
+                _name: GeoStreet
+                value: GeocodeResult.Street
+                label: "Street"
+                useCustomLabel: true
+                dataType: STRING
+              - _type: TextField
+                _name: GeoDistrict
+                value: GeocodeResult.District
+                label: "District"
+                useCustomLabel: true
+                dataType: STRING
+              - _type: TextField
+                _name: GeoCity
+                value: GeocodeResult.City
+                label: "City"
+                useCustomLabel: true
+                dataType: STRING
+              - _type: TextField
+                _name: GeoCounty
+                value: GeocodeResult.County
+                label: "County"
+                useCustomLabel: true
+                dataType: STRING
+              - _type: TextField
+                _name: GeoState
+                value: GeocodeResult.State
+                label: "State"
+                useCustomLabel: true
+                dataType: STRING
+              - _type: TextField
+                _name: GeoStateCode
+                value: GeocodeResult.StateCode
+                label: "State Code"
+                useCustomLabel: true
+                dataType: STRING
+              - _type: TextField
+                _name: GeoPostalCode
+                value: GeocodeResult.PostalCode
+                label: "Postal Code"
+                useCustomLabel: true
+                dataType: STRING
+              - _type: TextField
+                _name: GeoCountryCode
+                value: GeocodeResult.CountryCode
+                label: "Country Code"
+                useCustomLabel: true
+                dataType: STRING
+              - _type: TextField
+                _name: GeoCountryName
+                value: GeocodeResult.CountryName
+                label: "Country Name"
+                useCustomLabel: true
+                dataType: STRING
+              - _type: TextField
+                _name: GeoLatitude
+                value: GeocodeResult.Latitude
+                label: "Latitude"
+                useCustomLabel: true
+                dataType: DECIMAL
+              - _type: TextField
+                _name: GeoLongitude
+                value: GeocodeResult.Longitude
+                label: "Longitude"
+                useCustomLabel: true
+                dataType: DECIMAL
+              - _type: TextField
+                _name: GeoAccessLatitude
+                value: GeocodeResult.AccessLatitude
+                label: "Access Latitude"
+                useCustomLabel: true
+                dataType: DECIMAL
+              - _type: TextField
+                _name: GeoAccessLongitude
+                value: GeocodeResult.AccessLongitude
+                label: "Access Longitude"
+                useCustomLabel: true
+                dataType: DECIMAL
+              - _type: TextField
+                _name: GeoMapViewWest
+                value: GeocodeResult.MapViewWest
+                label: "Map View West"
+                useCustomLabel: true
+                dataType: DECIMAL
+              - _type: TextField
+                _name: GeoMapViewSouth
+                value: GeocodeResult.MapViewSouth
+                label: "Map View South"
+                useCustomLabel: true
+                dataType: DECIMAL
+              - _type: TextField
+                _name: GeoMapViewEast
+                value: GeocodeResult.MapViewEast
+                label: "Map View East"
+                useCustomLabel: true
+                dataType: DECIMAL
+              - _type: TextField
+                _name: GeoMapViewNorth
+                value: GeocodeResult.MapViewNorth
+                label: "Map View North"
+                useCustomLabel: true
+                dataType: DECIMAL
+              - _type: TextField
+                _name: GeoQueryScore
+                value: GeocodeResult.QueryScore
+                label: "Query Score"
+                useCustomLabel: true
+                dataType: DECIMAL
+
           - _type: FormContainer
             _name: RightColumn
             layoutDirection: COLUMN
-            relativeWidth: 50
+            relativeWidth: 33
             content:
             - _type: ObjectField
               _name: GoogleMaps

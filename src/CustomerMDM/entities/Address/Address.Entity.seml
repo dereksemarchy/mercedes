@@ -76,6 +76,12 @@ attributes:
     mandatory: false
     searchable: true
     lovValidationScope: PRE_CONSO
+  - _type: EntityAttribute
+    _name: GeocodeResult
+    label: Geocode Result
+    description: Best HERE geocoding match for the customer address
+    physicalName: GEO
+    dataType: CustomerMDM.complex_types.HereGeocodedAddress
 sourceIdGeneration:
   mode: SEQUENCE
   startWith: 1

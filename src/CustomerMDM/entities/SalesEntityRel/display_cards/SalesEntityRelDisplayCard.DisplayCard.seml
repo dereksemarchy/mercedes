@@ -3,7 +3,7 @@ _type: DisplayCard
 _name: SalesEntityRelDisplayCard
 entity: CustomerMDM.entities.SalesEntityRel.SalesEntityRel
 default: true
-primaryTextExpression: FDN_IndividualContext||'/'||FDN_SalesEntity
+primaryTextExpression: FDN_IndividualContext||'/'||FDN_SalesEntity||' ('||SUBSTR(RelationshipType,1,1)||')'
 primaryImageValueInterpreter: SEMQL
 primaryImageValue: CASE WHEN RelationshipType = 'DEALER_RELATIONSHIP' THEN 'images://mdi/alpha-d-circle-outline.svg' ELSE 'images://mdi/alpha-b-circle-outline.svg' END
 avatarImageSourceType: URL

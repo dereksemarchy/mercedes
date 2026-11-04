@@ -1,0 +1,34 @@
+{
+  "name": "UpsertSalesEntityRel",
+  "label": "Upsert Sales Entity Rel",
+  "description": "Creates or updates a SalesEntityRel for an IndividualContext / SalesEntity / RelationshipType combination through the CONT_SALESENTITYREL continuous load. StartDate is set by SetRelationshipPeriodToToday.",
+  "timeout": 10000,
+  "maxRetries": 0,
+  "successStatusCodes": "2xx",
+  "httpMethod": "POST",
+  "requestUrl": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM/CONT_SALESENTITYREL",
+  "requestHeaders": "API-Key: _gPvTnp.d_7rMz12dRwY5MsyD2Kg83iZazSx7dcBWC8",
+  "requestBodyFormat": "JSON",
+  "requestBody": "{\"action\":\"PERSIST_DATA\",\"persistOptions\":{\"responsePayload\":\"SUMMARY\",\"persistMode\":\"IF_NO_ERROR_OR_MATCH\",\"missingIdBehavior\":\"GENERATE\",\"optionsPerEntity\":{\"SalesEntityRel\":{\"enrichers\":[\"SetRelationshipPeriodToToday\"]}}},\"persistRecords\":{\"SalesEntityRel\":[{\"FID_IndividualContext\":${IndividualContextID},\"FID_SalesEntity\":${GCID},\"RelationshipType\":${RelationshipType}}]}}",
+  "requestInputs": [
+    { "name": "GCID", "label": "GCID", "dataType": "STRING" },
+    { "name": "IndividualContextID", "label": "Individual Context ID", "dataType": "STRING" },
+    {
+      "name": "RelationshipType",
+      "label": "Relationship Type",
+      "description": "RelationshipType LOV code, e.g. DEALER_RELATIONSHIP.",
+      "dataType": "STRING"
+    }
+  ],
+  "responseOutputs": [
+    {
+      "name": "status",
+      "label": "Status",
+      "dataType": "STRING",
+      "valueSelector": "$.status",
+      "defaultValue": "UNKNOWN",
+      "onAbsentValueBehavior": "USE_DEFAULT_VALUE",
+      "onDataTypeMismatchBehavior": "USE_DEFAULT_VALUE"
+    }
+  ]
+}
