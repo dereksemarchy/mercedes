@@ -325,6 +325,40 @@
       "response": []
     },
     {
+      "name": "Create SalesEntityRel",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"Postman\",\r\n  \"loadDescription\": \"Load Individual\",\r\n  \"jobName\": \"JOB_INDIVIDUAL\",\r\n  \"submitAs\": \"derek.leung@semarchy.com\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY_AND_RECORDS\",\r\n    \"persistMode\": \"ALWAYS\",\r\n    \"defaultPublisherId\": \"CRM\",\r\n    \"optionsPerEntity\": {\r\n      \"Individual\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"IndividualContext\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"EmailIndividualContext\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"Email\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      }\r\n    },\r\n    \"missingIdBehavior\": \"GENERATE\"\r\n  },\r\n  \"persistRecords\": {\r\n    \"Individual\": [\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"44444444\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Derek\",\r\n            \"LastName\": \"Leung\",\r\n            \"NickName\": \"Derek\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"44444445\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Derek\",\r\n            \"LastName\": \"Leung\",\r\n            \"NickName\": \"Derek\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"44444446\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Derek\",\r\n            \"LastName\": \"Leung\",\r\n            \"NickName\": \"Derek\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        }\r\n    ],\r\n    \"IndividualContext\": [\r\n    {\r\n    \"IndividualContextID\": \"CTX-444444\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"44444444\"\r\n    },\r\n   {\r\n    \"IndividualContextID\": \"CTX-444445\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"44444445\"\r\n    },\r\n   {\r\n    \"IndividualContextID\": \"CTX-444446\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"44444446\"\r\n    }\r\n    ],\r\n    \"Email\": [\r\n    {\r\n    \"EmailID\": 10000,\r\n    \"EmailAddress\": \"derek.leung@semarchy.com\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"EmailUsage\": \"BUSINESS;PRIVATE\"\r\n    },\r\n    {\r\n    \"EmailID\": 10001,\r\n    \"EmailAddress\": \"derek.leung@semarchy.com\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"EmailUsage\": \"BUSINESS;PRIVATE\"\r\n    },\r\n    {\r\n    \"EmailID\": 10002,\r\n    \"EmailAddress\": \"derek.leung@gmail.com\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"EmailUsage\": \"BUSINESS;PRIVATE\"\r\n    }\r\n    ],\r\n    \"EmailIndividualContext\": [\r\n    {\r\n    \"FID_Email\": 10000,\r\n    \"FID_IndividualContext\": \"CTX-444444\"\r\n    },\r\n    {\r\n    \"FID_Email\": 10001,\r\n    \"FID_IndividualContext\": \"CTX-444445\"\r\n    },\r\n    {\r\n    \"FID_Email\": 10002,\r\n    \"FID_IndividualContext\": \"CTX-444446\"\r\n    }\r\n    ]\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Create Individual with Dealer (DEV)",
       "request": {
         "method": "POST",
@@ -888,6 +922,149 @@
             "rest-clients",
             "UpdateSalesEntityRelPeriod",
             "test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test UpsertSalesEntityRel Client",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"IndividualContextID\": \"CTX-2026-11-04\",\r\n  \"GCID\": \"GC000002\",\r\n  \"RelationshipType\": \"DEALER_RELATIONSHIP\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/admin/rest-clients/UpsertSalesEntityRel/test",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "admin",
+            "rest-clients",
+            "UpsertSalesEntityRel",
+            "test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test CONT_SALESENTITYREL",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"PERSIST_DATA\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY\",\r\n    \"persistMode\": \"IF_NO_ERROR_OR_MATCH\",\r\n    \"missingIdBehavior\": \"GENERATE\",\r\n    \"optionsPerEntity\": {\r\n      \"SalesEntityRel\": {\r\n        \"enrichers\": [\"SetRelationshipPeriodToToday\"]\r\n      }\r\n    }\r\n  },\r\n  \"persistRecords\": {\r\n    \"SalesEntityRel\": [\r\n      {\r\n        \"FID_IndividualContext\": \"CTX-2026-11-04\",\r\n        \"FID_SalesEntity\": \"GC000002\",\r\n        \"RelationshipType\": \"DEALER_RELATIONSHIP\"\r\n      }\r\n    ]\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM/CONT_SALESENTITYREL",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM",
+            "CONT_SALESENTITYREL"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Individual with Individual Context",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"Postman\",\r\n  \"loadDescription\": \"Load Individual\",\r\n  \"jobName\": \"JOB_INDIVIDUAL\",\r\n  \"submitAs\": \"derek.leung@semarchy.com\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY_AND_RECORDS\",\r\n    \"persistMode\": \"ALWAYS\",\r\n    \"defaultPublisherId\": \"CRM\",\r\n    \"optionsPerEntity\": {\r\n      \"Individual\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"IndividualContext\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"EmailIndividualContext\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"Email\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      }\r\n    },\r\n    \"missingIdBehavior\": \"GENERATE\"\r\n  },\r\n  \"persistRecords\": {\r\n    \"Individual\": [\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"2026-11-04-02\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Patrick\",\r\n            \"LastName\": \"Mustermann\",\r\n            \"NickName\": \"\",\r\n            \"Birthday\": \"1990-01-01\",\r\n            \"NameComponents\": \"\"\r\n        }\r\n    ],\r\n    \"IndividualContext\": [\r\n    {\r\n    \"IndividualContextID\": \"CTX-2026-11-04\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"2026-11-04-02\",\r\n    \"GCID\": \"GC000002\",\r\n    \"RelationshipType\": \"DEALER_RELATIONSHIP\"\r\n    }\r\n    ]\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get UpsertSalesEntityRel Client",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"IndividualContextID\": \"CTX-2026-11-04\",\r\n  \"GCID\": \"GC000002\",\r\n  \"RelationshipType\": \"GC000002\",\r\n  \"StartDate\": \"2026-01-01\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/admin/rest-clients/UpsertSalesEntityRel",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "admin",
+            "rest-clients",
+            "UpsertSalesEntityRel"
           ]
         }
       },
