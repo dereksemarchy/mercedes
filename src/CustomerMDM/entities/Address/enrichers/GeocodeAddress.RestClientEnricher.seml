@@ -1,0 +1,73 @@
+# REST client enricher: calls HereGeocode and fills the GeocodeResult complex attribute
+# (dataType CustomerB2C.complex_types.HereGeocodeResult) on the Customer entity.
+# Place in <DataProduct>/entities/Customer/enrichers/ and adapt names to your model.
+_name: GeocodeAddress
+_package: CustomerMDM.entities.Address.enrichers
+_type: RestClientEnricher
+label: Geocode address (HERE)
+description: Calls HERE Geocoding & Search v7 and stores the best match in GeocodeResult.
+entity: CustomerMDM.entities.Address.Address
+enricherExecutionScope: NONE
+pluginId: HereGeocode
+
+# Only call HERE when there is an address and it hasn't been geocoded yet
+# condition: HouseNumber is not null and Street is not null and City is not null and PostalCode is not null and FID_Country is not null
+
+pluginInputs:
+  - inputName: address
+    expression: >-
+      Coalesce(HouseNumber, '') || ' ' || Coalesce(Street, '') || ', ' || Coalesce(City, '') || ' ' ||
+      Coalesce(PostalCode, '') || ', ' || Coalesce(FID_Country, '')
+
+pluginOutputs:
+  - outputName: here_id
+    attributeName: GeocodeResult.HereId
+  - outputName: result_type
+    attributeName: GeocodeResult.ResultType
+  # - outputName: house_number_type
+  #   attributeName: GeocodeResult.HouseNumberType
+  # - outputName: formatted_label
+  #   attributeName: GeocodeResult.FormattedAddress
+  # - outputName: house_number
+  #   attributeName: GeocodeResult.HouseNumber
+  - outputName: street
+    attributeName: GeocodeResult.Street
+  # - outputName: district
+  #   attributeName: GeocodeResult.District
+  - outputName: city
+    attributeName: GeocodeResult.City
+  # - outputName: county
+  #   attributeName: GeocodeResult.County
+  # - outputName: state
+  #   attributeName: GeocodeResult.State
+  # - outputName: state_code
+  #   attributeName: GeocodeResult.StateCode
+  # - outputName: postal_code
+  #   attributeName: GeocodeResult.PostalCode
+  # - outputName: country_code
+  #   attributeName: GeocodeResult.CountryCode
+  # - outputName: country_name
+  #   attributeName: GeocodeResult.CountryName
+  - outputName: latitude
+    attributeName: GeocodeResult.Latitude
+  - outputName: longitude
+    attributeName: GeocodeResult.Longitude
+  # - outputName: access_latitude
+  #   attributeName: GeocodeResult.AccessLatitude
+  # - outputName: access_longitude
+  #   attributeName: GeocodeResult.AccessLongitude
+  # - outputName: mapview_west
+  #   attributeName: GeocodeResult.MapViewWest
+  # - outputName: mapview_south
+  #   attributeName: GeocodeResult.MapViewSouth
+  # - outputName: mapview_east
+  #   attributeName: GeocodeResult.MapViewEast
+  # - outputName: mapview_north
+  #   attributeName: GeocodeResult.MapViewNorth
+  # - outputName: query_score
+  #   attributeName: GeocodeResult.QueryScore
+
+processingBatchSize: 100
+threadPoolSize: 2          # stay under your HERE plan's requests/second limit
+numberOfRetry: 2
+onErrorBehavior: SKIP_RECORDS

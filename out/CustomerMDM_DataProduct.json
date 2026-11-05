@@ -21677,7 +21677,54 @@
                     }
                 ],
                 "dupsManagers": [],
-                "enrichers": [],
+                "enrichers": [
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Address.enrichers.GeocodeAddress",
+                        "_type": "PluginEnricher",
+                        "condition": "",
+                        "enricherExecutionScope": "NONE",
+                        "numberOfRetry": 2,
+                        "onErrorBehavior": "SKIP_RECORDS",
+                        "pluginId": "CHereGeocode",
+                        "processingBatchSize": 100,
+                        "threadPoolSize": 2,
+                        "description": "Calls HERE Geocoding & Search v7 and stores the best match in GeocodeResult.",
+                        "label": "Geocode address (HERE)",
+                        "pluginInputs": [
+                            {
+                                "_type": "PluginEnricherInput",
+                                "expression": "Coalesce(HouseNumber, '') || ' ' || Coalesce(Street, '') || ', ' || Coalesce(City, '') || ' ' || Coalesce(PostalCode, '') || ', ' || Coalesce(FID_Country, '')",
+                                "inputName": "address"
+                            }
+                        ],
+                        "pluginOutputs": [
+                            {
+                                "outputName": "here_id",
+                                "attributeName": "GeocodeResult.HereId"
+                            },
+                            {
+                                "outputName": "result_type",
+                                "attributeName": "GeocodeResult.ResultType"
+                            },
+                            {
+                                "outputName": "street",
+                                "attributeName": "GeocodeResult.Street"
+                            },
+                            {
+                                "outputName": "city",
+                                "attributeName": "GeocodeResult.City"
+                            },
+                            {
+                                "outputName": "latitude",
+                                "attributeName": "GeocodeResult.Latitude"
+                            },
+                            {
+                                "outputName": "longitude",
+                                "attributeName": "GeocodeResult.Longitude"
+                            }
+                        ]
+                    }
+                ],
                 "forms": [
                     {
                         "default": true,
@@ -22375,6 +22422,14 @@
                                 "enabledOnParentEdit": true,
                                 "enableMasterValuePicking": false,
                                 "formFieldsMode": "AUTO",
+                                "formStepEnrichers": [
+                                    {
+                                        "enricher": "CustomerMDM.entities.Address.enrichers.GeocodeAddress",
+                                        "executedOnButtonClick": true,
+                                        "executedOnDataChange": true,
+                                        "executedOnFormOpen": false
+                                    }
+                                ],
                                 "formTab": "CustomerMDM.entities.Address.forms.AddressForm.Address",
                                 "label": "Address",
                                 "parentCollectionStep": "CustomerMDM.entities.Address.steppers.AuthorAddresses.Addresses"

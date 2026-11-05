@@ -31,3 +31,8 @@ rootStep:
       formFieldsMode: AUTO
       enableMasterValuePicking: false
       formTab: CustomerMDM.entities.Address.forms.AddressForm.Address
+      formStepEnrichers:
+        - enricher: CustomerMDM.entities.Address.enrichers.GeocodeAddress
+          executedOnButtonClick: true
+          executedOnDataChange: true
+          executedOnFormOpen: false
