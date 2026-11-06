@@ -68,9 +68,8 @@ attributes:
     physicalName: RELATIONSHIP_TYPE
     dataType: CustomerMDM.list_of_values.RelationshipType
     length: 32
-    mandatory: true
+    mandatory: false
     searchable: true
-    mandatoryValidationScope: PRE_CONSO
     lovValidationScope: PRE_CONSO
   - _type: EntityAttribute
     _name: SyncStatus
