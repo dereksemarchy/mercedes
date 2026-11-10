@@ -117,16 +117,6 @@ attributes:
     length: 400
     searchable: false
     mandatory: false
-  # - _type: EntityAttribute
-  #   _name: PrimaryUsGcid
-  #   label: Primary US GC ID
-  #   description: 'First US GC ID of the individual, the matching bin: only individuals of the same US sales entity are compared. AI agent instructions: technical attribute, do not display.'
-  #   physicalName: PRIMARY_US_GCID
-  #   dataType: String
-  #   length: 20
-  #   searchable: false
-  #   goldenAttribute: false
-  #   mandatory: false
   - _type: EntityAttribute
     _name: EmailKeys
     label: Email keys
@@ -145,6 +135,16 @@ attributes:
     length: 1000
     searchable: false
     mandatory: false
+  # - _type: EntityAttribute
+  #   _name: PrimaryUsGcid
+  #   label: Primary US GC ID
+  #   description: 'First US GC ID of the individual, the matching bin: only individuals of the same US sales entity are compared. AI agent instructions: technical attribute, do not display.'
+  #   physicalName: PRIMARY_US_GCID
+  #   dataType: String
+  #   length: 20
+  #   searchable: false
+  #   goldenAttribute: false
+  #   mandatory: false
 sourceIdGeneration:
   mode: MANUAL
 primaryKey: CustomerMDM.entities.Individual.Individual.IndividualID
