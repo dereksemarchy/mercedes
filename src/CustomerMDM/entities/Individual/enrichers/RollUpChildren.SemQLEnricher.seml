@@ -1,0 +1,42 @@
+_package: CustomerMDM.entities.Individual.enrichers
+_type: SemQLEnricher
+_name: RollUpChildren
+label: Roll up child keys
+description: Brings the three child paths onto the individual - US GC IDs through sales entity relationships, email keys through email links, phone keys through phones. Keys are normalized here from the loaded child values (same rules as CleanseEmail and StandardizePhone), because the child enrichers run after the individual in the job and their results are not available yet.
+entity: CustomerMDM.entities.Individual.Individual
+enricherExecutionScope: PRE_CONSO
+afterEnrichers:
+- CustomerMDM.entities.Individual.enrichers.PhonetizeLastName
+semQlEnricherExpressions:
+- attributeName: UsGcids
+  expression: >-
+    LEFT(LOOKUP DISTINCT_STRING_AGG SalesEntity.GCID SEPARATED BY '|'
+    FROM IndividualContext.SalesEntityRel
+    WHERE SalesEntity.Country.CountryCode = 'US'
+    AND SalesEntity.GCID IS NOT NULL
+    ORDER BY SalesEntity.GCID END, 400)
+- attributeName: PrimaryUsGcid
+  expression: >-
+    LOOKUP FIRST SalesEntity.GCID
+    FROM IndividualContext.SalesEntityRel
+    WHERE SalesEntity.Country.CountryCode = 'US'
+    AND SalesEntity.GCID IS NOT NULL
+    ORDER BY SalesEntity.GCID END
+- attributeName: EmailKeys
+  expression: >-
+    LEFT(LOOKUP DISTINCT_STRING_AGG LOWER(BTRIM(Email.EmailAddress)) SEPARATED BY '|'
+    FROM IndividualContext.EmailIndividualContext
+    WHERE NULLIF(BTRIM(Email.EmailAddress), '') IS NOT NULL
+    ORDER BY LOWER(BTRIM(Email.EmailAddress)) END, 2000)
+- attributeName: PhoneKeys
+  expression: >-
+    LEFT(LOOKUP DISTINCT_STRING_AGG
+    CASE WHEN LENGTH(REGEXP_REPLACE(PhoneNumber, '[^0-9]', '', 'g')) = 10
+    THEN '1' || REGEXP_REPLACE(PhoneNumber, '[^0-9]', '', 'g')
+    ELSE REGEXP_REPLACE(PhoneNumber, '[^0-9]', '', 'g') END
+    SEPARATED BY '|'
+    FROM IndividualContext.Phone
+    WHERE REGEXP_REPLACE(COALESCE(PhoneNumber, ''), '[^0-9]', '', 'g') <> ''
+    ORDER BY CASE WHEN LENGTH(REGEXP_REPLACE(PhoneNumber, '[^0-9]', '', 'g')) = 10
+    THEN '1' || REGEXP_REPLACE(PhoneNumber, '[^0-9]', '', 'g')
+    ELSE REGEXP_REPLACE(PhoneNumber, '[^0-9]', '', 'g') END END, 1000)

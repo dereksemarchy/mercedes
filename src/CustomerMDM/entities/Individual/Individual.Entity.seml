@@ -108,6 +108,43 @@ attributes:
     mandatory: false
     searchable: true
     length: 128
+  - _type: EntityAttribute
+    _name: UsGcids
+    label: US GC IDs
+    description: GC IDs of the US sales entities linked to the individual through its contexts, separated by |. Computed before matching from the previous load.
+    physicalName: US_GCIDS
+    dataType: String
+    length: 400
+    searchable: false
+    mandatory: false
+  - _type: EntityAttribute
+    _name: PrimaryUsGcid
+    label: Primary US GC ID
+    description: 'First US GC ID of the individual, the matching bin: only individuals of the same US sales entity are compared. AI agent instructions: technical attribute, do not display.'
+    physicalName: PRIMARY_US_GCID
+    dataType: String
+    length: 20
+    searchable: false
+    goldenAttribute: false
+    mandatory: false
+  - _type: EntityAttribute
+    _name: EmailKeys
+    label: Email keys
+    description: Cleansed email addresses of the individual's contexts, separated by |. Computed before matching from the previous load.
+    physicalName: EMAIL_KEYS
+    dataType: String
+    length: 2000
+    searchable: false
+    mandatory: false
+  - _type: EntityAttribute
+    _name: PhoneKeys
+    label: Phone keys
+    description: Standardized phone numbers of the individual's contexts, separated by |. Computed before matching from the previous load.
+    physicalName: PHONE_KEYS
+    dataType: String
+    length: 1000
+    searchable: false
+    mandatory: false
 sourceIdGeneration:
   mode: MANUAL
 primaryKey: CustomerMDM.entities.Individual.Individual.IndividualID
@@ -177,6 +214,20 @@ matcher:
     #   condition: ( SEM_EDIT_DISTANCE_SIMILARITY( Record1.FirstName, Record2.FirstName ) > 75 AND SEM_EDIT_DISTANCE_SIMILARITY(Record1.LastName, Record2.LastName ) > 75 ) AND Record1.Birthday = Record2.Birthday
     #   matchScore: 70
     #   usingMatchOn: false
+    - _type: SemQLMatchRule
+      _name: UsExactIdentity
+      label: US exact identity
+      description: Shares at least one US sales entity (GC ID), same birthday, normalized first and last name, and at least one shared email or phone key. Merges and confirms.
+      matchScore: 100
+      binningExpressions:
+      - expression: Birthday
+      - expression: FirstName
+      - expression: LastName
+      condition: keys_overlap(Record1.UsGcids, Record2.UsGcids) = 1
+        AND (
+          keys_overlap(Record1.EmailKeys, Record2.EmailKeys) = 1
+          OR keys_overlap(Record1.PhoneKeys, Record2.PhoneKeys) = 1
+        )
     - _type: SemQLMatchRule
       _name: SamePhoneticNameAndSameBirthday
       label: Same Phonetic Name And Same Birthday

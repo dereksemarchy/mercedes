@@ -53,6 +53,14 @@ modelTasks:
     postConsoValidationEnabled: true
     sourceDataEnrichmentEnabled: true
     sourceValidationEnabled: true
+  - _type: ModelJobTask
+    entity: CustomerMDM.entities.SalesEntityRel.SalesEntityRel
+    _name: SalesEntityRel
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true
 jobParams:
   - _name: PARAM_ANALYZE_STATS
     _type: ModelJobParam

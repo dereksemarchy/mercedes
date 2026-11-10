@@ -2243,6 +2243,15 @@
                         "postConsoValidationEnabled": true,
                         "sourceDataEnrichmentEnabled": true,
                         "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.certification_jobs.JOB_INDIVIDUAL.SalesEntityRel",
+                        "entity": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
                     }
                 ]
             },
@@ -11742,6 +11751,78 @@
                         "label": "Phonetic Last Name",
                         "length": 128,
                         "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Individual.Individual.UsGcids",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "US_GCIDS",
+                        "valueSeparator": "",
+                        "description": "GC IDs of the US sales entities linked to the individual through its contexts, separated by |. Computed before matching from the previous load.",
+                        "label": "US GC IDs",
+                        "length": 400,
+                        "searchable": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Individual.Individual.PrimaryUsGcid",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": false,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "PRIMARY_US_GCID",
+                        "valueSeparator": "",
+                        "description": "First US GC ID of the individual, the matching bin: only individuals of the same US sales entity are compared. AI agent instructions: technical attribute, do not display.",
+                        "label": "Primary US GC ID",
+                        "length": 20,
+                        "searchable": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Individual.Individual.EmailKeys",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "EMAIL_KEYS",
+                        "valueSeparator": "",
+                        "description": "Cleansed email addresses of the individual's contexts, separated by |. Computed before matching from the previous load.",
+                        "label": "Email keys",
+                        "length": 2000,
+                        "searchable": false
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Individual.Individual.PhoneKeys",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "PHONE_KEYS",
+                        "valueSeparator": "",
+                        "description": "Standardized phone numbers of the individual's contexts, separated by |. Computed before matching from the previous load.",
+                        "label": "Phone keys",
+                        "length": 1000,
+                        "searchable": false
                     }
                 ],
                 "complexAttributes": [],
@@ -11779,6 +11860,24 @@
                             "label": "Same Name, Birthday And Email Address",
                             "matchOnExpression": "IndividualContext.EmailIndividualContext",
                             "usingMatchOn": true
+                        },
+                        {
+                            "qualifiedName": "CustomerMDM.entities.Individual.Individual.Matcher.UsExactIdentity",
+                            "condition": "keys_overlap(Record1.UsGcids, Record2.UsGcids) = 1 AND ( keys_overlap(Record1.EmailKeys, Record2.EmailKeys) = 1 OR keys_overlap(Record1.PhoneKeys, Record2.PhoneKeys) = 1 )",
+                            "matchScore": 100,
+                            "binningExpressions": [
+                                {
+                                    "expression": "Birthday"
+                                },
+                                {
+                                    "expression": "FirstName"
+                                },
+                                {
+                                    "expression": "LastName"
+                                }
+                            ],
+                            "description": "Shares at least one US sales entity (GC ID), same birthday, normalized first and last name, and at least one shared email or phone key. Merges and confirms.",
+                            "label": "US exact identity"
                         },
                         {
                             "qualifiedName": "CustomerMDM.entities.Individual.Individual.Matcher.SamePhoneticNameAndSameBirthday",
@@ -14019,6 +14118,32 @@
                                 "value": "PHONETIC METAPHONE"
                             }
                         ]
+                    },
+                    {
+                        "qualifiedName": "CustomerMDM.entities.Individual.enrichers.RollUpChildren",
+                        "_type": "SemQLEnricher",
+                        "condition": "",
+                        "enricherExecutionScope": "PRE_CONSO",
+                        "description": "Brings the three child paths onto the individual - US GC IDs through sales entity relationships, email keys through email links, phone keys through phones. Keys are normalized here from the loaded child values (same rules as CleanseEmail and StandardizePhone), because the child enrichers run after the individual in the job and their results are not available yet.",
+                        "label": "Roll up child keys",
+                        "semQlEnricherExpressions": [
+                            {
+                                "attributeName": "UsGcids",
+                                "expression": "LEFT(LOOKUP DISTINCT_STRING_AGG SalesEntity.GCID SEPARATED BY '|' FROM IndividualContext.SalesEntityRel WHERE SalesEntity.Country.CountryCode = 'US' AND SalesEntity.GCID IS NOT NULL ORDER BY SalesEntity.GCID END, 400)"
+                            },
+                            {
+                                "attributeName": "PrimaryUsGcid",
+                                "expression": "LOOKUP FIRST SalesEntity.GCID FROM IndividualContext.SalesEntityRel WHERE SalesEntity.Country.CountryCode = 'US' AND SalesEntity.GCID IS NOT NULL ORDER BY SalesEntity.GCID END"
+                            },
+                            {
+                                "attributeName": "EmailKeys",
+                                "expression": "LEFT(LOOKUP DISTINCT_STRING_AGG LOWER(BTRIM(Email.EmailAddress)) SEPARATED BY '|' FROM IndividualContext.EmailIndividualContext WHERE NULLIF(BTRIM(Email.EmailAddress), '') IS NOT NULL ORDER BY LOWER(BTRIM(Email.EmailAddress)) END, 2000)"
+                            },
+                            {
+                                "attributeName": "PhoneKeys",
+                                "expression": "LEFT(LOOKUP DISTINCT_STRING_AGG CASE WHEN LENGTH(REGEXP_REPLACE(PhoneNumber, '[^0-9]', '', 'g')) = 10 THEN '1' || REGEXP_REPLACE(PhoneNumber, '[^0-9]', '', 'g') ELSE REGEXP_REPLACE(PhoneNumber, '[^0-9]', '', 'g') END SEPARATED BY '|' FROM IndividualContext.Phone WHERE REGEXP_REPLACE(COALESCE(PhoneNumber, ''), '[^0-9]', '', 'g') <> '' ORDER BY CASE WHEN LENGTH(REGEXP_REPLACE(PhoneNumber, '[^0-9]', '', 'g')) = 10 THEN '1' || REGEXP_REPLACE(PhoneNumber, '[^0-9]', '', 'g') ELSE REGEXP_REPLACE(PhoneNumber, '[^0-9]', '', 'g') END END, 1000)"
+                            }
+                        ]
                     }
                 ],
                 "forms": [
@@ -14038,173 +14163,250 @@
                                 "label": "Individual",
                                 "labelWidth": "150",
                                 "visibleValue": "1"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main",
+                                "_type": "FormContainer",
+                                "layoutDirection": "ROW",
+                                "posInParent": 0,
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails",
+                                "_type": "FormContainer",
+                                "layoutDirection": "COLUMN",
+                                "posInParent": 0,
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main"
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualKeysDetails",
+                                "_type": "FormContainer",
+                                "layoutDirection": "COLUMN",
+                                "posInParent": 1,
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main"
                             }
                         ],
                         "formDashboards": [],
                         "formFields": [
                             {
-                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.IndividualID",
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails.IndividualID",
                                 "_type": "FormField",
                                 "componentName": "semIdField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 0,
                                 "useCustomLabel": false,
                                 "value": "IndividualID",
-                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails",
                                 "valueDataType": "LONG_INTEGER",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Gender",
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails.Gender",
                                 "_type": "FormField",
                                 "componentName": "semMenuField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 1,
                                 "useCustomLabel": false,
                                 "value": "Gender",
-                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Salutation",
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails.Salutation",
                                 "_type": "FormField",
                                 "componentName": "semMenuField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 2,
                                 "useCustomLabel": false,
                                 "value": "Salutation",
-                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.FirstName",
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails.FirstName",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 3,
                                 "useCustomLabel": false,
                                 "value": "FirstName",
-                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.LastName",
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails.LastName",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 4,
                                 "useCustomLabel": false,
                                 "value": "LastName",
-                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.NormalizedFirstName",
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails.NormalizedFirstName",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 5,
                                 "useCustomLabel": false,
                                 "value": "NormalizedFirstName",
-                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.NormalizedLastName",
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails.NormalizedLastName",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 6,
                                 "useCustomLabel": false,
                                 "value": "NormalizedLastName",
-                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.PhoneticFirstName",
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails.PhoneticFirstName",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 7,
                                 "useCustomLabel": false,
                                 "value": "PhoneticFirstName",
-                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.PhoneticLastName",
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails.PhoneticLastName",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 8,
                                 "useCustomLabel": false,
                                 "value": "PhoneticLastName",
-                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.NickName",
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails.NickName",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 9,
                                 "useCustomLabel": false,
                                 "value": "NickName",
-                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Birthday",
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails.Birthday",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 10,
                                 "useCustomLabel": false,
                                 "value": "Birthday",
-                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails",
                                 "valueDataType": "DATE",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.NameComponents",
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails.NameComponents",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 11,
                                 "useCustomLabel": false,
                                 "value": "NameComponents",
-                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualDetails",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualKeysDetails.UsGcids",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "UsGcids",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualKeysDetails",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualKeysDetails.PrimaryUsGcid",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "PrimaryUsGcid",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualKeysDetails",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualKeysDetails.EmailKeys",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "EmailKeys",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualKeysDetails",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualKeysDetails.PhoneKeys",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "PhoneKeys",
+                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualKeysDetails",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
@@ -14280,6 +14482,12 @@
                                         "enricher": "CustomerMDM.entities.Individual.enrichers.NormalizeLastName",
                                         "executedOnButtonClick": false,
                                         "executedOnDataChange": true,
+                                        "executedOnFormOpen": false
+                                    },
+                                    {
+                                        "enricher": "CustomerMDM.entities.Individual.enrichers.RollUpChildren",
+                                        "executedOnButtonClick": true,
+                                        "executedOnDataChange": false,
                                         "executedOnFormOpen": false
                                     }
                                 ],

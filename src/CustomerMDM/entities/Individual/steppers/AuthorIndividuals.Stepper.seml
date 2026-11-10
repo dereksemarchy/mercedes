@@ -40,4 +40,8 @@ rootStep:
           executedOnButtonClick: false
           executedOnDataChange: true
           executedOnFormOpen: false
+        - enricher: CustomerMDM.entities.Individual.enrichers.RollUpChildren
+          executedOnButtonClick: true
+          executedOnDataChange: false
+          executedOnFormOpen: false
 
