@@ -90,11 +90,11 @@ formTabs:
                 value: UsGcids
                 useCustomLabel: false
                 dataType: STRING
-              - _type: TextField
-                _name: PrimaryUsGcid
-                value: PrimaryUsGcid
-                useCustomLabel: false
-                dataType: STRING
+              # - _type: TextField
+              #   _name: PrimaryUsGcid
+              #   value: PrimaryUsGcid
+              #   useCustomLabel: false
+              #   dataType: STRING
               - _type: TextField
                 _name: EmailKeys
                 value: EmailKeys

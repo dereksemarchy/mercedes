@@ -14132,10 +14132,6 @@
                                 "expression": "LEFT(LOOKUP DISTINCT_STRING_AGG SalesEntity.GCID SEPARATED BY '|' FROM IndividualContext.SalesEntityRel WHERE SalesEntity.Country.CountryCode = 'US' AND SalesEntity.GCID IS NOT NULL ORDER BY SalesEntity.GCID END, 400)"
                             },
                             {
-                                "attributeName": "PrimaryUsGcid",
-                                "expression": "LOOKUP FIRST SalesEntity.GCID FROM IndividualContext.SalesEntityRel WHERE SalesEntity.Country.CountryCode = 'US' AND SalesEntity.GCID IS NOT NULL ORDER BY SalesEntity.GCID END"
-                            },
-                            {
                                 "attributeName": "EmailKeys",
                                 "expression": "LEFT(LOOKUP DISTINCT_STRING_AGG LOWER(BTRIM(Email.EmailAddress)) SEPARATED BY '|' FROM IndividualContext.EmailIndividualContext WHERE NULLIF(BTRIM(Email.EmailAddress), '') IS NOT NULL ORDER BY LOWER(BTRIM(Email.EmailAddress)) END, 2000)"
                             },
@@ -14371,25 +14367,11 @@
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualKeysDetails.PrimaryUsGcid",
-                                "_type": "FormField",
-                                "componentName": "semTextField",
-                                "documentationInterpreter": "LITERAL",
-                                "posInParent": 1,
-                                "useCustomLabel": false,
-                                "value": "PrimaryUsGcid",
-                                "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualKeysDetails",
-                                "valueDataType": "STRING",
-                                "visibleValue": "1",
-                                "visibleValueInterpreter": "LITERAL",
-                                "componentProperties": []
-                            },
-                            {
                                 "qualifiedName": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualKeysDetails.EmailKeys",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 2,
+                                "posInParent": 1,
                                 "useCustomLabel": false,
                                 "value": "EmailKeys",
                                 "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualKeysDetails",
@@ -14403,7 +14385,7 @@
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 3,
+                                "posInParent": 2,
                                 "useCustomLabel": false,
                                 "value": "PhoneKeys",
                                 "parentFormContainer": "CustomerMDM.entities.Individual.forms.IndividualForm.Individual.Main.IndividualKeysDetails",

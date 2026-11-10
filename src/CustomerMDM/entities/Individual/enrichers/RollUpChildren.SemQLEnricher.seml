@@ -15,13 +15,13 @@ semQlEnricherExpressions:
     WHERE SalesEntity.Country.CountryCode = 'US'
     AND SalesEntity.GCID IS NOT NULL
     ORDER BY SalesEntity.GCID END, 400)
-- attributeName: PrimaryUsGcid
-  expression: >-
-    LOOKUP FIRST SalesEntity.GCID
-    FROM IndividualContext.SalesEntityRel
-    WHERE SalesEntity.Country.CountryCode = 'US'
-    AND SalesEntity.GCID IS NOT NULL
-    ORDER BY SalesEntity.GCID END
+#- attributeName: PrimaryUsGcid
+#  expression: >-
+#    LOOKUP FIRST SalesEntity.GCID
+#    FROM IndividualContext.SalesEntityRel
+#    WHERE SalesEntity.Country.CountryCode = 'US'
+#    AND SalesEntity.GCID IS NOT NULL
+#    ORDER BY SalesEntity.GCID END
 - attributeName: EmailKeys
   expression: >-
     LEFT(LOOKUP DISTINCT_STRING_AGG LOWER(BTRIM(Email.EmailAddress)) SEPARATED BY '|'
