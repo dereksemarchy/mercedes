@@ -173,13 +173,47 @@
       "response": []
     },
     {
+      "name": "Create an Address",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"Postman\",\r\n  \"loadDescription\": \"Create Address\",\r\n  \"jobName\": \"JOB_ADDRESS\",\r\n  \"submitAs\": \"derek.leung@semarchy.com\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY_AND_RECORDS\",\r\n    \"persistMode\": \"ALWAYS\",\r\n    \"defaultPublisherId\": \"CRM\",\r\n    \"optionsPerEntity\": {\r\n      \"Address\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      }\r\n    },\r\n    \"missingIdBehavior\": \"GENERATE\"\r\n  },\r\n  \"persistRecords\": {\r\n\"Address\": [\r\n    {\r\n        \"Street\": \"Am Wallgraben\",\r\n        \"City\": \"Stuttgart\",\r\n        \"PostalCode\": \"70563\",\r\n        \"HouseNumber\": \"110\",\r\n        \"Primary\": false,\r\n        \"AddressUsage\": \"BUSINESS\",\r\n        \"FID_AddressDefinition\": \"IT_STANDARD\",\r\n        \"FID_Country\": \"DE\",\r\n        \"FID_IndividualContext\": \"CTX-000001\"\r\n    }\r\n    ]\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Certify Individual",
       "request": {
         "method": "POST",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"options\": {\r\n    \"enrichers\": [],\r\n    \"validations\": [],\r\n    \"returnEnrichedRecord\": false,\r\n    \"queryPotentialMatchesRules\": \"ALL\",\r\n    \"queryPotentialMatchesHighestScoreOnly\": true,\r\n    \"queryPotentialMatchesBaseExpressions\": \"USER_ATTRS\"\r\n  },\r\n  \"record\": {\r\n    \"FirstName\": \"Derik\",\r\n    \"LastName\": \"Leung\",\r\n    \"Birthday\": \"1989-01-05\"\r\n  }\r\n}",
+          "raw": "{\r\n  \"options\": {\r\n    \"enrichers\": [\"NormalizeFirstName\", \"NormalizeLastName\", \"PhonetizeFirstName\",\"PhonetizeLastName\"],\r\n    \"validations\": [],\r\n    \"returnEnrichedRecord\": false,\r\n    \"queryPotentialMatchesRules\": [\"SamePhoneticNameAndSameBirthday\"],\r\n    \"queryPotentialMatchesHighestScoreOnly\": true,\r\n    \"queryPotentialMatchesBaseExpressions\": \"USER_ATTRS\"\r\n  },\r\n  \"record\": {\r\n    \"FirstName\": \"Derik\",\r\n    \"LastName\": \"Leung\",\r\n    \"Birthday\": \"1989-01-05\"\r\n  }\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -230,6 +264,40 @@
         "body": {
           "mode": "raw",
           "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"Postman\",\r\n  \"loadDescription\": \"Load Individual\",\r\n  \"jobName\": \"JOB_INDIVIDUAL\",\r\n  \"submitAs\": \"derek.leung@semarchy.com\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY_AND_RECORDS\",\r\n    \"persistMode\": \"ALWAYS\",\r\n    \"defaultPublisherId\": \"CRM\",\r\n    \"optionsPerEntity\": {\r\n      \"Individual\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"IndividualContext\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"Phone\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      }\r\n    },\r\n    \"missingIdBehavior\": \"GENERATE\"\r\n  },\r\n  \"persistRecords\": {\r\n    \"Individual\": [\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"44444444\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Derek\",\r\n            \"LastName\": \"Leung\",\r\n            \"NickName\": \"Derek\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        }\r\n    ],\r\n    \"IndividualContext\": [\r\n    {\r\n    \"IndividualContextID\": \"CTX-444444\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"44444444\"\r\n    }\r\n    ],\r\n    \"Phone\": [\r\n    {\r\n    \"PhoneNumber\": \"+447788990011\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"PhoneUsage\": \"MOBILE\",\r\n    \"FID_IndividualContext\": \"CTX-444444\"\r\n    }\r\n    ]\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Individual with Phone / Email from US Dealer",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"Postman\",\r\n  \"loadDescription\": \"Load Individual\",\r\n  \"jobName\": \"JOB_INDIVIDUAL\",\r\n  \"submitAs\": \"derek.leung@semarchy.com\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY_AND_RECORDS\",\r\n    \"persistMode\": \"ALWAYS\",\r\n    \"defaultPublisherId\": \"CRM\",\r\n    \"optionsPerEntity\": {\r\n      \"Individual\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"IndividualContext\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      },\r\n      \"Phone\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      }\r\n    },\r\n    \"missingIdBehavior\": \"GENERATE\"\r\n  },\r\n  \"persistRecords\": {\r\n    \"Individual\": [\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"1212121212\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Hilaire\",\r\n            \"LastName\": \"Godinot\",\r\n            \"NickName\": \"Hilaire\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"13131313\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Hilaire\",\r\n            \"LastName\": \"Godinot\",\r\n            \"NickName\": \"Hilaire\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        },\r\n        {\r\n            \"PublisherID\": \"CRM\",\r\n            \"SourceID\": \"14141414\",\r\n            \"Gender\": \"MALE\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Hilaire\",\r\n            \"LastName\": \"Godinot\",\r\n            \"NickName\": \"Hilaire\",\r\n            \"Birthday\": \"1989-01-05\",\r\n            \"NameComponents\": \"\"\r\n        }\r\n    ],\r\n    \"IndividualContext\": [\r\n    {\r\n    \"IndividualContextID\": \"CTX-12121212\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"12121212\"\r\n    },\r\n    {\r\n    \"IndividualContextID\": \"CTX-13131313\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"13131313\"\r\n    },\r\n    {\r\n    \"IndividualContextID\": \"CTX-14141414\",\r\n    \"ContextType\": \"PRIVATE\",\r\n    \"BusinessRole\": \"OTHER\",\r\n    \"StartDate\": \"2026-01-01\",\r\n    \"EndDate\": \"2027-12-31\",\r\n    \"PublisherID_Individual\": \"CRM\",\r\n    \"SourceID_Individual\": \"14141414\"\r\n    }\r\n    ],\r\n    \"Phone\": [\r\n    {\r\n    \"PhoneNumber\": \"+447788990011\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"PhoneUsage\": \"MOBILE\",\r\n    \"FID_IndividualContext\": \"CTX-12121212\"\r\n    },\r\n    {\r\n    \"PhoneNumber\": \"+447788990011\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"PhoneUsage\": \"MOBILE\",\r\n    \"FID_IndividualContext\": \"CTX-13131313\"\r\n    },\r\n    {\r\n    \"PhoneNumber\": \"+447788990011\",\r\n    \"Primary\": true,\r\n    \"InCriticalUse\": true,\r\n    \"PhoneUsage\": \"MOBILE\",\r\n    \"FID_IndividualContext\": \"CTX-14141414\"\r\n    }\r\n    ],\r\n    \"SalesEntityRel\": [\r\n    {\r\n    \"RelationshipType\": \"BUSINESS_RELATIONSHIP\",\r\n    \"StartDate\": \"2018-01-05\",\r\n    \"EndDate\": \"2018-01-05\",\r\n    \"FID_IndividualContext\": \"CTX-12121212\",\r\n    \"FID_SalesEntity\": \"GC000040\"\r\n    },\r\n    {\r\n    \"RelationshipType\": \"BUSINESS_RELATIONSHIP\",\r\n    \"StartDate\": \"2018-01-05\",\r\n    \"EndDate\": \"2018-01-05\",\r\n    \"FID_IndividualContext\": \"CTX-13131313\",\r\n    \"FID_SalesEntity\": \"GC000081\"\r\n    },\r\n    {\r\n    \"RelationshipType\": \"BUSINESS_RELATIONSHIP\",\r\n    \"StartDate\": \"2018-01-05\",\r\n    \"EndDate\": \"2018-01-05\",\r\n    \"FID_IndividualContext\": \"CTX-14141414\",\r\n    \"FID_SalesEntity\": \"GC000081\"\r\n    }\r\n    ]  \r\n  }\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -319,6 +387,40 @@
             "rest",
             "loads",
             "CustomerMDM_DEV"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Individual with Address",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"Bruno\",\r\n  \"loadDescription\": \"Load Individual\",\r\n  \"jobName\": \"JOB_INDIVIDUAL\",\r\n  \"submitAs\": \"julian.schregle@mercedes-benz.com\",\r\n  \"persistOptions\": {\r\n    \"responsePayload\": \"SUMMARY_AND_RECORDS\",\r\n    \"persistMode\": \"ALWAYS\",\r\n    \"defaultPublisherId\": \"CMDS\",\r\n    \"optionsPerEntity\": {\r\n      \"Individual\": {\r\n        \"enrichers\": \"ALL\",\r\n        \"validations\": \"ALL\"\r\n      }\r\n    },\r\n    \"missingIdBehavior\": \"GENERATE\"\r\n  },\r\n  \"persistRecords\": {\r\n    \"Individual\": [\r\n      {\r\n        \"PublisherID\": \"CMDS\",\r\n        \"SourceID\": \"12345678909876\",\r\n        \"Gender\": \"MALE\",\r\n        \"Salutation\": \"MR\",\r\n        \"FirstName\": \"Jonathan\",\r\n        \"LastName\": \"Cena\",\r\n        \"NickName\": null,\r\n        \"Birthday\": \"1973-06-07\",\r\n        \"NameComponents\": null\r\n      }\r\n    ],\r\n    \"IndividualContext\": [\r\n      {\r\n        \"IndividualContextID\": \"CTX-CMDS-here\",\r\n        \"ContextType\": \"BUSINESS\",\r\n        \"BusinessRole\": \"OTHER\",\r\n        \"StartDate\": \"2026-01-01\",\r\n        \"EndDate\": \"2027-12-31\",\r\n        \"PublisherID_Individual\": \"CMDS\",\r\n        \"SourceID_Individual\": \"12345678909876\"\r\n      }\r\n    ],\r\n    \"Address\": [\r\n      {\r\n        \"FID_IndividualContext\": \"CTX-CMDS-here\",\r\n        \"Street\": \"Piazza Giacconi\",\r\n        \"HouseNumber\": \"55\",\r\n        \"PostalCode\": \"25034\",\r\n        \"City\": \"Fiumicino Aeroporto\",\r\n        \"AddressUsage\": \"RESIDENTIAL\",\r\n        \"FID_Country\": \"IT\",\r\n        \"FID_AddressDefinition\": \"IT_STANDARD\",\r\n        \"Primary\": true,\r\n        \"InCriticalUse\": false\r\n      }\r\n    ]\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM"
           ]
         }
       },
@@ -552,6 +654,55 @@
         "body": {
           "mode": "raw",
           "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"recertify\",\r\n  \"loadDescription\": \"Reprocess Italy Individuals\",\r\n  \"jobName\": \"JOB_INDIVIDUAL\",\r\n  \"reprocessRecords\": {\r\n    \"Individual\": \"Any IndividualAccount have (FID_Country = 'IT')\"\r\n  },\r\n  \"reprocessOptions\": {\r\n    \"optionsPerEntity\": {\r\n      \"Individual\": { \"reprocessMatching\": true }\r\n    }\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/loads/CustomerMDM",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "loads",
+            "CustomerMDM"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reprocess Individual has US Dealers",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "8elxNlR.Ct8X9FwkWY4w39t62YL0Y757TD6R61gMdIR",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "Api-Key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"CREATE_LOAD_AND_SUBMIT\",\r\n  \"programName\": \"recertify\",\r\n  \"loadDescription\": \"Reprocess Individuals has US Dealers\",\r\n  \"jobName\": \"JOB_INDIVIDUAL\",\r\n  \"reprocessRecords\": {\r\n    \"Individual\": \"FirstName = 'Jason'\"\r\n  },\r\n  \"reprocessOptions\": {\r\n    \"optionsPerEntity\": {\r\n      \"Individual\": { \"reprocessMatching\": false }\r\n    }\r\n  }\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -922,6 +1073,80 @@
             "rest-clients",
             "UpdateSalesEntityRelPeriod",
             "test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test HereGeocode Client",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"address\": \"34 Staines Ave, Sutton, SM39BQ, United Kingdom\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/admin/rest-clients/HereGeocode/test",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "admin",
+            "rest-clients",
+            "HereGeocode",
+            "test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Rest Clients",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"UpdateCondition\": \"FID_IndividualContext = 'CTX-000010' and FID_SalesEntity = 'GC000006'\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/admin/rest-clients/",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "admin",
+            "rest-clients",
+            ""
           ]
         }
       },
@@ -1613,6 +1838,139 @@
             "admin",
             "job-executions",
             "fb20d5eb-819a-4e18-829f-fe1b0a0cbf74"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Stress Test - Search",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/named-query/CustomerMDM/IndividualDetails/GD?FirstName=Vinko&LastName=Ziegert&Email=vinko.ziegert.006@example.test",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "named-query",
+            "CustomerMDM",
+            "IndividualDetails",
+            "GD"
+          ],
+          "query": [
+            {
+              "key": "FirstName",
+              "value": "Vinko"
+            },
+            {
+              "key": "LastName",
+              "value": "Ziegert"
+            },
+            {
+              "key": "Email",
+              "value": "vinko.ziegert.006@example.test"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Stress Test - Wildcard",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/query/CustomerMDM/Individual/GD?$f=FirstName%20LIKE%20%27Hilaire%25%27%20AND%20LastName%20LIKE%20%27Godinot%25%27",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "query",
+            "CustomerMDM",
+            "Individual",
+            "GD"
+          ],
+          "query": [
+            {
+              "key": "$f",
+              "value": "FirstName%20LIKE%20%27Hilaire%25%27%20AND%20LastName%20LIKE%20%27Godinot%25%27"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Stress Test - Certify Individual",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"options\": {\r\n    \"enrichers\": [\"NormalizeFirstName\", \"NormalizeLastName\", \"PhonetizeFirstName\",\"PhonetizeLastName\"],\r\n    \"validations\": [],\r\n    \"returnEnrichedRecord\": false,\r\n    \"queryPotentialMatchesRules\": [\"SamePhoneticNameAndSameBirthday\"],\r\n    \"queryPotentialMatchesHighestScoreOnly\": true,\r\n    \"queryPotentialMatchesBaseExpressions\": \"USER_ATTRS\"\r\n  },\r\n  \"record\": {\r\n    \"FirstName\": \"Derik\",\r\n    \"LastName\": \"Leung\",\r\n    \"Birthday\": \"1989-01-05\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://poc-mercedes.eu.semarchy.net/dm/api/rest/certify/CustomerMDM/Individual",
+          "protocol": "https",
+          "host": [
+            "poc-mercedes",
+            "eu",
+            "semarchy",
+            "net"
+          ],
+          "path": [
+            "dm",
+            "api",
+            "rest",
+            "certify",
+            "CustomerMDM",
+            "Individual"
           ]
         }
       },

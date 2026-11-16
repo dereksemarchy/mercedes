@@ -2,7 +2,7 @@ _name: SalesEntityRelHasIndividualContext
 _type: Reference
 _package: CustomerMDM.references
 label: Sales Entity Relationship Has Individual Context
-deletePropagation: RESTRICT
+deletePropagation: NULLIFY
 fromEntity: CustomerMDM.entities.SalesEntityRel.SalesEntityRel
 fromRoleLabel: Sales Entity Relationship
 fromRoleName: SalesEntityRel

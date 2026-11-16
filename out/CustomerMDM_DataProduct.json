@@ -2292,7 +2292,7 @@
             {
                 "qualifiedName": "CustomerMDM.certification_jobs.JOB_SALESENTITYREL",
                 "jobType": "INTEGRATION",
-                "queueName": "Default",
+                "queueName": "SalesEntityRel",
                 "jobParams": [
                     {
                         "qualifiedName": "CustomerMDM.certification_jobs.JOB_SALESENTITYREL.PARAM_ANALYZE_STATS",
@@ -4768,7 +4768,7 @@
             {
                 "qualifiedName": "CustomerMDM.references.SalesEntityRelHasIndividualContext",
                 "brokenValidationLabel": "",
-                "deletePropagation": "RESTRICT",
+                "deletePropagation": "NULLIFY",
                 "fromEntity": "CustomerMDM.entities.SalesEntityRel.SalesEntityRel",
                 "fromRoleName": "SalesEntityRel",
                 "mandatoryValidationLabel": "",
@@ -11771,24 +11771,6 @@
                         "searchable": false
                     },
                     {
-                        "qualifiedName": "CustomerMDM.entities.Individual.Individual.PrimaryUsGcid",
-                        "_type": "AtomicAttribute",
-                        "abstractAtomicType": "String",
-                        "goldenAttribute": false,
-                        "i18ned": false,
-                        "lovValidationScope": "NONE",
-                        "mandatory": false,
-                        "mandatoryValidationLabel": "",
-                        "mandatoryValidationScope": "NONE",
-                        "multiValued": false,
-                        "physicalColName": "PRIMARY_US_GCID",
-                        "valueSeparator": "",
-                        "description": "First US GC ID of the individual, the matching bin: only individuals of the same US sales entity are compared. AI agent instructions: technical attribute, do not display.",
-                        "label": "Primary US GC ID",
-                        "length": 20,
-                        "searchable": false
-                    },
-                    {
                         "qualifiedName": "CustomerMDM.entities.Individual.Individual.EmailKeys",
                         "_type": "AtomicAttribute",
                         "abstractAtomicType": "String",
@@ -11843,8 +11825,27 @@
                     "description": "IndividualSemQLMatcher",
                     "matchRules": [
                         {
+                            "qualifiedName": "CustomerMDM.entities.Individual.Individual.Matcher.SameNameBirthdayAndStandardizedPhoneNumber",
+                            "condition": "Record1.StandardizedPhone = Record2.StandardizedPhone",
+                            "matchScore": 100,
+                            "binningExpressions": [
+                                {
+                                    "expression": "IndividualContext.Individual.FirstName"
+                                },
+                                {
+                                    "expression": "IndividualContext.Individual.LastName"
+                                },
+                                {
+                                    "expression": "IndividualContext.Individual.Birthday"
+                                }
+                            ],
+                            "label": "Same Name, Birthday And Standardized Phone Number",
+                            "matchOnExpression": "IndividualContext.Phone",
+                            "usingMatchOn": true
+                        },
+                        {
                             "qualifiedName": "CustomerMDM.entities.Individual.Individual.Matcher.SameNameBirthdayAndEmailAddress",
-                            "condition": "Record1.Email.EmailAddress = Record2.Email.EmailAddress",
+                            "condition": "Record1.Email.EmailAddress = Record2.Email.EmailAddress AND ( (Record1.IndividualContext.Individual.UsGcids IS NULL AND Record2.IndividualContext.Individual.UsGcids IS NULL) OR keys_overlap(Record1.IndividualContext.Individual.UsGcids, Record2.IndividualContext.Individual.UsGcids) = 1 )",
                             "matchScore": 100,
                             "binningExpressions": [
                                 {

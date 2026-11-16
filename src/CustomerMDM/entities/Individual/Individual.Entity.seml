@@ -158,15 +158,24 @@ matcher:
   description: IndividualSemQLMatcher
   matchRules:
     - _type: SemQLMatchRule
+      _name: SameNameBirthdayAndStandardizedPhoneNumber
+      label: Same Name, Birthday And Standardized Phone Number
+      condition: Record1.StandardizedPhone = Record2.StandardizedPhone
+      matchScore: 100
+      usingMatchOn: true
+      matchOnExpression: IndividualContext.Phone
+      binningExpressions:
+        - expression: IndividualContext.Individual.FirstName
+        - expression: IndividualContext.Individual.LastName
+        - expression: IndividualContext.Individual.Birthday
+    - _type: SemQLMatchRule
       _name: SameNameBirthdayAndEmailAddress
       label: Same Name, Birthday And Email Address
       condition: Record1.Email.EmailAddress = Record2.Email.EmailAddress
-        # AND NOT any Record1.IndividualContext.SalesEntityRel have (
-        #   SalesEntity.Country.CountryCode = 'US'
-        # )
-        # AND NOT any Record2.IndividualContext.SalesEntityRel have (
-        #   SalesEntity.Country.CountryCode = 'US'
-        # )
+        AND (
+          (Record1.IndividualContext.Individual.UsGcids IS NULL AND Record2.IndividualContext.Individual.UsGcids IS NULL)
+          OR keys_overlap(Record1.IndividualContext.Individual.UsGcids, Record2.IndividualContext.Individual.UsGcids) = 1
+        )
       matchScore: 100
       usingMatchOn: true
       matchOnExpression: IndividualContext.EmailIndividualContext
@@ -174,46 +183,6 @@ matcher:
         - expression: IndividualContext.Individual.FirstName
         - expression: IndividualContext.Individual.LastName
         - expression: IndividualContext.Individual.Birthday
-    # - _type: SemQLMatchRule
-    #   _name: ExactNameAndBirthday
-    #   label: Exact Name And Birthday
-    #   condition: Record1.FirstName = Record2.FirstName AND Record1.LastName = Record2.LastName AND Record1.Birthday = Record2.Birthday
-    #   matchScore: 99
-    #   usingMatchOn: false
-    # - _type: SemQLMatchRule
-    #   _name: ExactNameAndBirthdayForUS
-    #   label: Exact Name And Birthday For US
-    #   condition: |-
-    #     Record1.FirstName = Record2.FirstName
-    #     AND Record1.LastName = Record2.LastName
-    #     AND Record1.Birthday = Record2.Birthday
-    #     AND any Record1.IndividualContext.SalesEntityRel have (
-    #       SalesEntity.Country.CountryCode = 'US'
-    #       AND any ParentRecord.Record2.IndividualContext.SalesEntityRel have (
-    #         SalesEntity.GCID = ParentRecord.SalesEntity.GCID
-    #       )
-    #     )
-    #   matchScore: 99
-    #   usingMatchOn: true
-    # - _type: SemQLMatchRule
-    #   _name: ExactNameAndBirthdayForUS
-    #   label: Exact Name And Birthday For US
-    #   matchScore: 99
-    #   usingMatchOn: true
-    #   condition: Record1.SalesEntity.GCID = Record2.SalesEntity.GCID
-    #     AND Record1.SalesEntity.Country.CountryCode = 'US'
-    #     AND Record2.SalesEntity.Country.CountryCode = 'US'
-    #   matchOnExpression: IndividualContext.SalesEntityRel
-    #   binningExpressions:
-    #     - expression: IndividualContext.Individual.FirstName
-    #     - expression: IndividualContext.Individual.LastName
-    #     - expression: IndividualContext.Individual.Birthday
-    # - _type: SemQLMatchRule
-    #   _name: SimilarNameAndSameBirthday
-    #   label: Similar Name And Same Birthday
-    #   condition: ( SEM_EDIT_DISTANCE_SIMILARITY( Record1.FirstName, Record2.FirstName ) > 75 AND SEM_EDIT_DISTANCE_SIMILARITY(Record1.LastName, Record2.LastName ) > 75 ) AND Record1.Birthday = Record2.Birthday
-    #   matchScore: 70
-    #   usingMatchOn: false
     - _type: SemQLMatchRule
       _name: UsExactIdentity
       label: US exact identity

@@ -2,7 +2,7 @@ _name: JOB_SALESENTITYREL
 _type: CertificationJob
 _package: CustomerMDM.certification_jobs
 jobType: INTEGRATION
-queueName: Default
+queueName: SalesEntityRel
 modelTasks:
   - _type: ModelJobTask
     entity: CustomerMDM.entities.SalesEntityRel.SalesEntityRel
